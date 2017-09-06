@@ -11,6 +11,8 @@
  *
  * @var bool
  */
+echo 'yo im here';
+
 define('WP_USE_THEMES', true);
 
 /** Loads the WordPress Environment and Template */
