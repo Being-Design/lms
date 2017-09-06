@@ -1,0 +1,40 @@
+/* Boxed Layout CSS */
+
+.single-sfwd-courses .entry-content,
+.type-sfwd-courses #item-nav .item-list-tabs ul,
+#course-details,
+.single-sfwd-courses .course-header {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+    .single-sfwd-courses .entry-content,
+    .type-sfwd-courses #item-nav .item-list-tabs ul,
+    #course-details,
+    .single-sfwd-courses .course-header {
+        padding-left: 70px;
+        padding-right: 70px;
+    }    
+}
+
+.type-sfwd-courses #item-nav .item-list-tabs ul {
+    background-color: transparent;
+    border-top: 1px solid rgba(0,0,0,0.11);
+    border-bottom: 1px solid rgba(0,0,0,0.11);
+}
+
+#learndash_course_materials, 
+#learndash_lesson_topics_list, 
+#learndash_lessons, 
+#learndash_quizzes, 
+#learndash_uploaded_assignments {
+    border-top: 1px solid rgba(0,0,0,.11);
+    border-bottom: 1px solid rgba(0,0,0,.11);
+    border-right: 1px solid rgba(0,0,0,.11);
+    border-left: 1px solid rgba(0,0,0,.11);
+}
+
+#learndash_course_materials .materials-content {
+    padding-bottom: 19px;
+}

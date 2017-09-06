@@ -1,0 +1,158 @@
+<div class="usin-profile">
+
+	<div class="usin-profile-buttons">
+		<a class="usin-btn usin-profile-back-btn" href="#/"><span class="usin-icon-arrow-left"></span> {{strings.back}}</a>
+
+		<div class="usin-profile-actions" ng-if="user.actions.length">
+			<a ng-repeat="action in user.actions" href="{{action.link}}" target="_blank" class="usin-btn">
+				<span class="usin-icon-{{action.id}}"></span>
+				<md-tooltip md-direction="top" ng-if="action.name">{{action.name}}</md-tooltip>
+			</a>
+		</div>
+	</div>
+
+	<div ng-show="loading" class="usin-in-loading">
+		<div class="usin-loading"> <span class="usin-loading-dot"></span><span class="usin-loading-dot usna-dot2"></span></div>
+	</div>
+
+	<div class="usin-error" ng-show="errorMsg">
+	{{strings.error}}: {{errorMsg}}
+	</div>
+
+<div ng-show="user && !loading" class="usin-user-profile-container" >
+	<div ng-class="['usin-user-profile-wrap', 'usin-one-third', 'usin-column', {'usin-user-has-map':mapOptions}]">
+		<div class="usin-user-profile">
+			<div class="usin-profile-map-wrapper" ng-if="mapOptions">
+		  		<div usin-map id="usin-profile-map" map-options="mapOptions"></div>
+			</div>
+		<div class="usin-avatar" ng-bind-html="user.avatar"></div>
+
+		<div class="usin-personal-data">
+			<div ng-repeat="field in fields | fieldsByType:'personal'" class="usin-profile-field-{{field['id']}}">
+				<span class="field-name">{{field.name}}:</span><span class="field-value"> <h3>{{user[field['id']]}}</h3></span>
+			</div> 
+		</div>
+        <div class="clear"></div>
+		<div class="usin-general-data">
+				
+			<!-- GROUPS -->
+			<div class="usin-profile-groups" ng-controller="UsinProfileGroupCtrl">
+				<div>
+					<span class="field-name">{{strings.groups}}:</span> {{userGroupNames()}}
+					<span ng-show="!user.user_groups.length">-</span>
+					<span ng-repeat="groupId in user.user_groups" ng-bind-html="groupId | groupTagHtml"></span>
+					<span ng-if="canUpdateUsers">
+						<div class="usin-btn-edit usin-icon-edit alignright" ng-click="toggleEdit()" ng-show="!editing && allGroups.length"></div>
+						<div class="usin-btn-apply usin-icon-apply alignright" ng-click="updateGroups()" ng-show="!groupLoading && editing"></div>
+						<div class="usin-icon-simple-loading usin-group-loading alignright" ng-show="groupLoading"></div>
+						<div class="usin-groups-list" ng-show="editing">
+							<div class="usin-error" ng-show="groupErrorMsg">{{groupErrorMsg}}</div>
+							<ul>
+								<li ng-repeat="group in allGroups">
+									<md-checkbox ng-checked="userHasGroup(group.key)" md-no-ink="true"
+										aria-label="Toggle Group {{group.val}}" ng-click="toggleGroup(group.key)"></md-checkbox>
+									<span>{{group.val}}</span>
+								</li>
+							</ul>
+						</div>
+					</span>
+				</div>
+			</div>
+			
+			<div ng-repeat="field in fields | fieldsByType:'general'" 
+				ng-class="usin-profile-field-{{field['id']}}">
+				
+				<!-- NON-EDITABLE FIELDS: -->
+				<div ng-if="!isFieldEditable(field['id']) && user[field['id']]">
+					<span class="field-name">{{field.name}}: </span>
+					<span class="field-value">{{user[field.id]}}</span>
+				</div>
+				<!-- EDITABLE FIELDS: -->
+				<div ng-if="isFieldEditable(field['id'])" ng-class="['usin-editable-field', {'usin-field-editing': editing}]" ng-controller="UsinEditableFieldCtrl">
+					<span class="field-name">{{field.name}}: </span>
+					<span class="field-value" ng-hide="editing">{{user[field.id] || '-'}}</span>
+					
+					<span ng-if="canUpdateUsers">
+						<input type="text" ng-if="field.filter.type=='text' || field.filter.type=='date'" ng-model="user[field.id]" ng-show="editing" ng-keyup="$event.keyCode==13 && updateField()">
+						<input type="number" usin-string-to-number ng-if="field.filter.type=='number'" ng-model="user[field.id]" ng-show="editing" ng-keyup="$event.keyCode==13 && updateField()">
+						
+						<div class="usin-btn-edit usin-icon-edit alignright" ng-click="toggleEdit()" ng-show="!editing"></div>
+						<div class="usin-btn-apply usin-icon-apply alignright" ng-click="updateField()" ng-show="editing && !loading"></div>
+						<div class="usin-icon-simple-loading usin-group-loading alignright" ng-show="loading"></div>
+						<div class="usin-error" ng-show="errorMsg">{{errorMsg}}</div>
+					</span>
+					<div class="clear"></div>
+				</div>
+				
+				
+				<div ng-if=""></div>
+			</div> 
+		</div>
+
+	</div>
+</div>
+
+<div class="usin-user-data-wrap usin-one-third usin-column">
+	<div class="usin-user-data">
+		<div class="usin-activity">
+			<h3 class="usin-profile-title">{{strings.activity}}</h3>
+			<ul ng-if="user.activity.length">
+				<li ng-repeat="item in user.activity" class="usin-activity-item">
+					<h4 class="usin-act-title">
+						<span ng-class="['usin-act-icon', {'usin-icon-{{item.icon}}':item.icon, 'usin-icon-field': !item.icon}]"></span>
+						<span ng-if="!item.hide_count">
+							{{item.count}}
+						</span>
+						{{item.label}}
+					</h4>
+					<ul ng-if="item.list.length" class="usin-activity-list">
+						<li ng-repeat="listItem in item.list">
+							<span class="usin-icon-list"></span>
+							<a ng-href="{{listItem.link}}" target="_blank" ng-bind-html="listItem.title"></a>
+							<div ng-if="listItem.details.length" ng-repeat="details in listItem.details" ng-bind-html="details" class="usin-activity-details"></div>
+						</li>
+						<li ng-if="item.list.length < item.count" class="usin-list-more">[...]</li>
+					</ul>
+					<a class="usin-act-more" ng-href="{{item.link}}" ng-if="item.link" target="_blank">{{strings.view}}</a>
+				</li>
+			</ul>
+			<span ng-if="!user.activity.length">
+				{{strings.noActivity}}
+			</span>
+		</div>
+	</div>
+	</div>
+	
+	<div class="usin-user-notes-wrap usin-one-third usin-column">
+		
+		<!-- NOTES -->
+		<div class="usin-notes" ng-controller="UsinProfileNotesCtrl">
+			<h3 class="usin-profile-title">{{strings.notes}}</h3>
+			
+			<div class="usin-notes-form" ng-show="canUpdateUsers">
+				<textarea ng-model="noteContent" ng-keyup="$event.keyCode==13 && addNote()" class="usin-note-field" rows="3"></textarea>
+				<span class="usin-btn usin-btn-main usin-btn-note" ng-click="addNote()">{{strings.addNote}}</span>
+				<div class="usin-icon-simple-loading usin-note-loading alignright" ng-show="noteLoading"></div>
+			</div>
+			
+			<div class="clear"></div>
+			<div class="usin-error" ng-show="noteErrorMsg">{{noteErrorMsg}}</div>
+			
+			<div ng-if="user.notes" class="usin-notes-list">
+				<div ng-repeat="(index, note) in user.notes" ng-class="['usin-note', 'usin-note-'+note.state]">
+					<div class="usin-note-content">{{note.content}}</div>
+					<div class="usin-note-info">{{strings.by}} {{note.by}} | {{note.date}}
+					<span class="alignright usin-note-delete" ng-if="canUpdateUsers" usin-confirmed-click="deleteNote(note.id, index)" usin-confirm-click="{{strings.areYouSure}}">{{strings.delete}}</span>
+					<span class="usin-custom-directive" ng-repeat="ct in customTemplates['note_actions']" ct="ct" ></span>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="usin-custom-directive" ng-repeat="ct in customTemplates['after_notes']" ct="ct" ></div>
+		</div>
+	</div>
+	
+</div>
+
+</div>

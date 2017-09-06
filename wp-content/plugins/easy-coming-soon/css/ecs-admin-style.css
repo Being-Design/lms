@@ -1,0 +1,11 @@
+#wpadminbar .ecs-mode-enable > .ab-item{
+	color:#fff;
+	background-color: #21759b;
+	
+}
+
+#wpadminbar .ecs-mode-enable:hover > .ab-item{
+	background-color:#23607C !important;
+	background-image: -moz-linear-gradient(bottom, #23607C, #23607C) !important;
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#23607C), to(#23607C)) !important;
+}

@@ -1,0 +1,842 @@
+/**
+ *  BROWSER PREFIXES
+ */
+/**
+ *  UTIL
+ */
+/* line 1, ../../../src/scss/partials/_base.scss */
+html {
+  font-size: 62.5% !important;
+}
+
+/* line 4, ../../../src/scss/partials/_base.scss */
+body {
+  font-size: 14px ;
+  font-size: 1.4rem ;
+}
+
+/* line 8, ../../../src/scss/partials/_base.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 18, ../../../src/scss/partials/_base.scss */
+h1 {
+  font-size: 36px ;
+  font-size: 3.6rem ;
+}
+
+/* line 21, ../../../src/scss/partials/_base.scss */
+h2 {
+  font-size: 19px ;
+  font-size: 1.9rem ;
+}
+
+/* line 24, ../../../src/scss/partials/_base.scss */
+h3 {
+  font-size: 16px ;
+  font-size: 1.6rem ;
+}
+
+/* line 27, ../../../src/scss/partials/_base.scss */
+h4 {
+  font-size: 12px ;
+  font-size: 1.2rem ;
+}
+
+/* line 30, ../../../src/scss/partials/_base.scss */
+h5 {
+  font-size: 12px ;
+  font-size: 1.2rem ;
+}
+
+/* line 33, ../../../src/scss/partials/_base.scss */
+h6 {
+  font-size: 10.5px ;
+  font-size: 1.05rem ;
+}
+
+/* line 37, ../../../src/scss/partials/_base.scss */
+label {
+  cursor: pointer;
+}
+
+/* line 41, ../../../src/scss/partials/_base.scss */
+p {
+  font-size: 18px ;
+  font-size: 1.8rem ;
+  padding: 0;
+  margin-bottom: 0.5em;
+}
+
+/* line 47, ../../../src/scss/partials/_base.scss */
+table {
+  border-collapse: collapse;
+}
+
+/* line 51, ../../../src/scss/partials/_base.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 57, ../../../src/scss/partials/_base.scss */
+.full-width {
+  width: 100%;
+}
+
+/* line 61, ../../../src/scss/partials/_base.scss */
+.center-margin {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 66, ../../../src/scss/partials/_base.scss */
+.center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) ;
+  -ms-transform: translate(-50%, -50%) ;
+  transform: translate(-50%, -50%) ;
+}
+
+/* line 70, ../../../src/scss/partials/_base.scss */
+.center-flex {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* line 76, ../../../src/scss/partials/_base.scss */
+.flex-column {
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 80, ../../../src/scss/partials/_base.scss */
+.no-padding {
+  padding: 0;
+}
+
+/* line 84, ../../../src/scss/partials/_base.scss */
+.inline {
+  display: inline;
+}
+
+/* line 88, ../../../src/scss/partials/_base.scss */
+.inline-block {
+  display: inline-block;
+}
+
+/* line 93, ../../../src/scss/partials/_base.scss */
+.space-top {
+  margin-top: 50px;
+}
+
+/* line 96, ../../../src/scss/partials/_base.scss */
+.no-padding-direction {
+  padding-direction: 0;
+}
+
+/* line 93, ../../../src/scss/partials/_base.scss */
+.space-right {
+  margin-right: 50px;
+}
+
+/* line 96, ../../../src/scss/partials/_base.scss */
+.no-padding-direction {
+  padding-direction: 0;
+}
+
+/* line 93, ../../../src/scss/partials/_base.scss */
+.space-bottom {
+  margin-bottom: 50px;
+}
+
+/* line 96, ../../../src/scss/partials/_base.scss */
+.no-padding-direction {
+  padding-direction: 0;
+}
+
+/* line 93, ../../../src/scss/partials/_base.scss */
+.space-left {
+  margin-left: 50px;
+}
+
+/* line 96, ../../../src/scss/partials/_base.scss */
+.no-padding-direction {
+  padding-direction: 0;
+}
+
+/* line 1, ../../../src/scss/partials/_layout.scss */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* line 5, ../../../src/scss/partials/_layout.scss */
+html.scroll-lock, body.scroll-lock {
+  overflow: hidden !important;
+}
+
+/* line 2, ../../../src/scss/partials/_theme.scss */
+body {
+  color: black;
+  font-family: "Libre Baskerville", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 7, ../../../src/scss/partials/_theme.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.01em;
+}
+
+/* line 16, ../../../src/scss/partials/_theme.scss */
+h1 {
+  font-family: "Libre Baskerville", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* line 21, ../../../src/scss/partials/_theme.scss */
+h2 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* line 26, ../../../src/scss/partials/_theme.scss */
+h3 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+/* line 31, ../../../src/scss/partials/_theme.scss */
+h4 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* line 36, ../../../src/scss/partials/_theme.scss */
+h5 {
+  font-family: "Libre Baskerville", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* line 41, ../../../src/scss/partials/_theme.scss */
+h6 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* line 46, ../../../src/scss/partials/_theme.scss */
+p {
+  font-family: "Libre Baskerville", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 50, ../../../src/scss/partials/_theme.scss */
+a,
+a:visited {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: color 125ms;
+}
+
+/* line 61, ../../../src/scss/partials/_theme.scss */
+.btn, #item-header #item-header-cover #item-statistics .generic-button a,
+.button,
+a.button,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+#buddypress div.generic-button a,
+span.create-a-group > a {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  font-weight: 700;
+  background: #e0700b;
+  color: white;
+  padding: 11px 10px 10px;
+  border: rgba(255, 255, 255, 0.75) 1px solid;
+  border-radius: 0;
+  box-shadow: none;
+  transition: background 250ms;
+}
+/* line 83, ../../../src/scss/partials/_theme.scss */
+.btn:hover, #item-header #item-header-cover #item-statistics .generic-button a:hover, .btn:focus, #item-header #item-header-cover #item-statistics .generic-button a:focus,
+.button:hover,
+.button:focus,
+a.button:hover,
+a.button:focus,
+button:hover,
+button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+#buddypress div.generic-button a:hover,
+#buddypress div.generic-button a:focus,
+span.create-a-group > a:hover,
+span.create-a-group > a:focus {
+  background-color: #c8640a;
+}
+
+/* line 4, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-inner,
+.site-header .header-inner .right-col,
+.site-header #mastlogo,
+.site-header .boxed.is-desktop #mastlogo {
+  background-color: #1091af;
+}
+/* line 13, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-inner .left-col .header-navigation ul li {
+  float: left;
+}
+/* line 16, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-inner .left-col .header-navigation ul li a {
+  display: block;
+  line-height: 16px;
+  padding: 27px 10px;
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  transition: background 250ms, color 250ms;
+}
+/* line 26, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-inner .left-col .header-navigation ul li a:hover, .site-header .header-inner .left-col .header-navigation ul li a:focus {
+  color: #fff;
+}
+/* line 30, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-inner .left-col .header-navigation ul li a:hover:after, .site-header .header-inner .left-col .header-navigation ul li a:focus:after {
+  background-color: #fff;
+}
+/* line 37, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-inner .left-col .header-navigation ul li.current-menu-item a {
+  color: #c2f0fb;
+}
+/* line 40, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-inner .left-col .header-navigation ul li.current-menu-item a:after {
+  background-color: #c2f0fb;
+}
+/* line 45, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-inner .left-col .header-navigation ul li.bp-login-nav {
+  float: right;
+  margin-right: 16px;
+}
+/* line 49, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-inner .left-col .header-navigation ul li.bp-login-nav a {
+  border: white 3px solid;
+  border-radius: 4px;
+  padding: 9px 10px;
+  margin: 16px 0 0 10px;
+  transition: background 250ms, color 250ms;
+}
+/* line 56, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-inner .left-col .header-navigation ul li.bp-login-nav a:after {
+  display: none;
+}
+/* line 60, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-inner .left-col .header-navigation ul li.bp-login-nav a:hover {
+  background-color: white;
+  color: #3691b3;
+}
+/* line 67, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-inner .left-col .header-navigation ul li:after {
+  top: 11px;
+}
+/* line 75, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-account-login .user-link span.name {
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  width: 125px;
+}
+/* line 80, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-account-login a:hover,
+.site-header .header-account-login a:focus {
+  color: #c2f0fb;
+}
+/* line 85, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-account-login .pop {
+  background-color: transparent;
+}
+/* line 88, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-account-login .pop > *:not(.logout) {
+  background-color: white;
+}
+/* line 92, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-account-login .pop li a,
+.site-header .header-account-login .pop .logout a {
+  color: #3691b3;
+  padding: 7px 27px;
+  border-left: transparent 3px solid;
+  box-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  font-size: 14px ;
+  font-size: 1.4rem ;
+  transition: background 250ms, border-color 250ms, color 250ms;
+}
+/* line 103, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-account-login .pop li a:hover, .site-header .header-account-login .pop li a:focus,
+.site-header .header-account-login .pop .logout a:hover,
+.site-header .header-account-login .pop .logout a:focus {
+  background-color: #e7f4f7;
+  color: rgba(54, 145, 179, 0.75);
+  border-left-color: #1091af;
+}
+/* line 111, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-account-login .pop > .logout {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  border-top: #1091af 2px solid;
+}
+/* line 117, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-account-login .pop > .logout a {
+  display: block;
+  border-radius: 0;
+  color: #3691b3;
+  font-weight: 400;
+}
+/* line 123, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-account-login .pop > .logout a:hover {
+  color: #3691b3;
+  background-color: white;
+  border-left-color: white;
+}
+/* line 131, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-account-login .pop .bp_components .menupop:not(#wp-admin-bar-my-account) > .ab-sub-wrapper {
+  background-color: white;
+}
+/* line 137, ../../../src/scss/partials/modules/_header.scss */
+.site-header .header-account-login .pop .ab-sub-wrapper:before {
+  display: none;
+  visibility: hidden;
+}
+/* line 144, ../../../src/scss/partials/modules/_header.scss */
+.site-header #search-open,
+.site-header .header-account-login .pop .logout a {
+  background-color: inherit;
+}
+
+/* line 158, ../../../src/scss/partials/modules/_header.scss */
+.page-template-page-no-buddypanel .site-header .header-inner .search-wrap,
+.page-template-page-no-buddypanel .site-header .header-inner,
+.page-template-page-no-buddypanel .site-header #mastlogo, .page-template-page-no-buddypanel:not(.boxed) .site-header .header-inner .search-wrap,
+.page-template-page-no-buddypanel:not(.boxed) .site-header .header-inner,
+.page-template-page-no-buddypanel:not(.boxed) .site-header #mastlogo {
+  background: #1091af;
+}
+/* line 164, ../../../src/scss/partials/modules/_header.scss */
+.page-template-page-no-buddypanel .site-header .header-navigation #header-menu > ul > li:not(.bp-login-nav) > a:hover,
+.page-template-page-no-buddypanel .site-header .header-inner .left-col .header-navigation ul li:not(.bp-login-nav) > a:hover, .page-template-page-no-buddypanel:not(.boxed) .site-header .header-navigation #header-menu > ul > li:not(.bp-login-nav) > a:hover,
+.page-template-page-no-buddypanel:not(.boxed) .site-header .header-inner .left-col .header-navigation ul li:not(.bp-login-nav) > a:hover {
+  color: #fff;
+}
+/* line 175, ../../../src/scss/partials/modules/_header.scss */
+.page-template-page-no-buddypanel .site-header .header-inner .left-col .header-navigation #header-menu ul .bp-login-nav a:hover, .page-template-page-no-buddypanel .site-header .header-inner .left-col .header-navigation #header-menu ul .bp-login-nav.current-menu-item a:hover,
+.page-template-page-no-buddypanel .site-header .page-template-page-no-buddypanel .header-inner .header-navigation #header-menu > ul > .bp-login-nav a:hover,
+.page-template-page-no-buddypanel .site-header .page-template-page-no-buddypanel .header-inner .header-navigation #header-menu > ul > .bp-login-nav.current-menu-item a:hover, .page-template-page-no-buddypanel:not(.boxed) .site-header .header-inner .left-col .header-navigation #header-menu ul .bp-login-nav a:hover, .page-template-page-no-buddypanel:not(.boxed) .site-header .header-inner .left-col .header-navigation #header-menu ul .bp-login-nav.current-menu-item a:hover,
+.page-template-page-no-buddypanel:not(.boxed) .site-header .page-template-page-no-buddypanel .header-inner .header-navigation #header-menu > ul > .bp-login-nav a:hover,
+.page-template-page-no-buddypanel:not(.boxed) .site-header .page-template-page-no-buddypanel .header-inner .header-navigation #header-menu > ul > .bp-login-nav.current-menu-item a:hover {
+  color: #3691b3;
+}
+/* line 181, ../../../src/scss/partials/modules/_header.scss */
+.page-template-page-no-buddypanel .site-header .header-inner .left-col .header-navigation #header-menu ul .bp-login-nav.current-menu-item > a,
+.page-template-page-no-buddypanel .site-header .page-template-page-no-buddypanel .header-inner .header-navigation #header-menu > ul > .bp-login-nav.current-menu-item > a, .page-template-page-no-buddypanel:not(.boxed) .site-header .header-inner .left-col .header-navigation #header-menu ul .bp-login-nav.current-menu-item > a,
+.page-template-page-no-buddypanel:not(.boxed) .site-header .page-template-page-no-buddypanel .header-inner .header-navigation #header-menu > ul > .bp-login-nav.current-menu-item > a {
+  color: #fff;
+}
+/* line 186, ../../../src/scss/partials/modules/_header.scss */
+.page-template-page-no-buddypanel .site-header .header-navigation #header-menu > ul > .current-menu-item > a, .page-template-page-no-buddypanel:not(.boxed) .site-header .header-navigation #header-menu > ul > .current-menu-item > a {
+  color: #c2f0fb;
+}
+/* line 190, ../../../src/scss/partials/modules/_header.scss */
+.page-template-page-no-buddypanel .site-header .header-inner .hide, .page-template-page-no-buddypanel:not(.boxed) .site-header .header-inner .hide {
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 481px) {
+  /* line 201, ../../../src/scss/partials/modules/_header.scss */
+  body:not(.tablet) #wp-admin-bar-shortcode-secondary .menupop:focus .ab-sub-wrapper,
+  body:not(.tablet) .header-notifications:focus .pop,
+  body:not(.tablet) .header-account-login:focus .pop {
+    visibility: inherit ;
+    opacity: 1 ;
+  }
+}
+/* line 213, ../../../src/scss/partials/modules/_header.scss */
+body.is-desktop.left-menu-open .site-header .header-navigation > div > ul,
+body.is-desktop.left-menu-open .site-header #header-menu > ul > li,
+body.is-desktop.left-menu-open .site-header #mastlogo,
+body.is-desktop.left-menu-open .site-header .header-inner .left-col .table,
+body.left-menu-open[data-logo="1"] .site-header .header-navigation > div > ul,
+body.left-menu-open[data-logo="1"] .site-header #header-menu > ul > li,
+body.left-menu-open[data-logo="1"] .site-header #mastlogo,
+body.left-menu-open[data-logo="1"] .site-header .header-inner .left-col .table {
+  height: 74px;
+}
+
+/* line 225, ../../../src/scss/partials/modules/_header.scss */
+body.is-desktop.left-menu-open[data-logo="1"] #panels #right-panel {
+  margin-top: 74px;
+}
+
+/* line 237, ../../../src/scss/partials/modules/_header.scss */
+.is-mobile:not(.tablet) .menu-panel #nav-menu > ul > li.current-menu-item > a, .is-mobile:not(.tablet) .menu-panel #nav-menu > ul > li.current-menu-item > a:before,
+.is-mobile:not(.tablet) .menu-panel #header-menu > ul > li.current-menu-item > a,
+.is-mobile:not(.tablet) .menu-panel #header-menu > ul > li.current-menu-item > a:before {
+  color: #c2f0fb;
+}
+/* line 243, ../../../src/scss/partials/modules/_header.scss */
+.is-mobile:not(.tablet) .menu-panel #nav-menu > ul > li:hover,
+.is-mobile:not(.tablet) .menu-panel ul li .menupop:hover {
+  background-color: inherit;
+}
+
+/* line 1, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header {
+  min-height: 0;
+}
+/* line 4, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header #item-header-cover {
+  position: relative;
+}
+/* line 8, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header .bb-cover-photo {
+  height: 100%;
+}
+/* line 12, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header .member-header-wrapper {
+  padding: 50px 0 25px;
+}
+/* line 16, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header .member-header-container {
+  max-width: 250px;
+}
+/* line 24, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header .bb-cover-photo .update-cover-photo i.fa,
+#item-header .bb-cover-photo .update-cover-photo div {
+  color: black;
+}
+/* line 30, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header .bb-cover-photo .update-cover-photo div {
+  background-color: #e7f4f7;
+}
+/* line 35, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header .bb-cover-photo:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.35);
+}
+/* line 46, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header .member-header-userinfo {
+  text-align: center;
+}
+/* line 49, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header .member-header-userinfo #item-header-avatar {
+  float: none;
+}
+/* line 52, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header .member-header-userinfo #item-header-avatar > a {
+  position: relative;
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+@media screen and (min-width: 1040px) {
+  /* line 52, ../../../src/scss/partials/modules/_member_header.scss */
+  #item-header .member-header-userinfo #item-header-avatar > a {
+    width: 150px;
+    height: 150px;
+  }
+}
+/* line 64, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header .member-header-userinfo #item-header-avatar > a > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) ;
+  -ms-transform: translate(-50%, -50%) ;
+  transform: translate(-50%, -50%) ;
+  float: none;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+}
+/* line 76, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header #item-header-cover .member-header-wrapper .member-header-container #item-header-content {
+  float: none;
+  margin: 0;
+  width: 100%;
+}
+/* line 81, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header #item-header-cover .member-header-wrapper .member-header-container #item-header-content .basic {
+  margin: 0;
+  padding-bottom: 0;
+  box-shadow: none;
+  border: none;
+}
+/* line 87, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header #item-header-cover .member-header-wrapper .member-header-container #item-header-content .basic h1,
+#item-header #item-header-cover .member-header-wrapper .member-header-container #item-header-content .basic h2.user-nicename {
+  display: block;
+  margin: 20px 0;
+  color: white;
+  line-height: 125%;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.65);
+}
+/* line 96, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header #item-header-cover .member-header-wrapper .member-header-container #item-header-content .basic h1 {
+  font-size: 36px !important;
+  font-size: 3.6rem !important;
+}
+/* line 100, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header #item-header-cover .member-header-wrapper .member-header-container #item-header-content .basic h2.user-nicename {
+  font-size: 19px ;
+  font-size: 1.9rem ;
+  font-weight: 300;
+}
+/* line 107, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header #item-buttons > * + * {
+  margin-top: 15px;
+}
+/* line 111, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header #item-header-cover #item-statistics {
+  float: none;
+}
+/* line 114, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header #item-header-cover #item-statistics .generic-button {
+  float: none;
+  box-shadow: none;
+}
+/* line 118, ../../../src/scss/partials/modules/_member_header.scss */
+#item-header #item-header-cover #item-statistics .generic-button a {
+  width: 100%;
+  max-width: none;
+}
+
+/* line 3, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses .course-header {
+  background-color: #eff0eb;
+  color: black;
+}
+/* line 7, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses .course-header .table-cell.content > span {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  color: #3691b3;
+  font-weight: 300;
+  font-size: 14px ;
+  font-size: 1.4rem ;
+}
+/* line 15, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses .course-header h1 {
+  color: black;
+  line-height: 150%;
+  margin: 2rem 0;
+  font-size: 32px ;
+  font-size: 3.2rem ;
+}
+/* line 22, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses .course-header .course-excerpt {
+  color: black;
+  font-size: 14px ;
+  font-size: 1.4rem ;
+  text-transform: none;
+}
+/* line 28, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses .course-header .categories {
+  max-width: 358px;
+  width: 358px;
+  padding: 0;
+}
+/* line 34, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses .course-header .progress {
+  min-width: 400px;
+}
+/* line 37, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses .course-header .progress .course-completion-rate,
+.single-sfwd-courses .course-header .progress .percent {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  color: #7b7b7a;
+}
+/* line 44, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses .course-header .progress .course_progress_blue {
+  background-color: #1091af;
+}
+/* line 50, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #course-details {
+  background-color: #eff0eb;
+}
+/* line 53, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #course-details #show-video {
+  background: white;
+  transition: background 250ms;
+}
+/* line 57, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #course-details #show-video:hover, .single-sfwd-courses #course-details #show-video:focus {
+  background-color: #f7f7f5;
+}
+/* line 64, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #course-details #learndash_course_status {
+  border: none;
+}
+/* line 71, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #buddypress #item-nav {
+  background: white;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
+}
+/* line 75, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #buddypress #item-nav a {
+  position: relative;
+  color: #e0721f;
+  font-weight: 400;
+}
+/* line 80, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #buddypress #item-nav a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 16%;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  transition: background-color 250ms;
+}
+/* line 97, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #buddypress #item-nav a:hover:after,
+.single-sfwd-courses #buddypress #item-nav a:focus:after,
+.single-sfwd-courses #buddypress #item-nav li.current a:after {
+  background-color: #e0721f;
+}
+/* line 102, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #buddypress #item-nav .item-list-tabs > ul > li:not(.hideshow):hover {
+  border: none;
+}
+/* line 105, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #buddypress #item-nav .item-list-tabs > ul > li:not(.hideshow):hover a {
+  color: #e0721f;
+}
+/* line 110, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #buddypress #item-nav .item-list-tabs > ul > li.current {
+  border: none;
+}
+/* line 113, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #buddypress #item-nav .item-list-tabs > ul > li.current > a {
+  color: #e0721f;
+  font-weight: 700;
+  border-bottom-color: #e0721f;
+}
+/* line 118, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #buddypress #item-nav .item-list-tabs > ul > li.current > a:hover, .single-sfwd-courses #buddypress #item-nav .item-list-tabs > ul > li.current > a:focus {
+  color: #e0721f;
+}
+/* line 126, ../../../src/scss/partials/modules/_course_detail.scss */
+.single-sfwd-courses #buddypress #item-nav .item-list-tabs ul li a span {
+  background-color: #e0721f;
+}
+
+/* line 1, ../../../src/scss/partials/modules/_course_sidebar.scss */
+.single-sfwd-courses #secondary {
+  background-color: #f7f7f5;
+  border-left: #1091af 2px solid !important;
+}
+/* line 5, ../../../src/scss/partials/modules/_course_sidebar.scss */
+.single-sfwd-courses #secondary .button {
+  background-color: #e0700b;
+}
+/* line 9, ../../../src/scss/partials/modules/_course_sidebar.scss */
+.single-sfwd-courses #secondary .widget_course_teacher header span p:first-child,
+.single-sfwd-courses #secondary .widget_learndash_course_participants .widgettitle {
+  color: #3691b3;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  font-size: 14px ;
+  font-size: 1.4rem ;
+}
+/* line 17, ../../../src/scss/partials/modules/_course_sidebar.scss */
+.single-sfwd-courses #secondary .widget_course_teacher header span p:first-child:after,
+.single-sfwd-courses #secondary .widget_learndash_course_participants .widgettitle:after {
+  content: ':';
+}
+/* line 22, ../../../src/scss/partials/modules/_course_sidebar.scss */
+.single-sfwd-courses #secondary .widget_course_teacher {
+  position: relative;
+  border-bottom: none;
+}
+/* line 26, ../../../src/scss/partials/modules/_course_sidebar.scss */
+.single-sfwd-courses #secondary .widget_course_teacher header span {
+  vertical-align: top;
+}
+/* line 29, ../../../src/scss/partials/modules/_course_sidebar.scss */
+.single-sfwd-courses #secondary .widget_course_teacher header span p {
+  display: block;
+  height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  color: #3691b3;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px ;
+  font-size: 1.4rem ;
+}
+/* line 38, ../../../src/scss/partials/modules/_course_sidebar.scss */
+.single-sfwd-courses #secondary .widget_course_teacher header span a {
+  font-size: 18px ;
+  font-size: 1.8rem ;
+  font-family: "Libre Baskerville", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 44, ../../../src/scss/partials/modules/_course_sidebar.scss */
+.single-sfwd-courses #secondary .widget_course_teacher .avatar {
+  margin-top: 30px;
+}
+/* line 48, ../../../src/scss/partials/modules/_course_sidebar.scss */
+.single-sfwd-courses #secondary .widget_course_teacher:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) ;
+  -ms-transform: translate(-50%, -50%) ;
+  transform: translate(-50%, -50%) ;
+  top: 100%;
+  height: 4px;
+  width: 75%;
+  background: #1091af;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,611 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: LearnDash Plus v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-07-07 11:30:09+0000\n"
+"Last-Translator: admin <marquex@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: enhanced-paypal-shortcodes.php:266
+#@ learndash-plus
+msgid "Complete Your Purchase"
+msgstr "Completa tu Compra"
+
+#: enhanced-paypal-shortcodes.php:517
+#: enhanced-paypal-shortcodes.php:710
+#@ learndash-plus
+msgid "PayPal - The safer, easier way to pay online."
+msgstr "PayPal - La forma más fácil y segura de pagar online."
+
+#: enhanced-paypal-shortcodes.php:880
+#@ learndash-plus
+msgid " FREE SIGNUP"
+msgstr "REGISTRO GRATIS"
+
+#: enhanced-paypal-shortcodes.php:892
+#@ learndash-plus
+msgid "Access Content"
+msgstr "Acceder al Contenido"
+
+#: enhanced-paypal-shortcodes.php:900
+#@ learndash-plus
+msgid "Log-in or Register to View"
+msgstr "Identifíquese o Regístrese para Ver"
+
+#: ipn.php:82
+#@ learndash-plus
+msgid "Warning: IPN with invalid receiver email!"
+msgstr "Aviso: IPN con un email de receptor no válido!"
+
+#: learndash_plus.php:16
+#@ learndash-plus
+msgid "LearnDash Plus"
+msgstr "LearnDash Plus"
+
+#: learndash_plus.php:17
+#@ learndash-plus
+msgid "Settings"
+msgstr "Opciones"
+
+#: learndash_plus.php:18
+#@ learndash-plus
+msgid "Access Levels"
+msgstr "Niveles de Acceso"
+
+#: learndash_plus.php:19
+#: paypal_settings_page.php:48
+#@ learndash-plus
+msgid "Paypal Settings"
+msgstr "Opciones de Paypal"
+
+#: learndash_plus.php:104
+#: learndash_plus.php:367
+#@ learndash-plus
+msgid "AUTO UPGRADE"
+msgstr "ACTUALIZACIÓN AUTOMÁTICA"
+
+#: learndash_plus.php:137
+#@ learndash-plus
+msgctxt "post type general name"
+msgid "Transactions"
+msgstr "Transacciones"
+
+#: learndash_plus.php:138
+#@ learndash-plus
+msgctxt "post type singular name"
+msgid "Transaction"
+msgstr "Transacción"
+
+#: learndash_plus.php:139
+#@ learndash-plus
+msgctxt "book"
+msgid "Add New"
+msgstr "Añadir Nuevo"
+
+#: learndash_plus.php:140
+#@ learndash-plus
+msgid "Add New Transaction"
+msgstr "Nueva Transacción"
+
+#: learndash_plus.php:141
+#@ learndash-plus
+msgid "Edit Transaction"
+msgstr "Editar Transacción"
+
+#: learndash_plus.php:142
+#@ learndash-plus
+msgid "New Transaction"
+msgstr "Nueva Transacción"
+
+#: learndash_plus.php:143
+#: learndash_plus.php:149
+#@ learndash-plus
+msgid "Transactions"
+msgstr "Transacciones"
+
+#: learndash_plus.php:144
+#@ learndash-plus
+msgid "View Transaction"
+msgstr "Ver Transacciones"
+
+#: learndash_plus.php:145
+#@ learndash-plus
+msgid "Search Transaction"
+msgstr "Buscar Transacción"
+
+#: learndash_plus.php:146
+#@ learndash-plus
+msgid "No Transaction found"
+msgstr "Ninguna transacción encontrada"
+
+#: learndash_plus.php:147
+#@ learndash-plus
+msgid "No Transaction found in the Trash"
+msgstr "Ninguna transacción encontrada en la papelera"
+
+#: learndash_plus.php:153
+#@ learndash-plus
+msgid "Holds LearnDash Plus Transactions"
+msgstr "Contiene las Transacciones de LearnDash Plus"
+
+#: learndash_plus.php:302
+#@ learndash-plus
+msgid ""
+"Dear [name],\n"
+"As of today, you now have access to all content for [access-level]!  Log into your account to access the content.\n"
+"\n"
+"Thanks!"
+msgstr ""
+"Estimado [name],\n"
+"A partir de hoy tiene acceso a todos los contenidos de [access-level]! Identifíquese con su cuenta para acceder a los contenidos.\n"
+"\n"
+"Gracias!"
+
+#: learndash_plus.php:309
+#@ learndash-plus
+msgid "Congratulations! Your have got new Access Level"
+msgstr "Enhorabuena! Tiene un nuevo nivel de acceso"
+
+#: levels_edit.php:12
+#@ learndash-plus
+msgid "Invalid Access Level"
+msgstr "Nivel de acceso no válido"
+
+#: levels_edit.php:68
+#@ learndash-plus
+msgid "Settings Saved."
+msgstr "Configuración guardada."
+
+#: levels_edit.php:90
+#@ learndash-plus
+msgid "Access Level Name"
+msgstr "Nombre del Nivel de Acceso"
+
+#: levels_edit.php:94
+#: levels_list.php:39
+#: levels_list.php:59
+#@ learndash-plus
+msgid "Associated Role"
+msgstr "Rol Asociado"
+
+#: levels_edit.php:106
+#: levels_list.php:32
+#: levels_list.php:52
+#@ learndash-plus
+msgid "Next Level"
+msgstr "Siguiente Nivel"
+
+#: levels_edit.php:120
+#@ learndash-plus
+msgid "Auto Upgrade After (days)"
+msgstr "Actualización automática después de (días)"
+
+#: levels_edit.php:123
+#@ learndash-plus
+msgid "Price"
+msgstr "Precio"
+
+#: levels_edit.php:126
+#@ learndash-plus
+msgid "Price Type"
+msgstr "Tipo de Precio"
+
+#: levels_edit.php:128
+#@ learndash-plus
+msgid "Buy Now"
+msgstr "Un pago"
+
+#: levels_edit.php:129
+#@ learndash-plus
+msgid "Recurring"
+msgstr "Varios pagos"
+
+#: levels_edit.php:132
+#@ learndash-plus
+msgid "Billing Cycle"
+msgstr "Ciclo de facturación"
+
+#: levels_edit.php:135
+#@ learndash-plus
+msgid "day(s)"
+msgstr "día(s)"
+
+#: levels_edit.php:136
+#@ learndash-plus
+msgid "week(s)"
+msgstr "semana(s)"
+
+#: levels_edit.php:137
+#@ learndash-plus
+msgid "month(s)"
+msgstr "mes(es)"
+
+#: levels_edit.php:138
+#@ learndash-plus
+msgid "year(s)"
+msgstr "año(s)"
+
+#: levels_edit.php:143
+#: settings_page.php:46
+#@ learndash-plus
+msgid "Login Redirect Url"
+msgstr "URL después de la identificación"
+
+#: levels_edit.php:143
+#@ learndash-plus
+msgid "Leave blank to use the default global"
+msgstr "Dejar en blanco para usar la configuración por defecto"
+
+#: levels_edit.php:147
+#: paypal_settings_page.php:64
+#: settings_page.php:59
+#@ learndash-plus
+msgid "Update Settings"
+msgstr "Actualizar Configuración"
+
+#: levels_edit.php:167
+#@ learndash-plus
+msgid "Paypal ShortCode"
+msgstr "Shortcode de PayPal"
+
+#: levels_edit_userslist.php:35
+#@ learndash-plus
+msgid "Users with this Access"
+msgstr "Usuarios con este acceso"
+
+#: levels_edit_userslist.php:36
+#: levels_edit_userslist.php:112
+#@ learndash-plus
+msgid "Page"
+msgstr "Página"
+
+#: levels_edit_userslist.php:41
+#: levels_edit_userslist.php:117
+#@ learndash-plus
+msgid "Go"
+msgstr "Ir"
+
+#: levels_edit_userslist.php:44
+#: levels_edit_userslist.php:108
+#@ learndash-plus
+msgid "Prev"
+msgstr "Anterior"
+
+#: levels_edit_userslist.php:45
+#: levels_edit_userslist.php:109
+#@ learndash-plus
+msgid "Next"
+msgstr "Siguiente"
+
+#: levels_edit_userslist.php:48
+#: levels_edit_userslist.php:104
+#@ learndash-plus
+msgid "Showing"
+msgstr "Mostrando"
+
+#: levels_edit_userslist.php:48
+#: levels_edit_userslist.php:104
+#@ learndash-plus
+msgid "to"
+msgstr "a"
+
+#: levels_edit_userslist.php:48
+#: levels_edit_userslist.php:104
+#@ learndash-plus
+msgid "out of total"
+msgstr "de"
+
+#: levels_edit_userslist.php:53
+#: levels_edit_userslist.php:69
+#@ learndash-plus
+msgid "User ID"
+msgstr "ID de Usuario"
+
+#: levels_edit_userslist.php:56
+#: levels_edit_userslist.php:72
+#@ learndash-plus
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: levels_edit_userslist.php:60
+#: levels_edit_userslist.php:76
+#@ learndash-plus
+msgid "Name"
+msgstr "Nombre"
+
+#: levels_edit_userslist.php:63
+#: levels_edit_userslist.php:79
+#@ learndash-plus
+msgid "Email"
+msgstr "Email"
+
+#: levels_list.php:15
+#@ learndash-plus
+msgid "Level Deleted"
+msgstr "Nivel borrado"
+
+#: levels_list.php:28
+#: levels_list.php:48
+#: profile_fields.php:9
+#: settings_page.php:54
+#@ learndash-plus
+msgid "Access Level"
+msgstr "Nivel de Acceso"
+
+#: levels_list.php:36
+#: levels_list.php:56
+#@ learndash-plus
+msgid "Delete Level"
+msgstr "Borrar Nivel"
+
+#: levels_list.php:45
+#@ learndash-plus
+msgid "ID"
+msgstr "ID"
+
+#: levels_edit.php:109
+#: levels_list.php:75
+#: profile_fields.php:23
+#@ learndash-plus
+msgid "None"
+msgstr "Ninguno"
+
+#: levels_list.php:84
+#@ learndash-plus
+msgid "delete"
+msgstr "borrar"
+
+#: levels_page.php:5
+#: paypal_settings_page.php:5
+#: settings_page.php:5
+#: wp_autoupdate.php:204
+#@ default
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: levels_page.php:11
+#@ learndash-plus
+msgid "LearnDash Access Levels"
+msgstr "Niveles de Acceso para LearnDash"
+
+#: levels_page.php:11
+#@ learndash-plus
+msgid "Add New"
+msgstr "Añadir Nuevo"
+
+#: levels_page.php:11
+#@ learndash-plus
+msgid "List All"
+msgstr "Ver todos"
+
+#: page_meta.php:17
+#@ learndash-plus
+msgid "LearnDash Access"
+msgstr "Acceso de LearnDash"
+
+#: page_meta.php:56
+#@ learndash-plus
+msgid "Enable protection for this post "
+msgstr "Activar protección para esta entrada "
+
+#: page_meta.php:62
+#@ learndash-plus
+msgid "Allow access to "
+msgstr "Conceder acceso a "
+
+#: paypal_settings_page.php:41
+#: settings_page.php:35
+#: wp_autoupdate.php:227
+#@ learndash-plus
+msgid "Settings saved."
+msgstr "Configuración guardada."
+
+#: paypal_settings_page.php:49
+#@ learndash-plus
+msgid "PayPal Email:"
+msgstr "Email de PayPal"
+
+#: paypal_settings_page.php:51
+#@ learndash-plus
+msgid "PayPal Currency"
+msgstr "Moneda de PayPal"
+
+#: paypal_settings_page.php:51
+#@ learndash-plus
+msgid "Enter the currency code e.g. USD"
+msgstr "Introduzca el código de moneda. P.E. EUR"
+
+#: paypal_settings_page.php:53
+#@ learndash-plus
+msgid "PayPal Country"
+msgstr "País de PayPal"
+
+#: paypal_settings_page.php:55
+#@ learndash-plus
+msgid "PayPal Cancel URL"
+msgstr "URL de cancelación de PayPal"
+
+#: paypal_settings_page.php:55
+#@ learndash-plus
+msgid "Enter the URL used for purchase cancellations."
+msgstr "Introduzca la URL a la que se irá cuando se cancele una compra."
+
+#: paypal_settings_page.php:57
+#@ learndash-plus
+msgid "PayPal Return URL"
+msgstr "URL de vuelta de PayPal"
+
+#: paypal_settings_page.php:57
+#@ learndash-plus
+msgid "Enter the URL used for completed purchases, typically a thank you page."
+msgstr "Introduzca la URL a la que se irá después de completar la compra. Usualmente una página de agradecimiento."
+
+#: paypal_settings_page.php:59
+#@ learndash-plus
+msgid "PayPal Notify URL"
+msgstr "URL de notificación de PayPal"
+
+#: paypal_settings_page.php:59
+#@ learndash-plus
+msgid "If using Subscription options, set this url in your PayPal Admin settings for IPN."
+msgstr "Se se usa las opciones de subscripción, introduzca esta URL en las opciones de Paypal para IPN."
+
+#: paypal_settings_page.php:61
+#@ learndash-plus
+msgid "Use PayPal Sandbox"
+msgstr "Use el SandBox de PayPal"
+
+#: paypal_settings_page.php:61
+#@ learndash-plus
+msgid "Check to enable the PayPal sandbox"
+msgstr "Marcar para activar el SandBox de PayPal"
+
+#: profile_fields.php:4
+#@ learndash-plus
+msgid "Access Information"
+msgstr "Información de Acceso"
+
+#: profile_fields.php:43
+#@ learndash-plus
+msgid "Payments"
+msgstr "Pagos"
+
+#: profile_fields.php:48
+#@ learndash-plus
+msgid "Date"
+msgstr "Fecha"
+
+#: profile_fields.php:49
+#@ learndash-plus
+msgid "Amount"
+msgstr "Cantidad"
+
+#: profile_fields.php:50
+#@ learndash-plus
+msgid "For Access Level"
+msgstr "Para el Nivel de Acceso"
+
+#: profile_fields.php:73
+#@ learndash-plus
+msgid "By ADMIN"
+msgstr "Por ADMIN"
+
+#: settings_page.php:43
+#@ learndash-plus
+msgid "LearnDash Access Settings"
+msgstr "Opciones de Acceso de LearnDash"
+
+#: settings_page.php:44
+#@ learndash-plus
+msgid "Access Denied Redirect Url"
+msgstr "URL para accesos denegados"
+
+#: settings_page.php:44
+#@ learndash-plus
+msgid "URL to redirect to when the content is restricted to the user"
+msgstr "URL a la que enviar al usuario cuando intente ver un contenido restringido"
+
+#: settings_page.php:48
+#@ learndash-plus
+msgid "Email Subject"
+msgstr "Asunto del Email"
+
+#: settings_page.php:50
+#@ learndash-plus
+msgid "Email Template"
+msgstr "Plantilla de Email"
+
+#: settings_page.php:50
+#@ learndash-plus
+msgid "This email is sent when a users access level changes"
+msgstr "Este email se envía cuando el nivel de acceso del usuario cambia"
+
+#: settings_page.php:52
+#@ learndash-plus
+msgid "Tags"
+msgstr "Etiquetas"
+
+#: settings_page.php:53
+#@ learndash-plus
+msgid "User's Name"
+msgstr "Nombre del Usuario"
+
+#: settings_page.php:56
+#@ learndash-plus
+msgid "Cron Url"
+msgstr "URL del Cron"
+
+#: settings_page.php:56
+#@ learndash-plus
+msgid "Setup this url as a cron job to perform periodic auto upgrades. Without it auto upgrades will happen on user login."
+msgstr "Configura esta URL para realizar actualizaciones automáticas. Si no se configura, las actualizaciones se intentarán cada vez que el usuario se identifique."
+
+#: wp_autoupdate.php:75
+#@ learndash-plus
+msgid "License of your plugin"
+msgstr "La licencia de su plugin"
+
+#: wp_autoupdate.php:75
+#@ learndash-plus
+msgid "is invalid or incomplete. Please click"
+msgstr "no es válida o está incompleta. Por favor haz click"
+
+#: wp_autoupdate.php:75
+#@ learndash-plus
+msgid "here"
+msgstr "aquí"
+
+#: wp_autoupdate.php:75
+#@ learndash-plus
+msgid "and update your license."
+msgstr "y actualice su licencia."
+
+#: wp_autoupdate.php:250
+#@ learndash-plus
+msgid "Update License"
+msgstr "Actualizar Licencia"
+
+#: paypal_settings_page.php:53
+#@ learndash-plus
+msgid "Enter the country code e.g. US"
+msgstr "Introduzca el código de país. Por ejemplo ES"
+
+#: wp_autoupdate.php:242
+#@ learndash-plus
+msgid "License Settings"
+msgstr "Opciones de Licencia"
+
+#: wp_autoupdate.php:244
+#@ learndash-plus
+msgid "Email:"
+msgstr "Email:"
+
+#: wp_autoupdate.php:246
+#@ learndash-plus
+msgid "License Key:"
+msgstr "Clave de Licencia"
+
+#: settings_page.php:46
+#@ learndash-plus
+msgid "URL to redirect to on login"
+msgstr "URL a la que enviar al usuario cuando se identifique"
+
+#: wp_autoupdate.php:195
+#@ learndash-plus
+msgid "License"
+msgstr "Licencia"
+

@@ -1,0 +1,46 @@
+.cs-observer {
+  position: fixed;
+  border: 2px solid rgba(226, 226, 226, 0.95);
+  font-size: 10px;
+  pointer-events: none;
+  z-index: 10000;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .cs-observer .cs-observer-tooltip {
+    position: absolute;
+    width: 400px;
+    margin: 2px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .cs-observer .cs-observer-tooltip span {
+      display: inline-block;
+      padding: 0.625em 0.75em 0.595em 0.75em;
+      font-family: Monaco, "Courier New", Courier, monospace;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: -0.035em;
+      line-height: 1;
+      color: #444444;
+      background-color: rgba(226, 226, 226, 0.95);
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+  .cs-observer.top .cs-observer-tooltip {
+    bottom: 100%; }
+  .cs-observer.top-inside .cs-observer-tooltip {
+    top: -2px; }
+  .cs-observer.left .cs-observer-tooltip {
+    left: -2px; }
+  .cs-observer.right .cs-observer-tooltip {
+    right: -2px; }
+  .cs-observer.bottom .cs-observer-tooltip {
+    top: 100%; }
+  .cs-observer.inspect {
+    border-color: rgba(41, 128, 185, 0.95); }
+    .cs-observer.inspect .cs-observer-tooltip span {
+      color: #ffffff;
+      background-color: rgba(41, 128, 185, 0.95); }
+
+/*# sourceMappingURL=preview.css.map */

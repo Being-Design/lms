@@ -1,0 +1,2594 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+@charset "utf-8";
+
+/*---------Common Elements---------------*/
+.pmagic *,.uimagic * {
+    box-sizing: border-box;
+}
+
+.pmagic  a {
+    font-family: 'Roboto', 'Helvetica',sans-serif;
+    text-transform: uppercase;
+    color: #4bafe1;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.pmagic {
+    font-family: 'Roboto', 'helvetica',sans-serif;
+    display: block;
+    float: left;
+    width: 95%;
+    max-width: 1500px;
+    margin: 20px 2.5%;
+    color: rgb(125,125,125);
+    font-size: 14px;
+}
+
+.pmagic sup {
+    text-transform: uppercase;
+    color: #4bafe1;
+}
+
+.pmagic span.pm-red {
+    text-transform: uppercase;
+    color: #4bafe1;
+}
+
+.pmagic .pm-buttonarea {
+    width: 100%;
+    display: block;
+    float: left;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+
+
+.pmagic input[type=submit]:hover {
+    background-color: rgb(245,245,245);
+    color: #4bafe1;
+}
+
+.pmagic .cancel {
+    font-family: 'Roboto', 'Arial', serif;
+    display: inline-block;
+    float: left;
+    color: rgb(200,200,200);
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 25px 10px 25px;
+    margin-right: 20px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.pmagic .cancel:hover {
+    color: #4bafe1;
+}
+
+div:focus {outline: none;}
+
+.pm-notice {
+    display: block;
+    width: 100%;
+    float: left;
+    color: #646464;
+}
+/*----header----*/
+
+.pmagic .operationsbar {
+    display: block;
+    width: 100%;
+    float: right;
+    background-color: #fffffe;
+    padding:10px;    
+    margin-bottom: 25px;
+}
+
+.pmagic .pg-logo {
+    width: 100%;
+    display: block;
+}
+
+.pmagic .pg-logo img {
+    width: 10%;
+    margin: 0 45%;
+}
+
+.pmagic .pmtitle {
+    display: block;
+    float: left;
+    padding: 20px;
+    width: 70%;
+    font-size: 24px;
+    font-weight: 200;
+    color: #FF7852;
+}
+
+.pmagic .icons {
+    display: inline-block;
+    float: right;
+    padding: inherit;
+}
+
+.pmagic .icons img {
+    width: 30px;
+    height: auto;
+    display: inline;
+    margin-left: 10px;
+    transition: 0.1s;
+}
+
+.pmagic .icons img:hover {
+    transform: scale(1.1,1.1);
+}
+
+.pmagic .operationsbar .nav {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding: 10px 10px 10px 20px;
+}
+
+.pmagic .operationsbar .nav ul {
+    font-size: 14px;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    transition: 0.2s;
+}
+
+.pmagic .operationsbar .nav ul li {
+    display: inline-block;
+    margin-right: 2%;
+    float: left;
+}
+
+.pmagic .operationsbar .nav ul li a {}
+.pmagic .operationsbar .nav ul li.pm-form-toggle { 
+    float: right;
+    display: inline-block;
+    font-size: 12px;
+    color: rgb(150,150,150);
+}
+
+
+li.pm-form-toggle select {
+    background-color: #fafafa;
+    color: rgb(150, 150, 150);
+    margin-left: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0 45px 0 15px;
+    height: auto;
+    border-width: 2px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #dae5e8;
+    background-image: url(../partials/images/dropdown-arrow.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    box-shadow: none;
+
+}
+
+/*--------Filters----------------*/
+
+.pmfilters {
+    width: 100%;
+    float: right;
+    display: block;
+    background-color: #fffffe;
+    padding: 15px;
+    font-size: 12px;
+    color: #a0cece;
+}
+
+.pmfilters ul {
+    display: block;
+    list-style: none;
+    color: rgb(150,150,150);
+    padding: 0px;
+    margin: 0px;
+}
+
+.pmfilters ul li {
+    display: inline-block;
+    float: left;
+    margin-right: 2%;
+    padding: 0px;
+    
+}
+
+.pmfilters ul li.sort {
+    float: right;
+}
+
+.pmfilters ul li a {
+    color: rgb(175,175,175);
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid #dae5e8;
+    background: #f5f8f8;
+    font-size: 10px;
+    transition: 0.2s;
+}
+
+.pmfilters ul li a:hover {
+    background-color: rgb(100,100,100);
+    border: 2px solid rgb(100,100,100);
+    color: white;
+}
+
+.pmfilters ul li a.filteron {
+    padding: 5px;
+    background-color: rgb(100,100,100);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 10px;
+    transition: 0.2s;
+}
+
+.pmfilters ul li a.filteron:hover {
+    text-decoration: line-through;
+}
+
+
+
+/*------------Adjustments for smaller screens-----------------*/
+
+@media screen and (max-width: 700px){
+    
+    
+    .pmagic table {
+        display: block;
+        overflow: auto;
+        
+    }
+}
+
+.pmagic .title {
+    display: block;
+    float: left;
+    font-family: roboto, arial, sans-serif;
+    font-size:32px;
+    color:#6db5b6;
+    margin-left:50px;
+    text-overflow: ellipsis;
+    background-color: #fffffe;
+}
+
+/*table style*/
+
+.pmagic-table {
+    display: block;
+    float: left;
+    background-color: #fffffe;
+    padding: 10px;
+    width: 100%;
+}
+
+.pmagic tr:nth-child(odd), .uimagic .pg-import-table tr:nth-child(odd) {background-color: #f5f8f8;
+}
+.uimagic table.pg-import-table, .uimagic .pg-import-table td, .uimagic .pg-import-table th
+.pmagic table,.pmagic td,.pmagic th {
+    text-align: left;
+}
+.uimagic table.pg-import-table,
+.pmagic table {
+    border-collapse: collapse;
+    font-size: 14px;
+    width: 85%;
+    background-color: #fffffe;
+    margin: 2% 0 0 0;
+}
+
+table.pg-email-list {width: 100%};
+table.pg-email-list th {padding: 10px;}
+table.pg-email-list tr td:nth-child(1), 
+table.pg-email-list tr td:nth-child(2)
+{width: 5%;}
+.uimagic .pg-import-table th,
+.pmagic th {
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #dae5e8;
+    padding: 15px 0 15px 5px;
+    text-align: left;
+    font-size: 12px;
+    background-color: #fffffe;
+}
+.uimagic .pg-import-table td,
+.pmagic td {
+    padding: 8px;
+    border-bottom: 2px solid #dae5e8;
+}
+.uimagic .pg-import-table tr,
+.pmagic tr {
+    transition: 0.3s;
+}
+
+.pmagic th.table-header {
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #f5f8f8;
+}
+
+/* Tooltip container */
+.pmagic .tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.pmagic .tooltip .tooltiptext {
+    visibility: hidden;
+    font-family: Arial, sans-serif;
+    width: 220px;
+    font-size: 14px;
+    background-color: azure;
+    opacity: 1;
+    color: #5e7071;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    border-left: 2px solid #7adfe3;
+    border-top: 2px solid #7adfe3;
+    border-bottom: 3px solid #7adfe3;
+    border-right: 3px solid #7adfe3;
+    z-index: 1;
+}
+
+.pmagic .tooltip a {
+    display: block;
+    text-align: center;
+}
+
+.pmagic .tooltiptext a::before {
+    content: "»";
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.pmagic .tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* The animation code */
+@keyframes textfade {
+    .pmagic  from {color:transparent}
+    .pmagic  to {color: #6db5b6}
+    
+}
+
+/*----Sidebar----*/
+
+.pmagic .sidebar {
+    float: left;
+    width: 15%;
+    background-color: #fffffe;
+    height: inherit;
+    padding: 10px;
+    
+}
+
+.pmagic .sidebar .sb-filter {
+    width: 100%;
+    float: left;
+    display: block;
+    font-size: 10px;
+    color: rgb(150,150,150);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pmagic .sidebar .sb-filter input[type=text].sb-search {
+    display: block;
+    float: left;
+    width: 90%;
+    border: 2px solid #dae5e8;
+    border-radius: 4px;
+    padding: 5px;
+    color: rgb(150,150,150);
+}
+
+.pmagic .sidebar .sb-filter input[type=text].sb-search:focus {
+    outline: none;
+}
+
+select {max-width: 100%;}
+
+.pmagic .sidebar .sb-search-keyword {
+    display: block;
+    float: left;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 5px;
+    border: 2px solid #dae5e8;
+    background-color: #f5f8f8;
+    border-radius: 12px;
+    color: rgb(150,150,150);
+    font-size: 12px;
+}
+
+.pmagic .sidebar .sb-search-keyword:hover {
+    text-decoration: line-through;
+}
+
+
+.pmagic .sidebar .filter-row {
+    display: block;
+    width: 100%;
+    float: left;
+    padding: 5px 0 5px 10px;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.pmagic .sidebar input[type=button] {
+    border: none;
+    color: #fffffe;
+    background-color: #4bafe1;
+    padding: 5px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+
+/*------------Users Table---------*/
+
+.pmagic-table {
+    display: block;
+}
+
+
+
+.pmagic table img {
+    width: 30px;
+    height:30px;
+    border-radius: 100%;
+    transition: 0.4s;
+    padding: 0px;
+    overflow: hidden;
+    vertical-align: middle;
+    
+}
+
+.pmagic table img:hover {
+    transform: scale(2,2);
+}
+
+/*------Paginations-------*/
+
+.pmagic ul.page-numbers {
+    display: inline-block;
+    padding: 10px;;
+    margin: 0;
+    float: right;
+}
+
+.pmagic ul.page-numbers li {
+    display: inline;
+    
+}
+
+.pmagic ul.page-numbers li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: white;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+.pmagic ul.page-numbers li span.dots {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: white;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+ul.page-numbers li a:hover {
+    color: #4bafe1;
+}
+
+ul.page-numbers li span.current {
+    background-color: #4bafe1;
+    color: white;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin-left: 5px;
+    transition: 0.3s;
+    
+}
+
+
+/*---------Cards Area-----------------*/
+
+
+.pmagic-cards {
+    width: 100%;
+    display: block;
+    float: left;
+    margin: 0px 0 0 0;
+    padding: 20px;
+    background-color: #f5f8f8;
+    border-top: 0px solid #dae5e8;
+    
+}
+
+.pmagic .pmagic-cards .pm-card {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 220px;
+    height: 264px;
+    border-radius: 2px;
+    margin: 0 20px 25px 0;
+    transition: .2s;
+    background-color: #fffffe;
+    border: 0px solid #dae5e8;
+    -webkit-box-shadow: 0px 1px 2px #dae5e8;
+    -moz-box-shadow: 0px 1px 2px #dae5e8;
+    box-shadow: 0px 1px 2px #dae5e8;
+}
+
+.pmagic .pm-card input[type=checkbox], .cardtitle {
+    padding: 5px;
+    margin-right: 5px;
+    
+}
+
+.pmagic .cardtitle {
+    float:left;
+    display: block;
+    color: #FF7852;
+    font-size: 12px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding: 5% 2%;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.pmagic .carddescription {
+    text-transform: uppercase;
+    color: rgb(175,175,175);
+    display: block;
+    float: left;
+    font-size: 10px;
+    padding: 5px;
+    margin: 10px 0 0px 0;
+    height: 50px;
+    overflow:hidden;
+}
+
+.pmagic .pm-form-links {
+    position:absolute;
+    bottom:0;
+    list-style: none;
+    display: block;
+    width: 100%;
+    float: right;
+    padding: 2px;
+}
+
+.pm-form-row {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    text-align: left;
+    padding: 2px;
+    text-align: center;
+}
+
+
+.pm-form-row a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #999;
+    display: inline-block;
+    width: auto;
+    margin: 5%;
+    text-align: center;
+}
+
+.pm-form-row a::after {
+    content: ' ›';
+    color: #4bafe1;
+    font-size: 16px;
+}
+
+.pmagic .pm-last-submission img {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    border: 2px solid #dae5e8;
+}
+
+.pmagic .pm-last-submission {
+    display: block;
+    float: left;
+    width: 90%;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(150,155,160);
+    vertical-align: middle;
+    margin: 2px 0 0 5%;
+    padding: 2px;
+}
+
+span.card-submissions {
+    padding: 3px;
+    color: #FF7852;
+}
+
+.pm-form-shortcode-row {
+    display: block;
+    float: left;
+    font-size: 14px;
+    text-align: center;
+    font-family: monospace;
+    position: absolute;
+    bottom: 35px;
+    background-color: #4bafe1;
+    color: #fff;
+    padding: 5px;
+}
+
+.pm-new-form {
+    z-index: 1000;
+    background-color: #fffffe;
+    height: 150px;
+}
+
+.pm-new-form input[type=text] {
+    display: block;
+    width: 90%;
+    background-color: #f5f8f8;
+    border: 2px solid #dae5e8;
+    border-radius: 4px;
+    margin: 100px 5% 0;
+    font-size: 14px;
+    height: 32px;
+    box-shadow: none;
+}
+
+.pm-new-form input[type]:focus {
+    outline: none;
+}
+
+.pm-new-form a {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    color: #4bafe1;
+}
+
+.pmagic .pm-card-file-icon {
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.pmagic .pm-card-file-icon img {
+    width: 180px;
+    height: 180px;
+}
+
+/*----Slab View----*/
+
+/*----Field Selector---*/
+
+
+.pmagic .pm-field-selector {
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: #fffffe;
+    margin-top: 15px;
+}
+
+.pmagic .pm-field-selector .field-tabs {
+    display: inline-block;
+    float: left;
+    width: 15%;
+    border-right: 2px solid #dae5e8;
+}
+
+
+
+.pmagic .pm-field-selector .field-tabs-row {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+
+.pmagic .pm-field-selector .field-tabs-row:hover {
+    background-color: #f5f8f8;
+    border-top: 2px solid #dae5e8;
+    border-bottom: 2px solid #dae5e8;
+    cursor: pointer;
+}
+
+.pmagic .pm-field-selector .field-selector-pills {
+    display: block;
+    float: left;
+    width: 85%;
+    padding: 10px;
+}
+
+.pmagic .pm-field-selector .field-selector-pills span {
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+    display: inline-block;
+    float: left;
+    color: #4bafe1;
+    font-size: 12px;
+    background-color: #fff1f1;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.pmagic .pm-field-selector .field-selector-pills span:hover {
+    color: #fffffe;
+    background-color: #4bafe1;
+    cursor: pointer;
+}
+
+/*----Slabs----*/
+
+.pmagic .pm-slab {
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: #fffffe;
+    margin-top: 20px;
+    height: 50px;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.pmagic .pm-slab .pm-slab-grabber {
+    background-color: #f5f8f8;
+    display: inline-block;
+    float: left;
+    width: 50px;
+    height: inherit;
+    border-right: 2px solid #dae5e8;
+    cursor: move;
+}
+
+.pmagic .pm-slab .pm-slab-content {
+    padding: 15px 15px 0 15px;
+    display: block;
+    float: left;
+}
+
+.pmagic .pm-slab .pm-slab-content span {
+    display: inline-block;
+    margin: 0 15px 0 15px;
+    min-width: 150px;
+    
+}
+
+.pmagic .pm-slab .pm-slab-buttons {
+    display: inline-block;
+    float: right;
+    height: 50px;
+    padding: 15px 15px 0 15px;
+    border-left: 2px solid #dae5e8;
+}
+
+.pmagic .pm-slab .pm-slab-buttons a {
+    margin: 0 15px 0 15px;
+}
+
+.pmagic .pm-slab-child .pm-slab {
+    width: 95%;
+    display: inline-block;
+    float: left;
+}
+
+.pmagic .pm-slab-child .pm-slab-child-arrow {
+    
+    height: 50px;
+    padding: 15px;
+    color: #4bafe1;
+    font-size: 18px;
+    display: inline-block;
+    float: left;
+    margin-top: 20px;
+    width: 5%;
+    text-align: right;
+}
+
+/*----RM Global Settings----*/
+
+.pmagic .pm-global-settings {
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: #fffffe;
+    padding: 10px;
+    
+}
+
+.pmagic .pm-global-settings .pm-settings-title {
+    
+    font-family: 'Titillium Web', 'Verdana', sans-serif;
+    display: block;
+    float: left;
+    padding-left: 20px;
+    width:100%;
+    font-size:24px;
+    color:#94cdc9;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    background-color: #fffffe;
+}
+
+.pmagic .pm-global-settings .settings-icon-area {
+    margin: 3% 1% 1% 1%;
+    padding: 2%;
+    display: block;
+    float: left;
+    width: 98%;
+    background-color: #f5f8f8;
+    border: 2px solid #dae5e8;
+    border-radius: 20px;
+}
+
+.pmagic .pm-global-settings .settings-icon-area .pm-settings-box {
+    
+    display: inline-block;
+    float: left;
+    width: 50%;
+    padding: 15px;
+    margin: 25px 0 25px 0;
+    border-radius: 20px;
+    transition: 0.2s;
+    border: 2px solid transparent;
+}
+
+.pmagic .pm-global-settings .settings-icon-area .pm-settings-box:hover {
+    background-color: #fffffe;
+    border: 2px solid #dae5e8;
+}
+
+img.pm-settings-icon {
+    height: auto;
+    max-width: 20%;
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+}
+
+.pmagic .pm-global-settings .settings-icon-area .pm-settings-box .pm-settings-description {
+    display: block;
+    float: left;
+    max-width: 80%;
+}
+
+.pmagic .pm-global-settings .settings-icon-area .pm-settings-box .pm-settings-subtitle {
+    
+    display: block;
+    width: inherit;
+    float: left;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: normal;
+    
+    
+}
+
+.pmagic .pm-global-settings .settings-icon-area .pm-settings-box .pm-settings-subtitle::after {
+    content: " ›";
+    color: #4bafe1;
+}
+
+.pmagic .pm-global-settings .settings-icon-area .pm-settings-box span {
+    display: block;
+    width: inherit;
+    float: left;
+    font-size: 12px;
+    color: rgb(175,175,175);
+}
+
+
+/*----Single User Page----*/
+
+.pmagic .pm-user-area {
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: #fffffe;
+    margin-top: 0px;
+}
+
+.pmagic .pm-user-area .pm-user-info {
+    display: inline-block;
+    float: left;
+    width: 30%;
+    padding: 10px;
+    color: #646464;
+    background-color: #f5f8f8;
+    word-break: break-all;
+    border-width: 0px 2px 0 0;
+    border-style: solid;
+    border-color: #dae5e8;
+}
+
+.pmagic .pm-user-info .pm-profile-image {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 30px;
+}
+
+.pmagic .pm-user-info .pm-profile-image img {
+    width: 80%;
+    margin: auto;
+    height: auto;    
+}
+
+.pmagic .pm-profile-field-row  {
+    display: block;
+    width: 100%;
+    float: left;
+    padding: 5px;
+}
+
+.pm-field-label, .pm-field-value {
+    display: inline-block;
+    width: 50%;
+    float: left;
+}
+
+.pm-field-value {
+    font-weight: lighter;
+}
+
+.pm-field-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #a3adac;
+}
+
+.pmagic .pm-profile-nav {
+    width: 70%;
+    float: right;
+    display: block;
+    background-color: #f5f8f8;
+    border-bottom: 2px solid #dae5e8;
+    border-top: 0px solid #dae5e8;
+    margin: 0px;
+}
+
+
+.pm-profile-nav-item {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: auto;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 10px;
+    transition: 0.2s;
+    margin-bottom: 0px !important;
+    border-bottom: 2px solid transparent;
+}
+
+.pm-profile-nav-item.ui-state-active {
+        border-bottom-color: #4bafe1;
+}
+
+.pm-profile-nav-item:hover {
+    background-color: #dae5e8;
+    cursor: pointer;
+}
+
+.pmagic .pm-user-content {
+    width: 70%;
+    display: block;
+    float: right;
+    padding: 20px;
+}
+
+.pm-user-content table.user-content {
+    width: 100%;
+    margin: 0 0 50px 0;
+}
+
+.pm-user-content table.user-content img.icon {
+    height: 20px;
+    width: 20px;
+}
+
+.pm-user-content table.user-content img.icon:hover {
+    transform: none;
+}
+
+div.pm-user-field-icon {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    vertical-align: middle;
+    max-width: 16px;
+    height: auto;
+}
+
+/*----Analytics Page----*/
+
+.pmagic .pmagic-analytics {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.pmagic .pmagic-analytics table.pm-form-analytics {
+    width: 100%;
+    
+}
+
+.pmagic .pm-analytics-table-wrapper {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.pmagic .pmagic-analytics .pm-left-stats-box, .pmagic .pmagic-analytics .pm-right-stats-box {
+    display: inline-block;
+    width: 48%;
+    height: auto;
+    background-color: #fffffe;
+    margin-bottom: 25px;
+}
+
+
+.pmagic .pmagic-analytics .pm-left-stats-box {float: left;}
+.pmagic .pmagic-analytics .pm-right-stats-box {float: right;}
+
+.pmagic .pmagic-analytics .pm-box-title {
+    font-family: 'Titillium Web', Roboto, sans-serif;
+    display: block;
+    width: 100%;
+    color: #94cdc9;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.pmagic .pm-box-graph {
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: #fffffe;
+    
+}
+
+.pmagic .pmagic-analytics .pm-box-graph img {
+    display: block;
+}
+
+.pm-left-stats-box .pm-analytics-stat-counter {
+    background-color: #e46367;
+    padding: 10%;
+    text-align: center;
+    color: #fffffe;
+    font-size: 30px;
+}
+
+.pm-right-stats-box .pm-analytics-stat-counter {
+    background-color: #ffa416;
+    padding: 10%;
+    text-align: center;
+    color: #fffffe;
+    font-size: 30px;
+}
+
+.pm-analytics-stat-counter .pm-analytics-stat-counter-value {
+    font-size: 100px;
+    color: #fffffe;
+    font-weight: bolder;
+    display: block;
+    width: 90%;
+    border-radius: 30px;
+    text-align: center;
+}
+
+
+
+.pm-counter-value-dark {
+    opacity: 0.5;
+}
+
+.pm-center-stats-box {
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: #fffffe;
+}
+
+/*----Submission Page----*/
+
+.pmagic .pm-submission, .pmagic .pm-invites {margin-top: 25px;}
+.pm-submission-field-row {border-bottom: 1px dotted #dae5e8;}
+
+.pmagic .pm-submission, .pm-submission-field-row {
+    display: block;
+    background-color: #fffffe;
+    float: left;
+    width: 100%;
+    padding: 25px;
+}
+
+.pmagic .pm-submission-label, .pm-submission-value {
+    display: inline-block;
+    float: left;
+}
+
+.pmagic .pm-submission-label {font-weight: bold; width: 20%; text-transform: uppercase; font-size: 12px;}
+.pmagic .pm-submission-value {width: 80%;}
+
+.pmagic .pm-submission-field-row .pm-submission-attachment {
+    display: inline-block;
+    float: left;
+    padding: 10px;
+    background-color: #f5f8f8;
+    border: 2px dashed #dae5e8;
+    width: 120px;
+    margin:0 10px 10px 0;
+}
+
+.pmagic .pm-submission-field-row .pm-submission-attachment img {
+    float: left;
+    display: block;
+    width: 100px;
+    max-height: 100px;
+    height: auto;
+}
+
+.pmagic .pm-submission-attachment-field {
+    display: block;
+    float: left;
+    font-size: 12px;
+    width: 100px;
+    text-align: center;
+    padding: 5px 0 0 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+}
+
+.pmagic .pm-submission-note {
+    border-left: 4px solid red;
+    padding: 10px;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    float: left;
+    background: #fffffe;
+}
+
+.pmagic .pm-submission-note-text {
+    background-image: url(pm-submission-note.png);
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    display: block;
+    width: 100%;
+    float: left;
+    font-style: italic;
+}
+
+.pmagic .pm-submission-note-attribute {
+    font-size: 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    float: left;
+    text-align: right;
+    color: rgb(175,175,175);
+}
+
+.pmagic .pm-submission-note-attribute a {
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+/*----Invites View----*/
+
+.pmagic .pm-invites, .pm-invite-field-row {
+    display: block;
+    background-color: #fffffe;
+    float: left;
+    width: 100%;
+    padding: 20px;
+}
+
+.pmagic .pm-invite-label, .pmagic .pm-invite-value {
+    display: inline-block;
+    float: left;
+    text-transform: uppercase;
+}
+
+.pmagic .pm-invite-label {width: 20%; padding-top: 10px;}
+.pmagic .pm-invite-value {width: 80%;}
+
+.pmagic .pm-invite-value input.pm-invite-subject, .pmagic .pm-invite-value textarea {
+    padding: 10px;
+    width: 80%;
+    border: 2px solid #dae5e8;
+    background-color: #f5f8f8;
+    border-radius: 8px;
+    font-size: 14px;
+    
+}
+
+.pmagic .pm-invite-value input.pm-invite-subject:focus, .pmagic .pm-invite-value textarea:focus {
+    outline: none;
+}
+
+.pmagic .pm-invite-value textarea {resize: vertical; min-height: 200px;}
+
+.pmagic .pm-invite-icon {
+    float: left;
+    display: inline-block;
+    padding: 5px 20px 0 0;
+}
+
+.pmagic .pm-invite-field-row img {
+    max-width: 24px;
+    height: auto;
+    
+}
+
+img#group_icon_img, img.attachment-50x50.size-50x50 {
+    display: block;
+    margin: 20px 0;
+}
+
+input#remove_group_icon.remove_icon {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #ff6c6c;
+    border: 2px solid #ff6c6c;
+    background-color: #fffffe;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.uimagic .mce-toolbar-grp, .uimagic .tmce-active .switch-tmce {
+    background-color: #dae5e8;
+    border: 2px solid #dae5e8;
+}
+
+.uimagic .wp-switch-editor {
+    background-color: #f5f8f8;
+    border: 2px solid #dae5e8;
+}
+
+.uimagic .wp-editor-container {
+    border: 2px solid #dae5e8;
+}
+
+/*------------Adjustments for smaller screens-----------------*/
+
+@media screen and (max-width: 700px) {
+    .pm-cards .pm-card {
+        display: block;
+        float: left;
+        width: 100%;
+        margin-top: 5px;
+    }
+    
+    .pmagic .pm-slab .pm-slab-content span {
+        min-width: 0px;
+        
+    }
+    
+    .pmagic .pm-global-settings .settings-icon-area .pm-settings-box {
+        width: 100%;
+    }
+    
+    .pmagic .pmagic-analytics .pm-left-stats-box, .pmagic .pmagic-analytics .pm-right-stats-box {
+        width: 100%;
+    }
+    
+    
+}
+
+
+/* added by vincent start */
+.pm_settings_option .uimrow{ margin-bottom: 30px; width: 50%;}
+.pm_radio_option_field{ width:100%;}
+.pm_click_add_option{width:64%}
+ul.pm_sortable_fields,ul.pm_sortable_fields li{ float:left; width:100%;}
+/* setting page css */
+.pm_setting_image {
+    float: left;
+    margin: 0px 30px 0px 50px;
+}
+
+.pm_setting_image img {
+    float: left;
+    width: 70px;
+}
+.pm-setting-heading {
+    float: left;
+    width: 60%;
+    margin-top: 20px;
+}
+.pm-setting-heading .pm-setting-icon-title{ 
+    width: 100%;
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    text-decoration: none;
+    text-transform: none;
+}
+	
+.pm-setting-description{
+    font-size: 12px;
+    color: #FF7852;
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+    text-decoration: none;
+    text-transform: none;
+    color: grey;
+    min-height: 36px;
+}
+
+/*setting page css end */
+
+/* toggle swich css start */
+input.pm_toggle {
+	max-height: 0;
+	max-width: 0;
+	opacity: 0;
+}
+input.pm_toggle + label {
+	display: block;
+	position: relative;
+	box-shadow: inset 0 0 0px 1px #d5d5d5;
+	text-indent: -5000px;
+	height: 10px;
+	width: 40px;
+	border-radius: 15px;
+	background: #eaeaea;
+	top: 15px;
+}
+input.pm_toggle + label:before {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 20px;
+	width: 20px;
+	top: -5px;
+	left: 0;
+	border-radius: 15px;
+	background: #c8c8c8;
+	-moz-transition: .25s ease-in-out;
+	-webkit-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+input.pm_toggle + label:after {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 20px;
+	width: 20px;
+	top: -5px;
+	left: 0px;
+	border-radius: 15px;
+	background: #c8c8c8;
+	-moz-transition: .25s ease-in-out;
+	-webkit-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+input.pm_toggle:checked + label:before {
+	width: 40px;
+	height: 10px;
+	background: #4bafe1;
+	top: 0px;
+}
+input.pm_toggle:checked + label:after {
+	left: 20px;
+	background: #fff;
+	top: -5px;
+	box-shadow: inset 0 0 0 1px #4bafe1;
+}
+/* toggle swich css end */
+
+/* added by vincent end*/
+
+/*------------- UIMagic Elements --------------*/
+
+.uimagic  a {
+    text-transform: uppercase;
+    color: #4bafe1;
+    text-decoration: none;
+}
+
+.uimagic {
+    float: left;
+    display: block;
+    width: 90%;
+    max-width: 1280px;
+    background: #fffffe;
+    margin: 20px 5%;
+    color: rgb(125,125,125);
+    font-size: 14px;
+}
+
+.uimagic sup {color: #4bafe1;}
+
+.uimagic input[type=text],.uimagic input[type=number], .uimagic textarea {
+    height: 35px;
+    background-color: #f5f8f8;
+    border-radius: 4px;
+    color: rgb(150,150,150);
+    width: 80%;
+    transition: 0.0s;
+    padding: 5px;
+    font-size: 14px;
+    border: 2px solid #dae5e8;
+    -webkit-box-shadow: 0px 1px 0px #FFF !important;
+    -moz-box-shadow: 0px 1px 0px #FFF !important;
+    box-shadow: 0px 1px 0px #FFF !important;
+}
+
+.uimagic input[type=text].warning,.uimagic input[type=number].warning, input[type=password].warning, textarea.warning, select.warning {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e89d9d;
+    background-color: #f6edee;
+    color: #4bafe1;
+    border-width: 2px;
+    
+}
+
+.uimagic ul.uimradio {
+    display: block;
+    float: left;
+    list-style: none;
+    width: 80%;
+}
+
+.uimagic ul.uimradio li {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+
+
+.uimagic select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #555;
+    border-width: 2px;
+    border-color: #dae5e8;
+    border-style: solid;
+    background: #f7f7f7;
+    vertical-align: top;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 26px;
+    height: 28px;
+    margin: 0;
+    padding: 0 45px 0 15px;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    white-space: nowrap;
+    background-image: url(../partials/images/dropdown-arrow.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    -webkit-box-shadow: 0px 1px 0px #FFF;
+    -moz-box-shadow: 0px 1px 0px #FFF;
+    box-shadow: 0px 1px 0px #FFF;
+
+}
+
+.uimagic select:focus {
+    -webkit-box-shadow: 0 0 3px rgba(115, 115, 1115, 0.8);
+    -moz-box-shadow: 0 0 3px rgba(115, 115, 1115, 0.8);
+    box-shadow: 0 0 3px rgba(115, 115, 1115, 0.8)
+}
+
+.uimagic input[type=submit]{
+    display: inline-block;
+    float: left;
+    color: #4bafe1;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: none;
+    background: #fffffe;
+    padding: 10px 25px 10px 25px;
+    transition: 0.2s;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 2px solid #4bafe1;
+}
+
+
+
+.uimagic input[type=submit]:hover {
+    background-color: #4bafe1;
+    color: #fffffe;
+    cursor: pointer;
+}
+
+.uimagic .cancel {
+    font-family: 'Roboto', 'Arial', serif;
+    display: inline-block;
+    float: left;
+    color: rgb(200,200,200);
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 25px 10px 25px;
+    margin-right: 20px;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.uimagic .cancel:hover {
+    color: #00a0eb;
+}
+
+.uimagic textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+
+.uimagic .childfieldsrow {
+    width: 100%;
+    display: block;
+    float: left;
+    padding: 5%;
+    margin-bottom: 2%;
+    background-color: #f5f8f8;
+}
+
+.uimagic .childfieldsrow select {
+    background-color: #fffffe;
+    border-width: 2px;
+}
+
+.childfieldsrow .uimfield::before {
+    content: "└ ";
+    color: #4bafe1;
+}
+
+
+.uimagic .content {
+    width: 100%; 
+    float: left; 
+    background-color: #fffffe;
+    overflow: hidden;
+}
+
+.uimagic .helparea {
+    width: 20%; 
+    float: right; 
+    padding: 20px; 
+    background-color: #fffffe; 
+    border-left: 2px solid rgb(225,225,225);
+    height: inherit;
+}
+
+.uimheader {
+    display: block;
+    font-size: 20px;
+    padding: 20px;
+    text-transform: uppercase;
+    color: #FF7852;
+    font-weight: 400;
+}
+
+.uimsubheader { 
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    float: left;
+    padding: 5px 5px 5px 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    color: #4bafe1;
+    font-size: 12px;
+}
+
+.uimrow {
+    display: block; 
+    float: left;
+    position: inherit;
+    padding: 5px 20px 5px 20px; 
+    min-height: 60px; 
+    width: 100%;
+}
+
+.uimfield, .uimnote {width:25%;}
+.uiminput {width:50%; padding: 0px; margin: 0px;}
+
+.uimfield, .uiminput, .uimnote {
+    display: inline-block; 
+    float: left;
+    vertical-align: middle;
+    min-height: inherit;
+}
+
+.uiminput .errortext{
+    font-family: monospace;
+    width: 100%;
+    display: block;
+    float: left;
+    color: #e89d9d;
+    font-size: 12px;
+}
+
+.uiminput .errortext::before {
+    content: '⚠ ';
+    font-size: 18px;
+    display: none;
+}
+
+.uimfield {
+    font-family: 'Robot', sans-serif;
+    padding-top: 10px;
+    
+}
+
+.uimnote {
+    font-family: 'Roboto', 'Arial', serif;
+    font-size: 12px;
+    vertical-align: middle;
+    color: rgb(175,175,175);
+    
+}
+
+.uimagic .buttonarea {
+    width: 100%;
+    display: block;
+    float: left;
+    padding: 25px 15px 15px 15px;
+    border-top: 2px solid #dae5e8;
+}
+
+.uimagic .wp-editor-wrap {
+    margin: 0px 10px;
+}
+
+span.pm_remove_field {
+    display: inline-block;
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: #4bafe1;
+    cursor: pointer;
+}
+
+span.smtp_failed {
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    text-align: center;
+    color: #ff6c6c;
+    text-transform: uppercase;
+}
+
+span.smtp_failed::before {
+    content: '☹';
+}
+
+/*----UIMagic Hover Effects----*/
+
+/*.uimagic input[type=text]:hover, .uimagic textarea:hover {
+    color: #78c5d5;
+}*/
+
+.uimagic input[type=text]:focus, .uimagic textarea:focus, .uimagic select:focus  {
+    outline: none;
+    
+}
+
+
+
+/*------------Adjustments for smaller screens-----------------*/
+
+@media screen and (max-width: 700px) {
+    .uimfield, .uiminput, .uimnote {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+    }
+    
+    .uimrow {
+        min-height: 30px;
+    }
+    
+    .uimagic input[type=submit]  {
+        width: 100%;
+        display: block;
+        float: left;
+        border-radius: 0px;
+        padding: 20px;
+    }
+    
+    .uimagic .cancel {
+        display: none;
+    }
+    
+    .uimagic ul.uimradio li {
+        display: block;
+        width: 100%;
+        padding: 0 0 5px 10px;
+    }
+    
+    .uimagic ul.uimradio li:hover {
+        background-color: #f5f8f8;
+        border-radius: 4px;
+    }
+    
+    .uimagic {
+        margin: auto;
+    }
+}
+    
+/*----New Custom Fields View----*/
+
+.pm-field-creator {
+    display: block;
+    width: 100%;
+    float: left;
+    margin-top: 0px;
+    border-top: 0px solid #dae5e8;
+    background-color: #f5f8f8;  
+}
+
+.pm-page-tabs-sidebar {
+    display: inline-block;
+    width: 20%;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-right: 2px solid #dae5e8;
+
+}
+
+.pm-custom-fields-page {
+    display: inline-block;
+    width: 80%;
+    float: left;
+    padding: 50px;
+    background-color: #f5f8f8;
+    border-left: 2px solid #dae5e8;
+    margin-left: -2px;
+}
+
+.pm-page-tab, .pm-page-tab-add-new {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #dae5e8;
+}
+
+.pm-page-tab:hover {
+    background-color: #f5f8f8;
+    color: #4bafe1;
+}
+
+.pm-page-tab-add-new {
+    background-color: #f5f8f8;
+    color: #4bafe1;
+}
+
+.pm-custom-field-page-slab {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    float: left;
+    border-radius: 4px;
+    z-index: 1000;
+    background-color: #fffffe;
+    border: 0px solid #dae5e8;
+    -webkit-box-shadow: 0px 1px 2px #dae5e8;
+    -moz-box-shadow: 0px 1px 2px #dae5e8;
+    box-shadow: 0px 1px 2px #dae5e8;
+    transition: 0.2s;
+}
+
+.pm-custom-field-page-slab:active {
+    -webkit-box-shadow: 0px 0px 0px #dae5e8;
+    -moz-box-shadow: 0px 0px 0px #dae5e8;
+    box-shadow: 0px 0px 0px #dae5e8;
+    transform: translate(0px,1px);
+}
+
+
+.pm-slab-drag-handle {
+    display: inline-block;
+    float: left;
+    background-image: url(../partials/images/drag.png);
+    background-repeat: no-repeat;
+    width: 25px;
+    cursor: move; /* fallback: no `url()` support or images disabled */
+    cursor: -webkit-grab; /* Chrome 1-21, Safari 4+ */
+    cursor: -moz-grab; /* Firefox 1.5-26 */ 
+    cursor: grab; /* W3C standards syntax, should come least */
+}
+.pm-slab-drag-handle:active {
+cursor: -webkit-grabbing;
+cursor: -moz-grabbing;
+cursor: grabbing;
+}
+
+.pm-slab-info {
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+}
+
+.pm-slab-info sup {
+    color: #FF7852;
+    font-size: 10px;
+}
+
+.pm-slab-buttons {
+    display: inline-block;
+    float: right;
+}
+
+.pm-slab-buttons a {
+    margin-right: 10px;
+}
+
+.pm-custom-fields-page .pmrow {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pm-custom-fields-page .pmrow a {
+    margin-right: 20px;
+    background-color: #f5f8f8;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.pm-custom-fields-page .content {
+    padding: 20px 10px 0px 10px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px #dae5e8;
+    -webkit-box-shadow: 0px 2px 2px #dae5e8;
+    -moz-box-shadow: 0px 2px 2px #dae5e8;
+}
+
+.pm-custom-fields-page .pm-slab {
+    border: 2px solid orange;
+    background-color: lightyellow;
+    color: orange;
+}
+
+.pm-popup * {box-sizing: border-box;}
+
+.pm-popup {
+    display: block;
+    position: fixed;
+    background-color: #fffffe;
+    z-index: 2;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    left: 20%;
+    left: calc(20% + 160px);
+    visibility: hidden;
+    font-family: Roboto, sans-serif;
+    width: 50%;   
+    height: 85%;
+    overflow-y: auto;
+    top:10%;
+}
+
+.pm-popup-height-auto {
+    height: auto;
+}
+
+.pm-curtains {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.2;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+}
+
+.pm-popup-header {
+    width: 100%;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+    padding: 20px 0px;
+    background-color: #4bafe1;
+}
+
+.pm-popup-title {
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: 200;
+    float: left;
+    color: #fff;
+}
+
+img.pm-popup-close {
+    height: 20px;
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.pm-field-selection {
+    display: block;
+    float: left;
+    height: 200%;
+}
+
+.pm-popup-field-box {
+    display: inline-block;
+    float: left;
+    width: 47%;
+    transition: 0.2s;
+    margin: 0 0 10px 0;
+}
+
+.pm-popup-field-box:hover {
+    background-color: #f5f8f8;
+    cursor: pointer;
+}
+
+.pm-popup-field-name {
+    display: block;
+    float: left;
+    color: #4bafe1;
+    width: 100%;
+    padding: 10px 0 10px 20px;
+    font-size: 16px;
+}
+
+.pm-popup-field-details {
+    display: block;
+    float: left;
+    font-size: 12px;
+    width: 100%;
+    color: darkgrey;
+    padding: 0 0 10px 20px;
+}
+
+.pm-popup-field-box-wrap { 
+    width: 100%; 
+    float: left;
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 1279px) { 
+
+    .pmagic .pmagic-cards .pmcard{
+        margin-right: 10px !important;    
+        width: 200px !important; 
+        margin-left:10px;
+    }
+
+}
+@media screen and (max-width: 1024px){
+    .pm-setting-heading{
+        width: 100%;
+    }
+    .pm_setting_image { margin-left: 0px;}
+}
+@media screen and (max-width: 767px){
+    .pm_settings_option .uimrow {
+        width: 100%;
+        text-align: center;
+    }
+    .pm_setting_image { margin: 0; width: 100%;}
+    .pm_setting_image img { float: none; margin: 0px auto;}
+}
+
+/*----Import Export----*/
+
+.uimagic .uiminput select[multiple] {
+    background-image: none;
+    padding: 10px;
+    min-width: 50%;
+}
+
+tr.pm_import_row td:first-child {
+    color: #4bafe1;
+}
+
+.pm-import-result {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 20px;
+}
+
+.pm-import-note {
+    background-color: #dffae0;
+    color: #28bc86;
+    padding: 20px;
+    margin: 20px 0;
+    line-height: 2em;
+    border-radius: 2px;
+}
+
+.pm-import-details {
+    padding: 50px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.pmagic .pmcard input[type=checkbox] {border:2px solid #fff;-webkit-appearance:checkbox; box-shadow:none;}
+
+#pm_form_quick_add .pm-new-form .pmrow .pminput { width:100%;}
+
+.pmagic .operationsbar .nav ul li.pm-form-toggle form { float:right;}
+
+.pmagic .pm-field-selector .field-tabs-row a {color: rgb(125,125,125); outline:0px; min-height: 33.33%; display: inline-block; width: 100%;}
+
+.pmagic .pm-slab .pm-slab-content input[type=checkbox] {border:2px solid #fff;-webkit-appearance:checkbox; box-shadow: none;}
+
+.pmagic input[type=checkbox]{border:2px solid #fff;-webkit-appearance:checkbox; box-shadow:none;}
+
+.pmagic .pmagic-cards .pmcard:nth-child(5n) {margin-right:0px;}
+
+.pmagic .sidebar .sb-filter input[type=text].sb-search {
+    display: block;
+    float: left;
+    width: 90%;
+    border: 2px solid #dae5e8;
+    border-radius: 2px;
+    padding: 5px;
+    color: rgb(150,150,150);
+    transition: 0.2s;    
+    box-shadow: none;
+}
+
+.pmagic .sidebar .sb-filter input[type=text].sb-search:focus {background-color: #dae5e8;}
+.pmagic .sidebar .sb-filter input[type=text].sb-search:hover {background-color: #dae5e8;}
+
+
+.pmagic .sidebar .filter-row  input[type=submit], 
+.pmagic .sidebar .filter-row  input[type=reset] {    
+    border: none;
+    color: #fffffe;
+    background-color: #4bafe1;
+    padding: 5px 7px 5px 7px;
+    border-radius: 2px;
+    text-transform: uppercase; 
+    font-size: 12px;
+}
+
+
+.pmagic ul.pmpagination li a.active {
+    background-color: #4bafe1;
+    color: white;
+}
+
+
+
+
+.pmagic .sidebar .sb-filter input[type=text], 
+.pmagic .sidebar .sb-filter input[type=number], 
+.pmagic .sidebar .sb-filter input[type=password],
+.pmagic .sidebar .sb-filter input[type=url], 
+.pmagic .sidebar .sb-filter input[type=date], 
+.pmagic .sidebar .sb-filter input[type=email], 
+.pmagic .sidebar .sb-filter textarea, 
+.pmagic .sidebar .sb-filter select { 
+    background-color:transparent; 
+    height:inherit;
+}
+
+.pmagic-analytics li { list-style:none;}
+
+.pmagic .pmagic-analytics .pmnotice {}
+
+.pmagic .pmagic-cards .pmattachment {    
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.pmagic .pm-profile-nav-item a {color: rgb(125,125,125);}
+
+
+.pmagic .pmagic-analytics.pmagic-field-analytics .pm-left-stats-box, 
+.pmagic .pmagic-analytics.pmagic-field-analytics .pm-right-stats-box { 
+    width: 49%; 
+    margin-bottom: 25px;
+}
+
+.pmagic .pmagic-cards .pmcard .pm-new-form .buttonarea {border-top: 2px solid #dae5e8;}
+
+.pmagic .pmagic-cards .pmcard .pm-new-form .buttonarea input[type=submit] {   
+    display: block;                                                                       
+    text-align: center;                                                                       
+    font-size: 14px;                                                                      
+    padding: 5px;                                                         
+    color: #4bafe1;
+    background-color: transparent;
+    float: none;
+    margin: 0px auto;
+}
+
+.pmagic .pm-field-selector .field-selector-pills .pm_button_like_links:hover {cursor: pointer;}
+.pmagic .pm-field-selector .field-selector-pills .pm_button_like_links a {    text-transform: capitalize;    outline: 0px;}
+.pmagic .pm-field-selector .field-selector-pills .pm_button_like_links:hover a { color: #4bafe1;}
+
+.pm-field-container.ui-sortable#pm_sortable_form_fields {margin-top: 4px;}
+.pmagic a:focus, .pmagic a:focus .pmagic .media-icon img {
+    color: #124964;
+    -webkit-box-shadow: 0 0 0 0px #5b9dd9,0 0 0px 0px rgba(30,140,190,.8);
+    -moz-box-shadow: 0 0 0 0px #5b9dd9,0 0 0px 0px rgba(30,140,190,.8);
+    box-shadow: 0 0 0 0px #5b9dd9,0 0 0px 0px rgba(30,140,190,.8);
+}
+
+.pmagic input[type=checkbox]:checked:before { content: ""; color:#fff;}
+
+.shortcode_notification {
+    width: 97.5%;
+    background-color: #fffffe;
+    float: left;
+    -moz-box-shadow: 0px 1px 2px -1px #C7C7C7;
+    -webkit-box-shadow: 0px 1px 2px -1px #C7C7C7;
+    box-shadow: 0px 1px 2px -1px #C7C7C7;
+    margin-left: 30px;
+    margin-top: 14px;
+    border-left: 4px solid #46b450;
+
+}
+
+.shortcode_notification p.pm-notice-para {    
+    margin: 0px;
+    padding: 10px;
+}
+
+.pmagic .pmsupportcontent {
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: #fffffe;
+    margin-top: 15px;
+}
+
+.pmagic .pmsupportcontent .pmsubtitle {    
+    padding: 20px;    
+    font-size: 16px;
+}
+
+.pmagic .pmsupportcontent .pmlink { 
+    padding: 20px;    
+    padding-top: 0px;
+}
+
+.pm-field-container.pm-user-role-manager {margin-top: 4px;}
+
+.pm-field-container.pm-user-role-manager li .pm-slab .pm_sortable_handle img { 
+    padding: 4px;
+}
+
+.pmagic .pmagic-cards .pm-form-shortcode {    
+    float: left;
+    width: 70%;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+    margin-left: 15%;
+    border-radius: 8px;
+    border: 0px solid #dae5e8;
+    position: absolute;
+    bottom: 50px;
+}
+
+.pm_login_form_option_in_drop_down {font-style:italic;}
+.pmagic input.pm_checkbox {position:relative; top: 2px; left: 4px;}
+
+
+.pmagic .pmagic-cards .pm-card .pm-new-form input[type="submit"] {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 5px;
+    color: #4bafe1;
+    background-color: transparent;
+    float: none;
+    margin: 0 auto;
+    margin-top: 25px;
+    box-shadow: none;
+    border: 0px;
+    cursor: pointer;    text-transform: uppercase; outline:0px;
+
+}
+
+
+.pmagic .operationsbar .nav ul li input[type="submit"], 
+.pmagic .operationsbar .nav ul li input[type="button"],
+.pmagic .pm-move-to-group input[type=submit]
+{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #4bafe1;
+    background-color: transparent;
+    float: none;
+    margin: 0 auto;
+    margin-top: 0px;
+    box-shadow: none;
+    border: 0px;
+    cursor: pointer;    
+    text-transform: uppercase; 
+    outline:0px;
+    letter-spacing: 1px;
+}
+.pmagic .pm-move-to-group input[type=submit]{ display: inline;}
+.pm-page-tabs-sidebar li.pm-page-tab { 
+    margin-bottom:0px;
+    background-color: #fffffe;
+}
+
+
+.pm-page-tabs-sidebar li.pm-page-tab a { 
+    color: rgb(125,125,125);
+    padding-left: 8px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+
+}
+
+.pm-page-tabs-sidebar li.pm-page-tab a:hover {color: #4bafe1;}
+
+
+.pm-page-tabs-sidebar li.pm-page-tab.ui-state-active {
+    position: relative;
+    right: -2px;
+    background-color: #f5f8f8;
+    color: #4bafe1;    
+    outline: 0px;
+}
+
+.uimagic.pm-section-form { margin:0px;}
+.uimagic span#smtptestconn {cursor: pointer};
+
+
+/*email templates css */
+#email_manager .pmagic-table, #email_manager .pmagic-table table{width:100%;}
+.wp-media-buttons select.pm_field_list{
+    width: 230px;
+    height: 28px;
+}
+
+#profile-magic-access-metabox .inside{display:inline; min-height:100px;}
+
+/*
+ =======================
+|      Shortcodes       |
+ =======================
+*/
+
+.pg-scblock {
+    display: block;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.pg-scbg {background-color: #FFFFFE;}
+.pg-scpagetitle img {height: 32px; width: auto; vertical-align: middle;}
+.pg-scpagetitle b {height: 32px; width: auto; vertical-align: middle;}
+.pg-scpagetitle {font-size: 28px; padding: 20px 10px; font-weight: lighter; line-height: 32px;}
+.pg-blue {color: #4bafe1; vertical-align: middle;}
+ 
+.pg-scsubblock {
+    display: inline-block;
+    width: 33.33%;
+    float: left;
+    padding: 10px;
+}
+
+.pg-sctitle {
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.pg-code {
+    display: inline-block;
+    font-family: monospace;
+    padding: 10px 20px;
+    background-color: #FAFAFA;
+    color: #4bafe1;
+    text-shadow: 0 1px 0 #FFF;
+}
+.pg-scimg {max-width: 100%;}
+.pg-scdesc, .pg-scimg {font-size: 12px; padding: 10px;}
+.pm-attachment-title{word-break: break-word;}
+.pm_frontend_attachment img{max-width: 100%;
+    height: auto;}
+
+.pmagic .pm-warning {color: #FF7852;}
+.pm_five_star_Banner {
+    float: left;
+    width: 100%;
+}
+.pmagic .pm-star i { color: #ffd700;}
+.uimagic .pmagic-table .nav li {display: inline-block; margin-right: 10px;}
+.uimagic .pg-import-table {width: 100% !important; text-align: left;}
+.uimagic.pg-import-notification{
+    margin: 5px 5%;
+}
+.uimagic.pg-import-notification p{
+    padding: 0px 20px;
+}
+
+#profile-magic-access-metabox button.handlediv { display:none !important;}
+#profile-magic-access-metabox {width:100%;float:left;}
+.pmrow .pm-col .pm-field-input .errortext {  
+    color: rgb(255, 0, 0);
+} 
+
+
+/*----Extensions Page------*/
+
+.pmagic .pg-ext-list { 
+}
+
+.pmagic .pg-upcoming-ext {position: relative;}
+.pmagic .pg-ext-card-overlay { 
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.pmagic .pg-ext-card-overlay::after {  
+    content: "Coming Soon!";
+    color: #2b96dc;
+    text-align: center;
+    width: 100%;
+    float: left;
+    position: relative;
+    top: 44%;
+    font-size: 28px;
+}
+
+.pmagic .pg-ext-list .pg-ext-card {
+    text-align: left; 
+}
+
+.pmagic .pg-ext-list .pg-ext-card a.pg-install-now-btn {
+    background-color: #40a8e7;
+    color: #fff;
+    box-shadow: none;
+    border: 0px;
+    line-height: 30px;
+}
+
+.pmagic .pg-ext-list .pg-ext-card .plugin-card-top {   
+    min-height: 210px;
+}
+.pmagic .pg-ext-list .pg-ext-card .plugin-card-top .column-description { 
+    margin-right: 0px;
+}
+
+.pmagic .pg-exts-bundle-banner {    
+    text-align: center;
+    margin: 15px auto;
+}
+
+.pg-exts-bundle-banner img {
+    width: 100%;
+    max-width: 1100px;
+}
+
+
+/* ---- PG Custom Modal Box --- */
+
+.pmagic .pg-modal-view {   
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 70%;
+    z-index: 99999;
+    left: 0px;
+}
+.pmagic .pg-modal-wrap {    
+    position: absolute;
+    background: #fff;
+    width: 60%;
+    left: 20%;
+    top: 50px;
+    max-height: 100%;
+    z-index: 9999;
+}
+
+.pmagic .pg-modal-wrap {    
+    animation-name: popup;
+    animation-duration: 0.3s;
+    overflow: auto;
+}
+
+.pmagic .pg-modal-overlay {   
+    z-index: 9999;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);}
+
+.pmagic .pg-modal-overlay {    
+    animation-name: popup_wrap;
+    animation-duration: 0.3s;
+}
+
+.pmagic .pg-modal-titlebar {    
+    height: 60px;
+    border-bottom: 2px solid #fafafa;
+    display: table;
+    width: 100%;
+}
+
+.pmagic .pg-modal-titlebar .pg-modal-title,
+.pmagic .pg-modal-titlebar .pg-modal-close{   
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #646464;
+}
+
+.pmagic .pg-modal-titlebar .pg-modal-close{
+    text-align: right;
+    font-size: 22px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.pmagic .pg-modal-container {}
+
+.pmagic .pg-modal-view  .uimrow {
+    display: block;
+    float: left;
+    position: inherit;
+    padding: 20px;
+    min-height: 60px;
+    width: 100%;
+
+}
+
+
+/* RM Deactivate Feedback Dialog */
+
+.pmagic .pg-deactivate-feedback-dialog-input-wrapper {    
+    margin: 10px auto;
+    width: 100%;
+    float: left;
+}
+
+.pmagic .pg-deactivate-feedback-dialog-input-wrapper input[type=radio] { 
+    float: left;
+    margin: 0px 8px 0px 0px;
+} 
+
+.pmagic .pg-deactivate-feedback-dialog-input-wrapper label { 
+    float: left;
+}
+
+.pmagic .pg-modal-view .pg-modal-footer input {    
+    display: inline-block;
+    color: #fff;
+    border: none;
+    background: #4bafe1;
+    transition: .1s;
+    border-radius: 4px;
+    outline: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.pmagic .pg-deactivate-feedback-dialog-input-wrapper .pginput {   
+    width: 100%;
+    float: left;
+    margin: 15px;
+}
+.pmagic .pg-modal-wrap.pg-deactivate-feedback {    
+    width: 50%;
+    left: 30%;
+    min-height: 505px;
+}
+
+.pmagic .pg-modal-footer{    
+    border-top: 2px solid #fafafa;
+}
+
+.pmagic .pg-deactivate-feedback .pg-ajax-loader {    
+    text-align: center;
+    margin: 10px auto;
+}
+
+.pmagic .pg-deactivate-feedback span.pg-feedback-emoji {
+    float: left;
+    padding-right: 10px;
+}
+
+
+/*extension Page*/
+
+
+.pg-footer-banner {
+    width: 100%;
+    float: left;
+    text-align: center;
+    
+}
+
+.pg-footer-banner a{ 
+    display: inline-block;
+    outline: 0;
+}
+
+#toplevel_page_pm_manage_groups ul li:last-child a{color: #4bafe1 !important;}

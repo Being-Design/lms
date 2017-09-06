@@ -1,0 +1,27 @@
+<md-dialog aria-label="{{strings.exportAction}}">
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h2>{{strings.exportAction}}</h2>
+				<span flex></span>
+				<md-button class="md-icon-button" ng-click="closeExportDialog()">
+					<md-icon class="usin-icon-delete" aria-label="Close dialog"></md-icon>
+				</md-button>
+			</div>
+		</md-toolbar>
+
+		<md-dialog-content>
+			<div class="md-dialog-content">
+				<p ng-bind-html="strings.confirmExport.replace('%s', total.current)"></p>
+			</div>
+		</md-dialog-content>
+
+		<md-dialog-actions layout="row">
+			<div class="usin-icon-simple-loading" ng-show="isExportLoading"></div>
+			<button class="usin-btn" ng-click="closeExportDialog()">
+				{{strings.cancel}}
+			</button>
+			<button class="usin-btn usin-btn-main" ng-click="export()">
+				{{strings.exportAction}}
+			</button>
+		</md-dialog-actions>
+</md-dialog>

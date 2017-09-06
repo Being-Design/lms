@@ -1,0 +1,53 @@
+// PATHS
+$path_fonts: '../../fonts';
+$path_images: '../../images';
+
+
+// GLOBAL SETTINGS
+$trans_time: 250ms;
+$uppercase_letter_spacing: 0.075em;
+
+
+// COLORS
+// usage: color('blue-text')
+$palette: (
+	'white':			#fff,
+	'black': 			#000,
+	);
+
+
+// MODULE COLORS
+$body_bg: color('max-blue-green');
+
+
+// FONTS
+// Lato
+$font-lato: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+// FONT-WEIGHT
+// usage: font-weight('semi-bold')
+$font-weight: ( //keys designated per fonts.google.com
+	'thin': 		100,
+	'extra-light': 	200,
+	'light': 		300,
+	'regular': 		400,
+	'medium':		500,
+	'semi-bold':	600,
+	'bold':         700,
+	'extra-bold':	800,
+	'black':  		900,
+	);
+
+
+// BREAKPOINTS
+// usage: breakpoint(sm)
+$breakpoints: (	// derived from boss-child's default "custom.css" file
+	'xs': 0,
+	'sm': 350px,
+	'md': 720px,
+	'lg': 1040px
+	);
+
+// DIRECTIONS
+$directions: (top, right, bottom, left);

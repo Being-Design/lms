@@ -1,0 +1,470 @@
+# Copyright (C) 2016 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://www.buddyboss.com/contact/\n"
+"POT-Creation-Date: 2017-08-17 15:52:26+00:00\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: BuddyBoss <support@buddyboss.com>\n"
+"Language-Team: BuddyBoss <support@buddyboss.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: includes/admin-ui.php:77
+msgid "One Click Installer"
+msgstr ""
+
+#: includes/admin-ui.php:129 includes/admin-ui.php:217
+msgid "You don't have permission to access this page"
+msgstr ""
+
+#: includes/admin-ui.php:163 includes/admin-ui.php:239
+msgid "Your package has been unpacked, starting installation."
+msgstr ""
+
+#: includes/admin-ui.php:169
+msgid "We cannot unzip the demo packages, try again later"
+msgstr ""
+
+#: includes/admin-ui.php:184 includes/admin-ui.php:271
+#: includes/admin-ui.php:319
+msgid "Demo Package is downloaded and ready to install."
+msgstr ""
+
+#: includes/admin-ui.php:193 includes/admin-ui.php:356
+msgid "Package not found."
+msgstr ""
+
+#: includes/admin-ui.php:202 includes/admin-ui.php:365
+msgid "Security error try again later."
+msgstr ""
+
+#: includes/admin-ui.php:303
+msgid "Downloaded %s"
+msgstr ""
+
+#: includes/admin-ui.php:325
+msgid "Please refresh the page and try again."
+msgstr ""
+
+#: includes/admin-ui.php:339
+msgid ""
+"Downloading demo data, this may take some time. Please do not refresh or "
+"close this screen."
+msgstr ""
+
+#: includes/admin-ui.php:346
+msgid "Main package file could not be downloaded. Please contact support."
+msgstr ""
+
+#: includes/admin-ui.php:382
+msgid "View BuddyBoss One Click Installer Settings"
+msgstr ""
+
+#: includes/admin-ui.php:382
+msgid "Settings"
+msgstr ""
+
+#: includes/admin-ui.php:401
+msgid "You don't have permission to access this page."
+msgstr ""
+
+#: includes/admin-ui.php:405
+msgid "Installer"
+msgstr ""
+
+#: includes/admin-ui.php:406 includes/system-status-helper.php:116
+msgid "System Status"
+msgstr ""
+
+#: includes/admin-ui.php:407
+msgid "Support"
+msgstr ""
+
+#: includes/admin-ui.php:416
+msgid "BuddyBoss One Click Installer"
+msgstr ""
+
+#: includes/admin-ui.php:456
+msgid "Please select the demo package you would like to install on this site."
+msgstr ""
+
+#: includes/admin-ui.php:464
+msgid "Sorry currently there is no demo package available by buddyboss"
+msgstr ""
+
+#: includes/admin-ui.php:639
+msgid "Screenshot"
+msgstr ""
+
+#: includes/admin-ui.php:652
+msgid "Download"
+msgstr ""
+
+#: includes/admin-ui.php:654
+msgid "Install Now"
+msgstr ""
+
+#: includes/admin-ui.php:661
+msgid "Purchase"
+msgstr ""
+
+#: includes/admin-ui.php:666
+msgid "View Demo"
+msgstr ""
+
+#: includes/admin-ui.php:734
+msgid "Unknown Server Error."
+msgstr ""
+
+#: includes/admin-ui.php:766
+msgid "ERROR:"
+msgstr ""
+
+#: includes/admin-ui.php:766
+msgid ""
+"PHP's CURL extension is not available. Please contact your hosting provider "
+"to enable PHP's CURL extension."
+msgstr ""
+
+#: includes/buddyboss-plugin-updater.php:84
+msgid ""
+"An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?"
+"\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+msgstr ""
+
+#: includes/buddyboss-plugin-updater.php:88
+msgid "An unknown error occurred"
+msgstr ""
+
+#: includes/license-manager.php:28
+msgid "Before we proceed.."
+msgstr ""
+
+#: includes/license-manager.php:34
+msgid "Connect your BuddyBoss.com account"
+msgstr ""
+
+#: includes/license-manager.php:38
+msgid "Connecting"
+msgstr ""
+
+#: includes/license-manager.php:48
+msgid ""
+"Please connect with your buddyboss.com account to proceed. After successful "
+"connection, you'll see a list of demo packages available. You can install "
+"packages that you have a valid license for."
+msgstr ""
+
+#: includes/license-manager.php:51
+msgid "here"
+msgstr ""
+
+#: includes/license-manager.php:52
+msgid "You can see a list of your licenses %s."
+msgstr ""
+
+#: includes/license-manager.php:141
+msgid "Connect to BuddyBoss.com"
+msgstr ""
+
+#: includes/license-manager.php:186
+msgid "Error - Operation Failed."
+msgstr ""
+
+#: includes/license-manager.php:200
+msgid "Reconnect your BuddyBoss.com Account"
+msgstr ""
+
+#: includes/license-manager.php:219
+msgid ""
+"Account connected. You can now download and install packages which you have "
+"an active license for."
+msgstr ""
+
+#: includes/license-manager.php:270
+msgid "Video Tutorials"
+msgstr ""
+
+#: includes/license-manager.php:289
+msgid "Video Icon"
+msgstr ""
+
+#: includes/license-manager.php:298
+msgid "View more videos"
+msgstr ""
+
+#: includes/license-manager.php:303
+msgid "Resources"
+msgstr ""
+
+#: includes/license-manager.php:305
+msgid "Documentation &amp; Help Center"
+msgstr ""
+
+#: includes/license-manager.php:306
+msgid "Product Tutorials"
+msgstr ""
+
+#: includes/license-manager.php:307
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: includes/license-manager.php:308
+msgid "Release Notes"
+msgstr ""
+
+#: includes/license-manager.php:309
+msgid "Community Forums"
+msgstr ""
+
+#: includes/system-status-helper.php:123 includes/system-status-helper.php:137
+#: includes/system-status-helper.php:208
+msgid "FAIL"
+msgstr ""
+
+#: includes/system-status-helper.php:125 includes/system-status-helper.php:141
+#: includes/system-status-helper.php:156 includes/system-status-helper.php:170
+#: includes/system-status-helper.php:198 includes/system-status-helper.php:212
+msgid "OK"
+msgstr ""
+
+#: includes/system-status-helper.php:129
+msgid "WordPress Version"
+msgstr ""
+
+#: includes/system-status-helper.php:139 includes/system-status-helper.php:154
+#: includes/system-status-helper.php:168 includes/system-status-helper.php:206
+#: includes/system-status-helper.php:210 includes/system-status-helper.php:216
+#: includes/system-status-helper.php:220
+msgid "WARNING"
+msgstr ""
+
+#: includes/system-status-helper.php:145
+msgid "MySQL Version"
+msgstr ""
+
+#: includes/system-status-helper.php:160
+msgid "PHP Version"
+msgstr ""
+
+#: includes/system-status-helper.php:226
+msgid "PHP Memory Limit"
+msgstr ""
+
+#: includes/system-status-helper.php:234
+msgid "View more"
+msgstr ""
+
+#: includes/system-status-helper.php:250
+msgid "WordPress environment"
+msgstr ""
+
+#: includes/system-status-helper.php:255
+msgid "Home URL"
+msgstr ""
+
+#: includes/system-status-helper.php:256
+msgid "The homepage URL of your site."
+msgstr ""
+
+#: includes/system-status-helper.php:260
+msgid "Site URL"
+msgstr ""
+
+#: includes/system-status-helper.php:261
+msgid "The root URL of your site."
+msgstr ""
+
+#: includes/system-status-helper.php:266
+msgid "WP version"
+msgstr ""
+
+#: includes/system-status-helper.php:267
+msgid "The version of WordPress installed on your site."
+msgstr ""
+
+#: includes/system-status-helper.php:272
+msgid "WP multisite"
+msgstr ""
+
+#: includes/system-status-helper.php:273
+msgid "Whether or not you have WordPress Multisite enabled."
+msgstr ""
+
+#: includes/system-status-helper.php:278
+msgid "WP memory limit"
+msgstr ""
+
+#: includes/system-status-helper.php:279
+msgid "The maximum amount of memory (RAM) that your site can use at one time."
+msgstr ""
+
+#: includes/system-status-helper.php:282
+msgid "%1$s - We recommend setting memory to at least 64MB. See: %2$s"
+msgstr ""
+
+#: includes/system-status-helper.php:282
+msgid "Increasing memory allocated to PHP"
+msgstr ""
+
+#: includes/system-status-helper.php:290
+msgid "WP debug mode"
+msgstr ""
+
+#: includes/system-status-helper.php:291
+msgid "Displays whether or not WordPress is in Debug Mode."
+msgstr ""
+
+#: includes/system-status-helper.php:301
+msgid "WP cron"
+msgstr ""
+
+#: includes/system-status-helper.php:302
+msgid "Displays whether or not WP Cron Jobs are enabled."
+msgstr ""
+
+#: includes/system-status-helper.php:312
+msgid "Language"
+msgstr ""
+
+#: includes/system-status-helper.php:313
+msgid "The current language used by WordPress. Default = English"
+msgstr ""
+
+#: includes/system-status-helper.php:322
+msgid "Server environment"
+msgstr ""
+
+#: includes/system-status-helper.php:327
+msgid "Server info"
+msgstr ""
+
+#: includes/system-status-helper.php:328
+msgid "Information about the web server that is currently hosting your site."
+msgstr ""
+
+#: includes/system-status-helper.php:332
+msgid "PHP version"
+msgstr ""
+
+#: includes/system-status-helper.php:333
+msgid "The version of PHP installed on your hosting server."
+msgstr ""
+
+#: includes/system-status-helper.php:336
+msgid "%1$s - We recommend a minimum PHP version of 5.6."
+msgstr ""
+
+#: includes/system-status-helper.php:344
+msgid "PHP post max size"
+msgstr ""
+
+#: includes/system-status-helper.php:345
+msgid "The largest filesize that can be contained in one post."
+msgstr ""
+
+#: includes/system-status-helper.php:349
+msgid "PHP time limit"
+msgstr ""
+
+#: includes/system-status-helper.php:350
+msgid ""
+"The amount of time (in seconds) that your site will spend on a single "
+"operation before timing out (to avoid server lockups)"
+msgstr ""
+
+#: includes/system-status-helper.php:355
+msgid "cURL version"
+msgstr ""
+
+#: includes/system-status-helper.php:356
+msgid "The version of cURL installed on your server."
+msgstr ""
+
+#: includes/system-status-helper.php:368
+msgid "MySQL version"
+msgstr ""
+
+#: includes/system-status-helper.php:369
+msgid "The version of MySQL installed on your hosting server."
+msgstr ""
+
+#: includes/system-status-helper.php:373
+msgid "%1$s - We recommend a minimum MySQL version of 5.6. See: %2$s"
+msgstr ""
+
+#: includes/system-status-helper.php:373
+msgid "WordPress requirements"
+msgstr ""
+
+#: includes/system-status-helper.php:382
+msgid "Max upload size"
+msgstr ""
+
+#: includes/system-status-helper.php:383
+msgid ""
+"The largest filesize that can be uploaded to your WordPress installation."
+msgstr ""
+
+#: includes/system-status-helper.php:388
+msgid "DOMDocument"
+msgstr ""
+
+#: includes/system-status-helper.php:389
+msgid ""
+"HTML/Multipart emails use DOMDocument to generate inline CSS in templates."
+msgstr ""
+
+#: includes/system-status-helper.php:394
+msgid ""
+"Your server does not have the %s class enabled - HTML/Multipart emails, and "
+"also some extensions, will not work without DOMDocument."
+msgstr ""
+
+#: includes/system-status-helper.php:400
+msgid "Multibyte string"
+msgstr ""
+
+#: includes/system-status-helper.php:401
+msgid ""
+"Multibyte String (mbstring) is used to convert character encoding, like for "
+"emails or converting characters to lowercase."
+msgstr ""
+
+#: includes/system-status-helper.php:406
+msgid ""
+"Your server does not support the %s functions - this is required for better "
+"character encoding."
+msgstr ""
+
+#: includes/system-status-helper.php:417
+msgid "Active plugins"
+msgstr ""
+
+#: includes/system-status-helper.php:428
+msgid "Visit plugin homepage"
+msgstr ""
+
+#: includes/system-status-helper.php:433
+msgid "Network enabled"
+msgstr ""
+
+#. translators: %s: plugin author
+#: includes/system-status-helper.php:441
+msgid "by %s"
+msgstr ""

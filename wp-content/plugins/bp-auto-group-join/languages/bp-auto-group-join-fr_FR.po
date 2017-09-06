@@ -1,0 +1,166 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BP Auto Group Join\n"
+"Report-Msgid-Bugs-To: https://www.buddyboss.com/contact/\n"
+"POT-Creation-Date: 2017-02-08 12:14:13+00:00\n"
+"PO-Revision-Date: 2016-05-01 17:31-0400\n"
+"Last-Translator: jean-pierre michaud <nexialys@yahoo.com>\n"
+"Language-Team: jean-pierre michaud <nexialys@yahoo.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: bp-auto-group-join.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: bp-auto-group-join.php:77
+msgid "Couldn't load main class at:<br/>%s"
+msgstr "Impossible de charger les composantes sur:<br/>%s"
+
+#: bp-auto-group-join.php:81
+msgid "<h1>Fatal error:</h1><hr/><pre>%s</pre>"
+msgstr "<h1>Erreur fatale:</h1><hr/><pre>%s</pre>"
+
+#: bp-auto-group-join.php:108
+msgid "BuddyBoss Auto Group Join needs BuddyPress activated!"
+msgstr ""
+
+#: includes/admin.php:140
+msgid "General Settings"
+msgstr "Réglages généraux"
+
+#: includes/admin.php:222
+msgid "Settings"
+msgstr "Réglages"
+
+#: includes/admin.php:252
+msgid "BP Auto Group Join"
+msgstr "Auto-Liaison aux Groupes BP"
+
+#: includes/admin.php:300
+msgid "On"
+msgstr "Actif"
+
+#: includes/admin.php:301
+msgid "Off"
+msgstr "Fermé"
+
+#: includes/admin.php:308
+msgid ""
+"Add support for joining users to groups based on their member type. Requires "
+"<a target=\"_blank\" href=\"https://www.buddyboss.com/product/buddypress-"
+"member-types/\">BuddyPress Member Types</a>."
+msgstr ""
+"Ajoute le support pour joindre les membres aux groupes basé sur leur Type de "
+"Membre. Nécessite <a target=\"_blank\" href=\"https://www.buddyboss.com/"
+"product/buddypress-member-types/\">Types de Membres Buddypress</a>."
+
+#: includes/bp-auto-group-join-admin-class.php:93
+msgid "<em><a href=\"%s\" target=\"_blank\">Configure Member Types</a></em>"
+msgstr ""
+"<em><a href=\"%s\" target=\"_blank\">Configurer les Types de Membres</a></em>"
+
+#: includes/bp-auto-group-join-admin-class.php:94
+msgid ""
+"<em>Requires the <a href=\"%s\" target=\"_blank\">Buddypress Member Types "
+"plugin</a></em>"
+msgstr ""
+"<em>Nécessite le plugin <a href=\"%s\" target=\"_blank\">Types de Membres "
+"Buddypress</a></em>"
+
+#: includes/bp-auto-group-join-admin-class.php:102
+msgid "Join New Registrations"
+msgstr "Joindre les nouveaux inscrits"
+
+#: includes/bp-auto-group-join-admin-class.php:106
+msgid "All new registrations"
+msgstr "Toutes nouvelles inscriptions"
+
+#: includes/bp-auto-group-join-admin-class.php:111
+#: includes/bp-auto-group-join-admin-class.php:149
+msgid "Select by member type"
+msgstr "Sélectionner par type de membre"
+
+#: includes/bp-auto-group-join-admin-class.php:134
+#: includes/bp-auto-group-join-admin-class.php:172
+msgid "None"
+msgstr "Aucun"
+
+#: includes/bp-auto-group-join-admin-class.php:140
+msgid "Join Existing Members"
+msgstr "Lier les membres existants"
+
+#: includes/bp-auto-group-join-admin-class.php:144
+msgid "All existing members"
+msgstr "Tous les membres actuels"
+
+#: includes/bp-auto-group-join-base-class.php:235
+msgid ""
+"<strong>BP Auto Group Join:</strong> support for joining users to groups "
+"based on their member type requires \n"
+"                <a href='%s'>BuddyPress Member Types</a> to be active!"
+msgstr ""
+
+#: includes/help-support.php:5
+msgid "Here is a video tutorial to get you started:"
+msgstr "Voici un tutoriel vidéo pour vous aider à démarrer:"
+
+#: includes/help-support.php:13
+msgid "Need more help?"
+msgstr "Besoin d'aide?"
+
+#: includes/help-support.php:16
+msgid "Frequently Asked Questions"
+msgstr "Foire aux questions"
+
+#: includes/help-support.php:17
+msgid "Current Version &amp; Release Notes"
+msgstr "Version actuelle &amp; Notes de Version"
+
+#: includes/help-support.php:18
+msgid "How to Update"
+msgstr "Comment mettre à jour"
+
+#: includes/main-class.php:196 includes/main-class.php:205
+msgid "Cheatin&#8217; huh?"
+msgstr "On triche, hum?"
+
+#: includes/bp-auto-group-join-admin-class.php:77
+msgctxt "group admin edit screen"
+msgid "Auto-Join Users to this Group"
+msgstr "Auto-Lier les membres à ce Groupe"
+
+#~ msgid "Save Changes"
+#~ msgstr "Enregistrer les modifications"
+
+#~ msgid ""
+#~ "To automatically join users to a specific group, go to the <a href=\"%s/"
+#~ "admin.php?page=bp-groups\">Groups edit page</a> and select the group to "
+#~ "edit."
+#~ msgstr ""
+#~ "Pour rejoindre automatiquement les utilisateurs à un groupe spécifique, "
+#~ "allez dans les <a href=\"%s/admin.php?page=bp-groups\">Gestion de "
+#~ "Groupes</a> et sélectionnez le groupe à modifier."
+
+#~ msgid "Support Forums"
+#~ msgstr "Forums d'aide"
+
+#~ msgid "https://www.buddyboss.com"
+#~ msgstr "https://www.buddyboss.com"
+
+#~ msgid "Automatically join BuddyPress members to Groups"
+#~ msgstr "Lier automatiquement les membres BuddyPress à des groupes"
+
+#~ msgid "BuddyBoss"
+#~ msgstr "BuddyBoss"
+
+#~ msgid "http://buddyboss.com"
+#~ msgstr "http://buddyboss.com"

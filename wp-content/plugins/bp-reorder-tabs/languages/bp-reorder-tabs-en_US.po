@@ -1,0 +1,153 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BuddyPress Reorder Tabs v1.0.9\n"
+"POT-Creation-Date: 2016-08-23 16:34-0500\n"
+"PO-Revision-Date: 2016-08-23 16:35-0500\n"
+"Last-Translator: BuddyBoss <support@buddyboss.com>\n"
+"Language-Team: BuddyBoss <support@buddyboss.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: bp-reorder-tabs.php\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: bp-reorder-tabs.php:74
+#, php-format
+msgid "Couldn't load main class at:<br/>%s"
+msgstr ""
+
+#: bp-reorder-tabs.php:80
+#, php-format
+msgid "<h1>Fatal error:</h1><hr/><pre>%s</pre>"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: includes/admin.php:114
+msgid "BuddyPress Reorder Tabs"
+msgstr ""
+
+#: includes/admin.php:114
+msgid "Reorder Tabs"
+msgstr ""
+
+#: includes/admin.php:189
+msgid "Profile Tabs"
+msgstr ""
+
+#: includes/admin.php:193
+msgid "Group Tabs"
+msgstr ""
+
+#: includes/admin.php:229
+msgid "General"
+msgstr ""
+
+#: includes/admin.php:230
+msgid "Support"
+msgstr ""
+
+#: includes/admin.php:278 includes/admin.php:312
+msgid "Settings saved."
+msgstr ""
+
+#: includes/admin.php:323 includes/admin/groups.php:47
+msgid ""
+"You must be a member (preferably admin) of at least one group. Please join/"
+"create a group and reload this screen again."
+msgstr ""
+
+#: includes/admin/groups-content.php:18
+msgid "Default Group Page"
+msgstr ""
+
+#: includes/admin/groups-content.php:21 includes/admin/profile-content.php:40
+#: includes/admin/profile-content_1.php:38
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: includes/admin/groups-content.php:93 includes/admin/profile-content.php:138
+#: includes/admin/profile-content_1.php:137
+msgid "Save Changes"
+msgstr ""
+
+#: includes/admin/profile-content.php:27
+#: includes/admin/profile-content_1.php:25
+msgid "Default Profile Page"
+msgstr ""
+
+#: includes/admin/profile-content.php:61
+#: includes/admin/profile-content_1.php:59
+msgid "Adminbar nav"
+msgstr ""
+
+#: includes/admin/profile-content.php:74
+#: includes/admin/profile-content_1.php:72
+msgid "Enable adminbar nav links reorders."
+msgstr ""
+
+#: includes/admin/support.php:5
+msgid "Here is a video tutorial to get you started:"
+msgstr ""
+
+#: includes/admin/support.php:13
+msgid "Need more help?"
+msgstr ""
+
+#: includes/admin/support.php:16
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: includes/admin/support.php:17
+msgid "Support Forums"
+msgstr ""
+
+#: includes/admin/support.php:18
+msgid "How to Update"
+msgstr ""
+
+#: includes/buddyboss-plugin-updater.php:84
+msgid ""
+"An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?"
+"\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+msgstr ""
+
+#: includes/buddyboss-plugin-updater.php:88
+msgid "An unknown error occurred"
+msgstr ""
+
+#: includes/main-class.php:103 includes/main-class.php:105
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: includes/main-class.php:716
+msgid ""
+"Hey! BuddyPress Reorder Tabs requires BuddyPress version 2.6 or higher. You "
+"seem to have an older version and therefore BuddyPress Reorder Tabs is not "
+"working on your site. Please update BuddyPress."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://buddyboss.com/product/buddypress-reorder-tabs/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Easily reorder BuddyPress Profile and Group tabs from the WordPress admin"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "BuddyBoss"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://buddyboss.com"
+msgstr ""

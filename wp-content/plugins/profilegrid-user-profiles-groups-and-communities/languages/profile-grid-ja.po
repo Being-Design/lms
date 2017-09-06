@@ -1,0 +1,4548 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ProfileGrid\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-17 09:43+0000\n"
+"PO-Revision-Date: 2017-01-17 09:53+0000\n"
+"Last-Translator: admin <vikasarora2020@gmail.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: admin/class-profile-magic-access-options.php:53
+#: admin/class-profile-magic-access-options.php:54
+msgid "Profile Magic"
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:147
+#: includes/class-profile-magic-functions.php:46
+#: public/class-profile-magic-public.php:119
+msgid "Please enter a valid e-mail address."
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:148
+#: includes/class-profile-magic-functions.php:47
+#: includes/class-profile-magic-functions.php:51
+#: includes/class-profile-magic-functions.php:52
+#: includes/class-profile-magic-functions.php:53
+#: includes/class-profile-magic-functions.php:54
+#: public/class-profile-magic-public.php:120
+msgid "Please enter a valid number."
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:149
+#: public/class-profile-magic-public.php:121
+msgid "Please enter a valid date(yyyy-mm-dd format)."
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:150
+#: public/class-profile-magic-public.php:122
+msgid "This is a required field."
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:151
+#: includes/class-profile-magic-functions.php:50
+#: includes/class-profile-magic-request.php:450
+#: includes/class-profile-magic-request.php:453
+#: public/class-profile-magic-public.php:123
+msgid "This file type is not allowed."
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:152
+#: includes/class-profile-magic-functions.php:44
+#: public/class-profile-magic-public.php:124
+msgid "Your password should be at least 7 characters long."
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:153
+#: includes/class-profile-magic-functions.php:45
+#: includes/class-profile-magic-request.php:395
+#: public/class-profile-magic-public.php:125
+msgid "Password and confirm password do not match."
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:154
+#: includes/class-profile-magic-request.php:367
+#: public/class-profile-magic-public.php:126
+msgid "Sorry, username already exist."
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:155
+#: public/class-profile-magic-public.php:127
+msgid "Sorry, email already exist."
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:156
+msgid ""
+"You are changing the group of this user. All data associated with profile "
+"fields of old group will be hidden and the user will have to edit and fill "
+"profile fields associated with the new group. Do you wish to continue?"
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:397
+msgid "Select A Field"
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:398
+msgid "Comman Fields"
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:399 admin/partials/manage-fields.php:36
+msgid "User Name"
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:400
+msgid "User Password"
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:448
+msgid "Profile Picture"
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:452 admin/partials/add-group.php:167
+msgid "Upload Icon"
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:462
+msgid "User Group"
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:530
+msgid "You have successfully activated the user."
+msgstr ""
+
+#: admin/class-profile-magic-admin.php:536
+msgid "Failed to upadte user information.Can not activate user"
+msgstr ""
+
+#: includes/class-profile-magic-custom-fields.php:33
+msgid "Username or Email"
+msgstr ""
+
+#: includes/class-profile-magic-custom-fields.php:48
+#: admin/partials/manage-fields.php:59
+#: public/partials/themes/default/login-form-tpl.php:29
+msgid "Password"
+msgstr ""
+
+#: includes/class-profile-magic-custom-fields.php:67
+msgid "Remember Me"
+msgstr ""
+
+#: includes/class-profile-magic-custom-fields.php:573
+#: includes/class-profile-magic-custom-fields.php:623
+msgid "Add"
+msgstr ""
+
+#: includes/class-profile-magic-custom-fields.php:574
+#: includes/class-profile-magic-custom-fields.php:623
+#: public/partials/themes/default/edit-group-tpl.php:79
+#: public/partials/themes/default/profile-tpl.php:127
+msgid "Remove"
+msgstr ""
+
+#: includes/class-profile-magic-email.php:103
+msgid "Your Registration is Pending Approval"
+msgstr ""
+
+#: includes/class-profile-magic-email.php:108
+#, php-format
+msgid "You are now registered at %s."
+msgstr ""
+
+#: includes/class-profile-magic-email.php:109
+msgid ""
+"Before you can login, you need to activate your account by visiting this "
+"link:"
+msgstr ""
+
+#: includes/class-profile-magic-email.php:111
+#: public/class-profile-magic-public.php:367
+msgid "Thanks!"
+msgstr ""
+
+#. echo $this->profile_magic;
+#: includes/class-profile-magic-functions.php:20
+msgid ""
+"Some of the options below require selecting fields from your form. Since you "
+"are creating new form from scratch, there are no fields in this form yet. "
+"You can come back later and modify these field specific options. You can "
+"safely ignore them for now and save the settings."
+msgstr ""
+
+#: includes/class-profile-magic-functions.php:48
+#: includes/class-profile-magic-request.php:484
+msgid "Please enter a valid date (yyyy-mm-dd format)"
+msgstr ""
+
+#: includes/class-profile-magic-functions.php:49
+msgid "This is a required field"
+msgstr ""
+
+#: includes/class-profile-magic-html-generator.php:225
+msgid "Sorry, you didn't enter the correct captcha code."
+msgstr ""
+
+#: includes/class-profile-magic-request.php:339
+#: includes/class-profile-magic-request.php:360
+#: includes/class-profile-magic-request.php:375
+#: includes/class-profile-magic-request.php:389
+#: includes/class-profile-magic-request.php:403
+#: includes/class-profile-magic-request.php:410
+#: includes/class-profile-magic-request.php:419
+msgid " is a required field"
+msgstr ""
+
+#: includes/class-profile-magic-request.php:346
+#: includes/class-profile-magic-request.php:462
+msgid "Please enter a valid e-mail address"
+msgstr ""
+
+#: includes/class-profile-magic-request.php:351
+msgid "Sorry, useremail already exist."
+msgstr ""
+
+#: includes/class-profile-magic-request.php:381
+#: includes/class-profile-magic-request.php:591
+#: public/class-profile-magic-public.php:534
+msgid "Password is too short. At least 7 characters please!"
+msgstr ""
+
+#: includes/class-profile-magic-request.php:470
+msgid "Please enter a valid number"
+msgstr ""
+
+#: includes/class-profile-magic-request.php:477
+msgid "Please enter a valid amount"
+msgstr ""
+
+#: includes/class-profile-magic-request.php:546
+msgid "You do have an email address, right?"
+msgstr ""
+
+#: includes/class-profile-magic-request.php:549
+msgid "You need to enter a password to login."
+msgstr ""
+
+#: includes/class-profile-magic-request.php:552
+msgid ""
+"We don't have any users with that email address. Maybe you used a different "
+"one when signing up?"
+msgstr ""
+
+#: includes/class-profile-magic-request.php:555
+#, php-format
+msgid ""
+"You entered incorrect password. Please try again or click on <a href='%s'>"
+"“Forgot Password”</a>"
+msgstr ""
+
+#: includes/class-profile-magic-request.php:560
+msgid "You need to enter your email address to continue."
+msgstr ""
+
+#: includes/class-profile-magic-request.php:563
+#: public/class-profile-magic-public.php:449
+msgid "Account disabled"
+msgstr ""
+
+#: includes/class-profile-magic-request.php:566
+#, php-format
+msgid ""
+"Your account is deactivate due to payment process not completed yet. <a "
+"href='%s'>Did you want to payment now</a>?"
+msgstr ""
+
+#: includes/class-profile-magic-request.php:571
+#: includes/class-profile-magic-request.php:574
+msgid "There are no users registered with this email address."
+msgstr ""
+
+#: includes/class-profile-magic-request.php:577
+#: includes/class-profile-magic-request.php:580
+msgid "The password reset link you used is not valid anymore."
+msgstr ""
+
+#: includes/class-profile-magic-request.php:584
+msgid "The two passwords you entered don't match."
+msgstr ""
+
+#: includes/class-profile-magic-request.php:588
+msgid "Sorry, we don't accept empty passwords."
+msgstr ""
+
+#: includes/class-profile-magic-request.php:595
+msgid "Login required to view this page. Please Login."
+msgstr ""
+
+#: includes/class-profile-magic-request.php:598
+msgid "You have not permitted to view this page."
+msgstr ""
+
+#: includes/class-profile-magic-request.php:601
+msgid "Failed to upadte user information.Can not activate user."
+msgstr ""
+
+#: includes/class-profile-magic-request.php:604
+msgid "Invalid Activation code."
+msgstr ""
+
+#: includes/class-profile-magic-request.php:607
+msgid "An unknown error occurred. Please try again later."
+msgstr ""
+
+#: includes/country_option_list.php:1
+msgid "Afghanistan"
+msgstr ""
+
+#: includes/country_option_list.php:2
+msgid "Åland Islands"
+msgstr ""
+
+#: includes/country_option_list.php:3
+msgid "Albania"
+msgstr ""
+
+#: includes/country_option_list.php:4
+msgid "Algeria"
+msgstr ""
+
+#: includes/country_option_list.php:5
+msgid "American Samoa"
+msgstr ""
+
+#: includes/country_option_list.php:6 includes/time_zone_option_list.php:328
+msgid "Andorra"
+msgstr ""
+
+#: includes/country_option_list.php:7
+msgid "Angola"
+msgstr ""
+
+#: includes/country_option_list.php:8 includes/time_zone_option_list.php:58
+msgid "Anguilla"
+msgstr ""
+
+#: includes/country_option_list.php:9
+msgid "Antarctica"
+msgstr ""
+
+#: includes/country_option_list.php:10
+msgid "Antigua and Barbuda"
+msgstr ""
+
+#: includes/country_option_list.php:11
+msgid "Argentina"
+msgstr ""
+
+#: includes/country_option_list.php:12
+msgid "Armenia"
+msgstr ""
+
+#: includes/country_option_list.php:13 includes/time_zone_option_list.php:73
+msgid "Aruba"
+msgstr ""
+
+#: includes/country_option_list.php:14
+msgid "Australia"
+msgstr ""
+
+#: includes/country_option_list.php:15
+msgid "Austria"
+msgstr ""
+
+#: includes/country_option_list.php:16
+msgid "Azerbaijan"
+msgstr ""
+
+#: includes/country_option_list.php:17
+msgid "Bahamas"
+msgstr ""
+
+#: includes/country_option_list.php:18 includes/time_zone_option_list.php:228
+msgid "Bahrain"
+msgstr ""
+
+#: includes/country_option_list.php:19
+msgid "Bangladesh"
+msgstr ""
+
+#: includes/country_option_list.php:20 includes/time_zone_option_list.php:78
+msgid "Barbados"
+msgstr ""
+
+#: includes/country_option_list.php:21
+msgid "Belarus"
+msgstr ""
+
+#: includes/country_option_list.php:22
+msgid "Belgium"
+msgstr ""
+
+#: includes/country_option_list.php:23 includes/time_zone_option_list.php:80
+msgid "Belize"
+msgstr ""
+
+#: includes/country_option_list.php:24
+msgid "Benin"
+msgstr ""
+
+#: includes/country_option_list.php:25 includes/time_zone_option_list.php:302
+msgid "Bermuda"
+msgstr ""
+
+#: includes/country_option_list.php:26
+msgid "Bhutan"
+msgstr ""
+
+#: includes/country_option_list.php:27
+msgid "Bolivia"
+msgstr ""
+
+#: includes/country_option_list.php:28
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#: includes/country_option_list.php:29
+msgid "Botswana"
+msgstr ""
+
+#: includes/country_option_list.php:30
+msgid "Bouvet Island"
+msgstr ""
+
+#: includes/country_option_list.php:31
+msgid "Brazil"
+msgstr ""
+
+#: includes/country_option_list.php:32
+msgid "British Indian Ocean Territory"
+msgstr ""
+
+#: includes/country_option_list.php:33
+msgid "Brunei Darussalam"
+msgstr ""
+
+#: includes/country_option_list.php:34
+msgid "Bulgaria"
+msgstr ""
+
+#: includes/country_option_list.php:35
+msgid "Burkina Faso"
+msgstr ""
+
+#: includes/country_option_list.php:36
+msgid "Burundi"
+msgstr ""
+
+#: includes/country_option_list.php:37
+msgid "Cambodia"
+msgstr ""
+
+#: includes/country_option_list.php:38
+msgid "Cameroon"
+msgstr ""
+
+#: includes/country_option_list.php:39
+msgid "Canada"
+msgstr ""
+
+#: includes/country_option_list.php:40 includes/time_zone_option_list.php:304
+msgid "Cape Verde"
+msgstr ""
+
+#: includes/country_option_list.php:41
+msgid "Cayman Islands"
+msgstr ""
+
+#: includes/country_option_list.php:42
+msgid "Central African Republic"
+msgstr ""
+
+#: includes/country_option_list.php:43
+msgid "Chad"
+msgstr ""
+
+#: includes/country_option_list.php:44
+msgid "Chile"
+msgstr ""
+
+#: includes/country_option_list.php:45
+msgid "China"
+msgstr ""
+
+#: includes/country_option_list.php:46
+msgid "Christmas Island"
+msgstr ""
+
+#: includes/country_option_list.php:47
+msgid "Cocos (Keeling) Islands"
+msgstr ""
+
+#: includes/country_option_list.php:48
+msgid "Colombia"
+msgstr ""
+
+#: includes/country_option_list.php:49
+msgid "Comoros"
+msgstr ""
+
+#: includes/country_option_list.php:50
+msgid "Congo"
+msgstr ""
+
+#: includes/country_option_list.php:51
+msgid "Congo, The Democratic Republic of The"
+msgstr ""
+
+#: includes/country_option_list.php:52
+msgid "Cook Islands"
+msgstr ""
+
+#: includes/country_option_list.php:53 includes/time_zone_option_list.php:93
+msgid "Costa Rica"
+msgstr ""
+
+#: includes/country_option_list.php:54
+msgid "Cote D ivoire"
+msgstr ""
+
+#: includes/country_option_list.php:55
+msgid "Croatia"
+msgstr ""
+
+#: includes/country_option_list.php:56
+msgid "Cuba"
+msgstr ""
+
+#: includes/country_option_list.php:57
+msgid "Cyprus"
+msgstr ""
+
+#: includes/country_option_list.php:58
+msgid "Czech Republic"
+msgstr ""
+
+#: includes/country_option_list.php:59
+msgid "Denmark"
+msgstr ""
+
+#: includes/country_option_list.php:60 includes/time_zone_option_list.php:20
+msgid "Djibouti"
+msgstr ""
+
+#: includes/country_option_list.php:61 includes/time_zone_option_list.php:102
+msgid "Dominica"
+msgstr ""
+
+#: includes/country_option_list.php:62
+msgid "Dominican Republic"
+msgstr ""
+
+#: includes/country_option_list.php:63
+msgid "Ecuador"
+msgstr ""
+
+#: includes/country_option_list.php:64
+msgid "Egypt"
+msgstr ""
+
+#: includes/country_option_list.php:65 includes/time_zone_option_list.php:105
+msgid "El Salvador"
+msgstr ""
+
+#: includes/country_option_list.php:66
+msgid "Equatorial Guinea"
+msgstr ""
+
+#: includes/country_option_list.php:67
+msgid "Eritrea"
+msgstr ""
+
+#: includes/country_option_list.php:68
+msgid "Estonia"
+msgstr ""
+
+#: includes/country_option_list.php:69
+msgid "Ethiopia"
+msgstr ""
+
+#: includes/country_option_list.php:70
+msgid "Falkland Islands (Malvinas)"
+msgstr ""
+
+#: includes/country_option_list.php:71
+msgid "Faroe Islands"
+msgstr ""
+
+#: includes/country_option_list.php:72 includes/time_zone_option_list.php:406
+msgid "Fiji"
+msgstr ""
+
+#: includes/country_option_list.php:73
+msgid "Finland"
+msgstr ""
+
+#: includes/country_option_list.php:74
+msgid "France"
+msgstr ""
+
+#: includes/country_option_list.php:75
+msgid "French Guiana"
+msgstr ""
+
+#: includes/country_option_list.php:76
+msgid "French Polynesia"
+msgstr ""
+
+#: includes/country_option_list.php:77
+msgid "French Southern Territories"
+msgstr ""
+
+#: includes/country_option_list.php:78
+msgid "Gabon"
+msgstr ""
+
+#: includes/country_option_list.php:79
+msgid "Gambia"
+msgstr ""
+
+#: includes/country_option_list.php:80
+msgid "Georgia"
+msgstr ""
+
+#: includes/country_option_list.php:81
+msgid "Germany"
+msgstr ""
+
+#: includes/country_option_list.php:82
+msgid "Ghana"
+msgstr ""
+
+#: includes/country_option_list.php:83 includes/time_zone_option_list.php:340
+msgid "Gibraltar"
+msgstr ""
+
+#: includes/country_option_list.php:84
+msgid "Greece"
+msgstr ""
+
+#: includes/country_option_list.php:85
+msgid "Greenland"
+msgstr ""
+
+#: includes/country_option_list.php:86 includes/time_zone_option_list.php:111
+msgid "Grenada"
+msgstr ""
+
+#: includes/country_option_list.php:87 includes/time_zone_option_list.php:112
+msgid "Guadeloupe"
+msgstr ""
+
+#: includes/country_option_list.php:88 includes/time_zone_option_list.php:411
+msgid "Guam"
+msgstr ""
+
+#: includes/country_option_list.php:89 includes/time_zone_option_list.php:113
+msgid "Guatemala"
+msgstr ""
+
+#: includes/country_option_list.php:90 includes/time_zone_option_list.php:341
+msgid "Guernsey"
+msgstr ""
+
+#: includes/country_option_list.php:91
+msgid "Guinea"
+msgstr ""
+
+#: includes/country_option_list.php:92
+msgid "Guinea-bissau"
+msgstr ""
+
+#: includes/country_option_list.php:93 includes/time_zone_option_list.php:115
+msgid "Guyana"
+msgstr ""
+
+#: includes/country_option_list.php:94
+msgid "Haiti"
+msgstr ""
+
+#: includes/country_option_list.php:95
+msgid "Heard Island and Mcdonald Islands"
+msgstr ""
+
+#: includes/country_option_list.php:96
+msgid "Holy See (Vatican City State)"
+msgstr ""
+
+#: includes/country_option_list.php:97
+msgid "Honduras"
+msgstr ""
+
+#: includes/country_option_list.php:98 includes/time_zone_option_list.php:246
+msgid "Hong Kong"
+msgstr ""
+
+#: includes/country_option_list.php:99
+msgid "Hungary"
+msgstr ""
+
+#: includes/country_option_list.php:100
+msgid "Iceland"
+msgstr ""
+
+#: includes/country_option_list.php:101
+msgid "India"
+msgstr ""
+
+#: includes/country_option_list.php:102
+msgid "Indonesia"
+msgstr ""
+
+#: includes/country_option_list.php:103
+msgid "Iran, Islamic Republic of"
+msgstr ""
+
+#: includes/country_option_list.php:104
+msgid "Iraq"
+msgstr ""
+
+#: includes/country_option_list.php:105
+msgid "Ireland"
+msgstr ""
+
+#: includes/country_option_list.php:106 includes/time_zone_option_list.php:343
+msgid "Isle of Man"
+msgstr ""
+
+#: includes/country_option_list.php:107
+msgid "Israel"
+msgstr ""
+
+#: includes/country_option_list.php:108
+msgid "Italy"
+msgstr ""
+
+#: includes/country_option_list.php:109 includes/time_zone_option_list.php:129
+msgid "Jamaica"
+msgstr ""
+
+#: includes/country_option_list.php:110
+msgid "Japan"
+msgstr ""
+
+#: includes/country_option_list.php:111 includes/time_zone_option_list.php:345
+msgid "Jersey"
+msgstr ""
+
+#: includes/country_option_list.php:112
+msgid "Jordan"
+msgstr ""
+
+#: includes/country_option_list.php:113
+msgid "Kazakhstan"
+msgstr ""
+
+#: includes/country_option_list.php:114
+msgid "Kenya"
+msgstr ""
+
+#: includes/country_option_list.php:115
+msgid "Kiribati"
+msgstr ""
+
+#: includes/country_option_list.php:116
+msgid "Korea, Democratic People's Republic of"
+msgstr ""
+
+#: includes/country_option_list.php:117
+msgid "Korea, Republic of"
+msgstr ""
+
+#: includes/country_option_list.php:118 includes/time_zone_option_list.php:262
+msgid "Kuwait"
+msgstr ""
+
+#: includes/country_option_list.php:119
+msgid "Kyrgyzstan"
+msgstr ""
+
+#: includes/country_option_list.php:120
+msgid "Lao People's Democratic Republic"
+msgstr ""
+
+#: includes/country_option_list.php:121
+msgid "Latvia"
+msgstr ""
+
+#: includes/country_option_list.php:122
+msgid "Lebanon"
+msgstr ""
+
+#: includes/country_option_list.php:123
+msgid "Lesotho"
+msgstr ""
+
+#: includes/country_option_list.php:124
+msgid "Liberia"
+msgstr ""
+
+#: includes/country_option_list.php:125
+msgid "Libyan Arab Jamahiriya"
+msgstr ""
+
+#: includes/country_option_list.php:126
+msgid "Liechtenstein"
+msgstr ""
+
+#: includes/country_option_list.php:127
+msgid "Lithuania"
+msgstr ""
+
+#: includes/country_option_list.php:128 includes/time_zone_option_list.php:351
+msgid "Luxembourg"
+msgstr ""
+
+#: includes/country_option_list.php:129
+msgid "Macao"
+msgstr ""
+
+#: includes/country_option_list.php:130
+msgid "Macedonia, The Former Yugoslav Republic of"
+msgstr ""
+
+#: includes/country_option_list.php:131
+msgid "Madagascar"
+msgstr ""
+
+#: includes/country_option_list.php:132
+msgid "Malawi"
+msgstr ""
+
+#: includes/country_option_list.php:133
+msgid "Malaysia"
+msgstr ""
+
+#: includes/country_option_list.php:134 includes/time_zone_option_list.php:392
+msgid "Maldives"
+msgstr ""
+
+#: includes/country_option_list.php:135
+msgid "Mali"
+msgstr ""
+
+#: includes/country_option_list.php:136 includes/time_zone_option_list.php:353
+msgid "Malta"
+msgstr ""
+
+#: includes/country_option_list.php:137
+msgid "Marshall Islands"
+msgstr ""
+
+#: includes/country_option_list.php:138 includes/time_zone_option_list.php:142
+msgid "Martinique"
+msgstr ""
+
+#: includes/country_option_list.php:139
+msgid "Mauritania"
+msgstr ""
+
+#: includes/country_option_list.php:140 includes/time_zone_option_list.php:393
+msgid "Mauritius"
+msgstr ""
+
+#: includes/country_option_list.php:141 includes/time_zone_option_list.php:394
+msgid "Mayotte"
+msgstr ""
+
+#: includes/country_option_list.php:142
+msgid "Mexico"
+msgstr ""
+
+#: includes/country_option_list.php:143
+msgid "Micronesia, Federated States of"
+msgstr ""
+
+#: includes/country_option_list.php:144
+msgid "Moldova, Republic of"
+msgstr ""
+
+#: includes/country_option_list.php:145 includes/time_zone_option_list.php:356
+msgid "Monaco"
+msgstr ""
+
+#: includes/country_option_list.php:146
+msgid "Mongolia"
+msgstr ""
+
+#: includes/country_option_list.php:147
+msgid "Montenegro"
+msgstr ""
+
+#: includes/country_option_list.php:148 includes/time_zone_option_list.php:153
+msgid "Montserrat"
+msgstr ""
+
+#: includes/country_option_list.php:149
+msgid "Morocco"
+msgstr ""
+
+#: includes/country_option_list.php:150
+msgid "Mozambique"
+msgstr ""
+
+#: includes/country_option_list.php:151
+msgid "Myanmar"
+msgstr ""
+
+#: includes/country_option_list.php:152
+msgid "Namibia"
+msgstr ""
+
+#: includes/country_option_list.php:153 includes/time_zone_option_list.php:420
+msgid "Nauru"
+msgstr ""
+
+#: includes/country_option_list.php:154
+msgid "Nepal"
+msgstr ""
+
+#: includes/country_option_list.php:155
+msgid "Netherlands"
+msgstr ""
+
+#: includes/country_option_list.php:156
+msgid "Netherlands Antilles"
+msgstr ""
+
+#: includes/country_option_list.php:157
+msgid "New Caledonia"
+msgstr ""
+
+#: includes/country_option_list.php:158
+msgid "New Zealand"
+msgstr ""
+
+#: includes/country_option_list.php:159
+msgid "Nicaragua"
+msgstr ""
+
+#: includes/country_option_list.php:160
+msgid "Niger"
+msgstr ""
+
+#: includes/country_option_list.php:161
+msgid "Nigeria"
+msgstr ""
+
+#: includes/country_option_list.php:162 includes/time_zone_option_list.php:421
+msgid "Niue"
+msgstr ""
+
+#: includes/country_option_list.php:163
+msgid "Norfolk Island"
+msgstr ""
+
+#: includes/country_option_list.php:164
+msgid "Northern Mariana Islands"
+msgstr ""
+
+#: includes/country_option_list.php:165
+msgid "Norway"
+msgstr ""
+
+#: includes/country_option_list.php:166
+msgid "Oman"
+msgstr ""
+
+#: includes/country_option_list.php:167
+msgid "Pakistan"
+msgstr ""
+
+#: includes/country_option_list.php:168 includes/time_zone_option_list.php:425
+msgid "Palau"
+msgstr ""
+
+#: includes/country_option_list.php:169
+msgid "Palestinian Territory, Occupied"
+msgstr ""
+
+#: includes/country_option_list.php:170 includes/time_zone_option_list.php:163
+msgid "Panama"
+msgstr ""
+
+#: includes/country_option_list.php:171
+msgid "Papua New Guinea"
+msgstr ""
+
+#: includes/country_option_list.php:172
+msgid "Paraguay"
+msgstr ""
+
+#: includes/country_option_list.php:173
+msgid "Peru"
+msgstr ""
+
+#: includes/country_option_list.php:174
+msgid "Philippines"
+msgstr ""
+
+#: includes/country_option_list.php:175 includes/time_zone_option_list.php:426
+msgid "Pitcairn"
+msgstr ""
+
+#: includes/country_option_list.php:176
+msgid "Poland"
+msgstr ""
+
+#: includes/country_option_list.php:177
+msgid "Portugal"
+msgstr ""
+
+#: includes/country_option_list.php:178 includes/time_zone_option_list.php:170
+msgid "Puerto Rico"
+msgstr ""
+
+#: includes/country_option_list.php:179 includes/time_zone_option_list.php:276
+msgid "Qatar"
+msgstr ""
+
+#: includes/country_option_list.php:180 includes/time_zone_option_list.php:395
+msgid "Reunion"
+msgstr ""
+
+#: includes/country_option_list.php:181
+msgid "Romania"
+msgstr ""
+
+#: includes/country_option_list.php:182
+msgid "Russian Federation"
+msgstr ""
+
+#: includes/country_option_list.php:183
+msgid "Rwanda"
+msgstr ""
+
+#: includes/country_option_list.php:184
+msgid "Saint Helena"
+msgstr ""
+
+#: includes/country_option_list.php:185
+msgid "Saint Kitts and Nevis"
+msgstr ""
+
+#: includes/country_option_list.php:186
+msgid "Saint Lucia"
+msgstr ""
+
+#: includes/country_option_list.php:187
+msgid "Saint Pierre and Miquelon"
+msgstr ""
+
+#: includes/country_option_list.php:188
+msgid "Saint Vincent and The Grenadines"
+msgstr ""
+
+#: includes/country_option_list.php:189
+msgid "Samoa"
+msgstr ""
+
+#: includes/country_option_list.php:190 includes/time_zone_option_list.php:365
+msgid "San Marino"
+msgstr ""
+
+#: includes/country_option_list.php:191
+msgid "Sao Tome and Principe"
+msgstr ""
+
+#: includes/country_option_list.php:192
+msgid "Saudi Arabia"
+msgstr ""
+
+#: includes/country_option_list.php:193
+msgid "Senegal"
+msgstr ""
+
+#: includes/country_option_list.php:194
+msgid "Serbia"
+msgstr ""
+
+#: includes/country_option_list.php:195
+msgid "Seychelles"
+msgstr ""
+
+#: includes/country_option_list.php:196
+msgid "Sierra Leone"
+msgstr ""
+
+#: includes/country_option_list.php:197 includes/time_zone_option_list.php:284
+msgid "Singapore"
+msgstr ""
+
+#: includes/country_option_list.php:198
+msgid "Slovakia"
+msgstr ""
+
+#: includes/country_option_list.php:199
+msgid "Slovenia"
+msgstr ""
+
+#: includes/country_option_list.php:200
+msgid "Solomon Islands"
+msgstr ""
+
+#: includes/country_option_list.php:201
+msgid "Somalia"
+msgstr ""
+
+#: includes/country_option_list.php:202
+msgid "South Africa"
+msgstr ""
+
+#: includes/country_option_list.php:203
+msgid "South Georgia and The South Sandwich Islands"
+msgstr ""
+
+#: includes/country_option_list.php:204
+msgid "Spain"
+msgstr ""
+
+#: includes/country_option_list.php:205
+msgid "Sri Lanka"
+msgstr ""
+
+#: includes/country_option_list.php:206
+msgid "Sudan"
+msgstr ""
+
+#: includes/country_option_list.php:207
+msgid "Suriname"
+msgstr ""
+
+#: includes/country_option_list.php:208
+msgid "Svalbard and Jan Mayen"
+msgstr ""
+
+#: includes/country_option_list.php:209
+msgid "Swaziland"
+msgstr ""
+
+#: includes/country_option_list.php:210
+msgid "Sweden"
+msgstr ""
+
+#: includes/country_option_list.php:211
+msgid "Switzerland"
+msgstr ""
+
+#: includes/country_option_list.php:212
+msgid "Syrian Arab Republic"
+msgstr ""
+
+#: includes/country_option_list.php:213
+msgid "Taiwan, Province of China"
+msgstr ""
+
+#: includes/country_option_list.php:214
+msgid "Tajikistan"
+msgstr ""
+
+#: includes/country_option_list.php:215
+msgid "Tanzania, United Republic of"
+msgstr ""
+
+#: includes/country_option_list.php:216
+msgid "Thailand"
+msgstr ""
+
+#: includes/country_option_list.php:217
+msgid "Timor-leste"
+msgstr ""
+
+#: includes/country_option_list.php:218
+msgid "Togo"
+msgstr ""
+
+#: includes/country_option_list.php:219
+msgid "Tokelau"
+msgstr ""
+
+#: includes/country_option_list.php:220
+msgid "Tonga"
+msgstr ""
+
+#: includes/country_option_list.php:221
+msgid "Trinidad and Tobago"
+msgstr ""
+
+#: includes/country_option_list.php:222
+msgid "Tunisia"
+msgstr ""
+
+#: includes/country_option_list.php:223
+msgid "Turkey"
+msgstr ""
+
+#: includes/country_option_list.php:224
+msgid "Turkmenistan"
+msgstr ""
+
+#: includes/country_option_list.php:225
+msgid "Turks and Caicos Islands"
+msgstr ""
+
+#: includes/country_option_list.php:226
+msgid "Tuvalu"
+msgstr ""
+
+#: includes/country_option_list.php:227
+msgid "Uganda"
+msgstr ""
+
+#: includes/country_option_list.php:228
+msgid "Ukraine"
+msgstr ""
+
+#: includes/country_option_list.php:229
+msgid "United Arab Emirates"
+msgstr ""
+
+#: includes/country_option_list.php:230
+msgid "United Kingdom"
+msgstr ""
+
+#: includes/country_option_list.php:232
+msgid "United States Minor Outlying Islands"
+msgstr ""
+
+#: includes/country_option_list.php:233
+msgid "Uruguay"
+msgstr ""
+
+#: includes/country_option_list.php:234
+msgid "Uzbekistan"
+msgstr ""
+
+#: includes/country_option_list.php:235
+msgid "Vanuatu"
+msgstr ""
+
+#: includes/country_option_list.php:236
+msgid "Venezuela"
+msgstr ""
+
+#: includes/country_option_list.php:237
+msgid "Viet Nam"
+msgstr ""
+
+#: includes/country_option_list.php:238
+msgid "Virgin Islands, British"
+msgstr ""
+
+#: includes/country_option_list.php:239
+msgid "Virgin Islands, U.S."
+msgstr ""
+
+#: includes/country_option_list.php:240
+msgid "Wallis and Futuna"
+msgstr ""
+
+#: includes/country_option_list.php:241
+msgid "Western Sahara"
+msgstr ""
+
+#: includes/country_option_list.php:242
+msgid "Yemen"
+msgstr ""
+
+#: includes/country_option_list.php:243
+msgid "Zambia"
+msgstr ""
+
+#: includes/country_option_list.php:244
+msgid "Zimbabwe"
+msgstr ""
+
+#: includes/time_zone_option_list.php:2
+msgid "Africa/Abidjan"
+msgstr ""
+
+#: includes/time_zone_option_list.php:3
+msgid "Accra"
+msgstr ""
+
+#: includes/time_zone_option_list.php:4
+msgid "Addis_Ababa"
+msgstr ""
+
+#: includes/time_zone_option_list.php:5
+msgid "Algiers"
+msgstr ""
+
+#: includes/time_zone_option_list.php:6
+msgid "Asmara"
+msgstr ""
+
+#: includes/time_zone_option_list.php:7
+msgid "Bamako"
+msgstr ""
+
+#: includes/time_zone_option_list.php:8
+msgid "Bangui"
+msgstr ""
+
+#: includes/time_zone_option_list.php:9
+msgid "Banjul"
+msgstr ""
+
+#: includes/time_zone_option_list.php:10
+msgid "Bissau"
+msgstr ""
+
+#: includes/time_zone_option_list.php:11
+msgid "Blantyre"
+msgstr ""
+
+#: includes/time_zone_option_list.php:12
+msgid "Brazzaville"
+msgstr ""
+
+#: includes/time_zone_option_list.php:13
+msgid "Bujumbura"
+msgstr ""
+
+#: includes/time_zone_option_list.php:14
+msgid "Cairo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:15
+msgid "Casablanca"
+msgstr ""
+
+#: includes/time_zone_option_list.php:16
+msgid "Ceuta"
+msgstr ""
+
+#: includes/time_zone_option_list.php:17
+msgid "Conakry"
+msgstr ""
+
+#: includes/time_zone_option_list.php:18
+msgid "Dakar"
+msgstr ""
+
+#: includes/time_zone_option_list.php:19
+msgid "Dar_es_Salaam"
+msgstr ""
+
+#: includes/time_zone_option_list.php:21
+msgid "Douala"
+msgstr ""
+
+#: includes/time_zone_option_list.php:22
+msgid "El_Aaiun"
+msgstr ""
+
+#: includes/time_zone_option_list.php:23
+msgid "Freetown"
+msgstr ""
+
+#: includes/time_zone_option_list.php:24
+msgid "Gaborone"
+msgstr ""
+
+#: includes/time_zone_option_list.php:25
+msgid "Harare"
+msgstr ""
+
+#: includes/time_zone_option_list.php:26
+msgid "Johannesburg"
+msgstr ""
+
+#: includes/time_zone_option_list.php:27
+msgid "Juba"
+msgstr ""
+
+#: includes/time_zone_option_list.php:28
+msgid "Kampala"
+msgstr ""
+
+#: includes/time_zone_option_list.php:29
+msgid "Khartoum"
+msgstr ""
+
+#: includes/time_zone_option_list.php:30
+msgid "Kigali"
+msgstr ""
+
+#: includes/time_zone_option_list.php:31
+msgid "Kinshasa"
+msgstr ""
+
+#: includes/time_zone_option_list.php:32
+msgid "Lagos"
+msgstr ""
+
+#: includes/time_zone_option_list.php:33
+msgid "Libreville"
+msgstr ""
+
+#: includes/time_zone_option_list.php:34
+msgid "Lome"
+msgstr ""
+
+#: includes/time_zone_option_list.php:35
+msgid "Luanda"
+msgstr ""
+
+#: includes/time_zone_option_list.php:36
+msgid "Lubumbashi"
+msgstr ""
+
+#: includes/time_zone_option_list.php:37
+msgid "Lusaka"
+msgstr ""
+
+#: includes/time_zone_option_list.php:38
+msgid "Malabo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:39
+msgid "Maputo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:40
+msgid "Maseru"
+msgstr ""
+
+#: includes/time_zone_option_list.php:41
+msgid "Mbabane"
+msgstr ""
+
+#: includes/time_zone_option_list.php:42
+msgid "Mogadishu"
+msgstr ""
+
+#: includes/time_zone_option_list.php:43
+msgid "Monrovia"
+msgstr ""
+
+#: includes/time_zone_option_list.php:44
+msgid "Nairobi"
+msgstr ""
+
+#: includes/time_zone_option_list.php:45
+msgid "Ndjamena"
+msgstr ""
+
+#: includes/time_zone_option_list.php:46
+msgid "Niamey"
+msgstr ""
+
+#: includes/time_zone_option_list.php:47
+msgid "Nouakchott"
+msgstr ""
+
+#: includes/time_zone_option_list.php:48
+msgid "Ouagadougou"
+msgstr ""
+
+#: includes/time_zone_option_list.php:49
+msgid "Porto-Novo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:50
+msgid "Sao_Tome"
+msgstr ""
+
+#: includes/time_zone_option_list.php:51
+msgid "Tripoli"
+msgstr ""
+
+#: includes/time_zone_option_list.php:52
+msgid "Tunis"
+msgstr ""
+
+#: includes/time_zone_option_list.php:53
+msgid "Windhoek"
+msgstr ""
+
+#: includes/time_zone_option_list.php:56
+msgid "Adak"
+msgstr ""
+
+#: includes/time_zone_option_list.php:57
+msgid "Anchorage"
+msgstr ""
+
+#: includes/time_zone_option_list.php:59
+msgid "Antigua"
+msgstr ""
+
+#: includes/time_zone_option_list.php:60
+msgid "Araguaina"
+msgstr ""
+
+#: includes/time_zone_option_list.php:61
+msgid "Argentina - Buenos Aires"
+msgstr ""
+
+#: includes/time_zone_option_list.php:62
+msgid "Argentina - Catamarca"
+msgstr ""
+
+#: includes/time_zone_option_list.php:63
+msgid "Argentina - Cordoba"
+msgstr ""
+
+#: includes/time_zone_option_list.php:64
+msgid "Argentina - Jujuy"
+msgstr ""
+
+#: includes/time_zone_option_list.php:65
+msgid "Argentina - La Rioja"
+msgstr ""
+
+#: includes/time_zone_option_list.php:66
+msgid "Argentina - Mendoza"
+msgstr ""
+
+#: includes/time_zone_option_list.php:67
+msgid "Argentina - Rio Gallegos"
+msgstr ""
+
+#: includes/time_zone_option_list.php:68
+msgid "Argentina - Salta"
+msgstr ""
+
+#: includes/time_zone_option_list.php:69
+msgid "Argentina - San Juan"
+msgstr ""
+
+#: includes/time_zone_option_list.php:70
+msgid "Argentina - San Luis"
+msgstr ""
+
+#: includes/time_zone_option_list.php:71
+msgid "Argentina - Tucuman"
+msgstr ""
+
+#: includes/time_zone_option_list.php:72
+msgid "Argentina - Ushuaia"
+msgstr ""
+
+#: includes/time_zone_option_list.php:74
+msgid "Asuncion"
+msgstr ""
+
+#: includes/time_zone_option_list.php:75
+msgid "Atikokan"
+msgstr ""
+
+#: includes/time_zone_option_list.php:76
+msgid "Bahia"
+msgstr ""
+
+#: includes/time_zone_option_list.php:77
+msgid "Bahia Banderas"
+msgstr ""
+
+#: includes/time_zone_option_list.php:79
+msgid "Belem"
+msgstr ""
+
+#: includes/time_zone_option_list.php:81
+msgid "Blanc-Sablon"
+msgstr ""
+
+#: includes/time_zone_option_list.php:82
+msgid "Boa Vista"
+msgstr ""
+
+#: includes/time_zone_option_list.php:83
+msgid "Bogota"
+msgstr ""
+
+#: includes/time_zone_option_list.php:84
+msgid "Boise"
+msgstr ""
+
+#: includes/time_zone_option_list.php:85
+msgid "Cambridge Bay"
+msgstr ""
+
+#: includes/time_zone_option_list.php:86
+msgid "Campo Grande"
+msgstr ""
+
+#: includes/time_zone_option_list.php:87
+msgid "Cancun"
+msgstr ""
+
+#: includes/time_zone_option_list.php:88
+msgid "Caracas"
+msgstr ""
+
+#: includes/time_zone_option_list.php:89
+msgid "Cayenne"
+msgstr ""
+
+#: includes/time_zone_option_list.php:90
+msgid "Cayman"
+msgstr ""
+
+#: includes/time_zone_option_list.php:91
+msgid "Chicago"
+msgstr ""
+
+#: includes/time_zone_option_list.php:92
+msgid "Chihuahua"
+msgstr ""
+
+#: includes/time_zone_option_list.php:94
+msgid "Creston"
+msgstr ""
+
+#: includes/time_zone_option_list.php:95
+msgid "Cuiaba"
+msgstr ""
+
+#: includes/time_zone_option_list.php:96
+msgid "Curacao"
+msgstr ""
+
+#: includes/time_zone_option_list.php:97
+msgid "Danmarkshavn"
+msgstr ""
+
+#: includes/time_zone_option_list.php:98
+msgid "Dawson"
+msgstr ""
+
+#: includes/time_zone_option_list.php:99
+msgid "Dawson Creek"
+msgstr ""
+
+#: includes/time_zone_option_list.php:100
+msgid "Denver"
+msgstr ""
+
+#: includes/time_zone_option_list.php:101
+msgid "Detroit"
+msgstr ""
+
+#: includes/time_zone_option_list.php:103
+msgid "Edmonton"
+msgstr ""
+
+#: includes/time_zone_option_list.php:104
+msgid "Eirunepe"
+msgstr ""
+
+#: includes/time_zone_option_list.php:106
+msgid "Fortaleza"
+msgstr ""
+
+#: includes/time_zone_option_list.php:107
+msgid "Glace Bay"
+msgstr ""
+
+#: includes/time_zone_option_list.php:108
+msgid "Godthab"
+msgstr ""
+
+#: includes/time_zone_option_list.php:109
+msgid "Goose Bay"
+msgstr ""
+
+#: includes/time_zone_option_list.php:110
+msgid "Grand Turk"
+msgstr ""
+
+#: includes/time_zone_option_list.php:114
+msgid "Guayaquil"
+msgstr ""
+
+#: includes/time_zone_option_list.php:116
+msgid "Halifax"
+msgstr ""
+
+#: includes/time_zone_option_list.php:117
+msgid "Havana"
+msgstr ""
+
+#: includes/time_zone_option_list.php:118
+msgid "Hermosillo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:119
+msgid "Indiana - Indianapolis"
+msgstr ""
+
+#: includes/time_zone_option_list.php:120
+msgid "Indiana - Knox"
+msgstr ""
+
+#: includes/time_zone_option_list.php:121
+msgid "Indiana - Marengo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:122
+msgid "Indiana - Petersburg"
+msgstr ""
+
+#: includes/time_zone_option_list.php:123
+msgid "Indiana - Tell City"
+msgstr ""
+
+#: includes/time_zone_option_list.php:124
+msgid "Indiana - Vevay"
+msgstr ""
+
+#: includes/time_zone_option_list.php:125
+msgid "Indiana - Vincennes"
+msgstr ""
+
+#: includes/time_zone_option_list.php:126
+msgid "Indiana - Winamac"
+msgstr ""
+
+#: includes/time_zone_option_list.php:127
+msgid "Inuvik"
+msgstr ""
+
+#: includes/time_zone_option_list.php:128
+msgid "Iqaluit"
+msgstr ""
+
+#: includes/time_zone_option_list.php:130
+msgid "Juneau"
+msgstr ""
+
+#: includes/time_zone_option_list.php:131
+msgid "Kentucky - Louisville"
+msgstr ""
+
+#: includes/time_zone_option_list.php:132
+msgid "Kentucky - Monticello"
+msgstr ""
+
+#: includes/time_zone_option_list.php:133
+msgid "Kralendijk"
+msgstr ""
+
+#: includes/time_zone_option_list.php:134
+msgid "La Paz"
+msgstr ""
+
+#: includes/time_zone_option_list.php:135
+msgid "Lima"
+msgstr ""
+
+#: includes/time_zone_option_list.php:136
+msgid "Los Angeles"
+msgstr ""
+
+#: includes/time_zone_option_list.php:137
+msgid "Lower Princes"
+msgstr ""
+
+#: includes/time_zone_option_list.php:138
+msgid "Maceio"
+msgstr ""
+
+#: includes/time_zone_option_list.php:139
+msgid "Managua"
+msgstr ""
+
+#: includes/time_zone_option_list.php:140
+msgid "Manaus"
+msgstr ""
+
+#: includes/time_zone_option_list.php:141
+msgid "Marigot"
+msgstr ""
+
+#: includes/time_zone_option_list.php:143
+msgid "Matamoros"
+msgstr ""
+
+#: includes/time_zone_option_list.php:144
+msgid "Mazatlan"
+msgstr ""
+
+#: includes/time_zone_option_list.php:145
+msgid "Menominee"
+msgstr ""
+
+#: includes/time_zone_option_list.php:146
+msgid "Merida"
+msgstr ""
+
+#: includes/time_zone_option_list.php:147
+msgid "Metlakatla"
+msgstr ""
+
+#: includes/time_zone_option_list.php:148
+msgid "Mexico City"
+msgstr ""
+
+#: includes/time_zone_option_list.php:149
+msgid "Miquelon"
+msgstr ""
+
+#: includes/time_zone_option_list.php:150
+msgid "Moncton"
+msgstr ""
+
+#: includes/time_zone_option_list.php:151
+msgid "Monterrey"
+msgstr ""
+
+#: includes/time_zone_option_list.php:152
+msgid "Montevideo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:154
+msgid "Nassau"
+msgstr ""
+
+#: includes/time_zone_option_list.php:155
+msgid "New York"
+msgstr ""
+
+#: includes/time_zone_option_list.php:156
+msgid "Nipigon"
+msgstr ""
+
+#: includes/time_zone_option_list.php:157
+msgid "Nome"
+msgstr ""
+
+#: includes/time_zone_option_list.php:158
+msgid "Noronha"
+msgstr ""
+
+#: includes/time_zone_option_list.php:159
+msgid "North Dakota - Beulah"
+msgstr ""
+
+#: includes/time_zone_option_list.php:160
+msgid "North Dakota - Center"
+msgstr ""
+
+#: includes/time_zone_option_list.php:161
+msgid "North Dakota - New Salem"
+msgstr ""
+
+#: includes/time_zone_option_list.php:162
+msgid "Ojinaga"
+msgstr ""
+
+#: includes/time_zone_option_list.php:164
+msgid "Pangnirtung"
+msgstr ""
+
+#: includes/time_zone_option_list.php:165
+msgid "Paramaribo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:166
+msgid "Phoenix"
+msgstr ""
+
+#: includes/time_zone_option_list.php:167
+msgid "Port-au-Prince"
+msgstr ""
+
+#: includes/time_zone_option_list.php:168
+msgid "Port of Spain"
+msgstr ""
+
+#: includes/time_zone_option_list.php:169
+msgid "Porto Velho"
+msgstr ""
+
+#: includes/time_zone_option_list.php:171
+msgid "Rainy River"
+msgstr ""
+
+#: includes/time_zone_option_list.php:172
+msgid "Rankin Inlet"
+msgstr ""
+
+#: includes/time_zone_option_list.php:173
+msgid "Recife"
+msgstr ""
+
+#: includes/time_zone_option_list.php:174
+msgid "Regina"
+msgstr ""
+
+#: includes/time_zone_option_list.php:175
+msgid "Resolute"
+msgstr ""
+
+#: includes/time_zone_option_list.php:176
+msgid "Rio Branco"
+msgstr ""
+
+#: includes/time_zone_option_list.php:177
+msgid "Santa Isabel"
+msgstr ""
+
+#: includes/time_zone_option_list.php:178
+msgid "Santarem"
+msgstr ""
+
+#: includes/time_zone_option_list.php:179
+msgid "Santiago"
+msgstr ""
+
+#: includes/time_zone_option_list.php:180
+msgid "Santo Domingo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:181
+msgid "Sao Paulo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:182
+msgid "Scoresbysund"
+msgstr ""
+
+#: includes/time_zone_option_list.php:183
+msgid "Sitka"
+msgstr ""
+
+#: includes/time_zone_option_list.php:184
+msgid "St Barthelemy"
+msgstr ""
+
+#: includes/time_zone_option_list.php:185
+msgid "St Johns"
+msgstr ""
+
+#: includes/time_zone_option_list.php:186
+msgid "St Kitts"
+msgstr ""
+
+#: includes/time_zone_option_list.php:187
+msgid "St Lucia"
+msgstr ""
+
+#: includes/time_zone_option_list.php:188
+msgid "St Thomas"
+msgstr ""
+
+#: includes/time_zone_option_list.php:189
+msgid "St Vincent"
+msgstr ""
+
+#: includes/time_zone_option_list.php:190
+msgid "Swift Current"
+msgstr ""
+
+#: includes/time_zone_option_list.php:191
+msgid "Tegucigalpa"
+msgstr ""
+
+#: includes/time_zone_option_list.php:192
+msgid "Thule"
+msgstr ""
+
+#: includes/time_zone_option_list.php:193
+msgid "Thunder Bay"
+msgstr ""
+
+#: includes/time_zone_option_list.php:194
+msgid "Tijuana"
+msgstr ""
+
+#: includes/time_zone_option_list.php:195
+msgid "Toronto"
+msgstr ""
+
+#: includes/time_zone_option_list.php:196
+msgid "Tortola"
+msgstr ""
+
+#: includes/time_zone_option_list.php:197
+msgid "Vancouver"
+msgstr ""
+
+#: includes/time_zone_option_list.php:198
+msgid "Whitehorse"
+msgstr ""
+
+#: includes/time_zone_option_list.php:199
+msgid "Winnipeg"
+msgstr ""
+
+#: includes/time_zone_option_list.php:200
+msgid "Yakutat"
+msgstr ""
+
+#: includes/time_zone_option_list.php:201
+msgid "Yellowknife"
+msgstr ""
+
+#: includes/time_zone_option_list.php:204
+msgid "Casey"
+msgstr ""
+
+#: includes/time_zone_option_list.php:205
+msgid "Davis"
+msgstr ""
+
+#: includes/time_zone_option_list.php:206
+msgid "DumontDUrville"
+msgstr ""
+
+#: includes/time_zone_option_list.php:207
+msgid "Macquarie"
+msgstr ""
+
+#: includes/time_zone_option_list.php:208
+msgid "Mawson"
+msgstr ""
+
+#: includes/time_zone_option_list.php:209
+msgid "McMurdo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:210
+msgid "Palmer"
+msgstr ""
+
+#: includes/time_zone_option_list.php:211
+msgid "Rothera"
+msgstr ""
+
+#: includes/time_zone_option_list.php:212
+msgid "Syowa"
+msgstr ""
+
+#: includes/time_zone_option_list.php:213
+msgid "Troll"
+msgstr ""
+
+#: includes/time_zone_option_list.php:214
+msgid "Vostok"
+msgstr ""
+
+#: includes/time_zone_option_list.php:217
+msgid "Longyearbyen"
+msgstr ""
+
+#: includes/time_zone_option_list.php:220
+msgid "Aden"
+msgstr ""
+
+#: includes/time_zone_option_list.php:221
+msgid "Almaty"
+msgstr ""
+
+#: includes/time_zone_option_list.php:222
+msgid "Amman"
+msgstr ""
+
+#: includes/time_zone_option_list.php:223
+msgid "Anadyr"
+msgstr ""
+
+#: includes/time_zone_option_list.php:224
+msgid "Aqtau"
+msgstr ""
+
+#: includes/time_zone_option_list.php:225
+msgid "Aqtobe"
+msgstr ""
+
+#: includes/time_zone_option_list.php:226
+msgid "Ashgabat"
+msgstr ""
+
+#: includes/time_zone_option_list.php:227
+msgid "Baghdad"
+msgstr ""
+
+#: includes/time_zone_option_list.php:229
+msgid "Baku"
+msgstr ""
+
+#: includes/time_zone_option_list.php:230
+msgid "Bangkok"
+msgstr ""
+
+#: includes/time_zone_option_list.php:231
+msgid "Beirut"
+msgstr ""
+
+#: includes/time_zone_option_list.php:232
+msgid "Bishkek"
+msgstr ""
+
+#: includes/time_zone_option_list.php:233
+msgid "Brunei"
+msgstr ""
+
+#: includes/time_zone_option_list.php:234
+msgid "Choibalsan"
+msgstr ""
+
+#: includes/time_zone_option_list.php:235
+msgid "Chongqing"
+msgstr ""
+
+#: includes/time_zone_option_list.php:236
+msgid "Colombo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:237
+msgid "Damascus"
+msgstr ""
+
+#: includes/time_zone_option_list.php:238
+msgid "Dhaka"
+msgstr ""
+
+#: includes/time_zone_option_list.php:239
+msgid "Dili"
+msgstr ""
+
+#: includes/time_zone_option_list.php:240
+msgid "Dubai"
+msgstr ""
+
+#: includes/time_zone_option_list.php:241
+msgid "Dushanbe"
+msgstr ""
+
+#: includes/time_zone_option_list.php:242
+msgid "Gaza"
+msgstr ""
+
+#: includes/time_zone_option_list.php:243
+msgid "Harbin"
+msgstr ""
+
+#: includes/time_zone_option_list.php:244
+msgid "Hebron"
+msgstr ""
+
+#: includes/time_zone_option_list.php:245
+msgid "Ho Chi Minh"
+msgstr ""
+
+#: includes/time_zone_option_list.php:247
+msgid "Hovd"
+msgstr ""
+
+#: includes/time_zone_option_list.php:248
+msgid "Irkutsk"
+msgstr ""
+
+#: includes/time_zone_option_list.php:249
+msgid "Jakarta"
+msgstr ""
+
+#: includes/time_zone_option_list.php:250
+msgid "Jayapura"
+msgstr ""
+
+#: includes/time_zone_option_list.php:251
+msgid "Jerusalem"
+msgstr ""
+
+#: includes/time_zone_option_list.php:252
+msgid "Kabul"
+msgstr ""
+
+#: includes/time_zone_option_list.php:253
+msgid "Kamchatka"
+msgstr ""
+
+#: includes/time_zone_option_list.php:254
+msgid "Karachi"
+msgstr ""
+
+#: includes/time_zone_option_list.php:255
+msgid "Kashgar"
+msgstr ""
+
+#: includes/time_zone_option_list.php:256
+msgid "Kathmandu"
+msgstr ""
+
+#: includes/time_zone_option_list.php:257
+msgid "Khandyga"
+msgstr ""
+
+#: includes/time_zone_option_list.php:258
+msgid "Kolkata"
+msgstr ""
+
+#: includes/time_zone_option_list.php:259
+msgid "Krasnoyarsk"
+msgstr ""
+
+#: includes/time_zone_option_list.php:260
+msgid "Kuala Lumpur"
+msgstr ""
+
+#: includes/time_zone_option_list.php:261
+msgid "Kuching"
+msgstr ""
+
+#: includes/time_zone_option_list.php:263
+msgid "Macau"
+msgstr ""
+
+#: includes/time_zone_option_list.php:264
+msgid "Magadan"
+msgstr ""
+
+#: includes/time_zone_option_list.php:265
+msgid "Makassar"
+msgstr ""
+
+#: includes/time_zone_option_list.php:266
+msgid "Manila"
+msgstr ""
+
+#: includes/time_zone_option_list.php:267
+msgid "Muscat"
+msgstr ""
+
+#: includes/time_zone_option_list.php:268
+msgid "Nicosia"
+msgstr ""
+
+#: includes/time_zone_option_list.php:269
+msgid "Novokuznetsk"
+msgstr ""
+
+#: includes/time_zone_option_list.php:270
+msgid "Novosibirsk"
+msgstr ""
+
+#: includes/time_zone_option_list.php:271
+msgid "Omsk"
+msgstr ""
+
+#: includes/time_zone_option_list.php:272
+msgid "Oral"
+msgstr ""
+
+#: includes/time_zone_option_list.php:273
+msgid "Phnom Penh"
+msgstr ""
+
+#: includes/time_zone_option_list.php:274
+msgid "Pontianak"
+msgstr ""
+
+#: includes/time_zone_option_list.php:275
+msgid "Pyongyang"
+msgstr ""
+
+#: includes/time_zone_option_list.php:277
+msgid "Qyzylorda"
+msgstr ""
+
+#: includes/time_zone_option_list.php:278
+msgid "Rangoon"
+msgstr ""
+
+#: includes/time_zone_option_list.php:279
+msgid "Riyadh"
+msgstr ""
+
+#: includes/time_zone_option_list.php:280
+msgid "Sakhalin"
+msgstr ""
+
+#: includes/time_zone_option_list.php:281
+msgid "Samarkand"
+msgstr ""
+
+#: includes/time_zone_option_list.php:282
+msgid "Seoul"
+msgstr ""
+
+#: includes/time_zone_option_list.php:283
+msgid "Shanghai"
+msgstr ""
+
+#: includes/time_zone_option_list.php:285
+msgid "Taipei"
+msgstr ""
+
+#: includes/time_zone_option_list.php:286
+msgid "Tashkent"
+msgstr ""
+
+#: includes/time_zone_option_list.php:287
+msgid "Tbilisi"
+msgstr ""
+
+#: includes/time_zone_option_list.php:288
+msgid "Tehran"
+msgstr ""
+
+#: includes/time_zone_option_list.php:289
+msgid "Thimphu"
+msgstr ""
+
+#: includes/time_zone_option_list.php:290
+msgid "Tokyo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:291
+msgid "Ulaanbaatar"
+msgstr ""
+
+#: includes/time_zone_option_list.php:292
+msgid "Urumqi"
+msgstr ""
+
+#: includes/time_zone_option_list.php:293
+msgid "Ust-Nera"
+msgstr ""
+
+#: includes/time_zone_option_list.php:294
+msgid "Vientiane"
+msgstr ""
+
+#: includes/time_zone_option_list.php:295
+msgid "Vladivostok"
+msgstr ""
+
+#: includes/time_zone_option_list.php:296
+msgid "Yakutsk"
+msgstr ""
+
+#: includes/time_zone_option_list.php:297
+msgid "Yekaterinburg"
+msgstr ""
+
+#: includes/time_zone_option_list.php:298
+msgid "Yerevan"
+msgstr ""
+
+#: includes/time_zone_option_list.php:301
+msgid "Azores"
+msgstr ""
+
+#: includes/time_zone_option_list.php:303
+msgid "Canary"
+msgstr ""
+
+#: includes/time_zone_option_list.php:305
+msgid "Faroe"
+msgstr ""
+
+#: includes/time_zone_option_list.php:306
+msgid "Madeira"
+msgstr ""
+
+#: includes/time_zone_option_list.php:307
+msgid "Reykjavik"
+msgstr ""
+
+#: includes/time_zone_option_list.php:308
+msgid "South Georgia"
+msgstr ""
+
+#: includes/time_zone_option_list.php:309
+msgid "Stanley"
+msgstr ""
+
+#: includes/time_zone_option_list.php:310
+msgid "St Helena"
+msgstr ""
+
+#: includes/time_zone_option_list.php:313
+msgid "Adelaide"
+msgstr ""
+
+#: includes/time_zone_option_list.php:314
+msgid "Brisbane"
+msgstr ""
+
+#: includes/time_zone_option_list.php:315
+msgid "Broken Hill"
+msgstr ""
+
+#: includes/time_zone_option_list.php:316
+msgid "Currie"
+msgstr ""
+
+#: includes/time_zone_option_list.php:317
+msgid "Darwin"
+msgstr ""
+
+#: includes/time_zone_option_list.php:318
+msgid "Eucla"
+msgstr ""
+
+#: includes/time_zone_option_list.php:319
+msgid "Hobart"
+msgstr ""
+
+#: includes/time_zone_option_list.php:320
+msgid "Lindeman"
+msgstr ""
+
+#: includes/time_zone_option_list.php:321
+msgid "Lord Howe"
+msgstr ""
+
+#: includes/time_zone_option_list.php:322
+msgid "Melbourne"
+msgstr ""
+
+#: includes/time_zone_option_list.php:323
+msgid "Perth"
+msgstr ""
+
+#: includes/time_zone_option_list.php:324
+msgid "Sydney"
+msgstr ""
+
+#: includes/time_zone_option_list.php:327
+msgid "Amsterdam"
+msgstr ""
+
+#: includes/time_zone_option_list.php:329
+msgid "Athens"
+msgstr ""
+
+#: includes/time_zone_option_list.php:330
+msgid "Belgrade"
+msgstr ""
+
+#: includes/time_zone_option_list.php:331
+msgid "Berlin"
+msgstr ""
+
+#: includes/time_zone_option_list.php:332
+msgid "Bratislava"
+msgstr ""
+
+#: includes/time_zone_option_list.php:333
+msgid "Brussels"
+msgstr ""
+
+#: includes/time_zone_option_list.php:334
+msgid "Bucharest"
+msgstr ""
+
+#: includes/time_zone_option_list.php:335
+msgid "Budapest"
+msgstr ""
+
+#: includes/time_zone_option_list.php:336
+msgid "Busingen"
+msgstr ""
+
+#: includes/time_zone_option_list.php:337
+msgid "Chisinau"
+msgstr ""
+
+#: includes/time_zone_option_list.php:338
+msgid "Copenhagen"
+msgstr ""
+
+#: includes/time_zone_option_list.php:339
+msgid "Dublin"
+msgstr ""
+
+#: includes/time_zone_option_list.php:342
+msgid "Helsinki"
+msgstr ""
+
+#: includes/time_zone_option_list.php:344
+msgid "Istanbul"
+msgstr ""
+
+#: includes/time_zone_option_list.php:346
+msgid "Kaliningrad"
+msgstr ""
+
+#: includes/time_zone_option_list.php:347
+msgid "Kiev"
+msgstr ""
+
+#: includes/time_zone_option_list.php:348
+msgid "Lisbon"
+msgstr ""
+
+#: includes/time_zone_option_list.php:349
+msgid "Ljubljana"
+msgstr ""
+
+#: includes/time_zone_option_list.php:350
+msgid "London"
+msgstr ""
+
+#: includes/time_zone_option_list.php:352
+msgid "Madrid"
+msgstr ""
+
+#: includes/time_zone_option_list.php:354
+msgid "Mariehamn"
+msgstr ""
+
+#: includes/time_zone_option_list.php:355
+msgid "Minsk"
+msgstr ""
+
+#: includes/time_zone_option_list.php:357
+msgid "Moscow"
+msgstr ""
+
+#: includes/time_zone_option_list.php:358
+msgid "Oslo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:359
+msgid "Paris"
+msgstr ""
+
+#: includes/time_zone_option_list.php:360
+msgid "Podgorica"
+msgstr ""
+
+#: includes/time_zone_option_list.php:361
+msgid "Prague"
+msgstr ""
+
+#: includes/time_zone_option_list.php:362
+msgid "Riga"
+msgstr ""
+
+#: includes/time_zone_option_list.php:363
+msgid "Rome"
+msgstr ""
+
+#: includes/time_zone_option_list.php:364
+msgid "Samara"
+msgstr ""
+
+#: includes/time_zone_option_list.php:366
+msgid "Sarajevo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:367
+msgid "Simferopol"
+msgstr ""
+
+#: includes/time_zone_option_list.php:368
+msgid "Skopje"
+msgstr ""
+
+#: includes/time_zone_option_list.php:369
+msgid "Sofia"
+msgstr ""
+
+#: includes/time_zone_option_list.php:370
+msgid "Stockholm"
+msgstr ""
+
+#: includes/time_zone_option_list.php:371
+msgid "Tallinn"
+msgstr ""
+
+#: includes/time_zone_option_list.php:372
+msgid "Tirane"
+msgstr ""
+
+#: includes/time_zone_option_list.php:373
+msgid "Uzhgorod"
+msgstr ""
+
+#: includes/time_zone_option_list.php:374
+msgid "Vaduz"
+msgstr ""
+
+#: includes/time_zone_option_list.php:375
+msgid "Vatican"
+msgstr ""
+
+#: includes/time_zone_option_list.php:376
+msgid "Vienna"
+msgstr ""
+
+#: includes/time_zone_option_list.php:377
+msgid "Vilnius"
+msgstr ""
+
+#: includes/time_zone_option_list.php:378
+msgid "Volgograd"
+msgstr ""
+
+#: includes/time_zone_option_list.php:379
+msgid "Warsaw"
+msgstr ""
+
+#: includes/time_zone_option_list.php:380
+msgid "Zagreb"
+msgstr ""
+
+#: includes/time_zone_option_list.php:381
+msgid "Zaporozhye"
+msgstr ""
+
+#: includes/time_zone_option_list.php:382
+msgid "Zurich"
+msgstr ""
+
+#: includes/time_zone_option_list.php:385
+msgid "Antananarivo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:386
+msgid "Chagos"
+msgstr ""
+
+#: includes/time_zone_option_list.php:387
+msgid "Christmas"
+msgstr ""
+
+#: includes/time_zone_option_list.php:388
+msgid "Cocos"
+msgstr ""
+
+#: includes/time_zone_option_list.php:389
+msgid "Comoro"
+msgstr ""
+
+#: includes/time_zone_option_list.php:390
+msgid "Kerguelen"
+msgstr ""
+
+#: includes/time_zone_option_list.php:391
+msgid "Mahe"
+msgstr ""
+
+#: includes/time_zone_option_list.php:398
+msgid "Apia"
+msgstr ""
+
+#: includes/time_zone_option_list.php:399
+msgid "Auckland"
+msgstr ""
+
+#: includes/time_zone_option_list.php:400
+msgid "Chatham"
+msgstr ""
+
+#: includes/time_zone_option_list.php:401
+msgid "Chuuk"
+msgstr ""
+
+#: includes/time_zone_option_list.php:402
+msgid "Easter"
+msgstr ""
+
+#: includes/time_zone_option_list.php:403
+msgid "Efate"
+msgstr ""
+
+#: includes/time_zone_option_list.php:404
+msgid "Enderbury"
+msgstr ""
+
+#: includes/time_zone_option_list.php:405
+msgid "Fakaofo"
+msgstr ""
+
+#: includes/time_zone_option_list.php:407
+msgid "Funafuti"
+msgstr ""
+
+#: includes/time_zone_option_list.php:408
+msgid "Galapagos"
+msgstr ""
+
+#: includes/time_zone_option_list.php:409
+msgid "Gambier"
+msgstr ""
+
+#: includes/time_zone_option_list.php:410
+msgid "Guadalcanal"
+msgstr ""
+
+#: includes/time_zone_option_list.php:412
+msgid "Honolulu"
+msgstr ""
+
+#: includes/time_zone_option_list.php:413
+msgid "Johnston"
+msgstr ""
+
+#: includes/time_zone_option_list.php:414
+msgid "Kiritimati"
+msgstr ""
+
+#: includes/time_zone_option_list.php:415
+msgid "Kosrae"
+msgstr ""
+
+#: includes/time_zone_option_list.php:416
+msgid "Kwajalein"
+msgstr ""
+
+#: includes/time_zone_option_list.php:417
+msgid "Majuro"
+msgstr ""
+
+#: includes/time_zone_option_list.php:418
+msgid "Marquesas"
+msgstr ""
+
+#: includes/time_zone_option_list.php:419
+msgid "Midway"
+msgstr ""
+
+#: includes/time_zone_option_list.php:422
+msgid "Norfolk"
+msgstr ""
+
+#: includes/time_zone_option_list.php:423
+msgid "Noumea"
+msgstr ""
+
+#: includes/time_zone_option_list.php:424
+msgid "Pago Pago"
+msgstr ""
+
+#: includes/time_zone_option_list.php:427
+msgid "Pohnpei"
+msgstr ""
+
+#: includes/time_zone_option_list.php:428
+msgid "Port Moresby"
+msgstr ""
+
+#: includes/time_zone_option_list.php:429
+msgid "Rarotonga"
+msgstr ""
+
+#: includes/time_zone_option_list.php:430
+msgid "Saipan"
+msgstr ""
+
+#: includes/time_zone_option_list.php:431
+msgid "Tahiti"
+msgstr ""
+
+#: includes/time_zone_option_list.php:432
+msgid "Tarawa"
+msgstr ""
+
+#: includes/time_zone_option_list.php:433
+msgid "Tongatapu"
+msgstr ""
+
+#: includes/time_zone_option_list.php:434
+msgid "Wake"
+msgstr ""
+
+#: includes/time_zone_option_list.php:435
+msgid "Wallis"
+msgstr ""
+
+#: includes/time_zone_option_list.php:438
+msgid "UTC"
+msgstr ""
+
+#: includes/time_zone_option_list.php:441
+msgid "UTC-12"
+msgstr ""
+
+#: includes/time_zone_option_list.php:442
+msgid "UTC-11:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:443
+msgid "UTC-11"
+msgstr ""
+
+#: includes/time_zone_option_list.php:444
+msgid "UTC-10:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:445
+msgid "UTC-10"
+msgstr ""
+
+#: includes/time_zone_option_list.php:446
+msgid "UTC-9:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:447
+msgid "UTC-9"
+msgstr ""
+
+#: includes/time_zone_option_list.php:448
+msgid "UTC-8:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:449
+msgid "UTC-8"
+msgstr ""
+
+#: includes/time_zone_option_list.php:450
+msgid "UTC-7:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:451
+msgid "UTC-7"
+msgstr ""
+
+#: includes/time_zone_option_list.php:452
+msgid "UTC-6:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:453
+msgid "UTC-6"
+msgstr ""
+
+#: includes/time_zone_option_list.php:454
+msgid "UTC-5:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:455
+msgid "UTC-5"
+msgstr ""
+
+#: includes/time_zone_option_list.php:456
+msgid "UTC-4:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:457
+msgid "UTC-4"
+msgstr ""
+
+#: includes/time_zone_option_list.php:458
+msgid "UTC-3:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:459
+msgid "UTC-3"
+msgstr ""
+
+#: includes/time_zone_option_list.php:460
+msgid "UTC-2:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:461
+msgid "UTC-2"
+msgstr ""
+
+#: includes/time_zone_option_list.php:462
+msgid "UTC-1:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:463
+msgid "UTC-1"
+msgstr ""
+
+#: includes/time_zone_option_list.php:464
+msgid "UTC-0:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:465
+msgid "UTC+0"
+msgstr ""
+
+#: includes/time_zone_option_list.php:466
+msgid "UTC+0:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:467
+msgid "UTC+1"
+msgstr ""
+
+#: includes/time_zone_option_list.php:468
+msgid "UTC+1:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:469
+msgid "UTC+2"
+msgstr ""
+
+#: includes/time_zone_option_list.php:470
+msgid "UTC+2:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:471
+msgid "UTC+3"
+msgstr ""
+
+#: includes/time_zone_option_list.php:472
+msgid "UTC+3:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:473
+msgid "UTC+4"
+msgstr ""
+
+#: includes/time_zone_option_list.php:474
+msgid "UTC+4:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:475
+msgid "UTC+5"
+msgstr ""
+
+#: includes/time_zone_option_list.php:476
+msgid "UTC+5:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:477
+msgid "UTC+5:45"
+msgstr ""
+
+#: includes/time_zone_option_list.php:478
+msgid "UTC+6"
+msgstr ""
+
+#: includes/time_zone_option_list.php:479
+msgid "UTC+6:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:480
+msgid "UTC+7"
+msgstr ""
+
+#: includes/time_zone_option_list.php:481
+msgid "UTC+7:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:482
+msgid "UTC+8"
+msgstr ""
+
+#: includes/time_zone_option_list.php:483
+msgid "UTC+8:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:484
+msgid "UTC+8:45"
+msgstr ""
+
+#: includes/time_zone_option_list.php:485
+msgid "UTC+9"
+msgstr ""
+
+#: includes/time_zone_option_list.php:486
+msgid "UTC+9:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:487
+msgid "UTC+10"
+msgstr ""
+
+#: includes/time_zone_option_list.php:488
+msgid "UTC+10:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:489
+msgid "UTC+11"
+msgstr ""
+
+#: includes/time_zone_option_list.php:490
+msgid "UTC+11:30"
+msgstr ""
+
+#: includes/time_zone_option_list.php:491
+msgid "UTC+12"
+msgstr ""
+
+#: includes/time_zone_option_list.php:492
+msgid "UTC+12:45"
+msgstr ""
+
+#: includes/time_zone_option_list.php:493
+msgid "UTC+13"
+msgstr ""
+
+#: includes/time_zone_option_list.php:494
+msgid "UTC+13:45"
+msgstr ""
+
+#: includes/time_zone_option_list.php:495
+msgid ">UTC+14"
+msgstr ""
+
+#: public/class-profile-magic-public.php:128
+msgid "More..."
+msgstr ""
+
+#: public/class-profile-magic-public.php:129
+msgid "Show less"
+msgstr ""
+
+#: public/class-profile-magic-public.php:236
+msgid "You are already signed in."
+msgstr ""
+
+#: public/class-profile-magic-public.php:260
+msgid "Invalid password reset link."
+msgstr ""
+
+#: public/class-profile-magic-public.php:362
+msgid "Hello!"
+msgstr ""
+
+#: public/class-profile-magic-public.php:363
+#, php-format
+msgid ""
+"You asked us to reset your password for your account using the email address "
+"%s."
+msgstr ""
+
+#: public/class-profile-magic-public.php:364
+msgid ""
+"If this was a mistake, or you didn't ask for a password reset, just ignore "
+"this email and nothing will happen."
+msgstr ""
+
+#: public/class-profile-magic-public.php:365
+msgid "To reset your password, visit the following address:"
+msgstr ""
+
+#: public/class-profile-magic-public.php:453
+#: public/partials/profile-magic-login-form.php:23
+msgid "Your account has been successfully activated."
+msgstr ""
+
+#: public/class-profile-magic-public.php:541
+msgid "Password changed Successfully"
+msgstr ""
+
+#: public/class-profile-magic-public.php:545
+msgid "New Password and Repeat password does not match."
+msgstr ""
+
+#: public/class-profile-magic-public.php:551
+msgid "Password didn't changed."
+msgstr ""
+
+#: public/class-profile-magic-public.php:577
+msgid "New User Created"
+msgstr ""
+
+#: public/class-profile-magic-public.php:578
+msgid "New user created"
+msgstr ""
+
+#: admin/partials/access-meta-box.php:3
+msgid "Apply custom access settings?"
+msgstr ""
+
+#: admin/partials/access-meta-box.php:14
+msgid "Content Availability"
+msgstr ""
+
+#: admin/partials/access-meta-box.php:20
+msgid "Content accessible to Everyone"
+msgstr ""
+
+#: admin/partials/access-meta-box.php:24
+msgid "Content accessible to Logged In Users"
+msgstr ""
+
+#: admin/partials/access-meta-box.php:34
+msgid "Select the User Group that can see this content?"
+msgstr ""
+
+#: admin/partials/access-meta-box.php:42
+msgid "All Registered Users"
+msgstr ""
+
+#: admin/partials/add-group.php:128
+msgid "New Group"
+msgstr ""
+
+#: admin/partials/add-group.php:132
+#: public/partials/themes/default/edit-group-tpl.php:7
+msgid "Edit Group"
+msgstr ""
+
+#: admin/partials/add-group.php:143
+#: public/partials/themes/default/edit-group-tpl.php:26
+msgid "Group Name"
+msgstr ""
+
+#: admin/partials/add-group.php:149
+msgid ""
+"Name of this Group. The name will appear on Single and All Groups page and "
+"Member Profiles."
+msgstr ""
+
+#: admin/partials/add-group.php:153
+msgid "Group Description:"
+msgstr ""
+
+#: admin/partials/add-group.php:159
+msgid ""
+"Description or details of the group. It will appear on the individual Group "
+"page and as intro text on All Groups page."
+msgstr ""
+
+#: admin/partials/add-group.php:163
+msgid "Group Icon/ Badge"
+msgstr ""
+
+#: admin/partials/add-group.php:182
+msgid ""
+"Group badge, icon or image. This will appear with group description and on "
+"member user profiles belonging to this group."
+msgstr ""
+
+#: admin/partials/add-group.php:186
+msgid "Hide Group Card"
+msgstr ""
+
+#: admin/partials/add-group.php:192
+msgid "Turn on to hide group card on its group page."
+msgstr ""
+
+#: admin/partials/add-group.php:196
+msgid "Membership Limit"
+msgstr ""
+
+#: admin/partials/add-group.php:202
+msgid ""
+"Limit the number of membership slots for this group. Turn off for unlimited "
+"members."
+msgstr ""
+
+#: admin/partials/add-group.php:207
+msgid "Max no. of Members"
+msgstr ""
+
+#: admin/partials/add-group.php:213
+msgid "Define the maximum number of members allowed for this group."
+msgstr ""
+
+#: admin/partials/add-group.php:217
+msgid "Limit Reached Message"
+msgstr ""
+
+#: admin/partials/add-group.php:223
+msgid ""
+"Users trying to register for this group will see this message once all "
+"membership slots are filled."
+msgstr ""
+
+#: admin/partials/add-group.php:231
+msgid "Associated WP Role"
+msgstr ""
+
+#: admin/partials/add-group.php:235
+msgid "Select User Role"
+msgstr ""
+
+#: admin/partials/add-group.php:246
+msgid ""
+"Inherit the access rights for the members of this group based on WP User "
+"Role."
+msgstr ""
+
+#: admin/partials/add-group.php:250
+msgid "Group Leader"
+msgstr ""
+
+#: admin/partials/add-group.php:256
+msgid ""
+"A group leader is mentioned on the Group page prominently. The leader also "
+"has special previlidges to moderate the group."
+msgstr ""
+
+#: admin/partials/add-group.php:261
+msgid "Select Leader:"
+msgstr ""
+
+#: admin/partials/add-group.php:268
+msgid "Select from exsiting users. Start typing for realtime search."
+msgstr ""
+
+#: admin/partials/add-group.php:310
+msgid "After Registration, Redirect to"
+msgstr ""
+
+#: admin/partials/add-group.php:318 admin/partials/email-settings.php:142
+msgid "None"
+msgstr ""
+
+#: admin/partials/add-group.php:322 admin/partials/add-group.php:336
+msgid "Page"
+msgstr ""
+
+#: admin/partials/add-group.php:326 admin/partials/add-group.php:367
+msgid "URL"
+msgstr ""
+
+#: admin/partials/add-group.php:330
+msgid ""
+"Redirect users to a page or URL after they successfully submit the group "
+"registration form."
+msgstr ""
+
+#: admin/partials/add-group.php:357
+msgid ""
+"Select the page where user will be redirected after registration. Usually "
+"this page will have relevant information related to the group of "
+"registration process."
+msgstr ""
+
+#: admin/partials/add-group.php:373
+msgid "Enter the URL of the page where the user will be redirected."
+msgstr ""
+
+#: admin/partials/add-group.php:381
+msgid "Display a Message After Registration"
+msgstr ""
+
+#: admin/partials/add-group.php:387
+msgid ""
+"This message will appear to the user after the form is submitted. If "
+"redirection is turned on, it will appear for a few seconds before "
+"redirection is triggered."
+msgstr ""
+
+#: admin/partials/add-group.php:393
+msgid "Success Message"
+msgstr ""
+
+#: admin/partials/add-group.php:398
+msgid "The contents of the success message. Rich text is supported."
+msgstr ""
+
+#: admin/partials/add-group.php:405
+msgid "Member Email Notifications"
+msgstr ""
+
+#: admin/partials/add-group.php:411
+msgid ""
+"Send relevant custom email notifications to the user on important "
+"registration events. If you have not created any custom email templates, you "
+"can save the group now, and come back later to assign them."
+msgstr ""
+
+#: admin/partials/add-group.php:418
+msgid "On Registration"
+msgstr ""
+
+#: admin/partials/add-group.php:422 admin/partials/add-group.php:441
+#: admin/partials/add-group.php:460
+msgid "Select Email Template"
+msgstr ""
+
+#: admin/partials/add-group.php:432
+msgid ""
+"Sends this message to the user on successful registration form submission."
+msgstr ""
+
+#: admin/partials/add-group.php:437
+msgid "On User Activate"
+msgstr ""
+
+#: admin/partials/add-group.php:451
+msgid ""
+"Sends this message to the user on his/ her user account activation in WP "
+"dashboard."
+msgstr ""
+
+#: admin/partials/add-group.php:456
+msgid "On User Deactivate"
+msgstr ""
+
+#: admin/partials/add-group.php:470
+msgid ""
+"Sends this message to the user when his/ her user account is deactivate in "
+"WP dashboard."
+msgstr ""
+
+#: admin/partials/add-group.php:478 admin/partials/add-section.php:152
+#: admin/partials/email-settings.php:240 admin/partials/email-template.php:123
+#: admin/partials/general-settings.php:228
+#: admin/partials/security-settings.php:182
+#: admin/partials/thirdparty-settings.php:81
+#: admin/partials/user-settings.php:68
+#: public/partials/themes/default/edit-group-tpl.php:11
+msgid "Cancel"
+msgstr ""
+
+#: admin/partials/add-group.php:483 admin/partials/add-section.php:158
+#: admin/partials/email-settings.php:244 admin/partials/email-template.php:128
+#: admin/partials/general-settings.php:232 admin/partials/manage-fields.php:275
+#: admin/partials/security-settings.php:186
+#: admin/partials/thirdparty-settings.php:85
+#: admin/partials/user-settings.php:72
+#: public/partials/themes/default/edit-group-tpl.php:10
+#: public/partials/themes/default/edit-profile-tpl.php:16
+msgid "Save"
+msgstr ""
+
+#: admin/partials/add-section.php:103 admin/partials/manage-fields.php:189
+msgid "New Section"
+msgstr ""
+
+#: admin/partials/add-section.php:107
+msgid "Edit Section"
+msgstr ""
+
+#: admin/partials/add-section.php:117 admin/partials/manage-fields.php:260
+msgid "Section Name"
+msgstr ""
+
+#: admin/partials/add-section.php:123
+msgid "Enter a new name for this Profile Section."
+msgstr ""
+
+#: admin/partials/add-section.php:130
+msgid "Associate with Group"
+msgstr ""
+
+#: admin/partials/add-section.php:134 admin/partials/manage-fields.php:195
+#: admin/partials/user-manager.php:88
+msgid "Select A Group"
+msgstr ""
+
+#: admin/partials/add-section.php:144
+msgid "Move this Profile section to another Group."
+msgstr ""
+
+#: admin/partials/email-settings.php:33
+msgid "Email Notification"
+msgstr ""
+
+#: admin/partials/email-settings.php:44
+msgid "Send Notification To Site Admin:"
+msgstr ""
+
+#: admin/partials/email-settings.php:50
+msgid ""
+"The site administrator will be notified for each individual registration."
+msgstr ""
+
+#: admin/partials/email-settings.php:56
+msgid "Or Define Recipients Manually:"
+msgstr ""
+
+#: admin/partials/email-settings.php:82
+msgid ""
+"If you want to notify multiple people about registrations, enter each one's "
+"email address individually. Please note, this option will also require you "
+"to enter site administrator's email address if he/ she wants to receive "
+"notification as well."
+msgstr ""
+
+#: admin/partials/email-settings.php:89
+msgid "From Email Name"
+msgstr ""
+
+#: admin/partials/email-settings.php:95
+msgid ""
+"The <i>Sender's Name</i> inside the header of emails delivering "
+"notifications to the admin and the members."
+msgstr ""
+
+#: admin/partials/email-settings.php:100
+msgid "From Email Address"
+msgstr ""
+
+#: admin/partials/email-settings.php:106
+msgid ""
+"The <i>Reply-to</i> email address inside the emails delivering notifications "
+"to the admin and the members. It is a good idea to use an email address "
+"different from the admin's email address to avoid being trapped by spam "
+"filters. Also users, may directly reply to notifications emails - therefore "
+"you can either user an actively monitored email or specifically mention in "
+"your email templates that any replies to automated emails will be ignored."
+msgstr ""
+
+#: admin/partials/email-settings.php:111
+msgid "Enable SMPT:"
+msgstr ""
+
+#: admin/partials/email-settings.php:117
+msgid ""
+"Route emails from a dedicated email services instead of using your server's "
+"mail functionality. Allows a lot more control and better chances to avoid "
+"overzealous spam filters."
+msgstr ""
+
+#: admin/partials/email-settings.php:126
+msgid "SMTP Host"
+msgstr ""
+
+#: admin/partials/email-settings.php:132
+msgid ""
+"Host Server name. For e.g.<i>smtp.gmail.com</i> if you wish to use Gmail. "
+"Consult your SMTP service provider for exact name."
+msgstr ""
+
+#: admin/partials/email-settings.php:138
+msgid "Type of Encription:"
+msgstr ""
+
+#: admin/partials/email-settings.php:143
+msgid "TLS"
+msgstr ""
+
+#: admin/partials/email-settings.php:144
+msgid "SSL"
+msgstr ""
+
+#: admin/partials/email-settings.php:148
+msgid "Encryption supported by your SMTP provider."
+msgstr ""
+
+#: admin/partials/email-settings.php:153
+msgid "SMTP Port:"
+msgstr ""
+
+#: admin/partials/email-settings.php:159
+msgid "SMTP port. Usually number. For e.g. <i>465</i>"
+msgstr ""
+
+#: admin/partials/email-settings.php:164
+msgid "SMTP Authentication:"
+msgstr ""
+
+#: admin/partials/email-settings.php:168
+msgid "Yes"
+msgstr ""
+
+#: admin/partials/email-settings.php:169
+msgid "No"
+msgstr ""
+
+#: admin/partials/email-settings.php:173
+msgid "Authentication supported by your SMTP service provider."
+msgstr ""
+
+#: admin/partials/email-settings.php:178
+msgid "SMTP Username:"
+msgstr ""
+
+#: admin/partials/email-settings.php:184
+msgid "Your SMTP Username"
+msgstr ""
+
+#: admin/partials/email-settings.php:189
+msgid "SMTP Password:"
+msgstr ""
+
+#: admin/partials/email-settings.php:195
+msgid "Your SMTP Password"
+msgstr ""
+
+#: admin/partials/email-settings.php:200
+msgid "From Email Name:"
+msgstr ""
+
+#: admin/partials/email-settings.php:206
+msgid ""
+"The <i>From</i> name in your outgoing emails. For e.g. <i>John Doe</i>, <i>"
+"Acme Corp.</i> etc."
+msgstr ""
+
+#: admin/partials/email-settings.php:211
+msgid "From Email Address:"
+msgstr ""
+
+#: admin/partials/email-settings.php:217
+msgid "Your SMTP Email Address"
+msgstr ""
+
+#: admin/partials/email-settings.php:222
+msgid "Test Outgoing Connection:"
+msgstr ""
+
+#: admin/partials/email-settings.php:233
+msgid ""
+"For Testing Purpose Only. Once you have filled in all required SMTP details, "
+"you can enter an email address here, click \"TEST\" button and check if the "
+"email is sent successfully."
+msgstr ""
+
+#: admin/partials/email-template.php:50
+#: admin/partials/email-templates-list.php:40
+msgid "New Template"
+msgstr ""
+
+#: admin/partials/email-template.php:54
+msgid "Edit Template"
+msgstr ""
+
+#: admin/partials/email-template.php:64
+msgid "Title"
+msgstr ""
+
+#: admin/partials/email-template.php:70
+msgid ""
+"Define a name for this template. Front-end user never sees this. For your "
+"reference only."
+msgstr ""
+
+#: admin/partials/email-template.php:74
+msgid "Email Subject"
+msgstr ""
+
+#: admin/partials/email-template.php:80
+msgid "Subject of the email sent to the user."
+msgstr ""
+
+#: admin/partials/email-template.php:85
+msgid "Email Template"
+msgstr ""
+
+#: admin/partials/email-template.php:115
+msgid ""
+"Content of the email sent to the user. You can add profile field values "
+"using <i>Select A Field</i> dropdown. <hr/><strong>Important</strong> - if "
+"you do not have Password field in your Group sign up form, add Password "
+"field to the email template you plan to assign to user activation event. "
+"This will make sure that new users receive an auto-generated password inside "
+"their account activation email."
+msgstr ""
+
+#: admin/partials/email-templates-list.php:35
+msgid "Email Templates"
+msgstr ""
+
+#: admin/partials/email-templates-list.php:61
+msgid "SR"
+msgstr ""
+
+#: admin/partials/email-templates-list.php:62
+msgid "Name"
+msgstr ""
+
+#: admin/partials/email-templates-list.php:63
+msgid "Subject"
+msgstr ""
+
+#: admin/partials/email-templates-list.php:64
+#: admin/partials/user-manager.php:198
+msgid "Action"
+msgstr ""
+
+#: admin/partials/email-templates-list.php:77
+#: admin/partials/user-manager.php:224
+msgid "View"
+msgstr ""
+
+#: admin/partials/email-templates-list.php:86
+msgid ""
+"You haven’t created any email templates yet. Why don’t you go ahead and "
+"create one now!"
+msgstr ""
+
+#: admin/partials/general-settings.php:32 admin/partials/pm-settings.php:20
+msgid "General"
+msgstr ""
+
+#: admin/partials/general-settings.php:42
+msgid "Template"
+msgstr ""
+
+#: admin/partials/general-settings.php:55
+msgid ""
+"You can create new templates by copying and renaming \"default\" folder "
+"(&#128194;) inside \"[plugin root]/public/partials/themes\" to \"[your "
+"current theme directory]/profilegrid-user-profiles-groups-and-"
+"communities/themes\"."
+msgstr ""
+
+#: admin/partials/general-settings.php:60
+msgid "Allow Multiple Attachments"
+msgstr ""
+
+#: admin/partials/general-settings.php:66
+msgid "Allow users to attach more than one file to file upload fields."
+msgstr ""
+
+#: admin/partials/general-settings.php:71
+msgid "Default WP Registration Page:"
+msgstr ""
+
+#: admin/partials/general-settings.php:81
+#: admin/partials/general-settings.php:103
+#: admin/partials/general-settings.php:120
+#: admin/partials/general-settings.php:136
+#: admin/partials/general-settings.php:152
+#: admin/partials/general-settings.php:168
+#: admin/partials/general-settings.php:184
+#: admin/partials/general-settings.php:201
+#: admin/partials/general-settings.php:217
+msgid "Select Page"
+msgstr ""
+
+#: admin/partials/general-settings.php:88
+msgid ""
+"Redirect all registration links to this page on your site. This helps in "
+"hiding the default WP registration form."
+msgstr ""
+
+#: admin/partials/general-settings.php:93
+msgid "After Login Redirect User to:"
+msgstr ""
+
+#: admin/partials/general-settings.php:110
+msgid ""
+"When the user logs in, he/ she will be redirected to this page. This is "
+"usually a member specific area, like user profile page."
+msgstr ""
+
+#: admin/partials/general-settings.php:115
+msgid "All Groups Page:"
+msgstr ""
+
+#: admin/partials/general-settings.php:126
+msgid ""
+"All Groups page displays all the groups on your site beautifully on a single "
+"page. A great way to allow visitors to decide and sign up for relevant group."
+msgstr ""
+
+#: admin/partials/general-settings.php:131
+msgid "Registration Page:"
+msgstr ""
+
+#: admin/partials/general-settings.php:142
+msgid "This will add Username and Password fields to this form."
+msgstr ""
+
+#: admin/partials/general-settings.php:147
+msgid "Profile Page:"
+msgstr ""
+
+#: admin/partials/general-settings.php:158
+msgid ""
+"Default member profile page. Make sure it has profile shortcode pasted "
+"inside it."
+msgstr ""
+
+#: admin/partials/general-settings.php:163
+msgid "Login Page:"
+msgstr ""
+
+#: admin/partials/general-settings.php:174
+msgid ""
+"The page where users can log in. It should have the login shortcode pasted "
+"inside."
+msgstr ""
+
+#: admin/partials/general-settings.php:179
+msgid "Password Recovery Page:"
+msgstr ""
+
+#: admin/partials/general-settings.php:190
+msgid "This page will allows users to start password recovery process."
+msgstr ""
+
+#: admin/partials/general-settings.php:196
+msgid "Password Reset Page:"
+msgstr ""
+
+#: admin/partials/general-settings.php:207
+msgid ""
+"After successfully starting password recovery process, this page is the "
+"final step to reset lost passwords."
+msgstr ""
+
+#: admin/partials/general-settings.php:212
+msgid "Group Page:"
+msgstr ""
+
+#: admin/partials/general-settings.php:223
+msgid ""
+"Single group page where users can see group details and other members of the "
+"group."
+msgstr ""
+
+#: admin/partials/manage-fields.php:19
+msgid "Choose a field type"
+msgstr ""
+
+#: admin/partials/manage-fields.php:24 admin/partials/user-profile.php:93
+msgid "First Name"
+msgstr ""
+
+#: admin/partials/manage-fields.php:26
+msgid ""
+"This field is connected directly to WordPress’ User Profile First Name field."
+msgstr ""
+
+#: admin/partials/manage-fields.php:30 admin/partials/user-profile.php:97
+msgid "Last Name"
+msgstr ""
+
+#: admin/partials/manage-fields.php:32
+msgid ""
+"This field is connected directly to WordPress’ User Profile Last Name field."
+msgstr ""
+
+#: admin/partials/manage-fields.php:38
+msgid "If you want members to login using Username instead of email."
+msgstr ""
+
+#: admin/partials/manage-fields.php:46 admin/partials/user-manager.php:196
+msgid "User Email"
+msgstr ""
+
+#: admin/partials/manage-fields.php:48
+msgid ""
+"Member's email. Only use <u>once</u> for each profile. For secondary email, "
+"use <i>Email</i> field type."
+msgstr ""
+
+#: admin/partials/manage-fields.php:53
+msgid "User URL"
+msgstr ""
+
+#: admin/partials/manage-fields.php:55
+msgid "Allows members to add website address to their profiles."
+msgstr ""
+
+#: admin/partials/manage-fields.php:61
+msgid "Allows members to define their own password during registration."
+msgstr ""
+
+#: admin/partials/manage-fields.php:65
+msgid "Confirm Password"
+msgstr ""
+
+#: admin/partials/manage-fields.php:67
+msgid "To be used in conjunction with <i>Password</i> field."
+msgstr ""
+
+#: admin/partials/manage-fields.php:71
+msgid "Description"
+msgstr ""
+
+#: admin/partials/manage-fields.php:73
+msgid "Allows members to enter long text."
+msgstr ""
+
+#: admin/partials/manage-fields.php:77
+msgid "Profile Image"
+msgstr ""
+
+#: admin/partials/manage-fields.php:79
+msgid ""
+"Allows members to upload their Profile image during registration. This can "
+"be changed or removed later."
+msgstr ""
+
+#: admin/partials/manage-fields.php:84
+msgid "Text"
+msgstr ""
+
+#: admin/partials/manage-fields.php:86
+msgid "The common text field allowing user a single line of text."
+msgstr ""
+
+#: admin/partials/manage-fields.php:90
+msgid "DropDown"
+msgstr ""
+
+#: admin/partials/manage-fields.php:92
+msgid ""
+"A dropdown with selection of predefined options. Members can only select one "
+"option."
+msgstr ""
+
+#: admin/partials/manage-fields.php:96
+msgid "Radio"
+msgstr ""
+
+#: admin/partials/manage-fields.php:98
+msgid ""
+"A radiobox selection with predefined options. Members can only select one "
+"option."
+msgstr ""
+
+#: admin/partials/manage-fields.php:102
+msgid "Text Area"
+msgstr ""
+
+#: admin/partials/manage-fields.php:104
+msgid "A text area box with ability to add multiple lines of plain text."
+msgstr ""
+
+#: admin/partials/manage-fields.php:108
+msgid "Checkbox"
+msgstr ""
+
+#: admin/partials/manage-fields.php:110
+msgid ""
+"A checkbox selection with predefined options. Members can select multiple "
+"options."
+msgstr ""
+
+#: admin/partials/manage-fields.php:114
+msgid "Heading"
+msgstr ""
+
+#: admin/partials/manage-fields.php:116
+msgid "Large size read only text, useful for creating custom headings."
+msgstr ""
+
+#: admin/partials/manage-fields.php:120
+msgid "Paragraph"
+msgstr ""
+
+#: admin/partials/manage-fields.php:122
+msgid ""
+"This is a read only field which can be used to display formatted content "
+"inside the form. HTML is supported."
+msgstr ""
+
+#: admin/partials/manage-fields.php:126
+msgid "Date"
+msgstr ""
+
+#: admin/partials/manage-fields.php:128
+msgid "Allows users to pick a date from dropdown calendar or type it manually."
+msgstr ""
+
+#: admin/partials/manage-fields.php:132 admin/partials/user-profile.php:101
+msgid "Email"
+msgstr ""
+
+#: admin/partials/manage-fields.php:134
+msgid "A secondary email field."
+msgstr ""
+
+#: admin/partials/manage-fields.php:138
+msgid "Number"
+msgstr ""
+
+#: admin/partials/manage-fields.php:140
+msgid "Allows user to input value in numbers."
+msgstr ""
+
+#: admin/partials/manage-fields.php:144
+msgid "Country"
+msgstr ""
+
+#: admin/partials/manage-fields.php:146
+msgid "A drop down list of all countries appears to the user for selection."
+msgstr ""
+
+#: admin/partials/manage-fields.php:150
+msgid "Timezone"
+msgstr ""
+
+#: admin/partials/manage-fields.php:152
+msgid "A drop down list of all time-zones appears to the user for selection."
+msgstr ""
+
+#: admin/partials/manage-fields.php:156
+msgid "T&C Checkbox"
+msgstr ""
+
+#: admin/partials/manage-fields.php:158
+msgid ""
+"Useful for adding terms and conditions to the form. User must select the "
+"check box to continue with submission if you select “Is Required” below."
+msgstr ""
+
+#: admin/partials/manage-fields.php:162
+msgid "File"
+msgstr ""
+
+#: admin/partials/manage-fields.php:164
+msgid "Display a field to the user for attaching files from his/ her computer."
+msgstr ""
+
+#: admin/partials/manage-fields.php:168
+msgid "Repeatable Text"
+msgstr ""
+
+#: admin/partials/manage-fields.php:170
+msgid ""
+"Allows user to add extra text field boxes to the form for submitting "
+"different values. Useful where a field requires multiple user input values."
+msgstr ""
+
+#: admin/partials/manage-fields.php:180
+msgid "Custom Fields Manager"
+msgstr ""
+
+#: admin/partials/manage-fields.php:186
+msgid "New Field"
+msgstr ""
+
+#: admin/partials/manage-fields.php:192
+msgid "Filter by"
+msgstr ""
+
+#: admin/partials/manage-fields.php:245
+msgid "You haven't created any Profile Fields for this Section yet."
+msgstr ""
+
+#: admin/partials/manage-fields.php:266
+msgid "Name of your Group."
+msgstr ""
+
+#: admin/partials/manage-fields.php:289
+msgid ""
+"There’s no password field in your sign up form. You can auto-generated and "
+"email password to registering users. To do that please add password field to "
+"Account Activation email template associated with this Group."
+msgstr ""
+
+#: admin/partials/manage-groups.php:24
+msgid "Groups Manager"
+msgstr ""
+
+#: admin/partials/manage-groups.php:30
+msgid "Add New"
+msgstr ""
+
+#: admin/partials/manage-groups.php:32
+msgid "Duplicate"
+msgstr ""
+
+#: admin/partials/manage-groups.php:33 admin/partials/user-manager.php:85
+msgid "Delete"
+msgstr ""
+
+#: admin/partials/manage-groups.php:44
+msgid "This is required field"
+msgstr ""
+
+#: admin/partials/manage-groups.php:48
+msgid "Create New Group"
+msgstr ""
+
+#: admin/partials/manage-groups.php:67
+#: public/partials/themes/default/group-tpl.php:47
+msgid "Members"
+msgstr ""
+
+#: admin/partials/manage-groups.php:69
+msgid "At"
+msgstr ""
+
+#: admin/partials/manage-groups.php:72
+msgid "and"
+msgstr ""
+
+#: admin/partials/manage-groups.php:72
+msgid "more"
+msgstr ""
+
+#: admin/partials/manage-groups.php:76
+msgid "Settings"
+msgstr ""
+
+#: admin/partials/manage-groups.php:77
+msgid "Fields"
+msgstr ""
+
+#: admin/partials/manage-groups.php:82
+msgid ""
+"You have not created any groups yet. Once you have created a new group, it "
+"will appear here."
+msgstr ""
+
+#: admin/partials/pm-settings.php:10
+msgid "Global Settings"
+msgstr ""
+
+#: admin/partials/pm-settings.php:21
+msgid "Form look, Default pages, Attachment settings etc."
+msgstr ""
+
+#: admin/partials/pm-settings.php:32
+msgid "Security"
+msgstr ""
+
+#: admin/partials/pm-settings.php:33
+msgid "reCAPTCHA placement, Google reCAPTCHA keys"
+msgstr ""
+
+#: admin/partials/pm-settings.php:44 admin/partials/user-settings.php:32
+msgid "User Accounts"
+msgstr ""
+
+#: admin/partials/pm-settings.php:45
+msgid "Password behavior, Manual approvals etc."
+msgstr ""
+
+#: admin/partials/pm-settings.php:57
+msgid "Email Notifications"
+msgstr ""
+
+#: admin/partials/pm-settings.php:58
+msgid "Admin notifications, multiple email notifications, From email"
+msgstr ""
+
+#: admin/partials/security-settings.php:33
+msgid "Anti Spam"
+msgstr ""
+
+#: admin/partials/security-settings.php:44
+msgid "Enable reCAPTCHA:"
+msgstr ""
+
+#: admin/partials/security-settings.php:50
+msgid "Turns on reCAPTCHA on all registration forms."
+msgstr ""
+
+#: admin/partials/security-settings.php:59
+msgid "reCAPTCHA Language:"
+msgstr ""
+
+#: admin/partials/security-settings.php:138
+msgid ""
+"Sometimes reCAPTCHA displays words as images. Choosing a language limits "
+"these words to a that specific language."
+msgstr ""
+
+#: admin/partials/security-settings.php:143
+msgid "Site Key"
+msgstr ""
+
+#: admin/partials/security-settings.php:149
+msgid "Required to make reCAPTCHA work. You can generate site key from"
+msgstr ""
+
+#: admin/partials/security-settings.php:149
+msgid "here"
+msgstr ""
+
+#: admin/partials/security-settings.php:154
+msgid "Secret Key"
+msgstr ""
+
+#: admin/partials/security-settings.php:160
+msgid ""
+"Required to make reCAPTCHA work. It will be provided when you generate site "
+"key."
+msgstr ""
+
+#: admin/partials/security-settings.php:165
+msgid "Request Method"
+msgstr ""
+
+#: admin/partials/security-settings.php:169
+msgid "CurlPost"
+msgstr ""
+
+#: admin/partials/security-settings.php:170
+msgid "SocketPost"
+msgstr ""
+
+#: admin/partials/security-settings.php:174
+msgid "Change this setting if your reCAPTCHA is not working as expected."
+msgstr ""
+
+#. Name of the plugin
+#: admin/partials/shortcode.php:9
+msgid "ProfileGrid"
+msgstr ""
+
+#: admin/partials/shortcode.php:9
+msgid "Shortcodes"
+msgstr ""
+
+#: admin/partials/shortcode.php:12
+msgid "Registration Form as a Single Page"
+msgstr ""
+
+#: admin/partials/shortcode.php:15
+msgid ""
+"Displays sign up form for a group as a single page. Sections will be "
+"separated into separate blocks. Replace <i>x</i> with the Group ID."
+msgstr ""
+
+#: admin/partials/shortcode.php:18
+msgid "Registration Form as Multi-Page"
+msgstr ""
+
+#: admin/partials/shortcode.php:21
+msgid ""
+"Displays sign up form for a group as a multi-page. Sections will be "
+"separated into pages. Replace x with the Group ID."
+msgstr ""
+
+#: admin/partials/shortcode.php:24
+msgid "Single Group Page"
+msgstr ""
+
+#: admin/partials/shortcode.php:27
+msgid ""
+"Displays a Group with logo and description. Groups users are displayed below "
+"the Group Card. Replace x with the Group ID."
+msgstr ""
+
+#: admin/partials/shortcode.php:34
+msgid "Multi Group Page"
+msgstr ""
+
+#: admin/partials/shortcode.php:37
+msgid ""
+"Displays all the Groups with logo, description and Sign Up buttons. Visitors "
+"can choose a Group to join."
+msgstr ""
+
+#: admin/partials/shortcode.php:40
+msgid "Profile Page"
+msgstr ""
+
+#: admin/partials/shortcode.php:43
+msgid "Single profile page used for displaying logged in user's profile."
+msgstr ""
+
+#: admin/partials/shortcode.php:46
+msgid "Login Form"
+msgstr ""
+
+#: admin/partials/shortcode.php:49
+msgid ""
+"A login form with Username/ Email and Password fields. Also has Forgot "
+"Password link."
+msgstr ""
+
+#: admin/partials/shortcode.php:55
+msgid "Password Retrieval Form"
+msgstr ""
+
+#: admin/partials/shortcode.php:58
+msgid "A page where users can enter their email to reset their lost password."
+msgstr ""
+
+#: admin/partials/shortcode.php:61
+msgid "Password Reset Form"
+msgstr ""
+
+#: admin/partials/shortcode.php:64
+msgid ""
+"The page where users arrive after clicking on password reset link sent to "
+"them after using Password Retrieval Form."
+msgstr ""
+
+#: admin/partials/shortcode.php:67
+msgid "All Users Page"
+msgstr ""
+
+#: admin/partials/shortcode.php:70
+msgid ""
+"Shows all users with profile image and username on a single page with search "
+"capabilities."
+msgstr ""
+
+#: admin/partials/thirdparty-settings.php:31
+msgid "Third Party Integrations"
+msgstr ""
+
+#: admin/partials/thirdparty-settings.php:42
+msgid "Allow User to Login using Facebook:"
+msgstr ""
+
+#: admin/partials/thirdparty-settings.php:48
+msgid ""
+"For your reference only. Not visible on front-end. Description can help you "
+"remember the purpose of the form."
+msgstr ""
+
+#: admin/partials/thirdparty-settings.php:56
+msgid "Facebook App ID"
+msgstr ""
+
+#: admin/partials/thirdparty-settings.php:67
+msgid "Facebook App Secret"
+msgstr ""
+
+#: admin/partials/user-manager.php:77
+msgid "Users Profiles"
+msgstr ""
+
+#: admin/partials/user-manager.php:82
+msgid "New User"
+msgstr ""
+
+#: admin/partials/user-manager.php:83 admin/partials/user-manager.php:164
+#: admin/partials/user-manager.php:223 admin/partials/user-profile.php:76
+msgid "Deactivate"
+msgstr ""
+
+#: admin/partials/user-manager.php:84 admin/partials/user-manager.php:223
+#: admin/partials/user-profile.php:74
+msgid "Activate"
+msgstr ""
+
+#: admin/partials/user-manager.php:85
+msgid ""
+"You are going to delete selected users permanently. This action cannot be "
+"undone. Please confirm."
+msgstr ""
+
+#: admin/partials/user-manager.php:111 admin/partials/user-manager.php:186
+#: public/partials/themes/default/search-tpl.php:8
+msgid "Search"
+msgstr ""
+
+#: admin/partials/user-manager.php:117
+msgid "Time"
+msgstr ""
+
+#: admin/partials/user-manager.php:120 admin/partials/user-manager.php:158
+msgid "All"
+msgstr ""
+
+#: admin/partials/user-manager.php:123
+msgid "Today"
+msgstr ""
+
+#: admin/partials/user-manager.php:126
+msgid "Yesterday"
+msgstr ""
+
+#: admin/partials/user-manager.php:129
+msgid "This Week"
+msgstr ""
+
+#: admin/partials/user-manager.php:132
+msgid "Last Week"
+msgstr ""
+
+#: admin/partials/user-manager.php:135
+msgid "This Month"
+msgstr ""
+
+#: admin/partials/user-manager.php:138
+msgid "This Year"
+msgstr ""
+
+#: admin/partials/user-manager.php:141
+msgid "Specific Period"
+msgstr ""
+
+#: admin/partials/user-manager.php:144
+msgid "Start Date"
+msgstr ""
+
+#: admin/partials/user-manager.php:148
+msgid "End Date"
+msgstr ""
+
+#: admin/partials/user-manager.php:155 admin/partials/user-manager.php:197
+msgid "Status"
+msgstr ""
+
+#: admin/partials/user-manager.php:161
+msgid "Active"
+msgstr ""
+
+#: admin/partials/user-manager.php:166
+msgid "Match Field"
+msgstr ""
+
+#: admin/partials/user-manager.php:187
+msgid "Reset"
+msgstr ""
+
+#: admin/partials/user-manager.php:194
+msgid "Image"
+msgstr ""
+
+#: admin/partials/user-manager.php:195
+msgid "Display Name"
+msgstr ""
+
+#: admin/partials/user-manager.php:231
+msgid "No user matches your search."
+msgstr ""
+
+#: admin/partials/user-profile.php:70
+#: public/partials/themes/default/group-tpl.php:24
+#: public/partials/themes/default/profile-tpl.php:43
+msgid "Edit"
+msgstr ""
+
+#: admin/partials/user-profile.php:72
+msgid ""
+"Are you sure you want to delete this user permanently? You cannot undo this "
+"action."
+msgstr ""
+
+#: admin/partials/user-profile.php:105
+msgid "Role"
+msgstr ""
+
+#: admin/partials/user-profile.php:109
+msgid "Bio"
+msgstr ""
+
+#: admin/partials/user-profile.php:164
+msgid "No User Profile Fields in this section."
+msgstr ""
+
+#: admin/partials/user-profile.php:175
+msgid ""
+"This profile is not yet associated with any parent profile group. To make it "
+"visible please associate it with a group first."
+msgstr ""
+
+#: admin/partials/user-settings.php:44
+msgid "WP Registration Auto Approval:"
+msgstr ""
+
+#: admin/partials/user-settings.php:50
+msgid ""
+"Automatically activate user accounts after registration form is submitted. "
+"Keep this setting off if you want to manually approve each registering user."
+msgstr ""
+
+#: admin/partials/user-settings.php:56
+msgid "Send user Activation link in email:"
+msgstr ""
+
+#: admin/partials/user-settings.php:62
+msgid ""
+"Send an activation link to user in an email. Keep this setting \"off\", if "
+"you want to automatically approve each registered user."
+msgstr ""
+
+#: public/partials/profile-magic-group.php:17
+#: public/partials/profile-magic-group.php:36
+#: public/partials/profile-magic-login-form.php:49
+msgid "Failed security check"
+msgstr ""
+
+#: public/partials/profile-magic-group.php:121
+#: public/partials/profile-magic-groups.php:30
+msgid "Group id does not exist"
+msgstr ""
+
+#: public/partials/profile-magic-login-form.php:21
+msgid "Check your email for a link to reset your password."
+msgstr ""
+
+#: public/partials/profile-magic-login-form.php:22
+msgid "Your password has been changed. You can sign in now."
+msgstr ""
+
+#: public/partials/profile-magic-login-form.php:98
+msgid "Captcha Failed"
+msgstr ""
+
+#: public/partials/profile-magic-payment-process.php:32
+msgid "Payment Transaction Done Successfully"
+msgstr ""
+
+#: public/partials/profile-magic-payment-process.php:50
+msgid "Transaction Cancelle"
+msgstr ""
+
+#: public/partials/profile-magic-payment-process.php:78
+msgid "Instant Payment Notification - Recieved Payment"
+msgstr ""
+
+#: public/partials/profile-magic-payment-process.php:90
+msgid "Instant Payment Notification - Payment Fail"
+msgstr ""
+
+#: public/partials/profile-magic-profile.php:82
+msgid ""
+"Your profile is not yet associated with any parent profile group. To make it "
+"visible please associate it with a group first."
+msgstr ""
+
+#: public/partials/profile-magic-registration-form.php:70
+msgid "captcha failed"
+msgstr ""
+
+#: public/partials/profile-magic-registration-form.php:78
+msgid "Require Useremail field"
+msgstr ""
+
+#: public/partials/themes/default/edit-group-tpl.php:19
+msgid "Change Group Badge"
+msgstr ""
+
+#: public/partials/themes/default/edit-group-tpl.php:40
+msgid "Group Description"
+msgstr ""
+
+#: public/partials/themes/default/edit-group-tpl.php:63
+msgid "Change Group Icon"
+msgstr ""
+
+#: public/partials/themes/default/edit-group-tpl.php:72
+#: public/partials/themes/default/profile-tpl.php:120
+msgid "Upload"
+msgstr ""
+
+#: public/partials/themes/default/edit-profile-tpl.php:12
+msgid "Edit Profile"
+msgstr ""
+
+#: public/partials/themes/default/edit-profile-tpl.php:17
+msgid "Expand All"
+msgstr ""
+
+#: public/partials/themes/default/edit-profile-tpl.php:18
+msgid "Collapse All"
+msgstr ""
+
+#: public/partials/themes/default/forget-password-form-tpl.php:18
+msgid "You are already logged in."
+msgstr ""
+
+#: public/partials/themes/default/forget-password-form-tpl.php:19
+#: public/partials/themes/default/login-form-tpl.php:14
+#: public/partials/themes/default/password-reset-form-tpl.php:21
+#: public/partials/themes/default/reg-form-multipage-tpl.php:21
+#: public/partials/themes/default/reg-form-tpl.php:19
+msgid "PROCEED TO"
+msgstr ""
+
+#: public/partials/themes/default/forget-password-form-tpl.php:22
+#: public/partials/themes/default/login-form-tpl.php:17
+#: public/partials/themes/default/password-reset-form-tpl.php:24
+#: public/partials/themes/default/reg-form-multipage-tpl.php:24
+#: public/partials/themes/default/reg-form-tpl.php:22
+msgid "My Profile"
+msgstr ""
+
+#: public/partials/themes/default/forget-password-form-tpl.php:23
+#: public/partials/themes/default/login-form-tpl.php:18
+#: public/partials/themes/default/password-reset-form-tpl.php:25
+#: public/partials/themes/default/reg-form-multipage-tpl.php:25
+#: public/partials/themes/default/reg-form-tpl.php:23
+msgid "Logout"
+msgstr ""
+
+#: public/partials/themes/default/forget-password-form-tpl.php:32
+#: public/partials/themes/default/login-form-tpl.php:28
+msgid "Email or Username"
+msgstr ""
+
+#: public/partials/themes/default/forget-password-form-tpl.php:36
+#: public/partials/themes/default/password-reset-form-tpl.php:37
+msgid "Reset Password"
+msgstr ""
+
+#: public/partials/themes/default/group-tpl.php:57
+msgid "Details"
+msgstr ""
+
+#: public/partials/themes/default/group-tpl.php:78
+msgid "No User Profile is registered in this Group"
+msgstr ""
+
+#: public/partials/themes/default/groups-tpl.php:6
+msgid "All Groups"
+msgstr ""
+
+#: public/partials/themes/default/groups-tpl.php:45
+msgid "Sign Up"
+msgstr ""
+
+#: public/partials/themes/default/groups-tpl.php:51
+msgid "Free"
+msgstr ""
+
+#: public/partials/themes/default/login-form-tpl.php:13
+#: public/partials/themes/default/reg-form-multipage-tpl.php:20
+#: public/partials/themes/default/reg-form-tpl.php:18
+msgid "You have successfully logged in."
+msgstr ""
+
+#: public/partials/themes/default/login-form-tpl.php:34
+msgid "Forgot Password?"
+msgstr ""
+
+#: public/partials/themes/default/password-reset-form-tpl.php:20
+msgid "You have already logged in."
+msgstr ""
+
+#: public/partials/themes/default/password-reset-form-tpl.php:34
+#: public/partials/themes/default/profile-tpl.php:151
+msgid "New password"
+msgstr ""
+
+#: public/partials/themes/default/password-reset-form-tpl.php:35
+#: public/partials/themes/default/profile-tpl.php:152
+msgid "Repeat new password"
+msgstr ""
+
+#: public/partials/themes/default/profile-tpl.php:15
+#: public/partials/themes/default/profile-tpl.php:24
+msgid "Update Image"
+msgstr ""
+
+#: public/partials/themes/default/profile-tpl.php:44
+#: public/partials/themes/default/profile-tpl.php:140
+#: public/partials/themes/default/profile-tpl.php:154
+msgid "Change Password"
+msgstr ""
+
+#: public/partials/themes/default/profile-tpl.php:80
+msgid "Change Profile Image"
+msgstr ""
+
+#: public/partials/themes/default/profile-tpl.php:101
+msgid ""
+"For best visibility choose square image with minimum size of 200 x 200 pixels"
+msgstr ""
+
+#: public/partials/themes/default/profile-tpl.php:110
+msgid "Change Cover Image"
+msgstr ""
+
+#: public/partials/themes/default/profile-tpl.php:131
+msgid ""
+"For best visibility choose a landscape aspect ratio image with size of <span "
+"id=\"pm-cover-image-width\">1200</span> x 300 pixels"
+msgstr ""
+
+#: public/partials/themes/default/reg-form-multipage-tpl.php:44
+#: public/partials/themes/default/reg-form-tpl.php:46
+msgid "Submit"
+msgstr ""
+
+#: public/partials/themes/default/search-tpl.php:12
+msgid "Total"
+msgstr ""
+
+#: public/partials/themes/default/search-tpl.php:12
+msgid "members"
+msgstr ""
+
+#: public/partials/themes/default/search-tpl.php:36
+msgid "No users found."
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"ProfileGrid adds user groups and user profiles functionality to your site."
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "http://profilegrid.co"
+msgstr ""
+
+#. Author of the plugin
+msgid "profilegrid"
+msgstr ""
