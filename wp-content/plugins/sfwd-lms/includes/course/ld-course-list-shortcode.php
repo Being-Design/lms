@@ -779,13 +779,9 @@ add_shortcode( 'ld_course_list', 'ld_course_list' );
  * @param  array 	$attr 	shortcode attributes
  * @return string   		shortcode output
  */
-function ld_lesson_list( $attr = array() ) {
+function ld_lesson_list( $attr ) {
 	global $learndash_shortcode_used;
 	$learndash_shortcode_used = true;
-	
-	if ( !is_array( $attr ) ) {
-		$attr = array();
-	}
 	
 	$attr['post_type'] = 'sfwd-lessons';
 	$attr['mycourses'] = false;
@@ -804,14 +800,10 @@ add_shortcode( 'ld_lesson_list', 'ld_lesson_list' );
  * @param  array 	$attr 	shortcode attributes
  * @return string   		shortcode output
  */
-function ld_quiz_list( $attr = array() ) {
+function ld_quiz_list( $attr ) {
 	global $learndash_shortcode_used;
 	$learndash_shortcode_used = true;
 	
-	if ( !is_array( $attr ) ) {
-		$attr = array();
-	}
-
 	$attr['post_type'] = 'sfwd-quiz';
 	$attr['mycourses'] = false;
 	return ld_course_list( $attr );
@@ -829,13 +821,9 @@ add_shortcode( 'ld_quiz_list', 'ld_quiz_list' );
  * @param  array 	$attr 	shortcode attributes
  * @return string   		shortcode output
  */
-function ld_topic_list( $attr = array() ) {
+function ld_topic_list( $attr ) {
 	global $learndash_shortcode_used;
 	$learndash_shortcode_used = true;
-	
-	if ( !is_array( $attr ) ) {
-		$attr = array();
-	}
 	
 	$attr['post_type'] = 'sfwd-topic';
 	$attr['mycourses'] = false;

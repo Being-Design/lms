@@ -3,7 +3,7 @@
  * Plugin Name: LearnDash LMS
  * Plugin URI: http://www.learndash.com
  * Description: LearnDash LMS Plugin - Turn your WordPress site into a learning management system.
- * Version: 2.4.6
+ * Version: 2.4.3
  * Author: LearnDash
  * Author URI: http://www.learndash.com
  * Text Domain: learndash
@@ -17,19 +17,19 @@
 /**
  * LearnDash Version Constant
  */
-define( 'LEARNDASH_VERSION', '2.4.6' );
+define( 'LEARNDASH_VERSION', '2.4.3' );
 define( 'LEARNDASH_SETTINGS_DB_VERSION', '2.3.0.4' );
 define( 'LEARNDASH_SETTINGS_TRIGGER_UPGRADE_VERSION', '2.3.0.4' );
 define( 'LEARNDASH_LMS_TEXT_DOMAIN', 'learndash' );
 
 if ( !defined('LEARNDASH_LMS_PLUGIN_DIR' ) ) {
-	define( 'LEARNDASH_LMS_PLUGIN_DIR', trailingslashit( str_replace('\\', '/', WP_PLUGIN_DIR ) .'/'. basename( dirname( __FILE__ ) ) ) );
+	//define( 'LEARNDASH_LMS_PLUGIN_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+	$WP_PLUGIN_DIR_tmp = str_replace('\\', '/', WP_PLUGIN_DIR );
+	define( 'LEARNDASH_LMS_PLUGIN_DIR', trailingslashit( $WP_PLUGIN_DIR_tmp .'/'. basename( dirname( __FILE__ ) ) ) );
 }
 if (!defined( 'LEARNDASH_LMS_PLUGIN_URL' ) ) {
 	//define( 'LEARNDASH_LMS_PLUGIN_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
-	$url = trailingslashit( WP_PLUGIN_URL .'/'. basename( dirname( __FILE__ ) ) );
-	$url = str_replace( array('https://', 'http://' ), array('//', '//' ), $url );
-	define( 'LEARNDASH_LMS_PLUGIN_URL', $url );
+	define( 'LEARNDASH_LMS_PLUGIN_URL', trailingslashit( WP_PLUGIN_URL .'/'. basename( dirname( __FILE__ ) ) ) );
 }
 
 if ( !defined('LEARNDASH_LMS_PLUGIN_KEY' ) ) {
@@ -51,12 +51,6 @@ if ( !defined( 'LEARNDASH_SCRIPT_DEBUG' ) ) {
 		define('LEARNDASH_SCRIPT_DEBUG', false);
 	}
 }  
-
-// Added to support Lesson/Topic videos
-// @since 2.4.5
-if ( !defined('LEARNDASH_LESSON_VIDEO' ) ) {
-	define( 'LEARNDASH_LESSON_VIDEO', true );
-}
 
 if ( !defined('LEARNDASH_LMS_DEFAULT_QUESTION_POINTS' ) ) {
 	define( 'LEARNDASH_LMS_DEFAULT_QUESTION_POINTS', 1 );
@@ -230,22 +224,6 @@ require_once( dirname( __FILE__ ).'/includes/ld-reports.php' );
  */
 require_once( dirname( __FILE__ ).'/includes/settings/class-ld-shortcodes-tinymce.php' );
 
-/**
- * Registers REST API Hooks.
- */
-require_once( dirname( __FILE__ ).'/includes/rest-api/class-ld-rest-api.php' );
-
-/**
- * Load our Import/Export Utilities
- */
-require_once( dirname( __FILE__ ).'/includes/import/import-loader.php' );
-
-/**
- * Support for Video Progression
- */
-if ( ( defined( 'LEARNDASH_LESSON_VIDEO' ) ) && ( LEARNDASH_LESSON_VIDEO == true ) ) {
-	require_once( dirname( __FILE__ ).'/includes/course/ld-course-video.php' );
-}
 
 
 /**

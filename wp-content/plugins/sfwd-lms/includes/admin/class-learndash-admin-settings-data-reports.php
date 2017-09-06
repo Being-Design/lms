@@ -36,8 +36,7 @@ if ( !class_exists( 'Learndash_Admin_Settings_Data_Reports' ) ) {
 						
 						$transient_data = $this->get_transient( $transient_key );
 						if ( ( isset( $transient_data['report_filename'] ) ) && ( !empty( $transient_data['report_filename'] ) ) ) {
-							//$report_filename = ABSPATH . $transient_data['report_filename'];
-							$report_filename = $transient_data['report_filename'];
+							$report_filename = ABSPATH . $transient_data['report_filename'];
 							if ( ( file_exists( $report_filename ) ) && (is_readable( $report_filename ) ) ) {
 								header('Content-Type: text/csv');
 								header('Content-Disposition: attachment; filename='. basename( $report_filename ) );
@@ -114,7 +113,7 @@ if ( !class_exists( 'Learndash_Admin_Settings_Data_Reports' ) ) {
 
 			wp_enqueue_style( 
 				'sfwd-module-style', 
-				LEARNDASH_LMS_PLUGIN_URL . 'assets/css/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.css', 
+				LEARNDASH_LMS_PLUGIN_URL . '/assets/css/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.css', 
 				array(), 
 				LEARNDASH_VERSION 
 			);

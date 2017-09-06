@@ -353,11 +353,6 @@ function learndash_user_get_enrolled_courses( $user_id = 0, $course_query_args =
 			if ( !empty( $course_ids_access ) )
 				$course_ids = array_merge( $course_ids, $course_ids_access );
 		
-			$course_ids_meta = learndash_get_user_courses_from_meta( $user_id );
-			//error_log("course_ids_meta<pre>". print_r($course_ids_meta, true) .'</pre>');
-			if ( !empty( $course_ids_meta ) )
-				$course_ids = array_merge( $course_ids, $course_ids_meta );
-		
 			$course_ids_groups = learndash_get_user_groups_courses_ids( $user_id );
 			//error_log("course_ids_groups<pre>". print_r($course_ids_groups, true) .'</pre>');
 			if ( !empty( $course_ids_groups ) )
@@ -532,39 +527,27 @@ function learndash_user_set_enrolled_courses( $user_id = 0, $user_courses_new = 
 	}
 }
 
-// Get all courses for the user via the user meta 'course_XXX_access_from'
-function learndash_get_user_courses_from_meta( $user_id = 0 ) {
-	global $wpdb;
-	
-	$user_course_ids = array();
-	
-	if ( !empty( $user_id ) ) {
-		$sql_str = $wpdb->prepare( "SELECT REPLACE( REPLACE(meta_key, 'course_', ''), '_access_from', '' ) FROM ". $wpdb->usermeta ." as usermeta WHERE user_id=%d AND meta_key LIKE %s ", $user_id, 'course_%_access_from' );
-		//error_log("sql_str[". $sql_str ."]");	
-			
-		$user_course_ids = $wpdb->get_col( $sql_str );
-		if ( !empty( $user_course_ids ) ) {
-			$user_course_ids = array_map( 'intval', $user_course_ids );
-		}
-	}
-	return $user_course_ids;
-}
 
 function learndash_show_user_course_complete( $user_id = 0 ) {
 	
 	$show_options = false;
 	
-	if ( !empty( $user_id ) ) {
-	
+	//if ( ( !empty( $user_id ) ) && ( learndash_is_admin_user( ) ) || ( learndash_is_group_leader_user() ) ) {
+	if ( ( !empty( $user_id ) ) && ( current_user_can( 'edit_users' ) ) ) {	
 		global $pagenow;
 		
-		if ( ( ( $pagenow == 'profile.php' ) || ( $pagenow == 'user-edit.php' ) ) && ( current_user_can( 'edit_users' ) ) ) {
-			$show_options = true;
-		} else if ( $pagenow == 'admin.php' ) {
+		if ( ( ( $pagenow == 'profile.php' ) || ( $pagenow == 'user-edit.php' ) ) ) {
+			//if ( learndash_is_admin_user( ) )
+				$show_options = true;
+			//else if ( learndash_is_group_leader_user() )
+			//	$show_options = false;
+			
+		} else if ($pagenow == 'admin.php') {
 			if ( ( isset( $_GET['page'] ) ) && ( $_GET['page'] == 'group_admin_page' ) ) {
-				if ( ( learndash_is_admin_user( ) ) || ( learndash_is_group_leader_user( ) ) ) {
+				//if ( learndash_is_group_leader_user() )
 					$show_options = true;
-				}
+				//else if ( learndash_is_admin_user( ) )
+				//	$show_options = true;
 			}
 		}
 	}	
@@ -998,7 +981,7 @@ function learndash_get_user_course_access_list( $user_id = 0 ) {
 		OR postmeta.meta_value REGEXP  's:31:\"sfwd-courses_course_access_list\";s:(.*):\"(.*),". $user_id .",(.*)\";s:34:\"sfwd-courses_course_lesson_orderby\"' 
 		OR postmeta.meta_value REGEXP 's:31:\"sfwd-courses_course_access_list\";s:(.*):\"(.*),". $user_id ."\";s:34:\"sfwd-courses_course_lesson_orderby\"'";
 
-	$sql_str = "SELECT post_id FROM ". $wpdb->prefix ."postmeta as postmeta INNER JOIN ". $wpdb->prefix ."posts as posts ON posts.ID = postmeta.post_id WHERE posts.post_status='publish' AND posts.post_type='sfwd-courses' AND postmeta.meta_key='_sfwd-courses' AND ( ". $not_like ." AND (". $is_like ."))";
+	$sql_str = "SELECT post_id FROM ". $wpdb->prefix ."postmeta as postmeta INNER JOIN ". $wpdb->prefix ."posts as posts ON posts.ID = postmeta.post_id WHERE posts.post_status='publish' AND postmeta.meta_key='_sfwd-courses' AND ( ". $not_like ." AND (". $is_like ."))";
 	//error_log('sql_str['. $sql_str .']');
 	
 	$user_course_ids = $wpdb->get_col( $sql_str );

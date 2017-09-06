@@ -132,32 +132,6 @@ if ( typeof learndash_video_data !== 'undefined' ) {
 				}
 			});
 		});
-	} else if ( learndash_video_data.videos_found_provider == 'wistia' ) {
-		window._wq = window._wq || [];
-		_wq.push({ id: "_all", onReady: function(video) {
-			//console.log("This will run for every video on the page. Right now I'm on this one:", video);
-		  
-			//video.bind('ready', function() {
-			//    console.log('video is ready');
-			//});
-
-			//video.bind('play', function() {
-			//    console.log('video started');
-			//});
-			
-			video.bind('end', function() {
-			    //console.log('video ended');
-				LearnDash_disable_assets(false);
-				return video.unbind;
-			});
-			
-			if (learndash_video_data.videos_auto_start == true) {
-				video.play();
-			}
-			
-			LearnDash_disable_assets(true);
-			
-		}});
 	} else if ( learndash_video_data.videos_found_provider == 'local' ) {
 		jQuery( document ).ready(function() {
 			//console.log('learndash_video_data[%o]', learndash_video_data.videos_found_provider);
@@ -195,58 +169,27 @@ if ( typeof learndash_video_data !== 'undefined' ) {
 
 function LearnDash_disable_assets( status ) {
 	if ( jQuery('form#sfwd-mark-complete input#learndash_mark_complete_button').length ) {
-		if ( learndash_video_data.videos_hide_complete_button == true ) {
-			jQuery('form#sfwd-mark-complete input#learndash_mark_complete_button').hide();
-		} else {
-			jQuery('form#sfwd-mark-complete input#learndash_mark_complete_button').attr('disabled', status );
-		}
+		jQuery('form#sfwd-mark-complete input#learndash_mark_complete_button').attr('disabled', status );
 
 		// If we enabled the button 'status' is false and auto-complete is true then submit the form.
-		if ( learndash_video_data.videos_auto_complete == true ) {
-			if ( status == false ) {
+		if ( ( learndash_video_data.videos_auto_complete == true ) && ( status == false ) ) {
 			
-				var auto_complete_delay = parseInt( learndash_video_data.videos_auto_complete_delay );
-				//console.log('auto_complete_delay[%o]', auto_complete_delay);
-
-				if ( auto_complete_delay > 0 ) {
-					
-					if ( learndash_video_data.videos_auto_complete_delay_message != '' ) {
-						var timer_html = jQuery( learndash_video_data.videos_auto_complete_delay_message ).insertAfter( 'form#sfwd-mark-complete input#learndash_mark_complete_button' );
-					} 
-
-					var counter = auto_complete_delay;
-				
-					timer_id = setInterval(function() {
-					    counter--;
-					    if( counter < 1 ) {
-					        clearInterval( timer_id );
-							
-							//if ( typeof timer_html !== 'undefined' ) {
-							//	jQuery('span', timer_html).html('XXX'); 
-							//}
-							jQuery('form#sfwd-mark-complete').submit(); 
-							
-					    } else {
-							if ( typeof timer_html !== 'undefined' ) {
-								jQuery('span', timer_html).html(counter); 
-							}
-					    }
-					}, 1000);			
-				} else {
-					jQuery('form#sfwd-mark-complete').submit(); 
-				}
-			}
+			setTimeout(function(){ 
+				jQuery('form#sfwd-mark-complete').submit(); 
+			}, 3000);
 		} 
 	}
 
 	if (learndash_video_data.videos_shown == 'BEFORE' ) {
-		if ( status == true ) {
-			jQuery('#learndash_lesson_topics_list').hide();
-			jQuery('#learndash_quizzes').hide();
-			
-		} else {
-			jQuery('#learndash_lesson_topics_list').slideDown();
-			jQuery('#learndash_quizzes').slideDown();
+		if ( jQuery('#learndash_lesson_topics_list').length ) {
+			if ( status == true ) {
+				jQuery('#learndash_lesson_topics_list').hide();
+				jQuery('#learndash_quizzes').hide();
+				
+			} else {
+				jQuery('#learndash_lesson_topics_list').slideDown();
+				jQuery('#learndash_quizzes').slideDown();
+			}
 		}
 	}
 }

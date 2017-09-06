@@ -21,15 +21,7 @@ if ( ( class_exists( 'LearnDash_Settings_Section' ) ) && ( !class_exists( 'Learn
 			$this->settings_section_label			=	sprintf( _x( '%s Display Settings', 'placeholder: Lesson', 'learndash' ), LearnDash_Custom_Label::get_label( 'lesson') );
 		
 			parent::__construct(); 
-
-			add_action( "update_option_". $this->setting_option_key, array( $this, 'save_settings_values' ), 20, 3 );
 		}
-		
-		function save_settings_values( $old_value = '', $value = '', $option = '' ) {
-			// When the Lesson Options are changed we also want to purge the transients. All of them
-			learndash_purge_transients();
-		}
-		
 		
 		function load_settings_values() {
 			parent::load_settings_values();
@@ -113,8 +105,6 @@ if ( ( class_exists( 'LearnDash_Settings_Section' ) ) && ( !class_exists( 'Learn
 			
 			parent::load_settings_fields();
 		}
-		
-		// End of functions
 	}
 }
 add_action( 'learndash_settings_sections_init', function() {

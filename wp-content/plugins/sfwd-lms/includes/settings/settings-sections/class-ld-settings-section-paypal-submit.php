@@ -1,6 +1,6 @@
 <?php
-if ( ( class_exists( 'LearnDash_Settings_Section' ) ) && ( !class_exists( 'LearnDash_Settings_Section_PayPal_Submit' ) ) ) {
-	class LearnDash_Settings_Section_PayPal_Submit extends LearnDash_Settings_Section {
+if ( ( class_exists( 'LearnDash_Settings_Section' ) ) && ( !class_exists( 'LearnDash_Settings_Section_Submit' ) ) ) {
+	class LearnDash_Settings_Section_Submit extends LearnDash_Settings_Section {
 
 		function __construct() {
 		
@@ -49,5 +49,5 @@ if ( ( class_exists( 'LearnDash_Settings_Section' ) ) && ( !class_exists( 'Learn
 	}
 }
 add_action( 'learndash_settings_sections_init', function() {
-	LearnDash_Settings_Section_PayPal_Submit::add_section_instance();
+	LearnDash_Settings_Section_Submit::add_section_instance();
 } );

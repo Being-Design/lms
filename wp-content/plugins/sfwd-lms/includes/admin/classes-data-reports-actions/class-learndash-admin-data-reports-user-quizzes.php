@@ -101,32 +101,19 @@ if ( !class_exists( 'Learndash_Admin_Data_Reports_Quizzes' ) ) {
 
 						$this->transient_data = array();
 						
-						if ( ( isset( $data['filters'] ) ) && ( !empty( $data['filters'] ) ) ) {
+						if ( ( isset( $data['group_id'] ) ) && ( !empty( $data['group_id'] ) ) ) {
+							$this->transient_data['users_ids'] = learndash_get_groups_user_ids( intval( $data['group_id'] ) );
+							$this->transient_data['posts_ids'] = learndash_get_group_course_quiz_ids( intval( $data['group_id'] ) );
+							if ( empty( $this->transient_data['posts_ids'] ) ) 	return $data;
 
-							//error_log('before: transient_data<pre>'. print_r($this->transient_data, true ) .'</pre>');
-							$this->transient_data = $query = wp_parse_args( $this->transient_data, $data['filters'] );
-							//error_log('after: transient_data<pre>'. print_r($this->transient_data, true ) .'</pre>');
-							//die();
-														
 						} else {
-						
-							if ( ( isset( $data['group_id'] ) ) && ( !empty( $data['group_id'] ) ) ) {
-								$this->transient_data['users_ids'] = learndash_get_groups_user_ids( intval( $data['group_id'] ) );
-								$this->transient_data['posts_ids'] = learndash_get_group_course_quiz_ids( intval( $data['group_id'] ) );
-								if ( empty( $this->transient_data['posts_ids'] ) ) 	return $data;
-
-							} else {
-								$this->transient_data['posts_ids'] = '';
-								//$this->transient_data = array_merge( $this->transient_data, learndash_get_report_user_ids() );
-								$this->transient_data['users_ids'] = learndash_get_report_user_ids();
-							}
+							$this->transient_data['users_ids'] = learndash_get_report_user_ids();
+							$this->transient_data['posts_ids'] = '';
 						}
-						
 						$this->transient_data['total_users'] = count( $this->transient_data['users_ids'] );
 						
 						$this->set_report_filenames( $data );
-						//$this->report_filename = ABSPATH . $this->transient_data['report_filename'];
-						$this->report_filename = $this->transient_data['report_filename'];
+						$this->report_filename = ABSPATH . $this->transient_data['report_filename'];
 						
 						$data['report_download_link'] = $this->transient_data['report_url'];
 						$data['total_count'] = $this->transient_data['total_users'];
@@ -145,8 +132,7 @@ if ( !class_exists( 'Learndash_Admin_Data_Reports_Quizzes' ) ) {
 						//$this->transient_data = learndash_get_valid_transient( $this->transient_key );
 						$this->transient_data = $this->get_transient( $this->transient_key );
 						
-						//$this->report_filename = ABSPATH . $this->transient_data['report_filename'];
-						$this->report_filename = $this->transient_data['report_filename'];
+						$this->report_filename = ABSPATH . $this->transient_data['report_filename'];
 					}
 								
 					if ( !empty( $this->transient_data['users_ids'] ) ) {
@@ -373,7 +359,7 @@ if ( !class_exists( 'Learndash_Admin_Data_Reports_Quizzes' ) ) {
 			file_put_contents( trailingslashit( dirname( $ld_wp_upload_filename ) ) .'index.php', '// nothing to see here');
 		
 			// Because we on;y want to store the relative path 
-			//$ld_wp_upload_filename = str_replace( ABSPATH, '', $ld_wp_upload_filename );
+			$ld_wp_upload_filename = str_replace( ABSPATH, '', $ld_wp_upload_filename );
 		
 			$this->transient_data['report_filename'] = $ld_wp_upload_filename;
 

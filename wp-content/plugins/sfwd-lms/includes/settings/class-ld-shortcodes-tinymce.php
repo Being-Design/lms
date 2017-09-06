@@ -59,7 +59,7 @@ if ( !class_exists( 'LearnDash_Shortcodes_TinyMCE' ) ) {
 		}
 	
 		function add_tinymce_plugin( $plugin_array ) {
-		    $plugin_array['learndash_shortcodes_tinymce'] = LEARNDASH_LMS_PLUGIN_URL .'assets/js/learndash-admin-shortcodes-tinymce'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.js';
+		    $plugin_array['learndash_shortcodes_tinymce'] = LEARNDASH_LMS_PLUGIN_URL .'/assets/js/learndash-admin-shortcodes-tinymce'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.js';
 	    
 			return $plugin_array;
 		}	
@@ -78,7 +78,7 @@ if ( !class_exists( 'LearnDash_Shortcodes_TinyMCE' ) ) {
 
 					wp_enqueue_style( 
 						'learndash_admin_shortcodes_style', 
-						LEARNDASH_LMS_PLUGIN_URL . 'assets/css/learndash-admin-shortcodes'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.css', 
+						LEARNDASH_LMS_PLUGIN_URL . '/assets/css/learndash-admin-shortcodes'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.css', 
 						array( ),
 						LEARNDASH_VERSION
 					);
@@ -167,12 +167,6 @@ if ( !class_exists( 'LearnDash_Shortcodes_TinyMCE' ) ) {
 				
 					require_once( LEARNDASH_LMS_PLUGIN_DIR .'/includes/settings/shortcodes-sections/ld_course_expire_status.php' );
 					$shortcode_sections['ld_course_expire_status'] = new LearnDash_Shortcodes_Section_ld_course_expire_status( $fields_args );
-
-					if ( ( $fields_args['post_type'] == 'sfwd-lessons' ) || ( $fields_args['post_type'] == 'sfwd-topic' ) ) {
-						require_once( LEARNDASH_LMS_PLUGIN_DIR .'/includes/settings/shortcodes-sections/ld_video.php' );
-						$shortcode_sections['ld_video'] = new LearnDash_Shortcodes_Section_ld_video( $fields_args );
-					}
-
 				}
 			
 				require_once( LEARNDASH_LMS_PLUGIN_DIR .'/includes/settings/shortcodes-sections/courseinfo.php' );

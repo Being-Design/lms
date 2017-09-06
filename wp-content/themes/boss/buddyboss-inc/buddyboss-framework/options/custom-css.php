@@ -230,7 +230,7 @@ if ( !function_exists( 'boss_generate_option_css' ) ) {
 		.woocommerce button.button, .woocommerce input.button:hover,
 		#buddypress .activity-list li.load-more a,
 		#buddypress .activity-list li.load-newest a,
-		.btn, button, input[type="submit"], input[type="button"]:not(.button-small), input[type="reset"], article.post-password-required input[type=submit], li.bypostauthor cite span, a.button, #create-group-form .remove, #buddypress ul.button-nav li a, #buddypress div.generic-button a, #buddypress .comment-reply-link, .entry-title a.button, span.create-a-group > a, #buddypress div.activity-comments form input[disabled],
+		.btn, button, input[type="submit"], input[type="button"]:not(.button-small), input[type="reset"], article.post-password-required input[type=submit], li.bypostauthor cite span, a.button, #create-group-form .remove, #buddypress ul.button-nav li a, #buddypress div.generic-button a, body:not(.single-bp_doc) #buddypress .comment-reply-link, .entry-title a.button, span.create-a-group > a, #buddypress div.activity-comments form input[disabled],
 		.woocommerce #respond input#submit.alt, .woocommerce a.button.alt,
 		.woocommerce button.button.alt, .woocommerce input.button.alt,
 		.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover,
@@ -241,7 +241,14 @@ if ( !function_exists( 'boss_generate_option_css' ) ) {
 		background-color: <?php echo esc_attr( boss_get_option( 'boss_links_color' ) ); ?>;
 		}
 
-		body .boss-modal-form .button {
+		body .boss-modal-form .button,
+		#rtmedia-image-editor-cotnainer button.imgedit-crop,
+		#rtmedia-image-editor-cotnainer button.imgedit-rleft,
+		#rtmedia-image-editor-cotnainer button.imgedit-rright,
+		#rtmedia-image-editor-cotnainer button.imgedit-flipv,
+		#rtmedia-image-editor-cotnainer button.imgedit-fliph,
+		#rtmedia-image-editor-cotnainer button.imgedit-undo,
+		#rtmedia-image-editor-cotnainer button.imgedit-redo {
 		background: <?php echo esc_attr( boss_get_option( 'boss_links_color' ) ); ?>;
 		}
 
@@ -391,6 +398,7 @@ if ( !function_exists( 'boss_generate_option_css' ) ) {
 		body.tablet .menu-panel #header-menu > ul > li.current-menu-parent > a:not(.open-submenu):before,
 		body.tablet .menu-panel .bp_components ul li ul li.menupop.active > a:not(.open-submenu):before,
 		body .menu-panel #nav-menu > ul > li.current-menu-item > a:not(.open-submenu):before,
+		body .menu-panel #nav-menu .sub-menu-wrap > ul.sub-menu > li > a:not(.open-submenu):before,
 		body .menu-panel #header-menu > ul > li.current-menu-item > a:not(.open-submenu):before,
 		body .menu-panel #nav-menu > ul > li.current-menu-parent > a:not(.open-submenu):before,
 		body .menu-panel #header-menu > ul > li.current-menu-parent > a:not(.open-submenu):before,
@@ -1817,8 +1825,8 @@ if ( !function_exists( 'boss_generate_option_css' ) ) {
 			background-color: <?php echo esc_attr( boss_get_option( 'boss_links_color' ) ); ?>;
 			color: <?php echo esc_attr( boss_get_option( 'boss_layout_titlebar_bgcolor' ) ); ?>;
 			}
-			.btn:hover, button:hover, input[type="submit"]:hover, input[type="button"]:not(.button-small):hover, input[type="reset"]:hover, article.post-password-required input[type=submit]:hover, a.button:hover, #create-group-form .remove:hover, #buddypress ul.button-nav li a:hover, #buddypress ul.button-nav li.current a, #buddypress div.generic-button a:hover, #buddypress .comment-reply-link:hover, .entry-title a.button:hover, #buddypress div.activity-comments form input[disabled]:hover,
-			.btn, button, input[type="submit"], input[type="button"]:not(.button-small), input[type="reset"], article.post-password-required input[type=submit], li.bypostauthor cite span, a.button, #create-group-form .remove, #buddypress ul.button-nav li a, #buddypress div.generic-button a, #buddypress .comment-reply-link, .entry-title a.button, span.create-a-group > a, #buddypress div.activity-comments form input[disabled]
+			.btn:hover, button:hover, input[type="submit"]:hover, input[type="button"]:not(.button-small):hover, input[type="reset"]:hover, article.post-password-required input[type=submit]:hover, a.button:hover, #create-group-form .remove:hover, #buddypress ul.button-nav li a:hover, #buddypress ul.button-nav li.current a, #buddypress div.generic-button a:hover, body:not(.single-bp_doc) #buddypress .comment-reply-link:hover, .entry-title a.button:hover, #buddypress div.activity-comments form input[disabled]:hover,
+			.btn, button, input[type="submit"], input[type="button"]:not(.button-small), input[type="reset"], article.post-password-required input[type=submit], li.bypostauthor cite span, a.button, #create-group-form .remove, #buddypress ul.button-nav li a, #buddypress div.generic-button a, body:not(.single-bp_doc) #buddypress .comment-reply-link, .entry-title a.button, span.create-a-group > a, #buddypress div.activity-comments form input[disabled]
 			{
 			color: <?php echo esc_attr( boss_get_option( 'boss_layout_titlebar_bgcolor' ) ); ?>;
 			}
@@ -2277,8 +2285,9 @@ if ( !function_exists( 'boss_generate_option_css' ) ) {
             $active_link_color	 = esc_attr( boss_get_option( 'boss_edu_active_link_color' ) );
 
             $social_learner_header_css = "
-            .header-inner {$header_menu_class} .header-navigation ul li a {
-                color: " . esc_attr( boss_get_option( 'boss_heading_font_color' ) ) . ";
+            .header-inner {$header_admin_class} .header-notifications a.notification-link,
+            .header-inner {$header_admin_class} .header-account-login a.user-link {
+                color: " . esc_attr( boss_get_option( 'boss_title_color' ) ) . ";
             }
             .site-header {$header_admin_class} {
                 color: #fff;

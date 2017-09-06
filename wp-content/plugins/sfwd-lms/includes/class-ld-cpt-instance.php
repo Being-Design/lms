@@ -530,9 +530,10 @@ if ( ! class_exists( 'SFWD_CPT_Instance' ) ) {
 						}
 
 						// Added logic for Lesson Videos
-						if ( ( defined( 'LEARNDASH_LESSON_VIDEO' ) ) && ( LEARNDASH_LESSON_VIDEO == true ) ) {
-							if ( $show_content )  {
-								$ld_course_videos = Learndash_Course_Video::get_instance();
+						if ( ( defined('LEARNDASH_LESSON_VIDEO' ) ) && ( LEARNDASH_LESSON_VIDEO == true ) ) {
+							if ( ( $show_content ) && ( $lesson_progression_enabled ) ) {
+								include_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/course/ld-course-video.php');
+								$ld_course_videos = new Learndash_Course_Video();
 								$content = $ld_course_videos->add_video_to_content( $content, $post, $lesson_settings );
 							}
 						}
@@ -628,9 +629,10 @@ if ( ! class_exists( 'SFWD_CPT_Instance' ) ) {
 						$topic_settings = learndash_get_setting( $post );
 
 						// Added logic for Lesson Videos
-						if ( ( defined( 'LEARNDASH_LESSON_VIDEO' ) ) && ( LEARNDASH_LESSON_VIDEO == true ) ) {
-							if ( $show_content ) {
-								$ld_course_videos = Learndash_Course_Video::get_instance();
+						if ( ( defined('LEARNDASH_LESSON_VIDEO' ) ) && ( LEARNDASH_LESSON_VIDEO == true ) ) {
+							if ( ( $show_content ) && ( $lesson_progression_enabled ) ) {
+								include_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/course/ld-course-video.php');
+								$ld_course_videos = new Learndash_Course_Video();
 								$content = $ld_course_videos->add_video_to_content( $content, $post, $topic_settings );
 							}
 						}

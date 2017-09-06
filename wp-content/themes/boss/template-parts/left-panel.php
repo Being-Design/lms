@@ -29,7 +29,7 @@
 				?>
 
 				<!-- Register/Login links for logged out users -->
-				<?php if ( !is_user_logged_in() && buddyboss_is_bp_active() && !bp_hide_loggedout_adminbar( false ) ) : ?>
+				<?php if ( !is_user_logged_in() && buddyboss_is_bp_active() ) : ?>
 
 					<?php if ( buddyboss_is_bp_active() && bp_get_signup_allowed() ) : ?>
 						<a href="<?php echo bp_get_signup_page(); ?>" class="register-link screen-reader-shortcut"><?php _e( 'Register', 'boss' ); ?></a>

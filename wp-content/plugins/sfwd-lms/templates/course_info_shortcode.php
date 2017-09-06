@@ -126,7 +126,7 @@ global $pagenow;
 					if ( ( $user_id == get_current_user_id() ) || ( learndash_is_admin_user() ) || ( learndash_is_group_leader_user() ) ) {
 						$certificateLink = learndash_get_course_certificate_link( $course_id, $user_id );
 						if ( !empty( $certificateLink ) ) {
-							?> - <a class="learndash-profile-course-certificate-link" href="<?php echo $certificateLink ?>" target="_blank"><?php echo __( 'Certificate', 'learndash' ); ?></a><?php
+							?> - <a href="<?php echo $certificateLink ?>" target="_blank"><?php echo __( 'Certificate', 'learndash' ); ?></a><?php
 						}
 					}
 

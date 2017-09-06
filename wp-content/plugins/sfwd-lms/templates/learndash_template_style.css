@@ -827,15 +827,6 @@ dd.course_progress div.course_progress_blue {
 	list-style: none;
 }
 
-form#sfwd-mark-complete input#learndash_mark_complete_button[disabled] {
+input#learndash_mark_complete_button[disabled] {
 	color: #aaa;
-}
-
-form#sfwd-mark-complete p.ld-video-delay-message {
-	
-}
-
-form#sfwd-mark-complete p.ld-video-delay-message span.time-countdown {
-	background-color: #CCC;
-	padding: 0 2px;
 }

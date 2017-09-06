@@ -924,7 +924,7 @@ a.button:hover,
 #buddypress ul.button-nav li a:hover,
 #buddypress ul.button-nav li.current a,
 #buddypress div.generic-button a:hover,
-#buddypress .comment-reply-link:hover,
+body:not(.single-bp_doc) #buddypress .comment-reply-link:hover,
 .entry-title a.button:hover,
 span.create-a-group > a:hover,
 #buddypress div.activity-comments form input[disabled]:hover,
@@ -958,7 +958,7 @@ article.post-password-required input[type=submit]:active,
 a.button:active,
 #buddypress ul.button-nav li a:active,
 #buddypress div.generic-button a:active,
-#buddypress .comment-reply-link:active,
+body:not(.single-bp_doc) #buddypress .comment-reply-link:active,
 .entry-title a.button:active,
 span.create-a-group > a:active,
 #buddypress div.activity-comments form input[disabled]:active {
@@ -1796,6 +1796,26 @@ body:not(.left-menu-open) .menu-panel .ab-sub-wrapper > .ab-item {
     font-size: 19px;
     margin-left: 20px;
     padding-left: 22px;
+    width: 19px;
+    text-align: center;
+    visibility: visible;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.menu-panel #nav-menu .sub-menu-wrap > ul.sub-menu > li > a:not(.open-submenu):before {
+    color: #3c7a90;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 19px;
+    margin-right: 10px;
+    padding-right: 12px;
     width: 19px;
     text-align: center;
     visibility: visible;
@@ -2696,6 +2716,31 @@ button#searchsubmit:hover {
     margin-right: 10px;
 }
 
+#masthead .pop.user-pop-links {
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    padding-left: 190px;
+    right: auto;
+    left: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+
+#masthead .pop.pop-links {
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#masthead .pop-inner {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.2);
+}
 
 /*--------------------------------------------------------------
 3.7 - Footer
@@ -5911,7 +5956,7 @@ div#sitewide-notice div#message p #close-notice:after {
 #buddypress .standard-form#signup_form textarea,
 #buddypress .form-allowed-tags,
 #buddypress #commentform input[type="text"],
-#buddypress #commentform textarea {
+body:not(.single-bp_doc) #buddypress #commentform textarea {
     width: 90%;
 }
 
@@ -11596,7 +11641,9 @@ div[aria-label="rtMedia pro short code"] {
 .single-bp_doc #content article {
     padding: 22px 60px;
 }
-
+.single-bp_doc #comments article {
+    padding: 0;
+}
 .post-type-archive-bp_doc .edit-link,
 .single-bp_doc #content .edit-link {
     display: none;

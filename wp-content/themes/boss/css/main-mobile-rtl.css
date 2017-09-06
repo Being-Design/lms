@@ -124,7 +124,7 @@ body {
     margin-top: 60px;
 }
 
-.with-adminbar #inner-wrap {
+nav.subheader + #panels #inner-wrap {
     margin-top: 0;
 }
 
@@ -267,7 +267,7 @@ header#masthead .header-inner {
     box-sizing: border-box;
 }
 
-#mobile-header.with-adminbar {
+#mobile-header {
     position: static;
 }
 

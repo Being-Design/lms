@@ -2,7 +2,7 @@
 Contributors: buddyboss
 Requires at least: 3.8
 Tested up to: 4.7.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 
 == Description ==
 
@@ -23,6 +23,10 @@ Quickly Setup BuddyBoss Demos on your server using One Click Installer.
 4. Begin installation
 
 == Changelog ==
+
+= 1.0.5 =
+* Fix - support for PHP 5.5 and mysql 5.5
+* Added Server information tab
 
 = 1.0.4 =
 * HTTPS secure link for BuddyBoss.com resources

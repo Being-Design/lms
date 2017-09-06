@@ -5,7 +5,7 @@
  * Description: Quickly Setup BuddyBoss Demos on your server using One Click Installer.
  * Author:      BuddyBoss
  * Author URI:  http://buddyboss.com
- * Version:     1.0.4
+ * Version:     1.0.5
  */
 
 // Exit if accessed directly
@@ -20,7 +20,7 @@ if (!defined('ABSPATH'))
  */
 // Codebase version
 if (!defined( 'BUDDYBOSS_ONECLICK_INSTALLER_PLUGIN_VERSION' ) ) {
-  define( 'BUDDYBOSS_ONECLICK_INSTALLER_PLUGIN_VERSION', '1.0.4' );
+  define( 'BUDDYBOSS_ONECLICK_INSTALLER_PLUGIN_VERSION', '1.0.5' );
 }
 
 // Database version
@@ -81,4 +81,19 @@ require_once(dirname(__FILE__)."/includes/buddyboss-plugin-updater.php");
 new buddyboss_updater_plugin( 'http://update.buddyboss.com/plugin', plugin_basename(__FILE__), 326);
 
 /* Oneclick Admin UI */
-new buddyboss_oneclick_installer();
+
+/**
+ * 
+ * @global \buddyboss_oneclick_installer $buddyboss_oneclick_installer
+ * @return \buddyboss_oneclick_installer
+ */
+function buddyboss_oneclick_installer(){
+    global $buddyboss_oneclick_installer;
+    if( empty( $buddyboss_oneclick_installer ) ){
+        $buddyboss_oneclick_installer = new buddyboss_oneclick_installer();
+    }
+    
+    return $buddyboss_oneclick_installer;
+}
+
+buddyboss_oneclick_installer();

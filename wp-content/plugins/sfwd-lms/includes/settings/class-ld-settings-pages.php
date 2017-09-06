@@ -80,7 +80,7 @@ if ( !class_exists( 'LearnDash_Settings_Page' ) ) {
 			add_action( "load-". $this->settings_screen_id, array( $this, 'load_settings_page') );
 		}
 
-		function admin_tabs( $admin_menu_section ) {
+		function admin_tabs( $admin_menu_section ) {			
 			if ( $admin_menu_section == $this->parent_menu_page_url ) {
 				
 				learndash_add_admin_tab_item(
@@ -95,7 +95,7 @@ if ( !class_exists( 'LearnDash_Settings_Page' ) ) {
 			}
 		}
 
-		function load_settings_page() {
+		function load_settings_page() {			
 
 			if ( defined( 'LEARNDASH_SETTINGS_SECTION_TYPE' ) && ( LEARNDASH_SETTINGS_SECTION_TYPE == 'metabox' ) ) {
 				wp_enqueue_script( 'common' );
@@ -105,7 +105,7 @@ if ( !class_exists( 'LearnDash_Settings_Page' ) ) {
 				do_action( 'learndash_add_meta_boxes', $this->settings_screen_id );
 				
 				add_action( "admin_footer-". $this->settings_screen_id, array( $this, 'load_footer_scripts' ) );
-				add_filter( 'screen_layout_columns', array( $this, 'screen_layout_column' ), 10, 2 );
+				add_filter( 'screen_layout_columns', array( $this, 'screen_layout_column' ), 10, 2 );		
 			}
 			
 //			wp_enqueue_style( 
@@ -119,7 +119,7 @@ if ( !class_exists( 'LearnDash_Settings_Page' ) ) {
 			
 //			wp_enqueue_script( 
 //				'learndash-admin-settings-page-script', 
-//				LEARNDASH_LMS_PLUGIN_URL . 'assets/js/learndash-admin-settings-page'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.js', 
+//				LEARNDASH_LMS_PLUGIN_URL . '/assets/js/learndash-admin-settings-page'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.js', 
 //				array( 'jquery' ), 
 //				LEARNDASH_VERSION,
 //				true 
@@ -136,7 +136,7 @@ if ( !class_exists( 'LearnDash_Settings_Page' ) ) {
 
 			wp_enqueue_style( 
 				'sfwd-module-style', 
-				LEARNDASH_LMS_PLUGIN_URL . 'assets/css/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.css', 
+				LEARNDASH_LMS_PLUGIN_URL . '/assets/css/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.css', 
 				array(), 
 				LEARNDASH_VERSION 
 			);
@@ -144,7 +144,7 @@ if ( !class_exists( 'LearnDash_Settings_Page' ) ) {
 
 			wp_enqueue_script( 
 				'sfwd-module-script', 
-				LEARNDASH_LMS_PLUGIN_URL . 'assets/js/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.js', 
+				LEARNDASH_LMS_PLUGIN_URL . '/assets/js/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.js', 
 				array( 'jquery' ), 
 				LEARNDASH_VERSION,
 				true 
@@ -153,6 +153,8 @@ if ( !class_exists( 'LearnDash_Settings_Page' ) ) {
 
 			wp_localize_script( 'sfwd-module-script', 'sfwd_data', array() );
 
+
+			
 			do_action('learndash-settings-page-load', $this->settings_screen_id );
 		}
 

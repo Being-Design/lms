@@ -5,7 +5,7 @@
  * Description: Integrate the LearnDash LMS plugin with BuddyPress, so you can add courses to your social network.
  * Author:      BuddyBoss
  * Author URI:  http://buddyboss.com
- * Version:     1.2.2
+ * Version:     1.2.3
  */
 // Exit if accessed directly
 if (!defined('ABSPATH'))
@@ -18,7 +18,7 @@ if (!defined('ABSPATH'))
  */
 // Codebase version
 if (!defined( 'BUDDYPRESS_LEARNDASH_PLUGIN_VERSION' ) ) {
-  define( 'BUDDYPRESS_LEARNDASH_PLUGIN_VERSION', '1.2.2' );
+  define( 'BUDDYPRESS_LEARNDASH_PLUGIN_VERSION', '1.2.3' );
 }
 
 // Database version

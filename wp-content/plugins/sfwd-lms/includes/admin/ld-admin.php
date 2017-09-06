@@ -75,7 +75,7 @@ function learndash_load_admin_resources() {
 		if ( ( $pagenow == 'edit.php' ) && ( ( $typenow == 'sfwd-essays' ) || ( $typenow == 'sfwd-assignment' ) ) ) {
 			wp_enqueue_script( 
 				'sfwd-module-script', 
-				LEARNDASH_LMS_PLUGIN_URL . 'assets/js/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.js', 
+				LEARNDASH_LMS_PLUGIN_URL . '/assets/js/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.js', 
 				array( 'jquery' ), 
 				LEARNDASH_VERSION,
 				true 
@@ -1454,46 +1454,3 @@ function learndash_manage_category_custom_column( $column_content = '', $column_
 	return $column_content;
 }
 add_filter( "manage_category_custom_column", 'learndash_manage_category_custom_column', 10, 3 );
-
-
-function learndash_delete_all_data() {
-	global $wpdb, $learndash_post_types;
-	
-	$wpdb->query( 'DELETE FROM '. $wpdb->usermeta ." WHERE meta_key='_sfwd-course_progress'" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->usermeta ." WHERE meta_key='_sfwd-quizzes'" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->usermeta ." WHERE meta_key LIKE 'completed_%'" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->usermeta ." WHERE meta_key LIKE 'course_%_access_from'" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->usermeta ." WHERE meta_key LIKE 'course_completed_%'" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->usermeta ." WHERE meta_key LIKE 'learndash_course_expired_%'" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->options ." WHERE option_name LIKE 'learndash_%'" );
-
-	//$wpdb->query( 'DELETE FROM '. $wpdb->postmeta ." WHERE post_id IN (SELECT ID FROM wp_posts WHERE post_type IN ('sfwd-courses', 'swfd-lessons', 'sfwd-topic', 'sfwd-quiz', 'sfwd-essays') )" );
-	//$wpdb->query( 'DELETE FROM '. $wpdb->posts ." WHERE post_type IN ('sfwd-courses', 'swfd-lessons', 'sfwd-topic', 'sfwd-quiz', 'sfwd-essays')" );
-
-	$ld_post_types = '';
-	foreach( $learndash_post_types as $post_type ) {
-		if ( !empty( $ld_post_types ) ) $ld_post_types .= ',';
-		$ld_post_types .= "'". $post_type ."'";
-	}
-	
-	$post_ids = $wpdb->get_col( "SELECT ID FROM wp_posts WHERE post_type IN (". $ld_post_types .")" );
-	if ( !empty( $post_ids ) ) {
-		$wpdb->query( 'DELETE FROM '. $wpdb->postmeta ." WHERE post_id IN (". implode( ',', $post_ids ) .")" );
-		$wpdb->query( 'DELETE FROM '. $wpdb->posts ." WHERE post_parent IN (". implode( ',', $post_ids ) .")" );
-		$wpdb->query( 'DELETE FROM '. $wpdb->posts ." WHERE ID IN (". implode( ',', $post_ids ) .")" );
-	}
-
-	$wpdb->query( 'DELETE FROM '. $wpdb->prefix ."learndash_user_activity" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->prefix ."learndash_user_activity_meta" );
-
-	$wpdb->query( 'DELETE FROM '. $wpdb->prefix ."wp_pro_quiz_category" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->prefix ."wp_pro_quiz_form" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->prefix ."wp_pro_quiz_lock" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->prefix ."wp_pro_quiz_master" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->prefix ."wp_pro_quiz_prerequisite" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->prefix ."wp_pro_quiz_question" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->prefix ."wp_pro_quiz_statistic" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->prefix ."wp_pro_quiz_statistic_ref" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->prefix ."wp_pro_quiz_template" );
-	$wpdb->query( 'DELETE FROM '. $wpdb->prefix ."wp_pro_quiz_toplist" );
-}

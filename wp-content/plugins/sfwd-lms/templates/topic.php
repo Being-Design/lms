@@ -126,7 +126,7 @@
 		</div>	
 	<?php endif; ?>
 
-	<?php if ( ( lesson_hasassignments( $post ) ) && ( !empty( $user_id ) ) ) : ?>
+	<?php if ( lesson_hasassignments( $post ) ) : ?>
 
 		<?php $assignments = learndash_get_user_assignments( $post->ID, $user_id ); ?>
 

@@ -240,7 +240,7 @@ function learndash_lesson_edit_page_javascript() {
 	jQuery("[name='sfwd-lessons_lesson_assignment_points_enabled']").change(function(){
 		checked = jQuery("[name=sfwd-lessons_lesson_assignment_points_enabled]:checked").length;
 		if(checked) {
-			jQuery("#sfwd-lessons_lesson_assignment_points_amount").slideDown();
+			jQuery("#sfwd-lessons_lesson_assignment_points_amount").show();
 		}
 		else {
 			jQuery("#sfwd-lessons_lesson_assignment_points_amount").hide();
@@ -256,16 +256,10 @@ function learndash_lesson_edit_page_javascript() {
 	jQuery("input[name='sfwd-lessons_lesson_assignment_upload']").change(function(){
 		checked = jQuery("input[name=sfwd-lessons_lesson_assignment_upload]:checked").length;
 		if(checked) {
-			jQuery("#sfwd-lessons_auto_approve_assignment").slideDown();
-			jQuery("#sfwd-lessons_lesson_assignment_points_enabled").slideDown();
+			jQuery("#sfwd-lessons_auto_approve_assignment").show();
+			jQuery("#sfwd-lessons_lesson_assignment_points_enabled").show();
 			//jQuery("#sfwd-lessons_lesson_assignment_points_amount").show();
 			jQuery("input[name='sfwd-lessons_lesson_assignment_points_enabled']").change();
-			
-			// We uncheck the Video Progression option because we don't support Assignments and Videos
-			if ( jQuery("input[name='sfwd-lessons_lesson_video_enabled']").length ) {
-				jQuery("input[name='sfwd-lessons_lesson_video_enabled']").attr('checked', false);
-				jQuery("#sfwd-lessons_lesson_video_enabled").hide();
-			}
 		}
 		else {
 			jQuery("#sfwd-lessons_auto_approve_assignment").hide();
@@ -275,89 +269,53 @@ function learndash_lesson_edit_page_javascript() {
 			
 			//jQuery("#sfwd-lessons_lesson_assignment_points_amount").hide();
 			jQuery("input[name='sfwd-lessons_lesson_assignment_points_enabled']").change();
-			
-			if ( jQuery("input[name='sfwd-lessons_lesson_video_enabled']").length ) {
-				jQuery("#sfwd-lessons_lesson_video_enabled").slideDown();
-			}
 		}
 	});
+
 	if(jQuery("input[name='sfwd-lessons_lesson_assignment_upload']").length) {
 		jQuery("input[name='sfwd-lessons_lesson_assignment_upload']").change();
 	}
 
-	var video_enabled_checked = false;
-	var video_shown_checked = false;
-	var video_shown_selected = false;
-	var video_auto_complete_checked = false;
-	
-	if ( jQuery("input[name='sfwd-lessons_lesson_video_enabled']").length ) {
-		jQuery("input[name='sfwd-lessons_lesson_video_enabled']").change( function() {
-			video_enabled_checked = jQuery("input[name=sfwd-lessons_lesson_video_enabled]:checked").length;
-			if( video_enabled_checked ) {
-				jQuery("#sfwd-lessons_lesson_video_url").slideDown();
-				jQuery("#sfwd-lessons_lesson_video_auto_start").slideDown();
-				jQuery("#sfwd-lessons_lesson_video_show_controls").slideDown();
-				jQuery("#sfwd-lessons_lesson_video_shown").slideDown();
-				
-				if ( jQuery("input[name='sfwd-lessons_lesson_assignment_upload']").length ) {
-					jQuery("input[name='sfwd-lessons_lesson_assignment_upload']").attr('checked', false);
-					jQuery("#sfwd-lessons_lesson_assignment_upload").hide();
-				}
-				
-				
-			} else {
-				jQuery("#sfwd-lessons_lesson_video_url").hide();
-				jQuery("#sfwd-lessons_lesson_video_auto_start").hide();
-				jQuery("#sfwd-lessons_lesson_video_show_controls").hide();
-				jQuery("#sfwd-lessons_lesson_video_shown").hide();
-				jQuery("#sfwd-lessons_lesson_video_auto_complete").hide();
-				jQuery("#sfwd-lessons_lesson_video_auto_complete_delay").hide();
 
-				if ( jQuery("input[name='sfwd-lessons_lesson_assignment_upload']").length ) {
-					jQuery("#sfwd-lessons_lesson_assignment_upload").slideDown();
-				}
-			}
 
-			if ( jQuery("select[name='sfwd-lessons_lesson_video_shown']").length ) {
+	jQuery("input[name='sfwd-lessons_lesson_video_enabled']").change(function(){
+		checked = jQuery("input[name=sfwd-lessons_lesson_video_enabled]:checked").length;
+		if(checked) {
+			jQuery("#sfwd-lessons_lesson_video_url").slideDown();
+			jQuery("#sfwd-lessons_lesson_video_auto_start").slideDown();
+			jQuery("#sfwd-lessons_lesson_video_shown").slideDown();
+			if(jQuery("select[name='sfwd-lessons_lesson_video_shown']").length) {
 				jQuery("select[name='sfwd-lessons_lesson_video_shown']").change();
 			}
+		} else {
+			jQuery("#sfwd-lessons_lesson_video_url").hide();
+			jQuery("#sfwd-lessons_lesson_video_auto_start").hide();
+			jQuery("#sfwd-lessons_lesson_video_shown").hide();
+			if(jQuery("select[name='sfwd-lessons_lesson_video_shown']").length) {
+				jQuery("select[name='sfwd-lessons_lesson_video_shown']").change();
+			}
+		}
+	});
 
-		});
+	if(jQuery("input[name='sfwd-lessons_lesson_video_enabled']").length) {
 		jQuery("input[name='sfwd-lessons_lesson_video_enabled']").change();
 	}
 
-	if ( jQuery("select[name='sfwd-lessons_lesson_video_shown']").length ) {
-		jQuery("select[name='sfwd-lessons_lesson_video_shown']").change( function() {
-			video_shown_checked = jQuery("input[name=sfwd-lessons_lesson_video_enabled]:checked").length;
-			video_shown_selected = jQuery("select[name='sfwd-lessons_lesson_video_shown']").val();
-			
-			if ( ( video_enabled_checked ) && ( video_shown_checked ) && ( video_shown_selected == 'AFTER' ) ) {
-				jQuery("#sfwd-lessons_lesson_video_auto_complete").slideDown();
-			} else {
-				jQuery("#sfwd-lessons_lesson_video_auto_complete").hide();
-			}
-		
-			if ( jQuery("input[name='sfwd-lessons_lesson_video_auto_complete']").length ) {
-				jQuery("input[name='sfwd-lessons_lesson_video_auto_complete']").change();
-			}
-		});
+
+	jQuery("select[name='sfwd-lessons_lesson_video_shown']").change(function(){
+		checked = jQuery("input[name=sfwd-lessons_lesson_video_enabled]:checked").length;
+		selected = jQuery("select[name='sfwd-lessons_lesson_video_shown']").val();
+		if ((checked) && ( selected == 'AFTER' )) {
+			jQuery("#sfwd-lessons_lesson_video_auto_complete").slideDown();
+		} else {
+			jQuery("#sfwd-lessons_lesson_video_auto_complete").hide();
+		}
+	});
+	if(jQuery("select[name='sfwd-lessons_lesson_video_shown']").length) {
 		jQuery("select[name='sfwd-lessons_lesson_video_shown']").change();
 	}
 
-	if ( jQuery("input[name='sfwd-lessons_lesson_video_auto_complete']").length ) {
-		jQuery("input[name='sfwd-lessons_lesson_video_auto_complete']").change( function() {
-			video_auto_complete_checked = jQuery("input[name=sfwd-lessons_lesson_video_auto_complete]:checked").length;
-			
-			if ( ( video_enabled_checked ) && ( video_shown_selected == 'AFTER') && ( video_auto_complete_checked ) ) {
-				jQuery("#sfwd-lessons_lesson_video_auto_complete_delay").slideDown();
-				jQuery("#sfwd-lessons_lesson_video_hide_complete_button").slideDown();
-			} else {
-				jQuery("#sfwd-lessons_lesson_video_auto_complete_delay").hide();
-				jQuery("#sfwd-lessons_lesson_video_hide_complete_button").hide();
-			}
-		});
-		jQuery("input[name='sfwd-lessons_lesson_video_auto_complete']").change();
-	}
+
 
     //load_datepicker();	
 	
@@ -619,12 +577,6 @@ function learndash_topic_edit_page_javascript() {
 		if(checked) {
 			jQuery("#sfwd-topic_auto_approve_assignment").show();
 			jQuery("#sfwd-topic_lesson_assignment_points_enabled").show();
-			
-			// We uncheck the Video Progression option because we don't support Assignments and Videos
-			if ( jQuery("input[name='sfwd-topic_lesson_video_enabled']").length ) {
-				jQuery("input[name='sfwd-topic_lesson_video_enabled']").attr('checked', false);
-				jQuery("#sfwd-topic_lesson_video_enabled").hide();
-			}
 		}
 		else {
 			jQuery("#sfwd-topic_auto_approve_assignment").hide();
@@ -632,10 +584,6 @@ function learndash_topic_edit_page_javascript() {
 
 			jQuery("[name='sfwd-topic_lesson_assignment_points_enabled']").prop('checked', false); 
 			jQuery("[name='sfwd-topic_lesson_assignment_points_enabled']").change();
-
-			if ( jQuery("input[name='sfwd-topic_lesson_video_enabled']").length ) {
-				jQuery("#sfwd-topic_lesson_video_enabled").slideDown();
-			}
 		}
 	});
 	
@@ -659,82 +607,25 @@ function learndash_topic_edit_page_javascript() {
 	if(jQuery("[name='sfwd-topic_lesson_assignment_points_enabled']").length) {
 		jQuery("[name='sfwd-topic_lesson_assignment_points_enabled']").change();
 	}
-		
-	var video_enabled_checked = false;
-	var video_shown_checked = false;
-	var video_shown_selected = false;
-	var video_auto_complete_checked = false;
 	
-	if ( jQuery("input[name='sfwd-topic_lesson_video_enabled']").length ) {
-		jQuery("input[name='sfwd-topic_lesson_video_enabled']").change( function() {
-			video_enabled_checked = jQuery("input[name=sfwd-topic_lesson_video_enabled]:checked").length;
-			if( video_enabled_checked ) {
-				jQuery("#sfwd-topic_lesson_video_url").slideDown();
-				jQuery("#sfwd-topic_lesson_video_auto_start").slideDown();
-				jQuery("#sfwd-topic_lesson_video_show_controls").slideDown();
-				jQuery("#sfwd-topic_lesson_video_shown").slideDown();
-				
-				if ( jQuery("input[name='sfwd-topic_lesson_assignment_upload']").length ) {
-					jQuery("input[name='sfwd-topic_lesson_assignment_upload']").attr('checked', false);
-					jQuery("#sfwd-topic_lesson_assignment_upload").hide();
-				}
-				
-				
-			} else {
-				jQuery("#sfwd-topic_lesson_video_url").hide();
-				jQuery("#sfwd-topic_lesson_video_auto_start").hide();
-				jQuery("#sfwd-topic_lesson_video_show_controls").hide();
-				jQuery("#sfwd-topic_lesson_video_shown").hide();
-				jQuery("#sfwd-topic_lesson_video_auto_complete").hide();
-				jQuery("#sfwd-topic_lesson_video_auto_complete_delay").hide();
 
-				if ( jQuery("input[name='sfwd-topic_lesson_assignment_upload']").length ) {
-					jQuery("#sfwd-topic_lesson_assignment_upload").slideDown();
-				}
-			}
+	jQuery("input[name='sfwd-topic_lesson_video_enabled']").change(function(){
+		checked = jQuery("input[name=sfwd-topic_lesson_video_enabled]:checked").length;
+		if(checked) {
+			jQuery("#sfwd-topic_lesson_video_url").slideDown();
+			jQuery("#sfwd-topic_lesson_video_auto_start").slideDown();
+			jQuery("#sfwd-topic_lesson_video_auto_complete").slideDown();
+		} else {
+			jQuery("#sfwd-topic_lesson_video_url").hide();
+			jQuery("#sfwd-topic_lesson_video_auto_start").hide();
+			jQuery("#sfwd-topic_lesson_video_auto_complete").hide();
+		}
+	});
 
-			if ( jQuery("select[name='sfwd-topic_lesson_video_shown']").length ) {
-				jQuery("select[name='sfwd-topic_lesson_video_shown']").change();
-			}
-
-		});
+	if(jQuery("input[name='sfwd-topic_lesson_video_enabled']").length) {
 		jQuery("input[name='sfwd-topic_lesson_video_enabled']").change();
 	}
 
-	if ( jQuery("select[name='sfwd-topic_lesson_video_shown']").length ) {
-		jQuery("select[name='sfwd-topic_lesson_video_shown']").change( function() {
-			video_shown_checked = jQuery("input[name=sfwd-topic_lesson_video_enabled]:checked").length;
-			video_shown_selected = jQuery("select[name='sfwd-topic_lesson_video_shown']").val();
-			
-			if ( ( video_enabled_checked ) && ( video_shown_checked ) && ( video_shown_selected == 'AFTER' ) ) {
-				jQuery("#sfwd-topic_lesson_video_auto_complete").slideDown();
-			} else {
-				jQuery("#sfwd-topic_lesson_video_auto_complete").hide();
-			}
-		
-			if ( jQuery("input[name='sfwd-topic_lesson_video_auto_complete']").length ) {
-				jQuery("input[name='sfwd-topic_lesson_video_auto_complete']").change();
-			}
-		});
-		jQuery("select[name='sfwd-topic_lesson_video_shown']").change();
-	}
-
-	if ( jQuery("input[name='sfwd-topic_lesson_video_auto_complete']").length ) {
-		jQuery("input[name='sfwd-topic_lesson_video_auto_complete']").change( function() {
-			video_auto_complete_checked = jQuery("input[name=sfwd-topic_lesson_video_auto_complete]:checked").length;
-			
-			if ( ( video_enabled_checked ) && ( video_shown_selected == 'AFTER') && ( video_auto_complete_checked ) ) {
-				jQuery("#sfwd-topic_lesson_video_auto_complete_delay").slideDown();
-				jQuery("#sfwd-topic_lesson_video_hide_complete_button").slideDown();
-			} else {
-				jQuery("#sfwd-topic_lesson_video_auto_complete_delay").hide();
-				jQuery("#sfwd-topic_lesson_video_hide_complete_button").hide();
-			}
-		});
-		jQuery("input[name='sfwd-topic_lesson_video_auto_complete']").change();
-	}
-		
-	
 
 	jQuery("select[name=sfwd-topic_course]").change(function() {
 		if(window['sfwd_topic_lesson'] == undefined)

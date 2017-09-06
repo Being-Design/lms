@@ -253,26 +253,20 @@ function learndash_get_option( $post_type, $setting = '' ) {
 	
 	$options = get_option( 'sfwd_cpt_options' );
 
-	// In LD v2.4 we moved all the settings to the new Settings API. Because of this we need to merge the value(s)
-	// into the legacy values but keep in mind other add-ons might be extending the $post_args sections
-	if ( $post_type == 'sfwd-lessons' ) {
-		if ( $options === false ) $options = array();
-		if ( !isset( $options['modules'] ) ) $options['modules'] = array();
-		if ( !isset( $options['modules'][ $post_type.'_options'] ) ) $options['modules'][ $post_type.'_options'] = array();
-		
-		$settings_fields = LearnDash_Settings_Section::get_section_settings_all('LearnDash_Settings_Section_Lessons_Display_Order');
-		if ( ( !empty( $settings_fields ) ) && ( is_array( $settings_fields ) ) ) {
-			foreach( $settings_fields as $key => $val ) {
-				$options['modules'][ $post_type . '_options'][$post_type .'_'. $key ] = $val;
-			}
-		}
-	}
-
 	if ( ( empty( $setting ) )  && ( !empty( $options['modules'][ $post_type.'_options'] ) ) ) {
 		foreach ( $options['modules'][ $post_type.'_options'] as $key => $val ) {
 			$return[str_replace( $post_type.'_', '', $key )] = $val;
 		}
 
+		// In LD v2.4 we moved all the settings to the new Settings API. Because of this we need to merge the value(s)
+		// into the legacy values but keep in mind other add-ons might be extending the $post_args sections
+		if ( $post_type == 'sfwd-lessons' ) {
+			$settings_fields = LearnDash_Settings_Section::get_section_settings_all('LearnDash_Settings_Section_Lessons_Display_Order');
+			if ( ( !empty( $settings_fields ) ) && ( is_array( $settings_fields ) ) ) {
+				$return = wp_parse_args( $settings_fields, $return );
+			}
+		}
+		
 		return $return;
 	}
 
@@ -473,7 +467,7 @@ function learndash_payment_buttons( $course ) {
 			$post_title = str_replace(array('[', ']'), array('', ''), $course->post_title);
 			
 			if ( empty( $course_price_type ) || $course_price_type == 'paynow' ) {
-				$shortcode_content = do_shortcode( '[paypal type="paynow" amount="'. $course_price .'" sandbox="'. $paypal_settings['paypal_sandbox'] .'" email="'. $paypal_settings['paypal_email'] .'" itemno="'. $course->ID .'" name="'. $post_title .'" noshipping="1" nonote="1" qty="1" currencycode="'. $paypal_settings['paypal_currency'] .'" rm="2" notifyurl="'. $paypal_settings['paypal_notifyurl'] .'" returnurl="'. $paypal_settings['paypal_returnurl'] .'" cancelurl="'. $paypal_settings['paypal_cancelurl'] .'" imagewidth="100px" pagestyle="paypal" lc="'. $paypal_settings['paypal_country'] .'" cbt="'. __( 'Complete Your Purchase', 'learndash' ) . '" custom="'. $user_id. '"]' );
+				$shortcode_content = do_shortcode( '[paypal type="paynow" amount="'. $course_price .'" sandbox="'. $paypal_settings['paypal_sandbox'] .'" email="'. $paypal_settings['paypal_email'] .'" itemno="'. $course->ID .'" name="'. $post_title .'" noshipping="1" nonote="1" qty="1" currencycode="'. $paypal_settings['paypal_currency'] .'" rm="2" notifyurl="'. $paypal_settings['paypal_notifyurl'] .'" returnurl="'. $paypal_settings['paypal_returnurl'] .'" imagewidth="100px" pagestyle="paypal" lc="'. $paypal_settings['paypal_country'] .'" cbt="'. __( 'Complete Your Purchase', 'learndash' ) . '" custom="'. $user_id. '"]' );
 				if (!empty( $shortcode_content ) ) {
 					$paypal_button = wptexturize( '<div class="learndash_checkout_button learndash_paypal_button">'. $shortcode_content .'</div>');
 				}
@@ -483,7 +477,7 @@ function learndash_payment_buttons( $course ) {
 				$course_price_billing_t3 = get_post_meta( $course_id, 'course_price_billing_t3',  true );
 				$srt = intval( $course_no_of_cycles );
 				
-				$shortcode_content = do_shortcode( '[paypal type="subscribe" a3="'. $course_price .'" p3="'. $course_price_billing_p3 .'" t3="'. $course_price_billing_t3 .'" sandbox="'. $paypal_settings['paypal_sandbox'] .'" email="'. $paypal_settings['paypal_email'] .'" itemno="'. $course->ID .'" name="'. $post_title .'" noshipping="1" nonote="1" qty="1" currencycode="'. $paypal_settings['paypal_currency'] .'" rm="2" notifyurl="'. $paypal_settings['paypal_notifyurl'] .'" cancelurl="'. $paypal_settings['paypal_cancelurl'] .'" returnurl="'. $paypal_settings['paypal_returnurl'] .'" imagewidth="100px" pagestyle="paypal" lc="'. $paypal_settings['paypal_country'] .'" cbt="'. __( 'Complete Your Purchase', 'learndash' ) .'" custom="'. $user_id .'" srt="'. $srt .'"]' );
+				$shortcode_content = do_shortcode( '[paypal type="subscribe" a3="'. $course_price .'" p3="'. $course_price_billing_p3 .'" t3="'. $course_price_billing_t3 .'" sandbox="'. $paypal_settings['paypal_sandbox'] .'" email="'. $paypal_settings['paypal_email'] .'" itemno="'. $course->ID .'" name="'. $post_title .'" noshipping="1" nonote="1" qty="1" currencycode="'. $paypal_settings['paypal_currency'] .'" rm="2" notifyurl="'. $paypal_settings['paypal_notifyurl'] .'" returnurl="'. $paypal_settings['paypal_returnurl'] .'" imagewidth="100px" pagestyle="paypal" lc="'. $paypal_settings['paypal_country'] .'" cbt="'. __( 'Complete Your Purchase', 'learndash' ) .'" custom="'. $user_id .'" srt="'. $srt .'"]' );
 				
 				if (!empty( $shortcode_content ) ) {
 					$paypal_button = wptexturize( '<div class="learndash_checkout_button learndash_paypal_button">'. $shortcode_content .'</div>' );
@@ -972,16 +966,6 @@ function learndash_get_valid_transient( $transient_key = '' ) {
 	return $transient_data;
 }
 
-function learndash_purge_transients() {
-	if ( !apply_filters( 'learndash_transients_disabled', LEARNDASH_TRANSIENTS_DISABLED, 'learndash_all_purge' ) ) { 
-		global $wpdb;
-		
-		$sql_str = "DELETE FROM ". $wpdb->options." WHERE option_name LIKE '_transient_learndash_%' OR option_name LIKE '_transient_timeout_learndash_%'";
-		//error_log('sql_str['. $sql_str .']');
-		$wpdb->query( $sql_str );
-	}
-}
-
 function learndash_format_course_points( $points ) {
 
 	$points = preg_replace("/[^0-9.]/", '', $points );
@@ -1008,7 +992,6 @@ function learndash_template_url_from_path( $filepath = '' ) {
 		$WP_CONTENT_DIR_tmp = str_replace('\\', '/', WP_CONTENT_DIR );
 		$filepath = str_replace('\\', '/', $filepath );
 		$filepath = str_replace( $WP_CONTENT_DIR_tmp, WP_CONTENT_URL, $filepath );
-		$filepath = str_replace( array('https://', 'http://' ), array('//', '//' ), $filepath );
 	}
 
 	return $filepath;

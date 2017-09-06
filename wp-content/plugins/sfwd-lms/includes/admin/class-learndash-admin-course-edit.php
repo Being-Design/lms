@@ -48,43 +48,34 @@ if (!class_exists('Learndash_Admin_Course_Edit')) {
 		 */
 		function add_metaboxes() {
 			
-			if ( ( isset( $_GET['post'] ) ) && ( !empty( $_GET['post'] ) ) ) {
-
-				if ( ( defined( 'LEARNDASH_COURSE_BUILDER' ) ) && ( LEARNDASH_COURSE_BUILDER === true ) ) {
-					$course_id = intval( $_GET['post'] );
-					$course_price_type = learndash_get_setting( $course_id, 'course_price_type' );
-
-					if ( $course_price_type !== 'open' ) {
-
-						add_meta_box(
-							'learndash_couse_users',
-							sprintf( _x( 'LearnDash %s Users', 'LearnDash Course Users', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
-							array( $this, 'course_users_page_box' ),
-							$this->courses_post_type
-						);
-					}
-				}
-				
-				/** 
-				 * @since 2.3.1
-				 * Check if we have defined groups before showing the meta box
-				 */
-				$group_query_args = array( 
-					'post_type' 		=> 	'groups', 
-					'post_status' 		=> 	'publish',  
-					'posts_per_page' 	=> 	1,
+			/** 
+			 * @since 2.3.1
+			 * Check if we have defined groups before showing the meta box
+			 */
+			$group_query_args = array( 
+				'post_type' 		=> 	'groups', 
+				'post_status' 		=> 	'publish',  
+				'posts_per_page' 	=> 	1,
+			);
+			
+			$group_query = new WP_Query( $group_query_args );
+			if ( ( $group_query instanceof WP_Query) && ( !empty( $group_query->posts ) ) ) {
+			
+				add_meta_box(
+					'learndash_couse_groups',
+					sprintf( _x( 'LearnDash %s Group', 'LearnDash Course Group', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
+					array( $this, 'course_groups_page_box' ),
+					$this->courses_post_type
 				);
-		
-				$group_query = new WP_Query( $group_query_args );
-				if ( ( $group_query instanceof WP_Query) && ( !empty( $group_query->posts ) ) ) {
-		
-					add_meta_box(
-						'learndash_couse_groups',
-						sprintf( _x( 'LearnDash %s Group', 'LearnDash Course Group', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
-						array( $this, 'course_groups_page_box' ),
-						$this->courses_post_type
-					);
-				}
+
+				/*
+				add_meta_box(
+					'learndash_groups_join_course',
+					sprintf( _x( '%s Users to Group', 'Course Users to Group', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
+					array( $this, 'course_users_groups_page_box' ),
+					$this->courses_post_type
+				);
+				*/
 			}
 		}
 
@@ -127,37 +118,32 @@ if (!class_exists('Learndash_Admin_Course_Edit')) {
 		 * @param  object $post WP_Post
 		 * @return string 		meta box HTML output
 		 */
-		function course_users_page_box( $post ) {
+		function course_users_groups_page_box( $post ) {
 			$course_id = $post->ID;
 
-			$user_ids = array();
-			
-			$course_users_query = learndash_get_users_for_course( $course_id );
-			if ( $course_users_query instanceof WP_User_Query ) {	
-				$user_ids = $course_users_query->get_results();
-			}
-			
-
-
 			// Use nonce for verification
-			wp_nonce_field( 'learndash_course_users_nonce_'. $course_id, 'learndash_course_users_nonce' );
+			wp_nonce_field( 'learndash_course_users_groups_nonce_'. $course_id, 'learndash_course_users_groups_nonce' );
 			
 			?>
-			<div id="learndash_course_users_page_box" class="learndash_course_users_page_box">
-			<?php
-				$ld_binary_selector_course_users = new Learndash_Binary_Selector_Course_Users(
-					array(
-						'course_id'		=>	$course_id,
-						'selected_ids'	=>	$user_ids,
-						'search_posts_per_page' => 100
-					)
-				);
-				$ld_binary_selector_course_users->show();
-			?>
+			<div id="learndash_course_users_groups_page_box" class="learndash_course_users_groups_page_box">
+				<p><?php printf( _x('With this setting students enrolling in this %s will automatically be added to the following Group(s).', 'placeholder: Course', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ); ?></p>
+				<?php
+					$ld_binary_selector_course_users_groups = new Learndash_Binary_Selector_Course_Groups(
+						array(
+							'html_title' 			=>	'<h3>'. sprintf( _x('%s Users Groups', '%s Users Groups', 'learndash'), LearnDash_Custom_Label::get_label( 'course' ) ) .'</h3>',
+							'html_id'				=>	'learndash_course_users_groups',
+							'html_class'			=>	'learndash_course_users_groups',
+							'html_name'				=>	'learndash_course_users_groups',
+							'course_id'				=>	$course_id,
+							'selected_ids'			=>	get_post_meta( $course_id, 'learndash_course_users_groups', true ),
+							'search_posts_per_page' => 100
+						)
+					);
+					$ld_binary_selector_course_users_groups->show();
+				?>
 			</div>
 			<?php 
 		}
-
 
 		function save_metaboxes( $post_id, $post, $update ) {
 
@@ -191,15 +177,13 @@ if (!class_exists('Learndash_Admin_Course_Edit')) {
 				}
 			}
 
-			/*
-			if ( ( isset( $_POST['learndash_course_users_nonce'] ) ) && ( wp_verify_nonce( $_POST['learndash_course_users_nonce'], 'learndash_course_users_nonce_'. $post_id ) ) ) {
+			if ( ( isset( $_POST['learndash_course_users_groups_nonce'] ) ) && ( wp_verify_nonce( $_POST['learndash_course_users_groups_nonce'], 'learndash_course_users_groups_nonce_'. $post_id ) ) ) {
 
-				if ( ( isset( $_POST['learndash_course_users'] ) ) && ( isset( $_POST['learndash_course_users'][$post_id] ) ) && ( !empty( $_POST['learndash_course_users'][$post_id] ) ) ) {
-					$course_users = (array)json_decode( stripslashes( $_POST['learndash_course_users'][$post_id] ) );
-					//update_post_meta( $post_id, 'learndash_course_users_groups', $course_users_groups );
+				if ( ( isset( $_POST['learndash_course_users_groups'] ) ) && ( isset( $_POST['learndash_course_users_groups'][$post_id] ) ) && ( !empty( $_POST['learndash_course_users_groups'][$post_id] ) ) ) {
+					$course_users_groups = (array)json_decode( stripslashes( $_POST['learndash_course_users_groups'][$post_id] ) );
+					update_post_meta( $post_id, 'learndash_course_users_groups', $course_users_groups );
 				}
 			}
-			*/
 
 		}
 		// End of functions

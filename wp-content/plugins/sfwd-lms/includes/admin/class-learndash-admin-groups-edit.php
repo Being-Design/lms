@@ -277,7 +277,7 @@ if (!class_exists('Learndash_Admin_Groups_Edit')) {
 					$ld_binary_selector_group_users = new Learndash_Binary_Selector_Group_Users(
 						array(
 							'group_id'				=>	$post_id,
-							//'exclude'				=>	learndash_get_groups_administrator_ids( $post_id ),	// Exclude current group leaders.
+							'exclude'				=>	learndash_get_groups_administrator_ids( $post_id ),	// Exclude current group leaders.
 							'selected_ids' 			=>	learndash_get_groups_user_ids( $post_id, true ),
 						)
 					);

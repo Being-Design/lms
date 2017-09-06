@@ -7,7 +7,7 @@ if ( ( class_exists( 'LearnDash_Settings_Page' ) ) && ( !class_exists( 'LearnDas
 			$this->parent_menu_page_url		=	'edit.php?post_type=sfwd-topic';
 			$this->menu_page_capability		=	LEARNDASH_ADMIN_CAPABILITY_CHECK;
 			$this->settings_page_id 		= 	'topics-options';
-			$this->settings_page_title 		= 	sprintf( _x( '%s Options', 'placeholder: Topic', 'learndash' ), LearnDash_Custom_Label::get_label( 'topic') );
+			$this->settings_page_title 		= 	__( 'Topic Options', 'learndash' );
 
 			parent::__construct(); 
 		}

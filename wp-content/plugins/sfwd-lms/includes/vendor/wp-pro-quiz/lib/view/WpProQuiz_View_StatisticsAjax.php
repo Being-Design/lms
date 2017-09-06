@@ -79,13 +79,8 @@ class WpProQuiz_View_StatisticsAjax extends WpProQuiz_View_View {
 		if ( file_exists( $filepath ) ) {
 			?><style type="text/css"><?php include $filepath ?></style><?php
 		}
-		if ( ( isset( $_POST['data']['quizId'] ) ) && ( !empty( $_POST['data']['quizId'] ) ) ) {
-			$quizMapper = new WpProQuiz_Model_QuizMapper();
-			$quiz = $quizMapper->fetch( intval( $_POST['data']['quizId'] ) );
-		} else {
-			return;
-		}
-		?>
+	?>
+		
 		<h2><?php printf(__('User statistics: %s', 'wp-pro-quiz'), esc_html($this->userName)); ?></h2>
 		<?php if($this->avg) { ?>
 		<h2>
@@ -200,7 +195,7 @@ class WpProQuiz_View_StatisticsAjax extends WpProQuiz_View_View {
 						
 					<tr style="display: none;">
 						<th colspan="9">
-							<?php $this->showUserAnswer($q['questionAnswerData'], $q['statistcAnswerData'], $q['answerType'], $q['questionId'], $quiz ); ?>
+							<?php $this->showUserAnswer($q['questionAnswerData'], $q['statistcAnswerData'], $q['answerType']); ?>
 							<div class="wpProQuiz_response" style="">
 							<?php
 								if ( $q['correct'] == true ) {
@@ -297,7 +292,11 @@ class WpProQuiz_View_StatisticsAjax extends WpProQuiz_View_View {
 	<?php 
 	}
 	
-	private function showUserAnswer($qAnswerData, $sAnswerData, $anserType, $questionId, $quiz ) {
+	private function showUserAnswer($qAnswerData, $sAnswerData, $anserType) {
+		//error_log( 'qAnswerData<pre>'. print_r( $qAnswerData, true ) .'</pre>' );
+		//error_log( 'sAnswerData<pre>'. print_r( $sAnswerData, true ) .'</pre>' );
+		//error_log( 'anserType<pre>'. print_r( $anserType, true ) .'</pre>' );
+		
 		$matrix = array();
 		
 		if($anserType == 'matrix_sort_answer') {
@@ -322,14 +321,10 @@ class WpProQuiz_View_StatisticsAjax extends WpProQuiz_View_View {
 				$correct = '';
 			?>
 				<?php if($anserType === 'single' || $anserType === 'multiple') {
-					if ( !$quiz->isDisabledAnswerMark() ) {
-						if($qAnswerData[$i]->isCorrect()) {
-							$correct = 'wpProQuiz_answerCorrect';
-						} else if(isset($sAnswerData[$i]) && $sAnswerData[$i]) {
-							$correct = 'wpProQuiz_answerIncorrect';
-						}
-					} else {
-						$correct = '';
+					if($qAnswerData[$i]->isCorrect()) {
+						$correct = 'wpProQuiz_answerCorrect';
+					} else if(isset($sAnswerData[$i]) && $sAnswerData[$i]) {
+						$correct = 'wpProQuiz_answerIncorrect';
 					}
 				?>
 				<li class="<?php echo $correct; ?>">
@@ -345,14 +340,10 @@ class WpProQuiz_View_StatisticsAjax extends WpProQuiz_View_View {
 					$t = explode("\n", $t);
 					$t = array_values(array_filter(array_map('trim', $t)));
 					
-					if ( !$quiz->isDisabledAnswerMark() ) {
-						if(isset($sAnswerData[0]) && in_array(strtolower(trim($sAnswerData[0])), $t))
-							$correct = 'wpProQuiz_answerCorrect';
-						else
-							$correct = 'wpProQuiz_answerIncorrect';
-					} else {
-						$correct = '';
-					}
+					if(isset($sAnswerData[0]) && in_array(strtolower(trim($sAnswerData[0])), $t))
+						$correct = 'wpProQuiz_answerCorrect';
+					else
+						$correct = 'wpProQuiz_answerIncorrect';
 				?>
 				<li class="<?php echo $correct?>">
 					<label>
@@ -364,21 +355,13 @@ class WpProQuiz_View_StatisticsAjax extends WpProQuiz_View_View {
 					<?php echo implode(', ', $t); ?>
 				</li>
 				<?php } else if($anserType === 'sort_answer') { 
-					if ( !$quiz->isDisabledAnswerMark() ) {
-						$correct = 'wpProQuiz_answerIncorrect';
-					} else {
-						$correct = '';
-					}
+					$correct = 'wpProQuiz_answerIncorrect';
 			 		$sortText = '';
 
 					if(isset($sAnswerData[$i]) && isset($qAnswerData[$sAnswerData[$i]])) {
-						if($sAnswerData[$i] == $i) {
-							if ( !$quiz->isDisabledAnswerMark() ) {
-								$correct = 'wpProQuiz_answerCorrect';
-							} else {
-								$correct = '';
-							}
-		 				}
+						if($sAnswerData[$i] == $i)
+		 					$correct = 'wpProQuiz_answerCorrect';
+		 				
 			 			$v = $qAnswerData[$sAnswerData[$i]];
 			 			$sortText = $v->isHtml() ? $v->getAnswer() : esc_html($v->getAnswer());
 					}
@@ -389,21 +372,12 @@ class WpProQuiz_View_StatisticsAjax extends WpProQuiz_View_View {
 					</div>
 				</li>
 			 	<?php } else if($anserType == 'matrix_sort_answer') {
-					if ( !$quiz->isDisabledAnswerMark() ) {
-						$correct = 'wpProQuiz_answerIncorrect';
-					} else {
-						$correct = '';
-					} 
+			 		$correct = 'wpProQuiz_answerIncorrect';
 			 		$sortText = '';
 			 		
 			 		if(isset($sAnswerData[$i]) && isset($qAnswerData[$sAnswerData[$i]])) {
-						if(in_array($sAnswerData[$i], $matrix[$i])) {
-							if ( !$quiz->isDisabledAnswerMark() ) {
-								$correct = 'wpProQuiz_answerCorrect';
-							} else {
-								$correct = '';
-							}
-						}
+						if(in_array($sAnswerData[$i], $matrix[$i]))
+		 					$correct = 'wpProQuiz_answerCorrect';
 		 				
 			 			$v = $qAnswerData[$sAnswerData[$i]];
 			 			$sortText = $v->isSortStringHtml() ? $v->getSortString() : esc_html($v->getSortString());
@@ -443,47 +417,6 @@ class WpProQuiz_View_StatisticsAjax extends WpProQuiz_View_View {
 						
 					echo preg_replace_callback('#@@wpProQuizAssessment@@#im', array($this, 'assessmentCallback'), $assessment);
 			 	} else if($anserType == 'essay') {
-					if ( ( !isset( $sAnswerData['graded_id'] ) ) || ( empty($sAnswerData['graded_id'] ) ) ) {
-						// Due to a bug on LD v2.4.3 the essay file user answer data was not saved. So we need to lookup 
-						// the essay post ID from the user quiz meta.
-					
-						$statisticRefId = $this->statisticModel->getStatisticRefId();
-						$quizId = $this->statisticModel->getQuizId();
-						$userId = $this->statisticModel->getUserId();
-
-						if ( ( !empty( $userId ) ) && ( !empty( $quizId ) ) && ( !empty( $statisticRefId ) ) ) {
-							$user_quizzes = get_user_meta( $userId, '_sfwd-quizzes', true );
-							if ( !empty( $user_quizzes ) ) {
-								foreach( $user_quizzes as $user_quiz ) {
-
-									if ( ( isset( $user_quiz['pro_quizid'] ) ) && ( $user_quiz['pro_quizid'] == $quizId ) && ( isset( $user_quiz['statistic_ref_id'] ) ) && ( $user_quiz['statistic_ref_id'] == $statisticRefId ) ) {
-										if ( isset( $user_quiz['graded'][$questionId] ) ) {
-											if ( ( isset( $user_quiz['graded'][$questionId]['post_id'] ) ) && ( !empty( $user_quiz['graded'][$questionId]['post_id'] ) ) ) {
-												$sAnswerData = array( 'graded_id' => $user_quiz['graded'][$questionId]['post_id'] );
-
-												// Once we have the correct post_id we update the quiz statistics for next time.
-												global $wpdb;
-												$update_ret = $wpdb->update(
-													$wpdb->prefix .'wp_pro_quiz_statistic',
-													array( 'answer_data' => json_encode( $sAnswerData ) ),
-													array(
-														'statistic_ref_id' => $statisticRefId,
-														'question_id' => $questionId,
-													),
-													array( '%s' ),
-													array( '%d', '%d' )
-												);
-												
-												break;
-											}
-										}
-									} 
-								}
-							}
-						}
-					}
-
-					
 					if ( ( isset( $sAnswerData['graded_id'] ) ) && ( !empty($sAnswerData['graded_id'] ) ) ) {
 						
 						$essay_post = get_post( $sAnswerData['graded_id'] );

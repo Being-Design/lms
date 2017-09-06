@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Boss.\n"
 "Report-Msgid-Bugs-To: https://www.buddyboss.com/contact/\n"
-"POT-Creation-Date: 2017-04-22 06:09:10+00:00\n"
+"POT-Creation-Date: 2017-06-02 12:20:46+00:00\n"
 "PO-Revision-Date: 2016-05-01 14:10-0400\n"
 "Last-Translator: jean-pierre michaud <nexialys@yahoo.com>\n"
 "Language-Team: jean-pierre michaud <nexialys@yahoo.com>\n"
@@ -293,7 +293,7 @@ msgstr "Pages:"
 #: bbpress.php:40 bpdocs_gds/docs-header.php:32
 #: buddyboss-inc/buddyboss-framework/plugin-support.php:321
 #: buddyboss-inc/buddyboss-framework/plugin-support.php:400
-#: buddyboss-inc/theme-functions.php:3126 content-buddypress.php:16
+#: buddyboss-inc/theme-functions.php:3128 content-buddypress.php:16
 #: content-page.php:23 content.php:92 docs/docs-header.php:30 image.php:37
 #: page-events.php:53 single-event.php:79
 msgid "Edit"
@@ -305,7 +305,7 @@ msgstr "Ce Document est dans la corbeille"
 
 #: bpdocs_gds/docs-header.php:26
 #: buddyboss-inbox/members/single/messages/messages-loop.php:61
-#: buddyboss-inc/theme-functions.php:2881
+#: buddyboss-inc/theme-functions.php:2883
 #: buddypress/members/single/messages/messages-loop.php:81
 #: docs/docs-header.php:25
 msgid "Read"
@@ -315,7 +315,7 @@ msgstr "Lecture"
 msgid "New Doc"
 msgstr "Nouveau document"
 
-#: bpdocs_gds/single/comments.php:21
+#: bpdocs_gds/single/comments.php:21 docs/single/comments.php:53
 msgid "Discussion (%d)"
 msgstr "Discussion (%d)"
 
@@ -369,18 +369,16 @@ msgid "Nothing found"
 msgstr "Rien n’a été trouvé"
 
 #: bpge/front/extras_fields_add_edit.php:4
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1128
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1134
 msgid "Field Title"
 msgstr "Titre du champs"
 
-#: bpge/front/extras_fields_add_edit.php:5
-msgid "%s"
-msgstr "%s"
-
-#: bpge/front/extras_fields_add_edit.php:11
+#: bpge/front/extras_fields_add_edit.php:10
 msgid "Field Type"
 msgstr "Type de champ"
 
-#: bpge/front/extras_fields_add_edit.php:13
+#: bpge/front/extras_fields_add_edit.php:12
 msgid "Text Box"
 msgstr "Boîte de Texte"
 
@@ -400,19 +398,22 @@ msgstr "Boutons Radio"
 msgid "Date Selector"
 msgstr "Sélecteur de date"
 
-#: bpge/front/extras_fields_add_edit.php:18
+#: bpge/front/extras_fields_add_edit.php:19
 msgid "Drop Down Select Box"
 msgstr "Drop Down Select Box"
 
-#: bpge/front/extras_fields_add_edit.php:24
+#: bpge/front/extras_fields_add_edit.php:25
 msgid "Add New"
 msgstr "Ajouter une Recette"
 
 #: bpge/front/extras_fields_add_edit.php:33
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:424
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:432
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:444
 msgid "Field Description"
 msgstr "Description du champ."
 
-#: bpge/front/extras_fields_add_edit.php:38
+#: bpge/front/extras_fields_add_edit.php:41
 msgid ""
 "Is this field required (will be marked as required on group Edit Details "
 "page)?"
@@ -420,41 +421,41 @@ msgstr ""
 "Est ce un champ requis (sera marqué comme requis sur la page Modifier les "
 "Détails) ?"
 
-#: bpge/front/extras_fields_add_edit.php:39
+#: bpge/front/extras_fields_add_edit.php:43
 msgid "Required"
 msgstr "Requis"
 
-#: bpge/front/extras_fields_add_edit.php:40
+#: bpge/front/extras_fields_add_edit.php:45
 msgid "Not Required"
 msgstr "Non requis"
 
-#: bpge/front/extras_fields_add_edit.php:43
+#: bpge/front/extras_fields_add_edit.php:52
 msgid "Should this field be displayed for public on \"<u>%s</u>\" page?"
 msgstr "Ce champ devrait être affiché en public sur la page \"<u>%s</u>\"?"
 
-#: bpge/front/extras_fields_add_edit.php:45
-#: bpge/front/extras_pages_add_edit.php:35
+#: bpge/front/extras_fields_add_edit.php:54
+#: bpge/front/extras_pages_add_edit.php:37
 msgid "Display it"
 msgstr "Affichez-la"
 
-#: bpge/front/extras_fields_add_edit.php:46
-#: bpge/front/extras_pages_add_edit.php:39
+#: bpge/front/extras_fields_add_edit.php:57
+#: bpge/front/extras_pages_add_edit.php:41
 msgid "Do NOT display it"
 msgstr "Ne pas afficher"
 
-#: bpge/front/extras_fields_add_edit.php:49
+#: bpge/front/extras_fields_add_edit.php:62
 msgid "Create New &rarr;"
 msgstr "Créer un nouveau &rarr;"
 
-#: bpge/front/extras_fields_add_edit.php:52
+#: bpge/front/extras_fields_add_edit.php:65
 msgid "Save Changes &rarr;"
 msgstr "Enregistrer les Changements &rarr;"
 
-#: bpge/front/extras_fields_list.php:8 bpge/front/extras_pages_list.php:5
+#: bpge/front/extras_fields_list.php:8 bpge/front/extras_pages_list.php:6
 msgid "displayed"
 msgstr "affiché"
 
-#: bpge/front/extras_fields_list.php:8 bpge/front/extras_pages_list.php:5
+#: bpge/front/extras_fields_list.php:8 bpge/front/extras_pages_list.php:6
 msgid "<u>not</u> displayed"
 msgstr "<u>n'est pas</u> affiché"
 
@@ -470,15 +471,15 @@ msgstr "<u>n'est pas</u> requis"
 msgid "Change its title, description etc"
 msgstr "Modifier son titre, description, etc"
 
-#: bpge/front/extras_fields_list.php:14 bpge/front/extras_pages_list.php:9
+#: bpge/front/extras_fields_list.php:14 bpge/front/extras_pages_list.php:10
 msgid "Delete this item and all its content"
 msgstr "Supprimer cet item et tout son contenu"
 
-#: bpge/front/extras_general.php:2
+#: bpge/front/extras_general.php:3
 msgid "Please specify the page name, where all fields will be displayed"
 msgstr "Veuillez préciser le nom de la page où seront affichés tous les champs"
 
-#: bpge/front/extras_general.php:7
+#: bpge/front/extras_general.php:9
 msgid ""
 "Do you want to make <strong>\"%s\"</strong> page public? Everyone will see "
 "this page."
@@ -486,33 +487,33 @@ msgstr ""
 "Voulez-vous rendre la page <strong>\"%s\"</strong> publique? Tous pourront "
 "voir la page. "
 
-#: bpge/front/extras_general.php:8 bpge/front/extras_general.php:27
+#: bpge/front/extras_general.php:11 bpge/front/extras_general.php:37
 msgid "Show it"
 msgstr "Montrez la"
 
-#: bpge/front/extras_general.php:9 bpge/front/extras_general.php:28
+#: bpge/front/extras_general.php:13 bpge/front/extras_general.php:39
 msgid "Hide it"
 msgstr "Cacher"
 
-#: bpge/front/extras_general.php:13
+#: bpge/front/extras_general.php:18
 msgid "Please choose the layout for <strong>\"%s\"</strong> page"
 msgstr "Veuillez choisir la mise en page pour la page <strong>\"%s\"</strong>"
 
-#: bpge/front/extras_general.php:14
+#: bpge/front/extras_general.php:20
 msgid "Plain (field title and its data below)"
 msgstr "Simple (case titre et son contenu en dessous)"
 
-#: bpge/front/extras_general.php:15
+#: bpge/front/extras_general.php:22
 msgid "Profile style (in a table)"
 msgstr "Style de Profile (dans une table)"
 
-#: bpge/front/extras_general.php:21
+#: bpge/front/extras_general.php:29
 msgid "Please specify the page name, where all custom pages will be displayed"
 msgstr ""
 "Veuillez préciser le nom de la page où seront affichées toutes les pages "
 "personnalisées"
 
-#: bpge/front/extras_general.php:26
+#: bpge/front/extras_general.php:35
 msgid ""
 "Do you want to make <strong>\"%s\"</strong> page public (extra group pages "
 "will be displayed there)?"
@@ -520,12 +521,13 @@ msgstr ""
 "Voulez-vous rendre la page <strong>\"%s\"</strong> publique? Tous pourront "
 "voir la page."
 
-#: bpge/front/extras_general.php:33
+#: bpge/front/extras_general.php:46
+#, fuzzy
 msgid ""
 "You can reorder here all navigation links in this group. The first item will "
 "become a landing page for this group. Save changes after reordering.<br /"
-"><br />Please do NOT make Admin/Manage pages on first place - that will "
-"cause display problems."
+"><br />Please do NOT make admin only pages on first place - that will cause "
+"problems."
 msgstr ""
 "Vous pouvez réorganiser ici tous les liens de navigation de ce groupe. Le "
 "premier élément deviendra la page d'accueil pour ce groupe. Enregistrer les "
@@ -533,13 +535,13 @@ msgstr ""
 "page d'admin ou de gestion comme première page - pour éviter les problèmes "
 "d'affichage."
 
-#: bpge/front/extras_general.php:53
+#: bpge/front/extras_general.php:51
 msgid "Rename the Home group page - Activity (for example) is far better."
 msgstr ""
 "Renommer la page d'accueil du groupe - Activité (par exemple) est beaucoup "
 "mieux."
 
-#: bpge/front/extras_general.php:60 bpge/front/extras_pages_add_edit.php:54
+#: bpge/front/extras_general.php:60 bpge/front/extras_pages_add_edit.php:56
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/templates/panel/footer.tpl.php:57
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/templates/panel/header_stickybar.tpl.php:21
 #: buddypress/members/single/profile/edit.php:61
@@ -559,21 +561,21 @@ msgstr "Page Slug"
 msgid "Page Content"
 msgstr "Contenu de la page"
 
-#: bpge/front/extras_pages_add_edit.php:32
+#: bpge/front/extras_pages_add_edit.php:34
 msgid "Should this page be displayed for public in group navigation?"
 msgstr ""
 "Est-ce que cette page devrait être affichée en publique pour la navigation "
 "de groupe?"
 
-#: bpge/front/extras_pages_add_edit.php:49
+#: bpge/front/extras_pages_add_edit.php:51
 msgid "Create New"
 msgstr "Ajouter"
 
-#: bpge/front/extras_pages_list.php:7
+#: bpge/front/extras_pages_list.php:8
 msgid "View this page live"
 msgstr "Voir cette page en direct"
 
-#: bpge/front/extras_pages_list.php:8
+#: bpge/front/extras_pages_list.php:9
 msgid "Change its title, content etc"
 msgstr "Changer son titre, contenu etc"
 
@@ -627,10 +629,10 @@ msgstr "Supprimer le message"
 #: buddyboss-inbox/members/single/messages/messages-loop.php:66
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:167
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:220
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:164
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:206
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:194
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:256
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:176
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:218
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:206
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:268
 #: buddyboss-inc/buddyboss-framework/plugin-support.php:362
 #: buddypress/activity/comment.php:45
 #: buddypress/members/single/messages/messages-loop.php:86
@@ -711,36 +713,36 @@ msgstr "Etiquettes"
 msgid "Add Label"
 msgstr "Ajouter Etiquette"
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:453
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:687
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:451
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:689
 msgid "You have changes that are not saved. Would you like to save them now?"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:461
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:688
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:459
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:690
 msgid "Are you sure? Resetting will lose all custom values."
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:469
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:467
 msgid "Are you sure? Resetting will lose all custom values in this section."
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:477
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:689
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:475
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:691
 msgid ""
 "Your current options will be replaced with the values of this preset. Would "
 "you like to proceed?"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:484
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:482
 msgid "Please Wait"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:495
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:493
 msgid "There was an error saving. Here is the result of your action:"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:496
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/core/enqueue.php:494
 msgid ""
 "There was a problem with your action. Please try again or reload the page."
 msgstr ""
@@ -785,51 +787,51 @@ msgid ""
 "the reason. Ensure you update or remove them."
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:228
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:220
 msgid "Options panel created using %1$s"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:228
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:201
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:220
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:205
 msgid "Redux Framework"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:232
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:236
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:224
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:228
 #, fuzzy
 msgid "Options"
 msgstr "Options Boss"
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1753
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1765
 #, fuzzy
 msgid "Enable"
 msgstr "Tablette"
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1758
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1770
 #, fuzzy
 msgid "Disable"
 msgstr "Tablette"
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1764
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1776
 msgid "moving the mouse over"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1766
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1778
 msgid "clicking"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1770
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1782
 msgid ""
 "Hints are tooltips that popup when %d the hint icon, offering addition "
 "information about the field in which they appear.  They can be %d d by using "
 "the link below."
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1775
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1787
 msgid "Hints"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1902
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:1914
 #: buddyboss-inc/buddyboss-shortcodes/shortcodes.php:181
 #: buddyboss-inc/buddyboss-shortcodes/shortcodes.php:200
 #: buddyboss-inc/buddyboss-shortcodes/shortcodes.php:214
@@ -841,19 +843,19 @@ msgstr ""
 msgid "Default"
 msgstr "Par défaut"
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:2782
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:2792
 msgid "Invalid security credential.  Please reload the page and try again."
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:2791
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:2801
 msgid "Invalid user capability.  Please reload the page and try again."
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:2867
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:2881
 msgid "Your panel has no fields. Nothing to save."
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:3960
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:3999
 msgid ""
 "<strong>Redux Framework Notice: </strong>There are references to the Redux "
 "Framework support site in your config's <code>admin_bar_links</code> "
@@ -861,7 +863,7 @@ msgid ""
 "shipping your product."
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:3975
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/framework.php:4014
 msgid ""
 "<strong>Redux Framework Notice: </strong>There are references to the Redux "
 "Framework support site in your config's <code>share_icons</code> argument.  "
@@ -903,7 +905,7 @@ msgstr ""
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/class.redux_filesystem.php:31
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/class.redux_filesystem.php:60
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/class.redux_filesystem.php:271
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/class.redux_filesystem.php:272
 msgid "File Permission Issues"
 msgstr ""
 
@@ -915,7 +917,7 @@ msgid ""
 msgstr ""
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/class.redux_filesystem.php:60
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/class.redux_filesystem.php:271
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/class.redux_filesystem.php:272
 msgid ""
 "We were unable to modify required files. Please ensure that <code>%1s</code> "
 "has the proper read-write permissions, or modify your wp-config.php file to "
@@ -929,15 +931,15 @@ msgid ""
 "date. The core version is %s"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:722
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:724
 msgid "You have changes that are not saved.  Would you like to save them now?"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:723
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:725
 msgid "Are you sure?  Resetting will lose all custom values."
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:724
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/extensions/customizer/extension_customizer.php:726
 msgid ""
 "Your current options will be replaced with the values of this preset.  Would "
 "you like to proceed?"
@@ -971,7 +973,7 @@ msgid "Press return or enter to expand"
 msgstr ""
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/extensions/import_export/extension_import_export.php:120
-#: buddyboss-inc/buddyboss-framework/options-init.php:1370
+#: buddyboss-inc/buddyboss-framework/options-init.php:1369
 msgid "Import / Export"
 msgstr "Importer / Exporter"
 
@@ -1085,22 +1087,22 @@ msgstr ""
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/media/field_media.php:198
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:126
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:188
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:144
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:215
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:156
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:227
 msgid "Upload"
 msgstr "Mettre en ligne"
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/background/field_background.php:321
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/media/field_media.php:205
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/multi_text/field_multi_text.php:69
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/multi_text/field_multi_text.php:73
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/multi_text/field_multi_text.php:76
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/multi_text/field_multi_text.php:72
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/multi_text/field_multi_text.php:79
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/multi_text/field_multi_text.php:89
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:133
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:190
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:144
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:187
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:151
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:217
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:156
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:199
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:163
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:229
 msgid "Remove"
 msgstr "Supprimer"
 
@@ -1146,6 +1148,22 @@ msgstr "De"
 msgid "To "
 msgstr "À:"
 
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/color_rgba/field_color_rgba.php:71
+#, fuzzy
+msgid "Choose"
+msgstr "Choisir la taille."
+
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/color_rgba/field_color_rgba.php:72
+#: buddypress/activity/entry.php:102 buddypress/forums/index.php:111
+#: docs/single/edit-inner.php:187
+msgid "Cancel"
+msgstr "Cancel"
+
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/color_rgba/field_color_rgba.php:74
+#, fuzzy
+msgid "Select Color"
+msgstr "Sélectionner tout"
+
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/dimensions/field_dimensions.php:162
 msgid "Width"
 msgstr ""
@@ -1163,6 +1181,7 @@ msgid "Units"
 msgstr ""
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/gallery/field_gallery.php:73
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:915
 msgid "Add/Edit Gallery"
 msgstr ""
 
@@ -1187,20 +1206,21 @@ msgstr ""
 msgid "Active"
 msgstr "Active"
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/multi_text/field_multi_text.php:61
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/multi_text/field_multi_text.php:62
 #, fuzzy
 msgid "Add More"
 msgstr "Ajouter une Recette"
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/password/field_password.php:62
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:467
 #: buddyboss-inc/buddyboss-widgets/buddyboss-profile-widget-loader.php:85
-#: buddyboss-inc/theme-functions.php:954
+#: buddyboss-inc/theme-functions.php:953
 msgid "Password"
 msgstr "Mot de passe"
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/password/field_password.php:63
 #: buddyboss-inc/buddyboss-widgets/buddyboss-profile-widget-loader.php:76
-#: buddyboss-inc/theme-functions.php:953
+#: buddyboss-inc/theme-functions.php:952
 msgid "Username"
 msgstr "Nom d’utilisateur"
 
@@ -1217,23 +1237,23 @@ msgid "No items of this type were found."
 msgstr "Désolé, aucune information n'a été trouvée."
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:68
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:84
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:96
 msgid "Slide"
 msgstr "Diapositive"
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:73
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:174
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:88
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:171
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:89
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:201
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:100
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:183
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:101
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:213
 msgid "New %s"
 msgstr "Nouveau %s"
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:145
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:200
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:163
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:227
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:175
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:239
 #: buddyboss-inc/buddyboss-shortcodes/shortcodes.php:222
 #: docs/docs-loop-old.php:41 docs/docs-loop.php:51
 #: docs/single/edit-inner.php:37
@@ -1242,21 +1262,23 @@ msgstr "Titre"
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:149
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:204
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:168
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:231
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1863
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1872
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:180
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:243
 msgid "Description"
 msgstr "Description"
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:153
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:207
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:179
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:242
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:191
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:254
 msgid "URL"
 msgstr "URL"
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/fields/slides/field_slides.php:223
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:209
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:259
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:221
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:271
 msgid "Add %s"
 msgstr "Ajouter %s"
 
@@ -1271,12 +1293,12 @@ msgstr "Ajouter %s"
 #: buddyboss-inc/buddyboss-framework/options-init.php:456
 #: buddyboss-inc/buddyboss-framework/options-init.php:465
 #: buddyboss-inc/buddyboss-framework/options-init.php:480
-#: buddyboss-inc/buddyboss-framework/options-init.php:1156
-#: buddyboss-inc/buddyboss-framework/options-init.php:1176
-#: buddyboss-inc/buddyboss-framework/options-init.php:1202
-#: buddyboss-inc/buddyboss-framework/options-init.php:1235
-#: buddyboss-inc/buddyboss-framework/options-init.php:1251
-#: buddyboss-inc/buddyboss-framework/options-init.php:1269
+#: buddyboss-inc/buddyboss-framework/options-init.php:1155
+#: buddyboss-inc/buddyboss-framework/options-init.php:1175
+#: buddyboss-inc/buddyboss-framework/options-init.php:1201
+#: buddyboss-inc/buddyboss-framework/options-init.php:1234
+#: buddyboss-inc/buddyboss-framework/options-init.php:1250
+#: buddyboss-inc/buddyboss-framework/options-init.php:1268
 msgid "On"
 msgstr "On"
 
@@ -1291,12 +1313,12 @@ msgstr "On"
 #: buddyboss-inc/buddyboss-framework/options-init.php:457
 #: buddyboss-inc/buddyboss-framework/options-init.php:466
 #: buddyboss-inc/buddyboss-framework/options-init.php:481
-#: buddyboss-inc/buddyboss-framework/options-init.php:1157
-#: buddyboss-inc/buddyboss-framework/options-init.php:1177
-#: buddyboss-inc/buddyboss-framework/options-init.php:1203
-#: buddyboss-inc/buddyboss-framework/options-init.php:1236
-#: buddyboss-inc/buddyboss-framework/options-init.php:1252
-#: buddyboss-inc/buddyboss-framework/options-init.php:1270
+#: buddyboss-inc/buddyboss-framework/options-init.php:1156
+#: buddyboss-inc/buddyboss-framework/options-init.php:1176
+#: buddyboss-inc/buddyboss-framework/options-init.php:1202
+#: buddyboss-inc/buddyboss-framework/options-init.php:1235
+#: buddyboss-inc/buddyboss-framework/options-init.php:1251
+#: buddyboss-inc/buddyboss-framework/options-init.php:1269
 msgid "Off"
 msgstr "Fermé"
 
@@ -1533,7 +1555,7 @@ msgid ""
 msgstr ""
 
 #: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/tracking.php:154
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:225
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:229
 msgid "Redux Extensions"
 msgstr ""
 
@@ -2322,62 +2344,73 @@ msgid ""
 "\"_blank\">following article</a> before asking for support from us directly."
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:179
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:106
+msgid ""
+"If you like <strong>Redux</strong> please leave us a <a href=\"https://"
+"wordpress.org/support/view/plugin-reviews/redux-framework?filter=5#postform"
+"\" target=\"_blank\" class=\"redux-rating-link\" data-rated="
+"\"Thanks :)\">&#9733;&#9733;&#9733;&#9733;&#9733;</a> rating. A huge thank "
+"you from Redux in advance!"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:183
 msgid "Support hash could not be generated. Please try again later."
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:201
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:205
 msgid "Welcome to Redux Framework"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:209
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:213
 msgid "Redux Framework Changelog"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:217
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:221
 #: buddyboss-inc/buddyboss-framework/admin/class.redux-plugin.php:416
 #, fuzzy
 msgid "Get Support"
 msgstr "Support"
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:234
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:238
 msgid "The people that develop Redux Framework"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:242
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:246
 msgid "Redux Framework Status"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:342
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:346
 #, fuzzy
 msgid "What's New"
 msgstr "Quoi de neuf, %s ?"
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:345
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:349
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:190
 #, fuzzy
 msgid "Extensions"
 msgstr "Mentions"
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:348
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:352
 #, fuzzy
 msgid "Changelog"
 msgstr "Changer"
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:351
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:355
 msgid "Credits"
 msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:354
-#: buddyboss-inc/buddyboss-framework/options-init.php:1339
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:358
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:184
+#: buddyboss-inc/buddyboss-framework/options-init.php:1338
 msgid "Support"
 msgstr "Support"
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:357
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:361
 #: buddyboss-inc/buddyboss-framework/plugin-support.php:319
 msgid "Status"
 msgstr "Statut"
 
-#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:514
+#: buddyboss-inc/buddyboss-framework/admin/ReduxCore/inc/welcome/welcome.php:521
 #, fuzzy
 msgid "View %s"
 msgstr "Nouveau %s"
@@ -2442,7 +2475,7 @@ msgid "Click here to activate the sample config file."
 msgstr ""
 
 #: buddyboss-inc/buddyboss-framework/admin/class.redux-plugin.php:413
-#: buddyboss-inc/theme-functions.php:2773
+#: buddyboss-inc/theme-functions.php:2778
 msgid "Docs"
 msgstr "Docs"
 
@@ -2463,6 +2496,1285 @@ msgstr "Désactiver"
 #, fuzzy
 msgid "Activate Demo Mode"
 msgstr "Activer"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:77
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:78
+#, fuzzy
+msgid "Sample Options"
+msgstr "Options du Slider"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:178
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2228
+#: buddyboss-inc/buddyboss-framework/options-init.php:1354
+#: buddyboss-inc/buddyboss-framework/options-init.php:1386
+msgid "Documentation"
+msgstr "Documentation"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:223
+#, fuzzy
+msgid ""
+"<p>Did you know that Redux sets a global variable for you? To access any of "
+"your saved options from within your code you can use your global variable: "
+"<strong>$%1$s</strong></p>"
+msgstr ""
+"<p>Pour accéder à vos options enregistrées à partir de votre code, vous "
+"pouvez utiliser votre variable globale: <strong>$%1$s</strong></p>"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:225
+#: buddyboss-inc/buddyboss-framework/options-init.php:1562
+msgid ""
+"<p>This text is displayed above the options panel. It isn't required, but "
+"more info is always better! The intro_text field accepts all HTML.</p>"
+msgstr ""
+"<p>Ce texte s’affiche au-dessus du panneau d’options. Il n’est pas "
+"nécessaire, mais plus d’infos est toujours intéressant ! Le champ texte "
+"d’intro accepte tout code HTML. </p>"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:229
+#, fuzzy
+msgid ""
+"<p>This text is displayed below the options panel. It isn't required, but "
+"more info is always better! The footer_text field accepts all HTML.</p>"
+msgstr ""
+"<p>Ce texte s’affiche au-dessus du panneau d’options. Il n’est pas "
+"nécessaire, mais plus d’infos est toujours intéressant ! Le champ texte "
+"d’intro accepte tout code HTML. </p>"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:245
+msgid "Theme Information 1"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:246
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:251
+msgid "<p>This is the tab content, HTML is allowed.</p>"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:250
+msgid "Theme Information 2"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:257
+msgid "<p>This is the sidebar content, HTML is allowed.</p>"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:281
+msgid "Basic Fields"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:283
+msgid "These are really basic fields!"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:289
+#, fuzzy
+msgid "Checkbox"
+msgstr "Cases à cocher"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:293
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:345
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:375
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:414
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:454
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:469
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:488
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:514
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:547
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:605
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:628
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:647
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:668
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:693
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:753
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:759
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:803
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:839
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:909
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:925
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:978
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1007
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1020
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1115
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1165
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1204
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1263
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1496
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1591
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1625
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1689
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1709
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1791
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1807
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1855
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1887
+msgid "For full documentation on this field, visit: "
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:298
+#, fuzzy
+msgid "Checkbox Option"
+msgstr "Cases à cocher"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:299
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:307
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:326
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:334
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:351
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:365
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1172
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1186
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1271
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1293
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1318
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1351
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1360
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1368
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1377
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1385
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1394
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1402
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1411
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1419
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1428
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1446
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1455
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1463
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1472
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1480
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1488
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1504
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1549
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1798
+msgid "No validation can be done on this field type"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:300
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:308
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:327
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:335
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:352
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:366
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:382
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:396
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:496
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:637
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:677
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:702
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:769
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:787
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:917
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1173
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1187
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1272
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1294
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1319
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1352
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1361
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1369
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1378
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1386
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1395
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1403
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1412
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1420
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1429
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1439
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1447
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1456
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1464
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1473
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1489
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1550
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1799
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1913
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1923
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1932
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1939
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1948
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1957
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1966
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1988
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2025
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2034
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2043
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2061
+msgid "This is the description field, again good for additional info."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:306
+msgid "Multi Checkbox Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:325
+msgid "Multi Checkbox Option (with menu data)"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:333
+msgid "Multi Checkbox Option (with sidebar data)"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:341
+msgid "Radio"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:350
+#, fuzzy
+msgid "Radio Option"
+msgstr "Boutons Radio"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:364
+msgid "Radio Option w/ Menu Data"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:372
+msgid "Sortable"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:380
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:394
+msgid "Sortable Text Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:381
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:395
+msgid "Define and reorder these however you want."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:413
+#: buddyboss-inc/buddyboss-framework/options-init.php:703
+#, fuzzy
+msgid "Text"
+msgstr "Boîte de Texte"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:422
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:442
+msgid "Text Field"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:423
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:431
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:443
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:495
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1862
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1871
+#, fuzzy
+msgid "Subtitle"
+msgstr "Titre du site"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:430
+msgid "Text Field w/ Hint"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:452
+#, fuzzy
+msgid "Multi Text"
+msgstr "Zone de texte multiligne"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:460
+#, fuzzy
+msgid "Multi Text Option"
+msgstr "Zone de texte multiligne"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:461
+#, fuzzy
+msgid "Field subtitle"
+msgstr "Titre du champs"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:462
+#, fuzzy
+msgid "Field Decription"
+msgstr "Description du champ."
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:486
+msgid "Textarea"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:494
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2041
+msgid "Textarea Option - HTML Validated Custom"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:504
+#, fuzzy
+msgid "Editors"
+msgstr "Modifier"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:511
+msgid "WordPress Editor"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:520
+#, fuzzy
+msgid "Editor"
+msgstr "Modifier"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:521
+msgid "Use any of the features of WordPress editor inside your panel!"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:527
+msgid "Editor w/o Media Button"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:543
+msgid "Editor - Full Width"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:551
+msgid "ACE Editor"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:555
+msgid "For full documentation on the this field, visit: "
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:560
+#, fuzzy
+msgid "CSS Code"
+msgstr "Codes personalisés"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:561
+msgid "Paste your CSS code here."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:570
+msgid "JS Code"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:571
+msgid "Paste your JS code here."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:581
+msgid "PHP Code"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:582
+msgid "Paste your PHP code here."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:596
+msgid "Color Selection"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:603
+#: buddyboss-inc/buddyboss-shortcodes/shortcodes.php:244
+msgid "Color"
+msgstr "Couleur"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:612
+#: buddyboss-inc/buddyboss-framework/options-init.php:717
+#, fuzzy
+msgid "Site Title Color"
+msgstr "Titre du site"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:613
+msgid "Pick a title color for the theme (default: #000)."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:619
+msgid "Footer Background Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:620
+msgid "Pick a background color for the footer (default: #dd9933)."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:627
+msgid "Color Gradient"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:635
+msgid "Header Gradient Color Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:636
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:676
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:701
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:766
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:783
+msgid "Only color validation can be done on this field type"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:646
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:654
+#, fuzzy
+msgid "Color RGBA"
+msgstr "Couleur"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:655
+msgid "Gives you the RGBA color."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:667
+#: buddyboss-inc/buddyboss-framework/options-init.php:707
+#, fuzzy
+msgid "Link Color"
+msgstr "Couleur"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:675
+msgid "Links Color Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:692
+msgid "Palette Colors"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:700
+msgid "Palette Color Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:732
+msgid "Design Fields"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:739
+#, fuzzy
+msgid "Background"
+msgstr "Pièces jointes"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:747
+msgid "Body Background"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:748
+msgid "Body background with image, color, etc."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:757
+#, fuzzy
+msgid "Border"
+msgstr "Choisir un style."
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:765
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:782
+msgid "Header Border Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:801
+#, fuzzy
+msgid "Dimensions"
+msgstr "Mentions"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:811
+msgid "Dimensions (Width/Height) Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:812
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:825
+msgid "Allow your users to choose width, height, and/or unit."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:813
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:826
+msgid ""
+"You can enable or disable any piece of this field. Width, Height, or Units."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:824
+msgid "Dimensions (Width) Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:837
+msgid "Spacing"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:859
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:884
+msgid "Padding/Margin Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:860
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:885
+msgid "Allow your users to choose the spacing or margin they want."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:861
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:886
+msgid ""
+"You can enable or disable any piece of this field. Top, Right, Bottom, Left, "
+"or Units."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:899
+#, fuzzy
+msgid "Media Uploads"
+msgstr "Mettre en ligne"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:907
+msgid "Gallery"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:916
+msgid ""
+"Create a new Gallery by selecting existing or uploading new images using the "
+"WordPress native uploader"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:923
+msgid "Media"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:932
+msgid "Media w/ URL"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:935
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:969
+msgid "Basic media uploader with disabled URL input field."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:936
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:948
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:956
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:970
+msgid "Upload any media using the WordPress native uploader"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:946
+msgid "Media w/o URL"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:947
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:955
+msgid ""
+"This represents the minimalistic view. It does not have the preview box or "
+"the display URL in an input box. "
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:954
+msgid "Media No Preview"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:965
+msgid "Upload Anything - Disabled Mode"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:976
+#, fuzzy
+msgid "Slides"
+msgstr "Diapositive"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:984
+#, fuzzy
+msgid "Slides Options"
+msgstr "Options du Slider"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:985
+msgid "Unlimited slides with drag and drop sortings."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:986
+msgid ""
+"This field will store all slides values into a multidimensional array to use "
+"into a foreach loop."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:988
+#, fuzzy
+msgid "This is a title"
+msgstr "C'est un groupe privé."
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:989
+#, fuzzy
+msgid "Description Here"
+msgstr "Description"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:990
+#: buddyboss-inc/buddyboss-framework/options-init.php:417
+msgid "Give us a link!"
+msgstr "Donnez-nous un lien !"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:998
+msgid "Presentation Fields"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1005
+msgid "Divide"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1007
+msgid ""
+"The spacer to the section menu as seen to the left (after this section "
+"block) is the divide \"section\". Also the divider below is the divide "
+"\"field\"."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1018
+msgid "Info"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1026
+msgid "This is the info field, if you want to break sections up."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1032
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1039
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1047
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1055
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1064
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1071
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1079
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1088
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1097
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1106
+#, fuzzy
+msgid "This is a title."
+msgstr "Ceci est un message à tous les utilisateurs."
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1033
+msgid ""
+"This is an info field with the <strong>info</strong> style applied. By "
+"default the <strong>normal</strong> style is applied."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1040
+msgid "This is an info field with the <strong>warning</strong> style applied."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1048
+msgid ""
+"This is an info field with the <strong>success</strong> style applied and an "
+"icon."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1056
+msgid ""
+"This is an info field with the <strong>critical</strong> style applied and "
+"an icon."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1065
+msgid ""
+"This is an info field with the <strong>custom</strong> style applied, color "
+"arg passed, and an icon."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1072
+msgid ""
+"This is an info non-notice field with the <strong>normal</strong> style "
+"applied."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1080
+msgid ""
+"This is an info non-notice field with the <strong>info</strong> style "
+"applied."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1089
+msgid ""
+"This is an info non-notice field with the <strong>warning</strong> style "
+"applied and an icon."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1098
+msgid ""
+"This is an info non-notice field with the <strong>success</strong> style "
+"applied and an icon."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1107
+msgid ""
+"This is an non-notice field with the <strong>critical</strong> style applied "
+"and an icon."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1113
+#, fuzzy
+msgid "Section"
+msgstr "Mesure à prendre"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1121
+msgid "Section Example"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1122
+msgid "With the \"section\" field you can create indented option sections."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1129
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1135
+#, fuzzy
+msgid "Field Subtitle"
+msgstr "Titre du champs"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1145
+msgid "And now you can add more fields below and outside of the indent."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1156
+#, fuzzy
+msgid "Switch & Button Set"
+msgstr "Texte du bouton"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1163
+#, fuzzy
+msgid "Button Set"
+msgstr "Texte du bouton"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1171
+#, fuzzy
+msgid "Button Set Option"
+msgstr "Texte du bouton"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1185
+msgid "Button Set, Multi Select"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1202
+msgid "Switch"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1211
+msgid "Switch On"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1212
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1219
+msgid "Look, it's on!"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1218
+msgid "Switch Off"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1226
+msgid "Switch - Nested Children, Enable to show"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1227
+msgid "Look, it's on! Also hidden child elements!"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1236
+msgid "Switch - This and the next switch required for patterns to show"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1237
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1246
+msgid "Also called a \"fold\" parent."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1238
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1247
+msgid ""
+"Items set with a fold to this ID will hide unless this is set to the "
+"appropriate value."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1245
+msgid "Switch2 - Enable the above switch and this one for patterns to show"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1255
+#, fuzzy
+msgid "Select Fields"
+msgstr "Sélectionner tout"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1261
+#: paid-memberships-pro/pages/levels.php:45
+#: paid-memberships-pro/pages/levels.php:47
+msgid "Select"
+msgstr "Sélectionner"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1270
+#, fuzzy
+msgid "Select Option"
+msgstr "Options du Slider"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1284
+msgid "Theme Stylesheet"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1285
+msgid "Select your themes alternative color scheme."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1292
+msgid "Select Option with optgroup"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1317
+#, fuzzy
+msgid "Multi Select Option"
+msgstr "Options du Slider"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1332
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1589
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1598
+#, fuzzy
+msgid "Select Image"
+msgstr "Sélectionner tout"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1333
+msgid "A preview of the selected image will appear underneath the select box."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1344
+msgid "You can easily add a variety of data from WordPress."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1350
+msgid "Categories Select Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1359
+msgid "Categories Multi Select Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1367
+#, fuzzy
+msgid "Pages Select Option"
+msgstr "Sélecteur de date"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1376
+msgid "Pages Multi Select Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1384
+#, fuzzy
+msgid "Tags Select Option"
+msgstr "Options du Slider"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1393
+msgid "Tags Multi Select Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1401
+#, fuzzy
+msgid "Menus Select Option"
+msgstr "Options du Slider"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1410
+msgid "Menus Multi Select Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1418
+msgid "Post Type Select Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1427
+msgid "Post Type Multi Select Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1437
+msgid "Post Type Multi Select Option + Sortable"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1438
+msgid "This field also has sortable enabled!"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1445
+#, fuzzy
+msgid "Posts Select Option2"
+msgstr "Options Boss"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1454
+msgid "Posts Multi Select Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1462
+msgid "User Role Select Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1471
+msgid "Capabilities Select Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1479
+msgid "Elusive Icons Select Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1481
+msgid "Here's a list of all the elusive icons by name and icon."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1487
+#, fuzzy
+msgid "Users Select Option"
+msgstr "Options du Slider"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1494
+#, fuzzy
+msgid "Image Select"
+msgstr "Sélecteur de date"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1503
+msgid "Images Option for Layout"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1505
+msgid ""
+"This uses some of the built in images, you can use them for layout options."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1539
+msgid "Images Option (with tiles => true)"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1540
+msgid "Select a background pattern."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1548
+#, fuzzy
+msgid "Images Option"
+msgstr "Options Boss"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1565
+msgid "Preset"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1566
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1568
+msgid ""
+"This allows you to set a json string or array to override multiple "
+"preferences in your theme."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1616
+#, fuzzy
+msgid "Slider / Spinner"
+msgstr "Options du Slider"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1623
+#, fuzzy
+msgid "Slider"
+msgstr "Diapositive"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1631
+msgid "Slider Example 1"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1632
+msgid "This slider displays the value as a label."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1633
+msgid "Slider description. Min: 1, max: 500, step: 1, default value: 250"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1643
+msgid "Slider Example 2 with Steps (5)"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1644
+msgid "This example displays the value in a text box"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1645
+msgid "Slider description. Min: 0, max: 300, step: 5, default value: 75"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1655
+msgid "Slider Example 3 with two sliders"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1656
+msgid "This example displays the values in select boxes"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1657
+msgid ""
+"Slider description. Min: 0, max: 500, step: 5, slider 1 default value: 100, "
+"slider 2 default value: 300"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1671
+msgid "Slider Example 4 with float values"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1672
+msgid "This example displays float values"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1673
+msgid "Slider description. Min: 0, max: 1, step: .1, default value: .5"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1687
+msgid "Spinner"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1695
+msgid "JQuery UI Spinner Example 1"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1696
+msgid ""
+"JQuery UI spinner description. Min:20, max: 100, step:20, default value: 40"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1707
+#: buddyboss-inc/buddyboss-framework/options-init.php:497
+msgid "Typography"
+msgstr "Typographie"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1715
+#: buddyboss-inc/buddyboss-framework/options-init.php:521
+msgid "Body Font"
+msgstr "Police du corps de la Page"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1716
+#: buddyboss-inc/buddyboss-framework/options-init.php:522
+msgid "Specify the body font properties."
+msgstr "Spécifie les propriétés de la police du corps de texte."
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1728
+msgid "Typography h2.site-description"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1750
+msgid "Typography option with each property can be called individually."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1765
+msgid "Additional Types"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1789
+#, fuzzy
+msgid "Date"
+msgstr "Date/Heure"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1797
+#, fuzzy
+msgid "Date Option"
+msgstr "Options Boss"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1805
+msgid "Sorter"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1853
+msgid "Raw"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1861
+msgid "Standard Raw Field"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1870
+msgid "Raw Field <code>full_width</code> False"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1879
+msgid "Advanced Features"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1885
+msgid "Callback"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1893
+msgid "Custom Field Callback"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1894
+msgid "This is a completely unique field type"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1895
+msgid ""
+"This is created with a callback function, so anything goes in this field. "
+"Make sure to define the function though."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1903
+#, fuzzy
+msgid "Field Validation"
+msgstr "Description du champ."
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1905
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2071
+msgid "For full documentation on validation, visit: "
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1911
+msgid "Text Option - Email Validated"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1912
+msgid ""
+"This is a little space under the Field Title in the Options table, "
+"additional info is good in here."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1921
+msgid "Text Option with Data Attributes"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1922
+msgid ""
+"You can also pass an options array if you want. Set the default to whatever "
+"you like."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1929
+msgid "Multi Text Option - Color Validated"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1931
+msgid ""
+"If you enter an invalid color it will be removed. Try using the text \"blue"
+"\" as a color.  ;)"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1937
+msgid "Text Option - URL Validated"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1938
+msgid "This must be a URL."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1946
+msgid "Text Option - Numeric Validated"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1947
+msgid "This must be numeric."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1955
+msgid "Text Option - Comma Numeric Validated"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1956
+msgid "This must be a comma separated string of numerical values."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1964
+msgid "Text Option - No Special Chars Validated"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1965
+msgid "This must be a alpha numeric only."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1973
+msgid "Text Option - Str Replace Validated"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1974
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1987
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2000
+msgid "You decide."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1975
+msgid "This field's default value was changed by a filter hook!"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1986
+msgid "Text Option - Preg Replace Validated"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:1999
+msgid "Text Option - Custom Callback Validated"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2001
+msgid ""
+"Enter <code>1</code> and click <strong>Save Changes</strong> for an error "
+"message, or enter <code>2</code> and click <strong>Save Changes</strong> for "
+"a warning message."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2023
+msgid "Textarea Option - No HTML Validated"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2024
+msgid "All HTML will be stripped"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2032
+msgid "Textarea Option - HTML Validated"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2033
+msgid "HTML Allowed (wp_kses)"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2042
+msgid "Custom HTML Allowed (wp_kses)"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2059
+msgid "Textarea Option - JS Validated"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2060
+msgid "JS will be escaped"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2069
+msgid "Field Required / Linking"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2175
+msgid "WPML Integration"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2176
+msgid ""
+"These fields can be fully translated by WPML (WordPress Multi-Language). "
+"This serves as an example for you to implement. For extra details look at "
+"our <a href=\"//docs.reduxframework.com/core/advanced/wpml-integration/\" "
+"target=\"_blank\">WPML Implementation</a> documentation."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2183
+msgid "WPML Text"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2184
+msgid "This string can be translated via WPML."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2189
+msgid "WPML Multi Checkbox"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2190
+msgid "You can literally translate the values via key."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2203
+#, fuzzy
+msgid "Customizer Only"
+msgstr "Personnaliser"
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2204
+msgid ""
+"<p class=\"description\">This Section should be visible only in Customizer</"
+"p>"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2210
+msgid "Customizer Only Option"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2211
+msgid "The subtitle is NOT visible in customizer"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2212
+msgid "The field desc is NOT visible in customizer."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2343
+msgid "Section via hook"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/admin/sample/sample-config.php:2344
+msgid ""
+"<p class=\"description\">This is a section created by adding a filter to the "
+"sections array. Can be used by child themes to add/remove sections from the "
+"options.</p>"
+msgstr ""
 
 #: buddyboss-inc/buddyboss-framework/admin/tests/includes/class-tivwp-dm-controller.php:28
 msgid "Must call in of after the \"plugins_loaded\" action."
@@ -2493,28 +3805,28 @@ msgstr ""
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Vous n’avez pas la permission d’éditer ce sujet!"
 
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:83
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:95
 msgid "Site"
 msgstr "Site"
 
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:137
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:185
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:149
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:197
 msgid "Upload Icon"
 msgstr "Télécharger une icône"
 
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:156
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:197
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:168
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_sites/custom_sites/field_custom_sites.php:209
 #: buddyboss-inc/buddyboss-framework/options-init.php:489
 msgid "Site Name"
 msgstr "Nom du site"
 
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:172
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:235
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:184
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:247
 msgid "Button Text"
 msgstr "Texte du bouton"
 
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:175
-#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:238
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:187
+#: buddyboss-inc/buddyboss-framework/boss-extensions/extensions/custom_slides/custom_slides/field_custom_slides.php:250
 msgid "Open link in a new window/tab?"
 msgstr "Ouvrir le lien dans une nouvelle fenêtre/onglet"
 
@@ -2667,6 +3979,7 @@ msgid "Display (below other links)"
 msgstr "Afficher (sous autres liens)"
 
 #: buddyboss-inc/buddyboss-framework/options-init.php:243
+#: buddyboss-inc/buddyboss-framework/options-init.php:727
 #: buddyboss-inc/theme-functions.php:71
 msgid "BuddyPanel"
 msgstr "BuddyPanel"
@@ -2703,6 +4016,7 @@ msgid "Closed"
 msgstr "Fermé"
 
 #: buddyboss-inc/buddyboss-framework/options-init.php:296
+#: buddyboss-inc/buddyboss-framework/options-init.php:732
 msgid "Cover Photos"
 msgstr "Photos de Couverture"
 
@@ -2800,10 +4114,6 @@ msgstr "Titre de la Diapositive"
 msgid "Slide Description"
 msgstr "Description de la diapositive."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:417
-msgid "Give us a link!"
-msgstr "Donnez-nous un lien !"
-
 #: buddyboss-inc/buddyboss-framework/options-init.php:424
 msgid "Slider Shortcode"
 msgstr "Shortcode Personalisé"
@@ -2873,10 +4183,6 @@ msgstr ""
 msgid "Sites to Allow"
 msgstr "Sites toujours autorisés"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:497
-msgid "Typography"
-msgstr "Typographie"
-
 #: buddyboss-inc/buddyboss-framework/options-init.php:503
 msgid "Site Title"
 msgstr "Titre du site"
@@ -2884,14 +4190,6 @@ msgstr "Titre du site"
 #: buddyboss-inc/buddyboss-framework/options-init.php:504
 msgid "Specify the site title properties."
 msgstr "Précisez les propriétés du titre du site."
-
-#: buddyboss-inc/buddyboss-framework/options-init.php:521
-msgid "Body Font"
-msgstr "Police du corps de la Page"
-
-#: buddyboss-inc/buddyboss-framework/options-init.php:522
-msgid "Specify the body font properties."
-msgstr "Spécifie les propriétés de la police du corps de texte."
 
 #: buddyboss-inc/buddyboss-framework/options-init.php:538
 #, fuzzy
@@ -2959,28 +4257,275 @@ msgstr "Spécifiez les propriétés de police la page de titre."
 msgid "Specify the slide title font properties."
 msgstr "Spécifiez les propriétés de police de titre de la diapositive."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1115
-msgid "Styling"
-msgstr "Styliser"
+#: buddyboss-inc/buddyboss-framework/options-init.php:704
+msgid "Headings Color"
+msgstr ""
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1146
+#: buddyboss-inc/buddyboss-framework/options-init.php:704
+msgid "Set the color for h1, h2, h3, h4, h5, h6 elements."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:705
+msgid "Slideshow Text Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:705
+msgid "Set the color for slideshow content."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:706
+#, fuzzy
+msgid "Links and Buttons"
+msgstr "Boutons Radio"
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:707
+msgid "Select your color for anchor elements (links)."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:708
+#, fuzzy
+msgid "Buttons Color"
+msgstr "Couleur"
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:708
+msgid "Select your color for button elements."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:709
+#, fuzzy
+msgid "Body"
+msgstr "Police du corps de la Page"
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:710
+msgid "Body Background Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:710
+msgid "Select your color for body background."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:711
+#: buddyboss-inc/buddyboss-framework/options-init.php:1145
 #: buddyboss-inc/theme-functions.php:74
 msgid "Footer"
 msgstr "Bas de Page"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1153
+#: buddyboss-inc/buddyboss-framework/options-init.php:712
+msgid "Footer Widgets Background Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:712
+msgid "Select your background color for footer widget area."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:713
+msgid "Footer Bottom Text Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:713
+msgid "Select your color for footer bottom."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:714
+msgid "Footer Bottom Background Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:714
+msgid "Select your color for footer bottom background."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:715
+#, fuzzy
+msgid "Titlebar (Desktop)"
+msgstr "Voir comme un Ordinateur de Table"
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:716
+msgid "Logo Area Background"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:716
+msgid "Set background color for logo area."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:717
+msgid "Select your color for site title."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:718
+#: buddyboss-inc/buddyboss-framework/options-init.php:721
+msgid "Titlebar Background Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:718
+#: buddyboss-inc/buddyboss-framework/options-init.php:721
+msgid "Select your background color for Titlebar."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:719
+msgid "Titlebar Text Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:719
+msgid "Select your text color for Titlebar."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:720
+msgid "Titlebar (Desktop without BuddyPanel)"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:722
+msgid "Titlebar Links Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:722
+msgid "Select your color for links in Titlebar."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:723
+msgid "Titlebar Links Hover Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:723
+msgid "Select your hover color for links in Titlebar."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:724
+#, fuzzy
+msgid "Titlebar (Mobile)"
+msgstr "Affichage Mobile"
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:725
+msgid "Mobile Titlebar Background Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:725
+msgid "Select your background color for mobile Titlebar."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:726
+msgid "Mobile Titlebar Text Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:726
+msgid "Select your text color for mobile Titlebar."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:728
+msgid "BuddyPanel Background Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:728
+msgid "Select your background color for BuddyPanel."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:729
+#, fuzzy
+msgid "BuddyPanel Title Color"
+msgstr "BuddyPanel"
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:729
+msgid "Select your title color for BuddyPanel."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:730
+#, fuzzy
+msgid "BuddyPanel Icons Color"
+msgstr "BuddyPanel"
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:730
+#: buddyboss-inc/buddyboss-framework/options-init.php:731
+msgid "Select your color for icons in BuddyPanel."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:731
+msgid "BuddyPanel Open Icons Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:733
+#, fuzzy
+msgid "Cover Photo Background"
+msgstr "Photos de Couverture"
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:733
+msgid "Select your background color for cover photo."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:734
+#, fuzzy
+msgid "Admin Screen"
+msgstr "Ecran de connection personnalisé"
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:735
+msgid "Admin Screen Background Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:735
+msgid "Select your background color for admin screen."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:736
+msgid "Admin Screen Text Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:736
+msgid "Select your text color for admin screen."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:737
+msgid "Admin Screen Links and Button Color"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:737
+msgid "Select your links hover color and buttons color for admin screen."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:738
+#, fuzzy
+msgid "Social Learner Options"
+msgstr "Options du Slider"
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:739
+#, fuzzy
+msgid "Active link color"
+msgstr "Extensions"
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:739
+msgid "Set the color for active links."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:740
+msgid "Sidebar Background"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:740
+msgid "Set the color for sidebar."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:1101
+msgid "Color Presets"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:1102
+msgid "Change section colors based on these presets."
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:1114
+msgid "Styling"
+msgstr "Styliser"
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:1152
 msgid "Copyright Text"
 msgstr "Texte du droit d’auteur"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1154
+#: buddyboss-inc/buddyboss-framework/options-init.php:1153
 msgid "Enter your custom copyright text."
 msgstr "Entrez votre texte de droit d'auteur personnalisé."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1173
+#: buddyboss-inc/buddyboss-framework/options-init.php:1172
 msgid "Social Links"
 msgstr "Liens sociaux"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1174
+#: buddyboss-inc/buddyboss-framework/options-init.php:1173
 msgid ""
 "Define and reorder your social icons in the footer. Keep the input field "
 "empty for any social icon you do not wish to display."
@@ -2988,32 +4533,32 @@ msgstr ""
 "Définir et réordonner les icones de liens sociaux du bas de page. Vider les "
 "valeurs du champ pour les icones à ne pas afficher."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1191
+#: buddyboss-inc/buddyboss-framework/options-init.php:1190
 msgid "Admin Login"
 msgstr "Conection de l'Admin"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1199
+#: buddyboss-inc/buddyboss-framework/options-init.php:1198
 msgid "Custom Login Screen"
 msgstr "Ecran de connection personnalisé"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1200
+#: buddyboss-inc/buddyboss-framework/options-init.php:1199
 msgid "Toggle the custom login screen design on or off."
 msgstr "Activer la personalisation de la page de connection."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1210
+#: buddyboss-inc/buddyboss-framework/options-init.php:1209
 msgid "Custom Logo"
 msgstr "Logo personnalisé"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1211
+#: buddyboss-inc/buddyboss-framework/options-init.php:1210
 msgid "We display a custom logo in place of the default WordPress logo."
 msgstr ""
 "Nous affichons un logo personnalisé à la place du logo par défaut WordPress."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1217
+#: buddyboss-inc/buddyboss-framework/options-init.php:1216
 msgid "Custom Colors"
 msgstr "Couleurs personnalisées"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1218
+#: buddyboss-inc/buddyboss-framework/options-init.php:1217
 msgid ""
 "Edit the admin login screen colors in the <a href=\"javascript:void(0);\" "
 "class=\"redux-group-tab-link-a\" data-key=\"7\" data-rel=\"7\">Styling "
@@ -3023,15 +4568,15 @@ msgstr ""
 "la <a href=\"javascript:void(0);\" class=\"redux-group-tab-link-a\" data-key="
 "\"7\" data-rel=\"7\">section Styling,</a> sous le \"Screen Admin\"."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1225
+#: buddyboss-inc/buddyboss-framework/options-init.php:1224
 msgid "Custom Codes"
 msgstr "Codes personalisés"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1232
+#: buddyboss-inc/buddyboss-framework/options-init.php:1231
 msgid "Tracking Code"
 msgstr "Code de suivi"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1233
+#: buddyboss-inc/buddyboss-framework/options-init.php:1232
 msgid ""
 "Paste your Google Analytics (or other) tracking code here. This will be "
 "added before the closing of body tag."
@@ -3039,11 +4584,11 @@ msgstr ""
 "Coller votre code javascript Google Analytics ou tout autre code de suivi "
 "ici. Ce code sera ajouté avant la fin du tag <body>."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1248
+#: buddyboss-inc/buddyboss-framework/options-init.php:1247
 msgid "CSS"
 msgstr "CSS"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1249
+#: buddyboss-inc/buddyboss-framework/options-init.php:1248
 msgid ""
 "Quickly add some CSS here to make design adjustments. It is a much better "
 "solution then manually editing the theme. You may also consider using a "
@@ -3053,11 +4598,11 @@ msgstr ""
 "C'est une meilleure solution que d'éditer manuellement le thème. Vous pouvez "
 "également envisager d'utiliser un thème enfant."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1266
+#: buddyboss-inc/buddyboss-framework/options-init.php:1265
 msgid "JavaScript"
 msgstr "JavaScript"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1267
+#: buddyboss-inc/buddyboss-framework/options-init.php:1266
 msgid ""
 "Quickly add some JavaScript code here. It is a much better solution then "
 "manually editing the theme. You may also consider using a child theme."
@@ -3066,15 +4611,15 @@ msgstr ""
 "d'éditer manuellement le thème. Vous pouvez également envisager d'utiliser "
 "un thème enfant."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1286
+#: buddyboss-inc/buddyboss-framework/options-init.php:1285
 msgid "Optimizations"
 msgstr "Optimisations"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1294
+#: buddyboss-inc/buddyboss-framework/options-init.php:1293
 msgid "Minify CSS"
 msgstr "Minimifier le CSS"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1295
+#: buddyboss-inc/buddyboss-framework/options-init.php:1294
 msgid ""
 "By default the theme loads stylesheets that are not minified. Set this to "
 "YES to instead load minified and combined stylesheets."
@@ -3083,23 +4628,23 @@ msgstr ""
 "Réglez cette option sur OUI pour charger à la place des fichiers css "
 "minimisés et combinés."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1297
-#: buddyboss-inc/buddyboss-framework/options-init.php:1306
-#: buddyboss-inc/buddyboss-framework/options-init.php:1314
+#: buddyboss-inc/buddyboss-framework/options-init.php:1296
+#: buddyboss-inc/buddyboss-framework/options-init.php:1305
+#: buddyboss-inc/buddyboss-framework/options-init.php:1313
 msgid "Yes"
 msgstr "Oui"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1298
-#: buddyboss-inc/buddyboss-framework/options-init.php:1307
-#: buddyboss-inc/buddyboss-framework/options-init.php:1315
+#: buddyboss-inc/buddyboss-framework/options-init.php:1297
+#: buddyboss-inc/buddyboss-framework/options-init.php:1306
+#: buddyboss-inc/buddyboss-framework/options-init.php:1314
 msgid "No"
 msgstr "Non"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1303
+#: buddyboss-inc/buddyboss-framework/options-init.php:1302
 msgid "Minify JavaScript"
 msgstr "Minifier le Javascript"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1304
+#: buddyboss-inc/buddyboss-framework/options-init.php:1303
 msgid ""
 "By default the theme loads scripts that are not minified. Set this to YES to "
 "instead load minified and combined JS files."
@@ -3108,11 +4653,11 @@ msgstr ""
 "cette option sur OUI pour charger à la place des fichiers JS minimisés et "
 "combinés."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1312
+#: buddyboss-inc/buddyboss-framework/options-init.php:1311
 msgid "Output JavaScript on ALL form inputs"
 msgstr "Sortie JavaScript sur TOUTES les entrées de formulaire"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1313
+#: buddyboss-inc/buddyboss-framework/options-init.php:1312
 msgid ""
 "We style form inputs (dropdowns, checkboxes, and radios) using JavaScript. "
 "Set this to NO to disable this on inputs outside of BuddyPress and bbPress, "
@@ -3123,47 +4668,46 @@ msgstr ""
 "en dehors de BuddyPress et bbPress, afin d'améliorer la compatibilité avec "
 "certains plugins."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1323
-#: buddyboss-inc/theme-functions.php:3639
+#: buddyboss-inc/buddyboss-framework/options-init.php:1322
+#: buddyboss-inc/theme-functions.php:3647
 #: template-parts/header-dashboard-links.php:19
-#: template-parts/header-dashboard-links.php:41
+#: template-parts/header-dashboard-links.php:43
 msgid "Plugins"
 msgstr "Extensions"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1355
-#: buddyboss-inc/buddyboss-framework/options-init.php:1387
-msgid "Documentation"
-msgstr "Documentation"
-
-#: buddyboss-inc/buddyboss-framework/options-init.php:1395
+#: buddyboss-inc/buddyboss-framework/options-init.php:1394
 msgid "Miscellaneous"
 msgstr "Divers"
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1401
+#: buddyboss-inc/buddyboss-framework/options-init.php:1400
 msgid "Entry Content"
 msgstr "Contenu de l'entrée"
 
+#: buddyboss-inc/buddyboss-framework/options-init.php:1470
 #: buddyboss-inc/buddyboss-framework/options-init.php:1471
-#: buddyboss-inc/buddyboss-framework/options-init.php:1472
+#: buddyboss-inc/buddyboss-theme-updater.php:10
 msgid "Boss Theme"
 msgstr "Thème Boss."
 
-#: buddyboss-inc/buddyboss-framework/options-init.php:1561
+#: buddyboss-inc/buddyboss-framework/options-init.php:1539
+msgid "Like us on Facebook"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:1544
+msgid "Follow us on Twitter"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:1549
+msgid "Find us on LinkedIn"
+msgstr ""
+
+#: buddyboss-inc/buddyboss-framework/options-init.php:1560
 msgid ""
 "<p>To access any of your saved options from within your code you can use "
 "your global variable: <strong>$%1$s</strong></p>"
 msgstr ""
 "<p>Pour accéder à vos options enregistrées à partir de votre code, vous "
 "pouvez utiliser votre variable globale: <strong>$%1$s</strong></p>"
-
-#: buddyboss-inc/buddyboss-framework/options-init.php:1563
-msgid ""
-"<p>This text is displayed above the options panel. It isn't required, but "
-"more info is always better! The intro_text field accepts all HTML.</p>"
-msgstr ""
-"<p>Ce texte s’affiche au-dessus du panneau d’options. Il n’est pas "
-"nécessaire, mais plus d’infos est toujours intéressant ! Le champ texte "
-"d’intro accepte tout code HTML. </p>"
 
 #: buddyboss-inc/buddyboss-framework/plugin-support.php:240
 #: buddyboss-inc/buddyboss-framework/plugin-support.php:256
@@ -3330,10 +4874,6 @@ msgstr "Pourcent"
 #: buddyboss-inc/buddyboss-shortcodes/shortcodes.php:234
 msgid "Don't enter \"%\", just the number e.g. \"30\"."
 msgstr "Ne pas entrer le \"%\", juste le nombre, comme \"30\"."
-
-#: buddyboss-inc/buddyboss-shortcodes/shortcodes.php:244
-msgid "Color"
-msgstr "Couleur"
 
 #: buddyboss-inc/buddyboss-shortcodes/shortcodes.php:245
 msgid "Default is the main site color."
@@ -3505,6 +5045,12 @@ msgstr ""
 msgid "Insert shortcode"
 msgstr "Insérer le code raccourci"
 
+#: buddyboss-inc/buddyboss-theme-updater.php:49
+msgid ""
+"To receive updates for BuddyBoss products, please install and activate the "
+"plugin %s"
+msgstr ""
+
 #: buddyboss-inc/buddyboss-widgets/buddyboss-profile-widget-loader.php:18
 msgid "(BuddyBoss) Profile Login Widget"
 msgstr "(BuddyBoss) Connection au Profil"
@@ -3522,7 +5068,7 @@ msgid "Log In"
 msgstr "Se connecter"
 
 #: buddyboss-inc/buddyboss-widgets/buddyboss-profile-widget-loader.php:95
-#: template-parts/header-profile.php:139 template-parts/left-panel.php:35
+#: template-parts/header-profile.php:181 template-parts/left-panel.php:35
 msgid "Register"
 msgstr "Inscription"
 
@@ -3551,57 +5097,57 @@ msgstr "Nombre de postes à montrer:"
 msgid "Display post date?"
 msgstr "Afficher la date du contenu?"
 
-#: buddyboss-inc/cover-photo.php:238 buddyboss-inc/cover-photo.php:304
+#: buddyboss-inc/cover-photo.php:239 buddyboss-inc/cover-photo.php:305
 msgid "Update Cover Photo"
 msgstr "Mettre à Jour la Photo de Couverture"
 
-#: buddyboss-inc/cover-photo.php:247
+#: buddyboss-inc/cover-photo.php:248
 msgid "Remove cover photo"
 msgstr "Enlever la photo de couverture"
 
-#: buddyboss-inc/cover-photo.php:305 buddyboss-inc/cover-photo.php:344
+#: buddyboss-inc/cover-photo.php:306 buddyboss-inc/cover-photo.php:345
 msgid "Get a random cover photo"
 msgstr "Avoir une photo de couverture au hasard"
 
-#: buddyboss-inc/cover-photo.php:341
+#: buddyboss-inc/cover-photo.php:342
 msgid "Error uploading cover photo."
 msgstr "Erreur en transférant une photo de couverture."
 
-#: buddyboss-inc/cover-photo.php:342
+#: buddyboss-inc/cover-photo.php:343
 msgid "Error refreshing cover photo."
 msgstr "Erreur en rafraichissant la photo de couverture."
 
-#: buddyboss-inc/cover-photo.php:343
+#: buddyboss-inc/cover-photo.php:344
 msgid "Remove cover photo."
 msgstr "Supprimer la photo de couverture."
 
-#: buddyboss-inc/cover-photo.php:405 buddyboss-inc/cover-photo.php:413
-#: buddyboss-inc/cover-photo.php:504 buddyboss-inc/cover-photo.php:512
+#: buddyboss-inc/cover-photo.php:406 buddyboss-inc/cover-photo.php:414
+#: buddyboss-inc/cover-photo.php:505 buddyboss-inc/cover-photo.php:513
 msgid "Invalid request try again later."
 msgstr "Requête invalide, essayer plus tard."
 
-#: buddyboss-inc/cover-photo.php:420 buddyboss-inc/cover-photo.php:519
+#: buddyboss-inc/cover-photo.php:421 buddyboss-inc/cover-photo.php:520
 msgid "Security error try later again."
 msgstr "Erreur de sécurité, essayer plus tard."
 
-#: buddyboss-inc/cover-photo.php:427 buddyboss-inc/cover-photo.php:544
+#: buddyboss-inc/cover-photo.php:428 buddyboss-inc/cover-photo.php:545
 msgid "You don't have permission to update cover photo."
 msgstr ""
 "Vous n’avez pas la permission de mettre votre photo de couverture à jour."
 
-#: buddyboss-inc/cover-photo.php:435 buddyboss-inc/cover-photo.php:551
+#: buddyboss-inc/cover-photo.php:436 buddyboss-inc/cover-photo.php:552
 msgid "The section you uploading cover does not exists."
 msgstr "La section pour laquelle vous ajouter une couverture n'existe pas."
 
-#: buddyboss-inc/cover-photo.php:472 buddyboss-inc/cover-photo.php:571
+#: buddyboss-inc/cover-photo.php:473 buddyboss-inc/cover-photo.php:572
 msgid "Cover photo is successfully updated."
 msgstr "La couverture a été mise à jour avec succès."
 
-#: buddyboss-inc/cover-photo.php:477
+#: buddyboss-inc/cover-photo.php:478
 msgid "Error while uploading the cover photo, try later again."
 msgstr "Erreur en transférant cette photo de couverture, essayer plus tard."
 
-#: buddyboss-inc/cover-photo.php:591
+#: buddyboss-inc/cover-photo.php:592
 msgid "Cover photo is removed."
 msgstr "Photo de couverture supprimée."
 
@@ -3610,7 +5156,7 @@ msgid "Module does not have the proper info array"
 msgstr "Le module n'a pas la bonne information dans ce champs"
 
 #: buddyboss-inc/learner-functions.php:81
-#: buddyboss-inc/theme-functions.php:3593
+#: buddyboss-inc/theme-functions.php:3601
 msgid "See All"
 msgstr "Tout voir"
 
@@ -3630,85 +5176,85 @@ msgstr "Profil : Liens Supplémentaires"
 msgid "Group: Extra Links"
 msgstr "Groupes: liens supplémentaires"
 
-#: buddyboss-inc/theme-functions.php:327
+#: buddyboss-inc/theme-functions.php:323
 msgid "Your Comment..."
 msgstr "Votre Commentaire…"
 
-#: buddyboss-inc/theme-functions.php:328
+#: buddyboss-inc/theme-functions.php:324
 msgid "View as Desktop"
 msgstr "Voir comme un Ordinateur de Table"
 
-#: buddyboss-inc/theme-functions.php:329
+#: buddyboss-inc/theme-functions.php:325
 msgid "View as Mobile"
 msgstr "Affichage Mobile"
 
-#: buddyboss-inc/theme-functions.php:336 buddypress/activity/index.php:79
+#: buddyboss-inc/theme-functions.php:332 buddypress/activity/index.php:79
 msgid "Show:"
 msgstr "Montrer :"
 
-#: buddyboss-inc/theme-functions.php:337
+#: buddyboss-inc/theme-functions.php:333
 msgid "Post in:"
 msgstr "Posté dans:"
 
-#: buddyboss-inc/theme-functions.php:341
+#: buddyboss-inc/theme-functions.php:337
 msgid "Monday"
 msgstr "Lundi"
 
-#: buddyboss-inc/theme-functions.php:341
+#: buddyboss-inc/theme-functions.php:337
 msgid "Tuesday"
 msgstr "Mardi"
 
-#: buddyboss-inc/theme-functions.php:341
+#: buddyboss-inc/theme-functions.php:337
 msgid "Wednesday"
 msgstr "Mercredi"
 
-#: buddyboss-inc/theme-functions.php:341
+#: buddyboss-inc/theme-functions.php:337
 msgid "Thursday"
 msgstr "Jeudi"
 
-#: buddyboss-inc/theme-functions.php:341
+#: buddyboss-inc/theme-functions.php:337
 msgid "Friday"
 msgstr "Vendredi"
 
-#: buddyboss-inc/theme-functions.php:341
+#: buddyboss-inc/theme-functions.php:337
 msgid "Saturday"
 msgstr "Samedi"
 
-#: buddyboss-inc/theme-functions.php:341
+#: buddyboss-inc/theme-functions.php:337
 msgid "Sunday"
 msgstr "Dimanche"
 
-#: buddyboss-inc/theme-functions.php:784
+#: buddyboss-inc/theme-functions.php:783
 msgid "Post navigation"
 msgstr "Poster navigation"
 
-#: buddyboss-inc/theme-functions.php:785
+#: buddyboss-inc/theme-functions.php:784
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Les seniors messages"
 
-#: buddyboss-inc/theme-functions.php:786
+#: buddyboss-inc/theme-functions.php:785
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Les nouveaux messages <span class=\"meta-nav\">&rarr;</span>"
 
 #. Translators: used between list items, there is a space after the comma.
-#: buddyboss-inc/theme-functions.php:805 buddyboss-inc/theme-functions.php:808
+#: buddyboss-inc/theme-functions.php:804 buddyboss-inc/theme-functions.php:807
 #: buddypress/members/single/member-header.php:43
 msgid ", "
 msgstr ","
 
-#: buddyboss-inc/theme-functions.php:813
+#: buddyboss-inc/theme-functions.php:812
 msgid "View all posts by %s"
 msgstr "Voir tous les messages de %s"
 
-#: buddyboss-inc/theme-functions.php:837
+#: buddyboss-inc/theme-functions.php:836
 msgid "0 comments"
 msgstr "0 commentaires"
 
-#: buddyboss-inc/theme-functions.php:837
+#: buddyboss-inc/theme-functions.php:836
 msgid "1 comment"
 msgstr "1 commentaire"
 
-#: buddyboss-inc/theme-functions.php:837
+#: buddyboss-inc/theme-functions.php:836
 msgid "% comments"
 msgstr "% commentaires"
 
@@ -3789,115 +5335,119 @@ msgstr "<span class=\"post-num\">%1$s, %2$s</span>"
 msgid "<span class=\"post-num\">0 replies</span>"
 msgstr "<span class=\"post-num\">0 réponses</span>"
 
-#: buddyboss-inc/theme-functions.php:2437
+#: buddyboss-inc/theme-functions.php:2442 template-parts/header-profile.php:108
 msgid "No new notifications"
 msgstr "Aucune notification"
 
-#: buddyboss-inc/theme-functions.php:3085
+#: buddyboss-inc/theme-functions.php:3087
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: buddyboss-inc/theme-functions.php:3085
+#: buddyboss-inc/theme-functions.php:3087
 msgid "(Edit)"
 msgstr "(Editer)"
 
-#: buddyboss-inc/theme-functions.php:3104
+#: buddyboss-inc/theme-functions.php:3106
 msgid "Post author"
 msgstr "Auteur du sujet"
 
-#: buddyboss-inc/theme-functions.php:3110
+#: buddyboss-inc/theme-functions.php:3112
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
+#: buddyboss-inc/theme-functions.php:3121
+msgid "<a href=\"%1$s\"><time datetime=\"%2$s\">%3$s ago</time></a>"
+msgstr ""
+
 #. translators: 1: date, 2: time
-#: buddyboss-inc/theme-functions.php:3124
+#: buddyboss-inc/theme-functions.php:3126
 msgid "<i class=\"fa fa-reply\"></i>"
 msgstr "<i class=\"fa fa-reply\"></i>"
 
-#: buddyboss-inc/theme-functions.php:3179
+#: buddyboss-inc/theme-functions.php:3181
 msgid "The price for membership is <strong>%s</strong> now"
 msgstr ""
 "Le coût de votre abonnement est de <strong>%s</strong> pour la première année"
 
-#: buddyboss-inc/theme-functions.php:3181
+#: buddyboss-inc/theme-functions.php:3183
 msgid "<strong><span>%s</span> now</strong>"
 msgstr "<strong><span>%s</span> maintenant</strong>"
 
-#: buddyboss-inc/theme-functions.php:3187
+#: buddyboss-inc/theme-functions.php:3189
 msgid " and then <strong>%s per %s for %d more %s</strong>."
 msgstr " et ensuite <strong>%s par %s pour %d plus %s</strong>."
 
-#: buddyboss-inc/theme-functions.php:3189
+#: buddyboss-inc/theme-functions.php:3191
 msgid " and then <strong>%s every %d %s for %d more %s</strong>."
 msgstr " et ensuite <strong>%s chaque %d %s pour %d plus %s</strong>."
 
-#: buddyboss-inc/theme-functions.php:3192
+#: buddyboss-inc/theme-functions.php:3194
 msgid " and then <strong>%s after %d %s</strong>."
 msgstr "puis <strong>%s après %d %s</strong>."
 
-#: buddyboss-inc/theme-functions.php:3197
+#: buddyboss-inc/theme-functions.php:3199
 msgid "The price for membership is <strong>%s per %s</strong>."
 msgstr "Le prix d'adhésion est de <strong>%s par %s.</strong>."
 
-#: buddyboss-inc/theme-functions.php:3199
+#: buddyboss-inc/theme-functions.php:3201
 msgid "<strong><span>%s</span> per %s</strong>."
 msgstr "<strong><span>%s</span> par %s</strong>."
 
-#: buddyboss-inc/theme-functions.php:3203
+#: buddyboss-inc/theme-functions.php:3205
 msgid "The price for membership is <strong>%s every %d %s</strong>."
 msgstr "Le prix pour l'adhésion est de <strong>%s chaque %d %s</strong>."
 
-#: buddyboss-inc/theme-functions.php:3205
+#: buddyboss-inc/theme-functions.php:3207
 msgid "<strong><span>%s</span> every %d %s</strong>."
 msgstr "<strong><span>%s</span> chaque %d %s</strong>."
 
-#: buddyboss-inc/theme-functions.php:3209
+#: buddyboss-inc/theme-functions.php:3211
 msgid " and then <strong>%s per %s</strong>."
 msgstr "et ensuite <strong>%s par %s</strong> ."
 
-#: buddyboss-inc/theme-functions.php:3211
+#: buddyboss-inc/theme-functions.php:3213
 msgid " and then <strong>%s every %d %s</strong>."
 msgstr "et ensuite <strong>%s chaque %d %s</strong>."
 
-#: buddyboss-inc/theme-functions.php:3225
+#: buddyboss-inc/theme-functions.php:3227
 msgid "After your initial payment, your first payment is Free."
 msgstr "Après votre paiement initial, votre premier versement est gratuit."
 
-#: buddyboss-inc/theme-functions.php:3227
+#: buddyboss-inc/theme-functions.php:3229
 msgid "After your initial payment, your first %d payments are Free."
 msgstr ""
 "Après votre paiement initial, vos %d premiers versements sont gratuits."
 
-#: buddyboss-inc/theme-functions.php:3231
+#: buddyboss-inc/theme-functions.php:3233
 msgid "After your initial payment, your first payment will cost %s."
 msgstr "Après votre paiement initial, votre premier versement coûtera %s."
 
-#: buddyboss-inc/theme-functions.php:3233
+#: buddyboss-inc/theme-functions.php:3235
 msgid "After your initial payment, your first %d payments will cost %s."
 msgstr ""
 "Après votre paiement initial, vos %d prochains paiements vous coûteront %s."
 
-#: buddyboss-inc/theme-functions.php:3243
+#: buddyboss-inc/theme-functions.php:3245
 msgid "Customers in %s will be charged %s%% tax."
 msgstr "Les clients assujettis à la %s seront facturés à %s%%."
 
-#: buddyboss-inc/theme-functions.php:3285
+#: buddyboss-inc/theme-functions.php:3287
 msgid "Click to toggle"
 msgstr "Cliquez pour ouvrir"
 
-#: buddyboss-inc/theme-functions.php:3285
+#: buddyboss-inc/theme-functions.php:3287
 msgid "BuddyBoss Events"
 msgstr "Événements BuddyBoss"
 
-#: buddyboss-inc/theme-functions.php:3289
+#: buddyboss-inc/theme-functions.php:3291
 msgid "%s Page"
 msgstr "Page de %s"
 
-#: buddyboss-inc/theme-functions.php:3289
+#: buddyboss-inc/theme-functions.php:3291
 msgid "Events"
 msgstr "Événements"
 
-#: buddyboss-inc/theme-functions.php:3290
+#: buddyboss-inc/theme-functions.php:3292
 msgid ""
 "These formats will be used on your events page. They will override settings "
 "previously set on \"Events\" dropdown of this page. This will also be used "
@@ -3910,19 +5460,19 @@ msgstr ""
 "formats spécifiés dans les autres listes d'événements, comme dans les "
 "numéros courts."
 
-#: buddyboss-inc/theme-functions.php:3293
+#: buddyboss-inc/theme-functions.php:3295
 msgid "Use BuddyBoss list layout?"
 msgstr "Utiliser l'affichage en liste BuddyBoss ?"
 
-#: buddyboss-inc/theme-functions.php:3293
+#: buddyboss-inc/theme-functions.php:3295
 msgid "Use BuddyBoss grid layout."
 msgstr "Utiliser l'affichage en grille BuddyBoss ?"
 
-#: buddyboss-inc/theme-functions.php:3294
+#: buddyboss-inc/theme-functions.php:3296
 msgid "Default event list format header"
 msgstr "Affichage de la liste par défaut"
 
-#: buddyboss-inc/theme-functions.php:3294
+#: buddyboss-inc/theme-functions.php:3296
 msgid ""
 "This content will appear just above your code for the default event list "
 "format. Default is blank"
@@ -3930,20 +5480,20 @@ msgstr ""
 "Ce contenu s'affichera juste en-dessous de votre code pour le format de "
 "grille d'événements par défaut. Par défaut, la valeur est vide."
 
-#: buddyboss-inc/theme-functions.php:3295
+#: buddyboss-inc/theme-functions.php:3297
 msgid "Default event list format"
 msgstr "Affichage de la liste par défaut"
 
-#: buddyboss-inc/theme-functions.php:3295
-#: buddyboss-inc/theme-functions.php:3298
+#: buddyboss-inc/theme-functions.php:3297
+#: buddyboss-inc/theme-functions.php:3300
 msgid "The format of any events in a list."
 msgstr "Le format de tous les événements dans une liste."
 
-#: buddyboss-inc/theme-functions.php:3296
+#: buddyboss-inc/theme-functions.php:3298
 msgid "Default event list format footer"
 msgstr "Pied de page de la liste d'événements par défaut"
 
-#: buddyboss-inc/theme-functions.php:3296
+#: buddyboss-inc/theme-functions.php:3298
 msgid ""
 "This content will appear just below your code for the default event list "
 "format. Default is blank"
@@ -3951,11 +5501,11 @@ msgstr ""
 "Ce contenu s'affichera juste en-dessous de votre code pour l'affichage "
 "d'événements par défaut. Par défaut, la valeur est vide."
 
-#: buddyboss-inc/theme-functions.php:3297
+#: buddyboss-inc/theme-functions.php:3299
 msgid "Default event grid format header"
 msgstr "Affichage des événements en grille par défaut"
 
-#: buddyboss-inc/theme-functions.php:3297
+#: buddyboss-inc/theme-functions.php:3299
 msgid ""
 "This content will appear just above your code for the default event grid "
 "format. Default is blank"
@@ -3963,15 +5513,15 @@ msgstr ""
 "Ce contenu s'affichera juste au-dessus de votre code pour le format de "
 "grille d'événements. Par défaut, la valeur est vide."
 
-#: buddyboss-inc/theme-functions.php:3298
+#: buddyboss-inc/theme-functions.php:3300
 msgid "Default event grid format"
 msgstr "Affichage des événements en grille par défaut"
 
-#: buddyboss-inc/theme-functions.php:3299
+#: buddyboss-inc/theme-functions.php:3301
 msgid "Default event grid format footer"
 msgstr "Pied de page par défaut événement grille format"
 
-#: buddyboss-inc/theme-functions.php:3299
+#: buddyboss-inc/theme-functions.php:3301
 msgid ""
 "This content will appear just below your code for the default event grid "
 "format. Default is blank"
@@ -3979,16 +5529,16 @@ msgstr ""
 "Ce contenu s'affichera juste en-dessous de votre code pour le format de "
 "grille d'événements par défaut. Par défaut, la valeur est vide."
 
-#: buddyboss-inc/theme-functions.php:3303
+#: buddyboss-inc/theme-functions.php:3305
 msgid "Single %s Page"
 msgstr "Page unique de %s"
 
-#: buddyboss-inc/theme-functions.php:3303
-#: buddyboss-inc/theme-functions.php:3378
+#: buddyboss-inc/theme-functions.php:3305
+#: buddyboss-inc/theme-functions.php:3385
 msgid "Event"
 msgstr "Événement"
 
-#: buddyboss-inc/theme-functions.php:3304
+#: buddyboss-inc/theme-functions.php:3306
 msgid ""
 "These formats can be used on %s pages or on other areas of your site "
 "displaying an %s."
@@ -3996,24 +5546,24 @@ msgstr ""
 "Ces formats peuvent être utilisés sur les pages %s ou les autres sections de "
 "votre site en affichant un %s."
 
-#: buddyboss-inc/theme-functions.php:3304
-#: buddyboss-inc/theme-functions.php:3309
+#: buddyboss-inc/theme-functions.php:3306
+#: buddyboss-inc/theme-functions.php:3311
 msgid "event"
 msgstr "événement"
 
-#: buddyboss-inc/theme-functions.php:3308
+#: buddyboss-inc/theme-functions.php:3310
 msgid "Use BuddyBoss single event layout?"
 msgstr "Utiliser la mise en page événement unique BuddyBoss ?"
 
-#: buddyboss-inc/theme-functions.php:3308
+#: buddyboss-inc/theme-functions.php:3310
 msgid "Use BuddyBoss single event layout."
 msgstr "Utiliser la mise en page événement unique BuddyBoss."
 
-#: buddyboss-inc/theme-functions.php:3309
+#: buddyboss-inc/theme-functions.php:3311
 msgid "Single %s page format"
 msgstr "Format de page unique de %s"
 
-#: buddyboss-inc/theme-functions.php:3309
+#: buddyboss-inc/theme-functions.php:3311
 msgid ""
 "The format used to display %s content on single pages or elsewhere on your "
 "site."
@@ -4021,49 +5571,49 @@ msgstr ""
 "Le format utilisé pour afficher le contenu de %s sur des pages uniques ou "
 "n'importe où sur votre site."
 
-#: buddyboss-inc/theme-functions.php:3377
-#: buddyboss-inc/theme-functions.php:3422
+#: buddyboss-inc/theme-functions.php:3384
+#: buddyboss-inc/theme-functions.php:3429
 msgid "Date/Time"
 msgstr "Date/Heure"
 
-#: buddyboss-inc/theme-functions.php:3379
-#: buddyboss-inc/theme-functions.php:3427
+#: buddyboss-inc/theme-functions.php:3386
+#: buddyboss-inc/theme-functions.php:3434
 msgid "Location"
 msgstr "Zone géographique"
 
-#: buddyboss-inc/theme-functions.php:3432
+#: buddyboss-inc/theme-functions.php:3439
 msgid "Categories"
 msgstr "Catégories"
 
-#: buddyboss-inc/theme-functions.php:3437
+#: buddyboss-inc/theme-functions.php:3444
 msgid "Bookings"
 msgstr "Réservations"
 
-#: buddyboss-inc/theme-functions.php:3631
+#: buddyboss-inc/theme-functions.php:3639
 #: template-parts/header-dashboard-links.php:15
-#: template-parts/header-dashboard-links.php:38
+#: template-parts/header-dashboard-links.php:40
 msgid "Boss Options"
 msgstr "Options Boss"
 
-#: buddyboss-inc/theme-functions.php:3632
+#: buddyboss-inc/theme-functions.php:3640
 msgid "Customize"
 msgstr "Personnaliser"
 
-#: buddyboss-inc/theme-functions.php:3633
+#: buddyboss-inc/theme-functions.php:3641
 msgid "Widgets"
 msgstr "Widgets"
 
-#: buddyboss-inc/theme-functions.php:3634
+#: buddyboss-inc/theme-functions.php:3642
 msgid "Menus"
 msgstr "Menus"
 
-#: buddyboss-inc/theme-functions.php:3635
+#: buddyboss-inc/theme-functions.php:3643
 #: template-parts/header-dashboard-links.php:18
-#: template-parts/header-dashboard-links.php:40
+#: template-parts/header-dashboard-links.php:42
 msgid "Themes"
 msgstr "Thèmes"
 
-#: buddyboss-inc/theme-functions.php:3642
+#: buddyboss-inc/theme-functions.php:3650
 #, fuzzy
 msgid "Profile"
 msgstr "Profils"
@@ -4110,11 +5660,6 @@ msgstr "Enlever le Favori"
 #: buddypress/activity/entry.php:102
 msgid "Post"
 msgstr "Répondre"
-
-#: buddypress/activity/entry.php:102 buddypress/forums/index.php:111
-#: docs/single/edit-inner.php:187
-msgid "Cancel"
-msgstr "Cancel"
 
 #: buddypress/activity/index.php:24
 msgid "The public activity for everyone on this site."
@@ -4795,23 +6340,23 @@ msgstr "Permalink à %s"
 msgid "Groups"
 msgstr "Gestion des groupes"
 
-#: comments.php:48
+#: comments.php:48 docs/single/comments.php:64
 msgid "Comment navigation"
 msgstr "Navigation des commentaires"
 
-#: comments.php:49
+#: comments.php:49 docs/single/comments.php:65
 msgid "&larr; Older Comments"
 msgstr "&larr; Anciens Commentaires"
 
-#: comments.php:50
+#: comments.php:50 docs/single/comments.php:66
 msgid "Newer Comments &rarr;"
 msgstr "Nouveaux commentaires &rarr;"
 
-#: comments.php:59
+#: comments.php:59 docs/single/comments.php:75
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: comments.php:70
+#: comments.php:70 docs/single/comments.php:86
 msgid "Comment"
 msgstr "Commentaire"
 
@@ -5035,11 +6580,6 @@ msgstr "Prêt à publier votre premier sujet ? <a href=\"%s\">Commencer ici</a>.
 msgid "Free"
 msgstr "Gratuit"
 
-#: paid-memberships-pro/pages/levels.php:45
-#: paid-memberships-pro/pages/levels.php:47
-msgid "Select"
-msgstr "Sélectionner"
-
 #: paid-memberships-pro/pages/levels.php:55
 msgid "Renew"
 msgstr "Renouveler"
@@ -5089,9 +6629,9 @@ msgid "Network Admin"
 msgstr "Admin du réseau"
 
 #: template-parts/header-dashboard-links.php:14
-#: template-parts/header-dashboard-links.php:37
-#: template-parts/header-dashboard-links.php:57
-#: template-parts/header-dashboard-links.php:65
+#: template-parts/header-dashboard-links.php:39
+#: template-parts/header-dashboard-links.php:60
+#: template-parts/header-dashboard-links.php:68
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
@@ -5100,7 +6640,7 @@ msgid "Sites"
 msgstr "Sites"
 
 #: template-parts/header-dashboard-links.php:17
-#: template-parts/header-dashboard-links.php:39
+#: template-parts/header-dashboard-links.php:41
 msgid "Users"
 msgstr "Utilisateurs"
 
@@ -5108,11 +6648,21 @@ msgstr "Utilisateurs"
 msgid "Type to search..."
 msgstr "Type de recherche..."
 
-#: template-parts/header-profile.php:117 template-parts/left-panel.php:43
+#: template-parts/header-profile.php:57
+#, fuzzy
+msgid "Sent you message"
+msgstr "Envoyer un message"
+
+#: template-parts/header-profile.php:66
+#, fuzzy
+msgid "No unread messages"
+msgstr "Envoyer un message"
+
+#: template-parts/header-profile.php:158 template-parts/left-panel.php:43
 msgid "Logout"
 msgstr "Déconnexion"
 
-#: template-parts/header-profile.php:142 template-parts/left-panel.php:38
+#: template-parts/header-profile.php:184 template-parts/left-panel.php:38
 msgid "Login"
 msgstr "Connection"
 
@@ -5202,6 +6752,9 @@ msgstr[1] "%s nouveaux"
 msgctxt "up one folder"
 msgid ".."
 msgstr ".."
+
+#~ msgid "%s"
+#~ msgstr "%s"
 
 # @ boss
 #, fuzzy

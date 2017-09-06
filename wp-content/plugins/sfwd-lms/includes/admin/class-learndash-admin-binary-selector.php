@@ -402,34 +402,6 @@ if (!class_exists('Learndash_Binary_Selector_Users')) {
 	}
 }
 
-if (!class_exists('Learndash_Binary_Selector_Course_Users')) {
-	class Learndash_Binary_Selector_Course_Users extends Learndash_Binary_Selector_Users {
-		
-		function __construct( $args = array() ) {
-			
-			$this->selector_class = get_class($this);
-
-			$defaults = array(
-				'group_id'				=>	0,
-				'html_title' 			=>	'<h3>'. _x('%s Users', 'Course Users Label', 'learndash') .'</h3>',
-				'html_title' 			=>	'<h3>'. sprintf( _x('%s Users', 'Course Users label', 'learndash'), LearnDash_Custom_Label::get_label( 'course' ) ) .'</h3>',
-				'html_id'				=>	'learndash_course_users',
-				'html_class'			=>	'learndash_course_users',
-				'html_name'				=>	'learndash_group_users',
-				'search_label_left'		=>	sprintf( _x( 'Search All %s Users', 'Search All Group Users', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
-				'search_label_right'	=>	sprintf( _x( 'Search Assigned %s Users', 'Search Assigned Group Users', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
-			);
-			
-			$args = wp_parse_args( $args, $defaults );
-			
-			$args['html_id'] = $args['html_id'].'-'. $args['course_id'];
-			$args['html_name'] = $args['html_name'].'['. $args['course_id'] .']';
-
-			parent::__construct( $args );	
-		}
-	}
-}
-
 if (!class_exists('Learndash_Binary_Selector_Group_Users')) {
 	class Learndash_Binary_Selector_Group_Users extends Learndash_Binary_Selector_Users {
 		

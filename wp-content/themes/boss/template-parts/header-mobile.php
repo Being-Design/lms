@@ -31,7 +31,7 @@
 			?>
 
 			<!-- Profile menu trigger button -->
-			<?php if ( is_user_logged_in() || (!is_user_logged_in() && buddyboss_is_bp_active() && !bp_hide_loggedout_adminbar( false ) ) ) { ?>
+			<?php if ( is_user_logged_in() || (!is_user_logged_in() && buddyboss_is_bp_active() ) ) { ?>
 
 				<div id="profile-nav-wrap" class="btn-wrap">
 					<a href="#" id="profile-nav" class="sidebar-btn fa fa-user table-cell"><span id="ab-pending-notifications-mobile" class="pending-count no-alert"></span></a>
@@ -43,3 +43,10 @@
 	</div>
 
 </div><!-- #mobile-header -->
+
+<nav class="subheader">
+
+	<!-- Woocommerce Notification -->
+	<?php echo boss_cart_icon_html(); ?>
+
+</nav>

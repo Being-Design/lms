@@ -467,21 +467,23 @@ function ld_update_course_access( $user_id, $course_id, $remove = false ) {
 
 	$meta = get_post_meta( $course_id, '_sfwd-courses', true );
 	$access_list = $meta['sfwd-courses_course_access_list'];
-	if ( ( !empty( $access_list ) ) && ( is_string( $access_list ) ) ) {
-		$access_list = explode( ',', $access_list );
-		$access_list = array_map( 'intval', $access_list );
-	} else {
-		$access_list = array();
-	}
 
 	if ( empty( $remove ) ) {
 
-		$access_list[] = $user_id;
+		if ( empty( $access_list ) ) {
+			$access_list = $user_id;
+		} else {
+			$access_list_arr = explode( ',', $access_list );
+			$access_list_arr = array_map( 'intVal', $access_list_arr );
+			$access_list_arr[] = $user_id;
+			$access_list_arr = array_unique( $access_list_arr );
+			$access_list = implode( ',', $access_list_arr );
+		}
 
-		$user_course_access_time = get_user_meta( $user_id, "course_". $course_id ."_access_from", true );
+		$user_course_access_time = get_user_meta( $user_id, "course_".$course_id."_access_from", true );
 		if ( empty( $user_course_access_time ) ) {
 			$user_course_access_time = time();
-			update_user_meta( $user_id, "course_". $course_id ."_access_from", $user_course_access_time );
+			update_user_meta( $user_id, "course_".$course_id."_access_from", $user_course_access_time );
 		}
 
 		learndash_update_user_activity(
@@ -492,24 +494,18 @@ function ld_update_course_access( $user_id, $course_id, $remove = false ) {
 				'activity_started'	=>	$user_course_access_time,
 			)
 		); 
-	} else {
-	
-		$access_list = array_diff( $access_list, array( $user_id ) );
-		delete_user_meta( $user_id, 'course_'. $course_id .'_access_from' );
-	}
+	} else if ( ! empty( $access_list ) ) {
 
-//  Leaving this out for now
-//	$meta_access_user_ids = get_course_users_access_from_meta( $course_id );
-//	if ( !empty( $meta_access_user_ids ) ) {
-//		$access_list = array_merge( $access_list, $meta_access_user_ids );
-//	}
-	
-	if ( !empty( $access_list ) ) {
-		$access_list = array_map( 'intval', $access_list );
-		$access_list = array_unique( $access_list );
-		$access_list = implode( ',', $access_list );
-	} else {
-		$access_list = '';
+		$access_list = explode( ',', $access_list );
+		$new_access_list = array();
+		foreach ( $access_list as $c ) {
+			if ( trim( $c ) != $user_id ) {
+				$new_access_list[] = trim( $c );
+			}
+		}
+		$access_list = implode( ',', $new_access_list );
+		delete_user_meta( $user_id, 'course_'.$course_id.'_access_from' );
+
 	}
 
 	$meta['sfwd-courses_course_access_list'] = $access_list;
@@ -719,23 +715,14 @@ function learndash_get_course_prerequisites( $post_id = 0 ) {
  * @return array      list of courses
  */
 function learndash_get_course_prerequisite( $course_id = 0 ) {
+	//$id = learndash_get_course_id( $id );
+	//$post_options = get_post_meta( $id, '_sfwd-courses', true );
+	//$course_pre = isset( $post_options['sfwd-courses_course_prerequisite'] ) ? $post_options['sfwd-courses_course_prerequisite'] : array();
 	$course_pre = learndash_get_setting( $course_id, 'course_prerequisite' );
 	if ( empty( $course_pre ) ) $course_pre = array();
 	
 	return $course_pre;
 }
-
-function learndash_set_course_prerequisite( $course_id = 0, $course_prerequisites = array() ) {
-	if ( !empty( $course_id ) ) {
-		if ( ( !empty( $course_prerequisites ) ) && ( is_array( $course_prerequisites ) ) ) {
-			$course_prerequisites = array_unique( $course_prerequisites );
-		}
-		
-		return learndash_update_setting( $course_id, 'course_prerequisite', (array)$course_prerequisites );
-	}
-}
-
-
 
 /**
  * Given a course ID will return true or false if prereq is enabled
@@ -767,16 +754,6 @@ function learndash_get_course_prerequisite_enabled( $course_id ) {
 	}
 	
 	return $course_pre_enabled;
-}
-
-function learndash_set_course_prerequisite_enabled( $course_id, $enabled = true ) {
-	if ( $enabled === true ) 
-		$enabled = 'on';
-	
-	if ( $enabled != 'on' )
-		$enabled = '';
-	
-	return learndash_update_setting( $course_id, 'course_prerequisite_enabled', $enabled );
 }
 
 /**
@@ -1284,7 +1261,7 @@ function learndash_get_user_activity_meta( $activity_id = 0, $activity_meta_key 
 	} else {
 		// Here we return ALL meta for the given activity_id
 		$meta_sql_str = $wpdb->prepare("SELECT * FROM ". $wpdb->prefix ."learndash_user_activity_meta WHERE activity_id=%d", $activity_id);
-		return $wpdb->get_results( $meta_sql_str );
+		$activity_meta = $wpdb->get_results( $meta_sql_str );
 	}
 }
 
@@ -1355,7 +1332,7 @@ function learndash_get_open_courses( $bypass_transient = false ) {
 	
 	if ( $courses_ids_transient === false ) {
 	
-		$sql_str = "SELECT postmeta.post_id as post_id FROM ". $wpdb->prefix ."postmeta as postmeta INNER JOIN ". $wpdb->prefix ."posts as posts ON posts.ID = postmeta.post_id WHERE posts.post_status='publish' AND posts.post_type='sfwd-courses' AND postmeta.meta_key='_sfwd-courses' AND ( postmeta.meta_value REGEXP '\"sfwd-courses_course_price_type\";s:4:\"open\";' )";
+		$sql_str = "SELECT postmeta.post_id as post_id FROM ". $wpdb->prefix ."postmeta as postmeta INNER JOIN ". $wpdb->prefix ."posts as posts ON posts.ID = postmeta.post_id WHERE posts.post_status='publish' AND postmeta.meta_key='_sfwd-courses' AND ( postmeta.meta_value REGEXP '\"sfwd-courses_course_price_type\";s:4:\"open\";' )";
 		$course_ids = $wpdb->get_col( $sql_str );
 	
 		set_transient( $transient_key, $course_ids, MINUTE_IN_SECONDS );
@@ -1387,7 +1364,7 @@ function learndash_get_paynow_courses( $bypass_transient = false ) {
 	
 	if ( $courses_ids_transient === false ) {
 	
-		$sql_str = "SELECT postmeta.post_id FROM ". $wpdb->prefix ."postmeta as postmeta INNER JOIN ". $wpdb->prefix ."posts as posts ON posts.ID = postmeta.post_id WHERE posts.post_status='publish' AND posts.post_type='sfwd-courses' AND postmeta.meta_key='_sfwd-courses' AND (( postmeta.meta_value REGEXP 's:30:\"sfwd-courses_course_price_type\";s:6:\"paynow\";' ) AND ( postmeta.meta_value REGEXP 's:25:\"sfwd-courses_course_price\";s:0:\"\";' ))";
+		$sql_str = "SELECT postmeta.post_id FROM ". $wpdb->prefix ."postmeta as postmeta INNER JOIN ". $wpdb->prefix ."posts as posts ON posts.ID = postmeta.post_id WHERE posts.post_status='publish' AND postmeta.meta_key='_sfwd-courses' AND (( postmeta.meta_value REGEXP 's:30:\"sfwd-courses_course_price_type\";s:6:\"paynow\";' ) AND ( postmeta.meta_value REGEXP 's:25:\"sfwd-courses_course_price\";s:0:\"\";' ))";
 		//error_log('sql_str['. $sql_str .']');
 		$course_ids = $wpdb->get_col( $sql_str );
 		set_transient( $transient_key, $course_ids, MINUTE_IN_SECONDS );

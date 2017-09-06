@@ -11,7 +11,7 @@ if ( class_exists( 'BP_Group_Extension' ) ) :
 		private $extension_slug;
 
 		/**
-		 * Your __construct() method will contain configuration options for
+		 * Your __construct() method will contain configuration options for 
 		 * your extension, and will pass them to parent::init()
 		 */
 		function __construct() {
@@ -40,7 +40,7 @@ if ( class_exists( 'BP_Group_Extension' ) ) :
 		}
 
 		/**
-		 * display() contains the markup that will be displayed on the main
+		 * display() contains the markup that will be displayed on the main 
 		 * plugin tab
 		 */
 		function display( $group_id = null ) {
@@ -93,6 +93,6 @@ if ( class_exists( 'BP_Group_Extension' ) ) :
 		}
 
 	}
-
+	
 
 endif; // if ( class_exists( 'BP_Group_Extension' ) )

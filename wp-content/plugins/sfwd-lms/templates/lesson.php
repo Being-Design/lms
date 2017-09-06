@@ -119,7 +119,7 @@
      * Display Lesson Assignments
      */
     ?>
-	<?php if ( ( lesson_hasassignments( $post ) ) && ( !empty( $user_id ) ) ) : ?>
+	<?php if ( lesson_hasassignments( $post ) ) : ?>
 		<?php $assignments = learndash_get_user_assignments( $post->ID, $user_id ); ?>
 		
 		<div id="learndash_uploaded_assignments" class="learndash_uploaded_assignments">

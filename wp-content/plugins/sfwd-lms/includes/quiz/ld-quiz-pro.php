@@ -200,9 +200,9 @@ class LD_QuizPro {
 
 							$points  = ( $correct) ? $questionData['points'] : 0;
 
-							$extra['r'] = $userResponse;
 							if ( ! $quiz->isDisabledAnswerMark() && empty( $questionData['disCorrect'] ) ) {
-								$extra['c'] = $questionData['correct'];
+								$extra['r'] = $userResponse;
+								//$extra['c'] = $questionData['correct'];
 							}
 
 							break;
@@ -274,9 +274,8 @@ class LD_QuizPro {
 
 							}
 
-							$extra['r'] = $userResponse;
-
 							if ( ! $quiz->isDisabledAnswerMark() ) {
+								$extra['r'] = $userResponse;
 								$extra['c'] = $questionData['correct'];
 							}
 
@@ -307,9 +306,8 @@ class LD_QuizPro {
 								}
 							}
 
-							$extra['r'] = $userResponse;
-
 							if ( ! $quiz->isDisabledAnswerMark() && empty( $questionData['disCorrect'] ) ) {
+								$extra['r'] = $userResponse;
 								$extra['c'] = $questionData['correct'];
 							}
 							break;
@@ -339,10 +337,9 @@ class LD_QuizPro {
 								$statisticsData = new stdClass();
 							}
 
-							$extra['r'] = $userResponse;
-
 							if ( ! $quiz->isDisabledAnswerMark() && empty( $questionData['disCorrect'] ) ) {
 								$extra['c'] = $questionData['correct'];
+								$extra['r'] = $userResponse;
 							} else {
 								$statisticsData = new stdClass();
 							}
@@ -371,11 +368,10 @@ class LD_QuizPro {
 								}
 							}
 
-							$extra['r'] = $userResponse;
-
 							if ( ! $quiz->isDisabledAnswerMark() && empty( $questionData['disCorrect'] ) ) {
-								$extra['c'] = $questionData['correct'];
-								//$extra['c'] = array();
+								$extra['r'] = $userResponse;
+								//$extra['c'] = $questionData['correct'];
+								$extra['c'] = array();
 							}
 
 							break;
@@ -383,8 +379,7 @@ class LD_QuizPro {
 						case 'assessment_answer':
 							$correct = true;
 							$points  = intVal( $userResponse );
-							$extra['r'] = $userResponse;
-							
+
 							break;
 
 						case 'essay':
@@ -431,10 +426,10 @@ class LD_QuizPro {
 							if ( $value->getId() == $question_id ) {
 								if ( $correct || $value->isCorrectSameText() ) {
 									//$extra['AnswerMessage'] = do_shortcode( apply_filters( 'comment_text', $value->getCorrectMsg() ) );
-									$extra['AnswerMessage'] = do_shortcode( apply_filters( 'the_content', $value->getCorrectMsg() ) );
+									$extra['AnswerMessage'] = do_shortcode( apply_filters( 'content', $value->getCorrectMsg() ) );
 								} else {
 									//$extra['AnswerMessage'] = do_shortcode( apply_filters( 'comment_text', $value->getIncorrectMsg() ) );
-									$extra['AnswerMessage'] = do_shortcode( apply_filters( 'the_content', $value->getIncorrectMsg() ) );
+									$extra['AnswerMessage'] = do_shortcode( apply_filters( 'content', $value->getIncorrectMsg() ) );
 								}
 
 								break;
@@ -461,57 +456,26 @@ class LD_QuizPro {
 		$total_points = 0;
 		
 		foreach( $results as $r_idx => $result ) {
-
-			if ( ( isset( $result['e'] ) ) && ( !empty( $result['e'] ) ) ) {
-				if ( ( isset( $result['e']['type'] ) ) && ( !empty( $result['e']['type'] ) ) ) {
-					$response_str = '';
-					
-					switch( $result['e']['type'] ) {
-						case 'essay':
-							if ( ( isset( $result['e']['graded_id'] ) ) && ( !empty( $result['e']['graded_id'] ) ) ) {
-								$response_str = maybe_serialize( array( 'graded_id' => $result['e']['graded_id'] ) );
-							}
-							break;
-
-						case 'free_answer':
-							if ( ( isset( $result['e']['r'] ) ) && ( !empty( $result['e']['r'] ) ) ) {
-								
-								$response_str = maybe_serialize( array( $result['e']['r'] ) );
-							}
-							break;
-						
-						case 'assessment_answer':
-							if ( isset( $result['p'] ) ) {
-								$response_str = maybe_serialize( array( (string)$result['p'] ) );
-							}
-							break;
-							
-						case 'multiple':
-						case 'single':
-						default:
-							if ( ( isset( $result['e']['r'] ) ) && ( !empty( $result['e']['r'] ) ) ) {
-								$result_array = array();
-								foreach( $result['e']['r'] as $ri_idx => $ri ) {
-									if ( $ri === true )
-										$ri = 1;
-									else if ( $ri === false )
-										$ri = 0;
-									
-									$result_array[$ri_idx] = $ri;
-								}
-								$response_str = maybe_serialize( $result_array );
-							}
-							break;
-						
-							break;
+			if ( isset( $data['responses'][$r_idx]['response'] ) ) {
+				$response = $data['responses'][$r_idx]['response'];
+				if ( is_array( $response ) ) {
+					foreach( $response as $r_key => $k_val ) {
+						if ( $k_val === false ) {
+							$response[$r_key] = 0;
+						} else if ( $k_val === true ) {
+							$response[$r_key] = 1;
+						}
 					}
-					
-					if ( !empty( $response_str ) ) {
-						$answers_nonce = wp_create_nonce( 'ld_quiz_anonce'. $user_id .'_'. $id .'_'. $quiz_post_id .'_'. $r_idx .'_'. $response_str );
-						$results[$r_idx]['a_nonce'] = $answers_nonce;
-					}
+					//error_log('response<pre>'. print_r($response, true) .'</pre>');
+
+					$response_str = maybe_serialize( $response );
+					//error_log('response_str['. $response_str .']');
+					$answers_nonce = wp_create_nonce( 'ld_quiz_anonce'. $user_id .'_'. $id .'_'. $quiz_post_id .'_'. $r_idx .'_'. $response_str );
+					$results[$r_idx]['a_nonce'] = $answers_nonce;
 				}
 			}
+
+			$total_points += intval( $result['p'] );
 			
 			$points_array = array(
 				'points' => intval( $result['p'] ),
@@ -520,13 +484,21 @@ class LD_QuizPro {
 			);
 			if ( $points_array['correct'] === false ) $points_array['correct'] = 0;
 			else if ( $points_array['correct'] === true ) $points_array['correct'] = 1;
+			
+			//error_log('points_array<pre>'. print_r($points_array, true) .'</pre>');
+
 			$points_str = maybe_serialize( $points_array );
+			//error_log('points_str['. $points_str .']');
+			
 			$points_nonce = wp_create_nonce( 'ld_quiz_pnonce'. $user_id .'_'. $id .'_'. $quiz_post_id .'_'. $r_idx .'_'. $points_str );
 			$results[$r_idx]['p_nonce'] = $points_nonce;
 		}
 		
+		//error_log('results<pre>'. print_r($results, true) .'</pre>');
 		return json_encode( $results );
 	}
+
+
 
 	/**
 	 * Redirect from the Advanced Quiz edit or add link to the Quiz edit or add link

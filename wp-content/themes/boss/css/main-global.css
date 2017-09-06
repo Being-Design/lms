@@ -834,7 +834,7 @@ a.button,
 #create-group-form .remove,
 #buddypress ul.button-nav li a,
 #buddypress div.generic-button a,
-#buddypress .comment-reply-link,
+body:not(.single-bp_doc) #buddypress .comment-reply-link,
 .entry-title a.button,
 span.create-a-group > a,
 #buddypress div.activity-comments form input[disabled],
@@ -931,7 +931,7 @@ a.button:hover,
 #buddypress ul.button-nav li a:hover,
 #buddypress ul.button-nav li.current a,
 #buddypress div.generic-button a:hover,
-#buddypress .comment-reply-link:hover,
+body:not(.single-bp_doc) #buddypress .comment-reply-link:hover,
 .entry-title a.button:hover,
 span.create-a-group > a:hover,
 #buddypress div.activity-comments form input[disabled]:hover,
@@ -965,7 +965,7 @@ article.post-password-required input[type=submit]:active,
 a.button:active,
 #buddypress ul.button-nav li a:active,
 #buddypress div.generic-button a:active,
-#buddypress .comment-reply-link:active,
+body:not(.single-bp_doc) #buddypress .comment-reply-link:active,
 .entry-title a.button:active,
 span.create-a-group > a:active,
 #buddypress div.activity-comments form input[disabled]:active {
@@ -1782,6 +1782,26 @@ body:not(.left-menu-open) .menu-panel .ab-sub-wrapper > .ab-item {
     font-size: 19px;
     margin-right: 20px;
     padding-right: 22px;
+    width: 19px;
+    text-align: center;
+    visibility: visible;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.menu-panel #nav-menu .sub-menu-wrap > ul.sub-menu > li > a:not(.open-submenu):before {
+    color: #3c7a90;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 19px;
+    margin-right: 10px;
+    padding-right: 12px;
     width: 19px;
     text-align: center;
     visibility: visible;
@@ -2678,6 +2698,30 @@ button#searchsubmit:hover {
     margin-left: 10px;
 }
 
+#masthead .pop.user-pop-links {
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    padding-left: 190px;
+    left: auto;
+    right: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+#masthead .pop.pop-links {
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#masthead .pop-inner {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.2);
+}
 
 /*--------------------------------------------------------------
 3.7 - Footer
@@ -5617,6 +5661,8 @@ body.activity:not(.bp-user)  .item-list-tabs ul li:last-child,
     margin-top: 10px;
 }
 
+
+
 /*--------------------------------------------------------------
 5.0 - Errors / Success Messages
 --------------------------------------------------------------*/
@@ -5915,7 +5961,7 @@ div#sitewide-notice div#message p #close-notice:after {
 #buddypress .standard-form#signup_form textarea,
 #buddypress .form-allowed-tags,
 #buddypress #commentform input[type="text"],
-#buddypress #commentform textarea {
+body:not(.single-bp_doc) #buddypress #commentform textarea {
     width: 90%;
 }
 
@@ -6921,6 +6967,9 @@ body.buddypress .entry-header .entry-title a {
     float: left;
 }
 
+body.group-admin #buddypress .section-header + div.pagination {
+    display: none;
+}
 
 /*--------------------------------------------------------------
 9.2.3 - Group Single Cover
@@ -7255,6 +7304,7 @@ body.activity:not(.bp-user) #activity-filter-select .buddyboss-select label,
 
 #primary #groups-list li .item-avatar {
     width: 135px;
+    float: left;
 }
 
 .item-list li .item-avatar a {
@@ -7783,9 +7833,7 @@ body:not(.group-cover-image) #buddypress form#group-settings-form h4 {
 }
 #buddypress form#group-settings-form ul.item-list {
     margin-bottom: 10px;
-    overflow: hidden;
 }
-
 #buddypress form#group-settings-form ul.item-list li {
     padding: 0 0 20px 0;
     border: none;
@@ -10572,6 +10620,7 @@ input[type="checkbox"]:not(.styled), input[type="radio"]:not(.styled) {
     padding-top: 1em;
 }
 
+/*
 .woocommerce div.product div.images img,
 .woocommerce #content div.product div.images img,
 .woocommerce-page div.product div.images img,
@@ -10581,6 +10630,7 @@ input[type="checkbox"]:not(.styled), input[type="radio"]:not(.styled) {
     width: auto !important;
     max-width: 100% !important;
 }
+*/
 
 .woocommerce div.product div.images,
 .woocommerce #content div.product div.images,
@@ -10606,6 +10656,11 @@ input[type="checkbox"]:not(.styled), input[type="radio"]:not(.styled) {
 
 .woocommerce-cart table.cart .product-thumbnail {
     min-width: 100px;
+}
+
+.woocommerce input.button:disabled, .woocommerce input.button:disabled[disabled] {
+    padding: inherit;
+    line-height: .5;
 }
 
 .woocommerce-tabs h2,
@@ -11474,6 +11529,16 @@ li#nav-documents-groups-li, li#nav-documents-personal-li {
     width: auto;
 }
 
+#rtmedia-image-editor-cotnainer button.imgedit-crop,
+#rtmedia-image-editor-cotnainer button.imgedit-rleft,
+#rtmedia-image-editor-cotnainer button.imgedit-rright,
+#rtmedia-image-editor-cotnainer button.imgedit-flipv,
+#rtmedia-image-editor-cotnainer button.imgedit-fliph,
+#rtmedia-image-editor-cotnainer button.imgedit-undo,
+#rtmedia-image-editor-cotnainer button.imgedit-redo {
+    width: 40px;
+}
+
 /*--------------------------------------------------------------
 24.0 - Sensei
 --------------------------------------------------------------*/
@@ -11765,7 +11830,9 @@ div[aria-label="rtMedia pro short code"] {
 .single-bp_doc #content article {
     padding: 22px 60px;
 }
-
+.single-bp_doc #comments article {
+    padding: 0;
+}
 .post-type-archive-bp_doc .edit-link,
 .single-bp_doc #content .edit-link {
     display: none;

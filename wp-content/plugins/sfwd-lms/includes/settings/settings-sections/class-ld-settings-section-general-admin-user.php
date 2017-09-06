@@ -47,7 +47,7 @@ if ( ( class_exists( 'LearnDash_Settings_Section' ) ) && ( !class_exists( 'Learn
 				'courses_autoenroll_admin_users' => array(
 					'name'  		=> 	'courses_autoenroll_admin_users', 
 					'type'  		=> 	'checkbox',
-					'label' 		=> 	sprintf( _x( '%s Auto-enroll', 'placeholder: Course', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
+					'label' 		=> 	__( 'Courses Auto-enroll', 'learndash' ),
 					'help_text'  	=> 	sprintf( _x( 'Admin users will be automatically enrolled in all %s.', 'placeholder: Courses', 'learndash' ), LearnDash_Custom_Label::get_label( 'courses' ) ),
 					'value' 		=> 	isset( $this->setting_option_values['courses_autoenroll_admin_users'] ) ? $this->setting_option_values['courses_autoenroll_admin_users'] : 'no',
 					'options'		=>	array(
@@ -57,7 +57,7 @@ if ( ( class_exists( 'LearnDash_Settings_Section' ) ) && ( !class_exists( 'Learn
 				'bypass_course_limits_admin_users' => array(
 					'name'  		=> 	'bypass_course_limits_admin_users', 
 					'type'  		=> 	'checkbox',
-					'label' 		=> 	sprintf( _x( 'Bypass %s limits', 'placeholder: Course','learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
+					'label' 		=> 	__( 'Bypass Course limits', 'learndash' ),
 					'help_text'  	=> 	sprintf( _x( 'Admin users will bypass restrictions like %s Progression, %s and %s Prerequisites, %s Points limits and %s/%s timers.', 'placeholder: Course, Course, Lesson, Course, Lesson, Topic', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ), LearnDash_Custom_Label::get_label( 'course' ), LearnDash_Custom_Label::get_label( 'lesson' ), LearnDash_Custom_Label::get_label( 'course' ), LearnDash_Custom_Label::get_label( 'lesson' ), LearnDash_Custom_Label::get_label( 'topic' ) ),
 					'value' 		=> 	isset( $this->setting_option_values['bypass_course_limits_admin_users'] ) ? $this->setting_option_values['bypass_course_limits_admin_users'] : 'yes',
 					'options'		=>	array(

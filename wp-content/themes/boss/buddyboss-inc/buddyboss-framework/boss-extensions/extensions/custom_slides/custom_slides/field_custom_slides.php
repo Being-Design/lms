@@ -48,8 +48,20 @@ if ( !class_exists( 'ReduxFramework_custom_slides' ) ) {
 			$this->value	 = $value;
 
 			if ( empty( $this->extension_dir ) ) {
-				$this->extension_dir = trailingslashit( str_replace( '\\', '/', dirname( __FILE__ ) ) );
-				$this->extension_url = site_url( str_replace( trailingslashit( str_replace( '\\', '/', ABSPATH ) ), '', $this->extension_dir ) );
+
+				if ( strpos( Redux_Helpers::cleanFilePath( __FILE__ ), Redux_Helpers::cleanFilePath( get_template_directory() ) ) !== false ) {
+					$relative_url = str_replace( Redux_Helpers::cleanFilePath( get_template_directory() ), '', Redux_Helpers::cleanFilePath( dirname( __FILE__ ) ) );
+					$this->extension_url   = trailingslashit( get_template_directory_uri() . $relative_url );
+				} else if ( strpos( Redux_Helpers::cleanFilePath( __FILE__ ), Redux_Helpers::cleanFilePath( get_stylesheet_directory() ) ) !== false ) {
+					$relative_url = str_replace( Redux_Helpers::cleanFilePath( get_stylesheet_directory() ), '', Redux_Helpers::cleanFilePath( dirname( __FILE__ ) )  );
+					$this->extension_url   = trailingslashit( get_stylesheet_directory_uri() . $relative_url );
+				} else {
+					$wp_content_dir = trailingslashit( Redux_Helpers::cleanFilePath( WP_CONTENT_DIR ) );
+					$wp_content_dir = trailingslashit( str_replace( '//', '/', $wp_content_dir ) );
+					$relative_url   = str_replace( $wp_content_dir, '', Redux_Helpers::cleanFilePath( dirname( __FILE__ ) ) );
+					$this->extension_url     = trailingslashit( self::$wp_content_url . $relative_url );
+				}
+
 			}
 
 			// Set default args for this field to avoid bad indexes. Change this to anything you use.

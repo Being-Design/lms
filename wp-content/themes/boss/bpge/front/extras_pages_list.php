@@ -1,3 +1,4 @@
+<?php do_action( 'bpge_template_pages_list_sortable_before_list', $pages ); ?>
 <ul id="pages-sortable">
     <?php
     foreach($pages as $page){
@@ -11,3 +12,4 @@
             </li>';
     } ?>
 </ul>
+<?php do_action( 'bpge_template_pages_list_sortable_after_list', $pages ); ?>

@@ -486,6 +486,29 @@ body:not(.logged-in) .site-header .right-col-inner {
     vertical-align: middle;
 }
 
+.header-notifications.messages .bb-user-notifications a {
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.header-notifications.messages .bb-user-notifications .avatar {
+    border-radius: 100%;
+    margin-right: 10px;
+    margin-top: -3px;
+    vertical-align: middle;
+}
+
+.header-notifications.messages .bb-user-notifications .bb-message-link {
+    text-transform: lowercase;
+}
+
+.header-notifications.messages .pop {
+    min-width: 250px;
+    width: 100%;
+    line-height: 34px;
+    padding: 10px 0 10px 10px;
+}
+
 .header-inner .middle-col {
     width: 60%;
     padding-right: 20px;
@@ -658,6 +681,9 @@ body:not(.bp-active).logged-in .middle-col {
     min-width: 50px;
 }
 
+.header-notifications.cart + .header-account-login {
+    padding-left: 0;
+}
 /* Disable click on tablet */
 .tablet #wp-admin-bar-shortcode-secondary .menupop:after,
 .tablet .header-notifications.all-notifications:before,
@@ -728,7 +754,7 @@ body:not(.bp-active).logged-in .middle-col {
 
 .header-notifications .pop {
     width: 180px;
-    padding: 15px 27px 15px;
+    padding: 15px 20px 15px;
     z-index: 1;
 }
 
@@ -1409,7 +1435,8 @@ body.tablet.left-menu-open #nav-menu > ul > li > a:after, body.tablet.left-menu-
 1.0.9 - Panels Layout
 --------------------------------------------------------------*/
 
-#mobile-header {
+#mobile-header,
+.subheader {
     display: none;
 }
 

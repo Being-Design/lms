@@ -47,128 +47,15 @@ function boss_child_theme_scripts_styles()
   /*
    * Styles
    */
-  wp_enqueue_style( 'font-libre-baskerville', 'https://fonts.googleapis.com/css?family=Libre+Baskerville:300,400,700' );
-  wp_enqueue_style( 'font-montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:400,600' );
-  wp_enqueue_style( 'boss-child-libraries', get_stylesheet_directory_uri() . '/resources/css/compressed/libraries.css' );
-  wp_enqueue_style( 'boss-child-custom', get_stylesheet_directory_uri() . '/resources/css/compressed/main.css' );
-
-  /*
-   * Scripts
-   */
-  wp_enqueue_script( 'boss-child-custom', get_stylesheet_directory_uri() . '/resources/js/compressed/libraries.js' );
+  wp_enqueue_style( 'boss-child-custom', get_stylesheet_directory_uri().'/css/custom.css' );
 }
 add_action( 'wp_enqueue_scripts', 'boss_child_theme_scripts_styles', 9999 );
 
 
-
 /****************************** CUSTOM FUNCTIONS ******************************/
 
-  /*
-   * Adds shortcode for current username
-   */
-  function shortcode_current_user( $attributes ) {
-
-    global $current_user, $user_login;
-    get_currentuserinfo();
-    add_filter('widget_text', 'do_shortcode');
-
-    if ($user_login) {
-      return $current_user->display_name;
-    } else {
-      return '';
-    }
-  }
-  add_shortcode( 'current_user', 'shortcode_current_user' );
-
-
-  /*
-   * Adds shortcode for user-specific links, in the form of a box
-   *
-   * title: sets the box title.
-   * target: goes to this url previxed with 'members/{user_login}'.
-   * href: goes to a custom url; overridden if target is not blank.
-   */
-  function shortcode_personal_link( $attributes, $content ) {
-    add_filter('widget_text', 'do_shortcode');
-
-    $title =  '';
-    $target = '';
-    $href = '';
-    $user_id = '';
-    if(isset($attributes['title'])) {
-      $title = $attributes['title'];
-    }
-
-    if(isset($attributes['href'])) {
-      $href = $attributes['href'];
-    }
-
-    if(isset($attributes['target'])) {
-      global $current_user, $user_login;
-      get_currentuserinfo();
-
-      if ($user_login) {
-        $user_id = $current_user->user_login;
-      }
-
-      $target = $attributes['target'];
-      $href = '/members/' . $user_id . '/' . $target;
-    }
-
-    if(!empty($href)) {
-
-      $link = '
-      <a href="' . $href . '" class="personal-link-card" data-mh="personal-link-card">
-        <div class="card-content">
-          <h4>' . $title . '</h4>
-          <div class="card-content">' . $content . '</div>
-        </div>
-      </a>
-      ';
-
-    } else {
-      $link = '
-      <div class="personal-link-card">
-        <div class="card-content">
-          <h4>' . $title . '</h4>
-          <div class="card-content">' . $content . '</div>
-        </div>
-      </div>
-      ';
-    }
-
-    return $link;
-  }
-  add_shortcode( 'personal_link', 'shortcode_personal_link' );
+// Add your own custom functions here
 
 
 
-  /*
-   * WP Login Redirect
-   */
-  function redirect_login_page(){
-
-      // var for checking if this page equals wp-login.php
-      $page_viewed = basename( $_SERVER['REQUEST_URI'] );
-      $user_can_access = false;
-
-      if ( strstr($page_viewed, "logout") !== false ) {
-        $user_can_access = true;
-      }
-      elseif ( strstr($page_viewed, "lostpassword") !== false ) {
-        $user_can_access = true;
-      }
-      elseif ( strstr($page_viewed, "action=rp") !== false || strstr($page_viewed, "resetpass") !== false ) {
-        $user_can_access = true;
-      }
-
-      
-      if( strstr($page_viewed, "wp-login") !== false && !$user_can_access ) {
-        wp_redirect( '/login/' );
-        exit();
-      }
-
-  }
-  add_action( 'init','redirect_login_page' );
-
-  
+?>

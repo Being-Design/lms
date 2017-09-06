@@ -48,7 +48,7 @@ if (!class_exists('Learndash_Admin_User_Profile_Edit')) {
 
 			wp_enqueue_script( 
 				'sfwd-module-script', 
-				LEARNDASH_LMS_PLUGIN_URL . 'assets/js/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.js', 
+				LEARNDASH_LMS_PLUGIN_URL . '/assets/js/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.js', 
 				array( 'jquery' ), 
 				LEARNDASH_VERSION,
 				true 

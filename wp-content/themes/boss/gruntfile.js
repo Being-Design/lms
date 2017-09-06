@@ -77,7 +77,7 @@ module.exports = function ( grunt ) {
          */
         checktextdomain: {
             options: {
-                text_domain: [ 'boss', 'buddypress', 'bbpress', 'bp-docs', 'bpge', 'buddyboss-inbox', 'social-learner', 'invite-anyone', 'pmpro' ], //Specify allowed domain(s)
+                text_domain: [ 'boss', 'buddypress', 'bbpress', 'bp-docs', 'bpge', 'buddyboss-inbox', 'social-learner', 'invite-anyone', 'pmpro', 'buddypress-groups-extras' ], //Specify allowed domain(s)
                 keywords: [ //List keyword specifications
                     '__:1,2d',
                     '_e:1,2d',

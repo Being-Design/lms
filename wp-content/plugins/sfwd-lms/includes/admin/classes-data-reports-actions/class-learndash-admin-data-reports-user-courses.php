@@ -119,9 +119,8 @@ if ( !class_exists( 'Learndash_Admin_Data_Reports_Courses' ) ) {
 								$this->transient_data['users_ids'] = learndash_get_groups_user_ids( intval( $data['group_id'] ) );
 								$this->transient_data['posts_ids'] = learndash_group_enrolled_courses( intval( $data['group_id'] ) );
 							} else {
-								$this->transient_data['posts_ids'] = '';
-								//$this->transient_data = array_merge( $this->transient_data, learndash_get_report_user_ids() );
 								$this->transient_data['users_ids'] = learndash_get_report_user_ids();
+								$this->transient_data['posts_ids'] = '';
 							}
 							//$this->transient_data['users_ids'] = array(6);
 							
@@ -135,8 +134,7 @@ if ( !class_exists( 'Learndash_Admin_Data_Reports_Courses' ) ) {
 						$this->transient_data['total_users'] = count( $this->transient_data['users_ids'] );
 						
 						$this->set_report_filenames( $data );
-						//$this->report_filename = ABSPATH . $this->transient_data['report_filename'];
-						$this->report_filename = $this->transient_data['report_filename'];
+						$this->report_filename = ABSPATH . $this->transient_data['report_filename'];
 												
 						$data['report_download_link'] = $this->transient_data['report_url'];
 						$data['total_count'] = $this->transient_data['total_users'];
@@ -153,8 +151,7 @@ if ( !class_exists( 'Learndash_Admin_Data_Reports_Courses' ) ) {
 					} else {
 						$this->transient_data = $this->get_transient( $this->transient_key );
 						
-						//$this->report_filename = ABSPATH . $this->transient_data['report_filename'];
-						$this->report_filename = $this->transient_data['report_filename'];
+						$this->report_filename = ABSPATH . $this->transient_data['report_filename'];
 					}
 								
 					if ( !empty( $this->transient_data['users_ids'] ) ) {
@@ -363,7 +360,7 @@ if ( !class_exists( 'Learndash_Admin_Data_Reports_Courses' ) ) {
 			file_put_contents( trailingslashit( dirname( $ld_wp_upload_filename ) ) .'index.php', '// nothing to see here');
 		
 			// Because we on;y want to store the relative path 
-			//$ld_wp_upload_filename = str_replace( ABSPATH, '', $ld_wp_upload_filename );
+			$ld_wp_upload_filename = str_replace( ABSPATH, '', $ld_wp_upload_filename );
 		
 			$this->transient_data['report_filename'] = $ld_wp_upload_filename;
 

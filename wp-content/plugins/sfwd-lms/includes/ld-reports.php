@@ -44,7 +44,6 @@ function learndash_get_users_query( $query_args = array() ) {
  * 
  * @since 2.3
  */
-
 function learndash_get_report_user_ids( $user_id = 0, $query_args = array() ) {
 	if ( empty( $user_id ) ) {
 		// If the current user is not able to be determined. Then abort. 
@@ -59,21 +58,19 @@ function learndash_get_report_user_ids( $user_id = 0, $query_args = array() ) {
 		'order'			=>	'ASC'
 	);
 	
+	if ( LearnDash_Settings_Section::get_section_setting('LearnDash_Settings_Section_General_Admin_User', 'reports_include_admin_users' ) != 'yes' ) {
+		$default_args['role__not_in'] = 'administrator';
+	}
+	
 	$query_args = wp_parse_args( $query_args, $default_args );
 
-	if ( learndash_is_admin_user( $user_id ) ) {
-		if ( LearnDash_Settings_Section::get_section_setting('LearnDash_Settings_Section_General_Admin_User', 'reports_include_admin_users' ) != 'yes' ) {
-			$query_args['role__not_in'] = 'administrator';
-		}
-	} else if (learndash_is_group_leader_user( $user_id ) ) {
+	if (learndash_is_group_leader_user( $user_id ) ) {
 		$include_user_ids = learndash_get_group_leader_groups_users( $user_id );
 		
 		// Even though we have the users ids from the learndash_get_group_leader_groups_users() we need to validate them
 		// by running them against the WP_User_Query 
 		if (!empty( $include_user_ids ) )
 			$query_args['include'] = $include_user_ids;
-	} else {
-		$query_args['include'] = array( $user_id );
 	} 
 
 	$query_args = apply_filters('learndash_get_report_users_query_args', $query_args);
@@ -81,69 +78,6 @@ function learndash_get_report_user_ids( $user_id = 0, $query_args = array() ) {
 	return apply_filters('learndash_get_report_user_ids', $report_user_ids);
 }
 
-
-function learndash_get_report_user_ids_NEW_PP21( $user_id = 0, $query_args = array() ) {
-	if ( empty( $user_id ) ) {
-		// If the current user is not able to be determined. Then abort. 
-		if ( !is_user_logged_in() ) return array();
-		
-		$user_id = get_current_user_id();
-	}
-
-	$default_args = array(
-		'fields' 		=>	'ID',
-		'orderby'		=>	'display_name',
-		'order'			=>	'ASC'
-	);
-		
-	$query_args = wp_parse_args( $query_args, $default_args );
-
-	if ( learndash_is_group_leader_user( $user_id ) ) {
-
-		$include_user_ids = learndash_get_group_leader_groups_users( $user_id );
-		
-		// Even though we have the users ids from the learndash_get_group_leader_groups_users() we need to validate them
-		// by running them against the WP_User_Query 
-		if (!empty( $include_user_ids ) )
-			$query_args['include'] = $include_user_ids;
-		else 
-			$query_args = array();
-		
-	} else if ( learndash_is_admin_user( $user_id ) ) {
-		if ( LearnDash_Settings_Section::get_section_setting('LearnDash_Settings_Section_General_Admin_User', 'reports_include_admin_users' ) != 'yes' ) {
-			$query_args['role__not_in'] = 'administrator';
-		}
-
-	} else {
-		$query_args['include'] = array( $user_id );
-	}
-
-	if ( !empty( $query_args ) ) {
-		$query_args = apply_filters( 'learndash_get_report_users_query_args', $query_args );
-		$report_user_ids = learndash_get_users_query( $query_args );
-		$report_user_ids = apply_filters('learndash_get_report_user_ids', $report_user_ids );
-	} else {
-		$report_user_ids = array();
-	}
-	
-	if ( version_compare( '2.0.2', LD_PP_VERSION, '<=' ) ) {
-		return $report_user_ids;
-	} else {
-		
-		$return  = array(
-			'user_ids_action' => 'IN',
-			'user_ids' => $report_user_ids
-		);
-
-		if ( learndash_is_admin_user( $user_id ) ) {
-			if ( LearnDash_Settings_Section::get_section_setting('LearnDash_Settings_Section_General_Admin_User', 'reports_include_admin_users' ) != 'yes' ) {
-				$return['user_ids_action'] = 'NOT IN';
-			}
-		}
-	}
-	
-	return $return;
-}
 
 	
 /**
@@ -616,14 +550,12 @@ function learndash_reports_get_activity( $query_args = array(), $current_user_id
 		
 		// array of comma list of course, lesson, topic, etc. Default is all posts
 		'post_ids'						=>	'',
-		'post_ids_action'				=>	'IN',
 		
 		// array or comma list of LD specific post types. See $learndash_post_types for possible values 
 		'post_types'					=>	'',
 		
 		// array or comma list of user ids. Defaults to all user ids. 
 		'user_ids'						=>	'',
-		'user_ids_action'				=>	'IN',
 		
 		// An array of activity_type values to filter. Default is all types
 		'activity_types'				=>	'',
@@ -807,17 +739,7 @@ function learndash_reports_get_activity( $query_args = array(), $current_user_id
 			
 		} else {
 			// If the user if not a group leader and not admin then abort until we have added support for those roles. 
-			//return $activity_results;
-			if ( empty( $query_args['user_ids'] ) ) {
-				$query_args['user_ids'] = array( get_current_user_id() );
-			}
-			
-			if ( empty( $query_args['post_ids'] ) ) {
-				$query_args['post_ids'] = learndash_user_get_enrolled_courses( get_current_user_id() );
-				if ( empty( $query_args['post_ids'] ) ) {
-					return $activity_results;
-				}
-			}
+			return $activity_results;
 		}
 	} 
 	
@@ -913,10 +835,10 @@ function learndash_reports_get_activity( $query_args = array(), $current_user_id
 	$sql_str_where  = " WHERE 1=1 ";
 	
 	if ( !empty( $query_args['user_ids'] ) ) {
-		$sql_str_where .= " AND users.ID ". $query_args['user_ids_action'] . " (". implode(',', $query_args['user_ids'] ) .") ";
+		$sql_str_where .= " AND users.ID IN (". implode(',', $query_args['user_ids'] ) .") ";
 	}
 	if ( !empty( $query_args['post_ids'] ) ) {
-		$sql_str_where .= " AND posts.ID ". $query_args['post_ids_action'] ." (". implode(',', $query_args['post_ids'] ) .") ";
+		$sql_str_where .= " AND posts.ID IN (". implode(',', $query_args['post_ids'] ) .") ";
 	}
 	$sql_str_where .= " AND posts.post_status='publish' ";
 	

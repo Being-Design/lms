@@ -179,7 +179,7 @@ class WpProQuiz_Model_QuizMapper extends WpProQuiz_Model_Mapper
 		}
 		
 		$data->saveTimeLimitCookie();
-		//$data->saveViewProfileStatistics();
+		$data->saveViewProfileStatistics();
 		
 		return $data;
 	}

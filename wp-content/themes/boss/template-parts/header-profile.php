@@ -9,7 +9,7 @@ $boxed = boss_get_option( 'boss_layout_style' );
     <?php if ( '2' == $header_style ): ?>
     <div class="table">
     <?php endif; ?>
-    
+
 	<?php if ( '1' == $header_style ): ?>
 	<?php if ( $boxed == 'boxed' ): ?>
 		<div class="header-notifications search-toggle">
@@ -22,18 +22,52 @@ $boxed = boss_get_option( 'boss_layout_style' );
 
 		<?php
 		if ( is_user_logged_in() ) {
-            $name_class = '';
-            $update_data = wp_get_update_data();
 
-            if ($update_data['counts']['total'] && current_user_can( 'update_core' ) && current_user_can( 'update_plugins' ) && current_user_can( 'update_themes' )) { 
-                $name_class = 'has_updates';
-                ?>
-                <!-- Notification -->
-                <div class="header-notifications updates">
-                    <a class="notification-link fa fa-refresh" href="<?php echo network_admin_url( 'update-core.php' ); ?>">
-                       <span class="ab-label"><?php echo number_format_i18n( $update_data['counts']['total'] ); ?></span>
-                    </a>
-                </div><?php
+            if ( function_exists( "messages_get_unread_count" ) ) {
+				$name_class = 'has_updates';
+				$unread_message_count = messages_get_unread_count();
+				$user_id = get_current_user_id();
+				?>
+				<!-- Notification -->
+				<div class="header-notifications messages">
+				<a id="user-messages" class="notification-link fa fa-envelope" href="<?php echo esc_url( bp_core_get_user_domain( $user_id ) . bp_get_messages_slug() ) ?>">
+					<?php
+					if ((int)$unread_message_count > 0 ) {
+						echo '<span class="count">'. $unread_message_count .'</span>';
+					} else {
+						echo '<span class="no-alert"><b>0</b></span>';
+					}
+					?>
+				</a>
+
+				<div class="pop pop-links">
+					<div class="pop-links-inner">
+					<?php if (bp_has_message_threads('type=unread')) { ?>
+
+						<ul class="bb-user-notifications">
+							<?php while (bp_message_threads()) : bp_message_thread(); ?>
+
+								<li>
+
+									<?php bp_message_thread_avatar('height=20&width=20'); ?>
+
+									<?php bp_message_thread_from() ?>
+
+									<a class="bb-message-link" href="<?php esc_url(bp_message_thread_view_link()); ?>">
+										<?php _e('Sent you message', 'boss'); ?>
+									</a>
+
+								</li>
+
+							<?php endwhile; ?>
+						</ul>
+
+					<?php } else { ?>
+						<div><?php _e('No unread messages', 'boss'); ?></div>
+					<?php } ?>
+						</div>
+					</div>
+				</div><?php
 			}
 
 			if ( buddyboss_is_bp_active() && bp_is_active( 'notifications' ) ):
@@ -42,33 +76,39 @@ $boxed = boss_get_option( 'boss_layout_style' );
 					echo do_shortcode( '[buddyboss_notification_bar]' );
 				} else {
 
-					$notifications	 = buddyboss_adminbar_notification();
-					$link			 = $notifications[ 0 ];
-					unset( $notifications[ 0 ] );
+					$notifications = bp_notifications_get_notifications_for_user( bp_loggedin_user_id(), 'object' );
+					$count         = ! empty( $notifications ) ? count( $notifications ) : 0;
+					$alert_class   = (int) $count > 0 ? 'pending-count alert' : 'count no-alert';
+					$menu_title    = '<span id="ab-pending-notifications" class="' . $alert_class . '">' . number_format_i18n( $count ) . '</span>';
+					$menu_link     = trailingslashit( bp_loggedin_user_domain() . bp_get_notifications_slug() );
 					?>
 
 					<!-- Notification -->
 					<div class="header-notifications all-notifications">
 						<a class="notification-link fa fa-bell" href="<?php
-						if ( $link ) {
-							echo $link->href;
+						if ( $menu_link ) {
+							echo $menu_link;
 						}
 						?>">
 							   <?php
-							   if ( $link ) {
-								   echo $link->title;
+							   if ( $menu_title ) {
+								   echo $menu_title;
 							   }
 							   ?>
 						</a>
 
-						<div class="pop">
-							<?php
-							if ( $link ) {
-								foreach ( $notifications as $notification ) {
-									echo '<a href="' . $notification->href . '">' . $notification->title . '</a>';
+						<div class="pop pop-links">
+							<div class="pop-links-inner">
+								<?php
+								if ( ! empty( $notifications ) && is_array( $notifications ) ) {
+									foreach ( $notifications as $notification ) {
+										echo '<a href="' . $notification->href . '">' . $notification->content . '</a>';
+									}
+								} else {
+									echo '<a href="' . bp_loggedin_user_domain() . '' . BP_NOTIFICATIONS_SLUG . '/">' . __( "No new notifications", "boss" ) . '</a>';
 								}
-							}
-							?>
+								?>
+							</div>
 						</div>
 					</div>
 
@@ -94,28 +134,30 @@ $boxed = boss_get_option( 'boss_layout_style' );
 							<?php echo bp_core_fetch_avatar( array( 'item_id' => get_current_user_id(), 'type' => 'full', 'width' => '100', 'height' => '100' ) ); ?>                        </span>
 					</a>
 
-					<div class="pop">
-						<!-- Dashboard links -->
-						<?php
-						if ( boss_get_option( 'boss_dashboard' ) &&  current_user_can( 'read' ) ) :
-							get_template_part( 'template-parts/header-dashboard-links' );
-						endif;
-						?>
+					<div class="pop user-pop-links">
+						<div class="pop-inner">
+							<!-- Dashboard links -->
+							<?php
+							if ( boss_get_option( 'boss_dashboard' ) &&  current_user_can( 'read' ) ) :
+								get_template_part( 'template-parts/header-dashboard-links' );
+							endif;
+							?>
 
-						<!-- Adminbar -->
-						<div id="adminbar-links" class="bp_components">
-							<?php buddyboss_adminbar_myaccount(); ?>
+							<!-- Adminbar -->
+							<div id="adminbar-links" class="bp_components">
+								<?php buddyboss_adminbar_myaccount(); ?>
+							</div>
+
+							<?php
+							if ( boss_get_option( 'boss_profile_adminbar' ) ) {
+								wp_nav_menu( array( 'theme_location' => 'header-my-account', 'fallback_cb' => '', 'menu_class' => 'links' ) );
+							}
+							?>
+
+							<span class="logout">
+								<a href="<?php echo wp_logout_url(); ?>"><?php _e( 'Logout', 'boss' ); ?></a>
+							</span>
 						</div>
-
-						<?php
-						if ( boss_get_option( 'boss_profile_adminbar' ) ) {
-							wp_nav_menu( array( 'theme_location' => 'header-my-account', 'fallback_cb' => '', 'menu_class' => 'links' ) );
-						}
-						?>
-
-						<span class="logout">
-							<a href="<?php echo wp_logout_url(); ?>"><?php _e( 'Logout', 'boss' ); ?></a>
-						</span>
 					</div>
 
 					<?php do_action( "buddyboss_after_header_account_login_block" ); ?>
@@ -125,12 +167,12 @@ $boxed = boss_get_option( 'boss_layout_style' );
 			<?php } ?>
 
 		<?php } else { ?>
-           
+
             <!-- Woocommerce Notification for guest users-->
             <?php echo boss_cart_icon_html(); ?>
-            
+
 			<!-- Register/Login links for logged out users -->
-			<?php if ( !is_user_logged_in() && buddyboss_is_bp_active() && !bp_hide_loggedout_adminbar( false ) ) : ?>
+			<?php if ( !is_user_logged_in() && buddyboss_is_bp_active() ) : ?>
 
                 <?php if( '2' == boss_get_option('boss_header') ){ ?>
                 <div class="table-cell">
@@ -143,11 +185,11 @@ $boxed = boss_get_option( 'boss_layout_style' );
                 <?php if( '2' == boss_get_option('boss_header') ){ ?>
                 </div>
                 <?php } ?>
-                
+
 			<?php endif; ?>
 
 		<?php } ?> <!-- if ( is_user_logged_in() ) -->
 
 	</div><!--.left-col-inner/.table-->
-    
+
 </div><!--.left-col-->

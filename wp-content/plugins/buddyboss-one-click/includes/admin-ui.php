@@ -5,8 +5,10 @@ if (!defined('ABSPATH'))
 
 class buddyboss_oneclick_installer {
 
+    var $license_manager = false;
+    var $system_status_helper = false;
     var $admin_screen = '';
-    var $package_api = 'https://www.buddyboss.com/oneclick/packages.php';
+    var $package_api = 'https://www.buddyboss.com/oneclick/packages_new.php';
 
     function __construct(){
         $this->hooks();
@@ -21,11 +23,11 @@ class buddyboss_oneclick_installer {
     function hooks() {
 
         add_action('init', array($this,"init"));
-        add_action('admin_init', array($this,"init"));
+        //add_action('admin_init', array($this,"init"));admin_init is fired after init, so no need to call this twice
 
         add_action('init', array($this,"load_package_installer"));
         add_action('admin_menu', array($this,"admin_menu"));
-        add_action( 'wp_ajax_bb_oneclick_installer_ajax', array($this,"the_ajax_action") );
+        add_action( 'wp_ajax_bb_oneclick_installer_ajax', array($this,"the_ajax_action_new") );
 
         add_filter( 'plugin_action_links_' . BUDDYBOSS_ONECLICK_PLUGIN_BASENAME, array( $this, 'plugin_action_links' ) );
 
@@ -34,6 +36,12 @@ class buddyboss_oneclick_installer {
 
     function init() {
         $this->package_api = apply_filters("buddyboss_oneclick_installer_package_api",$this->package_api);
+        
+        require_once BUDDYBOSS_ONECLICK_INSTALLER_PLUGIN_DIR . 'includes/license-manager.php';
+        $this->license_manager = new buddyboss_onclick_license_manager();
+        
+        require_once BUDDYBOSS_ONECLICK_INSTALLER_PLUGIN_DIR . 'includes/system-status-helper.php';
+        $this->system_status_helper = new buddyboss_onclick_system_status_helper();
     }
 
     /**
@@ -135,7 +143,7 @@ class buddyboss_oneclick_installer {
 
             if(isset($package_slug) AND !empty($packages[$package_slug])) {
 
-                if($this->is_demo_downloaded($package_slug)) { // lets unzip it.
+                if($this->is_demo_downloaded_new($package_slug)) { // lets unzip it.
 
 
                     WP_Filesystem();
@@ -171,11 +179,174 @@ class buddyboss_oneclick_installer {
                     unlink($bb_demo_download_dir); //delete if already exists
 
                     $this->download($packages[$package_slug]["download_url"],$bb_demo_download_dir);
-
+                    
                     wp_send_json_success ( array(
-                    "text"=>__("Demo Package is downloaded and ready to install. You will need to purchase this product for installation to complete successfully.","buddyboss-one-click"),
+                    "text"=>__("Demo Package is downloaded and ready to install.","buddyboss-one-click"),
                     ) );
 
+                }
+
+
+            }  else {
+
+             wp_send_json_error ( array(
+                "text"=>__("Package not found.","buddyboss-one-click"),
+                ) );
+
+            }
+
+
+        } else {
+
+             wp_send_json_error ( array(
+                "text"=>__("Security error try again later.","buddyboss-one-click"),
+                ) );
+
+        }
+
+
+
+    }
+    
+    function the_ajax_action_new() {
+
+        error_reporting(0);
+
+         if(!current_user_can("manage_options")) {
+            wp_send_json_error ( array(
+                "text"=>__("You don't have permission to access this page", 'buddyboss-one-click' ),
+                ) );
+        }
+
+        if(isset($_POST["oneclick_installer_process_package"]) AND wp_verify_nonce( $_POST["oneclick_installer_process_package"], "oneclick_installer_process_package" )) {
+
+            @session_start();
+
+            set_time_limit(0);
+
+            $package_slug = @$_POST["package_slug"];
+            $packages = $this->get_all_demo_packages();
+
+            $_SESSION["bb_oneclick_installing_package"] = ""; //empty this as there is nothing to install
+
+            if(isset($package_slug) AND !empty($packages[$package_slug])) {
+
+                if( $this->is_demo_downloaded_new( $package_slug ) ) { // lets unzip it.
+
+                        $_SESSION["bb_oneclick_installing_package"] = $package_slug;
+
+                        wp_send_json_success ( array(
+                            "text"=>__("Your package has been unpacked, starting installation.","buddyboss-one-click"),
+                            "noalert" => "1"
+                        ) );
+
+
+                } else { // lets download it.
+                    WP_Filesystem();
+                    
+                    $upload_dir = wp_upload_dir();
+                    $destination_path = dirname($upload_dir["basedir"])."/bb-oneclick-demos/".$package_slug;
+                    
+                    
+                    $package_url_base = $packages[$package_slug]["download_url"];
+                    $package_url_base = trailingslashit( $package_url_base );
+                    
+                    /**
+                     * We are now downloading multiple files.
+                     * To avoid running out of php memory or execution time, we'll download just one file in each request.
+                     * Those files can be zip files, which are extracted right after download.
+                     * 
+                     * We pass '_download_file_num' parameter to indicate which file number we are going to download.
+                     * If this is not passed, it is assumed to be a fresh request and we download the config file.
+                     */
+                    if( isset( $_POST['_download_file_num'] ) ){
+                        $download_file_num = absint( $_POST['_download_file_num'] );//0 based index
+                        $info_file = $destination_path . '/_config.txt';
+                        
+                        $files_to_download = file( $info_file, FILE_IGNORE_NEW_LINES );
+                        if( !empty( $files_to_download ) ){
+                            if( count( $files_to_download ) < ( $download_file_num + 1 ) ){
+                                //all files downloaded already, abort
+                                wp_send_json_success ( array(
+                                    "text"=>__("Demo Package is downloaded and ready to install.","buddyboss-one-click"),
+                                ) );
+                            }
+                            
+                            $file_to_download = $files_to_download[ $download_file_num ];
+                            $parts = explode( ' ', $file_to_download );
+                            $filename = $parts[0];
+                            $relative_path = $parts[1];
+
+                            $downloaded_file = $this->download_new( $package_url_base . $filename, $destination_path . $relative_path );
+
+                            //if this is a zip file, extract it and delete the zip file
+                            $extension = end( explode( '.', $filename ) );
+                            if( 'zip' == $extension ){
+                                //xxxx.zip file, if contains xxxx folders and then files inside it,
+                                //unzip_file function, for some reason, doesn't create the folder xxxx and instead extracts all file in root folder
+                                //we need to workaround that issue
+                                if( 'main.zip' != $filename ){
+                                    $folder_name = reset( explode( '.', $filename ) );
+                                    $unzipfile = unzip_file( $downloaded_file , $destination_path . $relative_path . $folder_name .'/' );
+                                } else {
+                                    $unzipfile = unzip_file( $downloaded_file , $destination_path . $relative_path );
+                                }
+                                
+                                unlink( $downloaded_file );
+                            }
+
+                            $next_download_num = $download_file_num + 1;
+                            
+                            //check if any more file remaining
+                            if( count( $files_to_download ) > $next_download_num ){
+                                wp_send_json_success ( array(
+                                    "text" => sprintf( __( "Downloaded %s", "buddyboss-one-click" ), $downloaded_file ),
+                                    "noalert"   => true,
+                                    "continue"  => true,
+                                    "nextfile_num"  => $next_download_num,
+                                    "totalfile_num" => count( $files_to_download ),
+                                ) );
+                            } else {
+                                //all files downloaded already
+                                
+                                //1. create _download_complete.txt file to indicate that the package download is complete
+                                $fp = fopen( $destination_path . "/_download_complete.txt","wb" );
+                                fwrite( $fp, 'done' );
+                                fclose( $fp );
+                                
+                                //2. send response
+                                wp_send_json_success ( array(
+                                    "text"=>__("Demo Package is downloaded and ready to install.","buddyboss-one-click"),
+                                ) );
+                            }
+                            
+                        } else {
+                            wp_send_json_error ( array(
+                                "text" => __( "Please refresh the page and try again.", "buddyboss-one-click" ),
+                            ) );
+                        }
+                        
+                    } else {
+                        $this->remove_dir($destination_path); //first remove it for making sure we get latest version.
+                        @mkdir($destination_path);
+                        
+                        //Download the text file which contains info about what all files to download
+                        $info_file = $this->download_new( $package_url_base . '_config.txt', $destination_path );
+                        
+                        $files_to_download = file( $info_file, FILE_IGNORE_NEW_LINES );
+                        if( !empty( $files_to_download ) ){
+                            wp_send_json_success ( array(
+                                "text" => __( "Downloading demo data, this may take some time. Please do not refresh or close this screen.", "buddyboss-one-click" ),
+                                "continue"  => true,
+                                "nextfile_num" => 0,//first file
+                                "totalfile_num" => count( $files_to_download ),
+                            ) );
+                        } else {
+                            wp_send_json_error ( array(
+                                "text" => __( "Main package file could not be downloaded. Please contact support.", "buddyboss-one-click" ),
+                            ) );
+                        }
+                    }
                 }
 
 
@@ -229,12 +400,59 @@ class buddyboss_oneclick_installer {
         if(!current_user_can("manage_options")) {
             wp_die( __("You don't have permission to access this page.", 'buddyboss-one-click') );
         }
+        
+        $nav_tabs = array( 
+            'installer'     => __( 'Installer', 'buddyboss-one-click' ), 
+            'system-info'   => __( 'System Status', 'buddyboss-one-click' ),
+            'support'       => __( 'Support', 'buddyboss-one-click' ),
+        );
+        $current_nav_tab = isset( $_GET['_tab'] ) && !empty( $_GET['_tab'] ) ? $_GET['_tab'] : 'installer';
+        if( !isset( $nav_tabs[$current_nav_tab] ) ){
+            $current_nav_tab = 'installer';//default
+        }
+        ?>
 
-    ?>
-
-    <div class="wrap">
+        <div class="wrap">
             <h2><?php _e("BuddyBoss One Click Installer","buddyboss-one-click"); ?></h2>
+            
+            <h2 class="nav-tab-wrapper">
+                <?php 
+                $url = admin_url( 'admin.php?page=buddyboss-oneclick-installer' );
+                foreach( $nav_tabs as $slug => $name ){
+                    $class = $slug == $current_nav_tab ? 'nav-tab nav-tab-active' : 'nav-tab';
+                    $iurl = add_query_arg( array( '_tab' => $slug ), $url );
+                    echo "<a class='{$class}' href='{$iurl}'>{$name}</a>";
+                }
+                ?>
+            </h2>
+            
+            <?php 
+            switch( $current_nav_tab ){
+                case 'system-info':
+                    $this->system_status_helper->display_details();
+                    break;
+                case 'support':
+                    $this->license_manager->support_ui();
+                    break;
+                default:
+                    if( $this->license_manager->is_connected() ){
+                        $this->license_manager->reconnect_ui();
+                        $this->page_ui_installer();
+                    } else {
+                        $this->license_manager->connect_ui();
+                    }
+                    break;
+            }
+            ?>
 
+        </div>
+        <?php 
+    }
+
+
+    function page_ui_installer(){
+        ?>
+        
             <p><?php _e("Please select the demo package you would like to install on this site.","buddyboss-one-click"); ?></p>
 
             <form method="post" action="javascript:;" id="bb_oneclick_installer_form">
@@ -412,7 +630,7 @@ class buddyboss_oneclick_installer {
 
             <?php foreach($demo_packages as $package_slug => $package): ?>
 
-                <div class="package_details <?php if($this->is_demo_downloaded($package_slug)) { ?>install_ready<?php } ?>">
+                <div class="package_details <?php if($this->is_demo_downloaded_new($package_slug)) { ?>install_ready<?php } ?>">
 
                     <div class="packages_screenshots">
                         <?php
@@ -428,11 +646,15 @@ class buddyboss_oneclick_installer {
                         <h4><?php echo $package["package_name"]; ?></h4>
 
                         <div class="action">
-                            <?php if(!$this->is_demo_downloaded($package_slug)) { ?>
-                            <button name="package_name" data-package-slug="<?php echo $package_slug; ?>" type="button" class="installbtn button button-primary"> <?php _e("Download","buddyboss-one-click"); ?><span class="spinner"></span></button>
-                            <?php } else { ?>
-                            <button name="package_name" data-package-slug="<?php echo $package_slug; ?>" type="button" class="installbtn button button-primary"> <?php _e("Install Now","buddyboss-one-click"); ?><span class="spinner"></span></button>
-                            <?php } ?>
+                            <?php if( $this->license_manager->can_download_package( $package ) ):?>
+                            
+                                <?php if(!$this->is_demo_downloaded_new($package_slug)) { ?>
+                                <button name="package_name" data-package-slug="<?php echo $package_slug; ?>" type="button" class="installbtn button button-primary"> <?php _e("Download","buddyboss-one-click"); ?><span class="spinner"></span></button>
+                                <?php } else { ?>
+                                <button name="package_name" data-package-slug="<?php echo $package_slug; ?>" type="button" class="installbtn button button-primary"> <?php _e("Install Now","buddyboss-one-click"); ?><span class="spinner"></span></button>
+                                <?php } ?>
+                            
+                            <?php endif; ?>
 
                             <?php if(!empty($package["solution_url"])):?>
 
@@ -458,7 +680,7 @@ class buddyboss_oneclick_installer {
 
             <script>
                 jQuery(document).ready(function(){
-
+                    
                     jQuery(document).on("click",".installbtn",function(){
 
                         _this = jQuery(this);
@@ -471,24 +693,45 @@ class buddyboss_oneclick_installer {
                         post = jQuery.post(ajaxurl,jQuery("#bb_oneclick_installer_form").serialize(),function(){},'json');
 
                         post.done(function(d){
-
-                                _this.prop("disabled",false).find(".spinner").removeClass('is-active');
-
-                                if(d.success) {
-                                    if(typeof d.data.noalert == 'undefined'){
-                                        alert(d.data.text);
+                            _this.prop("disabled",false).find(".spinner").removeClass('is-active');
+                            
+                            var _continue = false;
+                            if( d.success ){
+                                if( typeof d.data.continue != 'undefined' && d.data.continue ){
+                                    _continue = true;
+                                    var nextfile_num = d.data.nextfile_num,//0 based index
+                                        totalfile_num = d.data.totalfile_num;
+                                    
+                                    var percent = ( nextfile_num * 100 ) / totalfile_num;
+                                    percent = Math.round( percent );
+                                    if( percent < 0 ){
+                                        percent = 0;
                                     }
-                                    location.reload();
-                                    return;
-                                } else {
-                                    alert(d.data.text);
+                                    _this.html( percent + '% <span class="spinner"></span>' );
+                                    
+                                    jQuery("#bb_oneclick_installer_form").find('[name="_download_file_num"]').remove();
+                                    jQuery("#bb_oneclick_installer_form").append( "<input type='hidden' name='_download_file_num' value='"+ nextfile_num +"'>" );
                                 }
-
+                                
+                                if( typeof d.data.noalert == 'undefined' ){
+                                    alert( d.data.text );
+                                }
+                                
+                                if( _continue ){
+                                    window.setTimeout( function(){ _this.trigger('click'); }, 500);
+                                    return false;
+                                } else {
+                                    location.reload();
+                                    return false;
+                                }
+                            } else {
+                                alert( d.data.text );
+                            }
                         });
 
                         post.fail(function(d){
                             _this.prop("disabled",false).find(".spinner").removeClass('is-active');
-                            alert("Unknown Server Error.");
+                            alert( '<?php _e( "Unknown Server Error.", "buddyboss-one-click" );?>' );
                         });
 
                     });
@@ -496,14 +739,9 @@ class buddyboss_oneclick_installer {
                 });
 
             </script>
-
-            </div>
-        <?php
-
-
+        <?php 
     }
-
-
+    
     function get_all_demo_packages() {
 
         $oneclick_demo_packages = get_transient( "buddyboss_oneclick_demo_packages" );
@@ -522,7 +760,13 @@ class buddyboss_oneclick_installer {
 
     }
 
-    function get_remote_content($url,$post_data=array()){
+    function get_remote_content($url,$post_data=array()) {
+
+       if ( ! function_exists( 'curl_init' ) || ! function_exists( 'curl_exec' ) ) {
+           echo '<div class="error"><p><strong>' . __( 'ERROR:', 'buddyboss-one-click') . '</strong> ' . __("PHP's CURL extension is not available. Please contact your hosting provider to enable PHP's CURL extension.", "buddyboss-one-click") . '</p></div>';
+           return;
+       }
+
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($post_data));
@@ -566,6 +810,17 @@ class buddyboss_oneclick_installer {
             return false;
 
      }
+     
+     function is_demo_downloaded_new($package_slug) {
+         $upload_dir = wp_upload_dir();
+         
+         $flag = dirname( $upload_dir["basedir"] ) . "/bb-oneclick-demos/" . $package_slug . "/_download_complete.txt";
+         if( file_exists( $flag ) ) {
+             return true;
+         }
+         
+         return false;
+     }
 
      /**
       * @since BuddyBoss One Click (1.0.0)
@@ -573,7 +828,7 @@ class buddyboss_oneclick_installer {
       * */
 
     function download($file_source, $file_target) {
-
+        
         $download = download_url($file_source);
 
         if(empty($download)){
@@ -587,7 +842,26 @@ class buddyboss_oneclick_installer {
         return true;
     }
 
+    function download_new($file_source, $file_target) {
+        $name_parts = explode( '/', $file_source );
+        $filename = end( $name_parts );
+        
+        $download = download_url( $file_source );
 
+        if(empty($download)){
+            return false;
+        } else {
+            //create target folder, if it not exists
+            if( !is_dir( $file_target ) ){
+                mkdir( $file_target, 0777, true );
+            }
+            
+            @rename( $download, trailingslashit( $file_target ) . $filename );
+            return trailingslashit( $file_target ) . $filename;
+        }
+
+        return true;
+    }
 }
 
 /**

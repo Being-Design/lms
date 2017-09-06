@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-Pro-Quiz 0.28\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-pro-quiz\n"
-"POT-Creation-Date: 2017-07-24 00:17-0500\n"
+"POT-Creation-Date: 2017-04-24 20:14-0500\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,8 +19,8 @@ msgstr ""
 #: lib/controller/WpProQuiz_Controller_Admin.php:122
 #: lib/controller/WpProQuiz_Controller_Toplist.php:156
 #: lib/controller/WpProQuiz_Controller_Toplist.php:175
-#: lib/controller/WpProQuiz_Controller_Toplist.php:220
-#: lib/controller/WpProQuiz_Controller_Toplist.php:224
+#: lib/controller/WpProQuiz_Controller_Toplist.php:225
+#: lib/controller/WpProQuiz_Controller_Toplist.php:229
 msgid "An error has occurred."
 msgstr ""
 
@@ -79,7 +79,7 @@ msgstr ""
 #: lib/view/WpProQuiz_View_QuestionOverall.php:95
 #: lib/view/WpProQuiz_View_QuizOverall.php:107
 #: lib/view/WpProQuiz_View_StatisticsAjax.php:37
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:718
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:651
 msgid "No data available"
 msgstr ""
 
@@ -173,10 +173,10 @@ msgstr ""
 #: lib/controller/WpProQuiz_Controller_Question.php:580
 #: lib/controller/WpProQuiz_Controller_Quiz.php:48
 #: lib/controller/WpProQuiz_Controller_Quiz.php:52
-#: lib/controller/WpProQuiz_Controller_Quiz.php:371
-#: lib/controller/WpProQuiz_Controller_Quiz.php:385
-#: lib/controller/WpProQuiz_Controller_Quiz.php:469
-#: lib/controller/WpProQuiz_Controller_Quiz.php:675
+#: lib/controller/WpProQuiz_Controller_Quiz.php:366
+#: lib/controller/WpProQuiz_Controller_Quiz.php:380
+#: lib/controller/WpProQuiz_Controller_Quiz.php:464
+#: lib/controller/WpProQuiz_Controller_Quiz.php:670
 #: lib/controller/WpProQuiz_Controller_Statistics.php:40
 #: lib/controller/WpProQuiz_Controller_Toplist.php:88
 msgid "You do not have sufficient permissions to access this page."
@@ -200,7 +200,7 @@ msgstr ""
 #: lib/controller/WpProQuiz_Controller_Question.php:10
 #: lib/controller/WpProQuiz_Controller_Question.php:21
 #: lib/controller/WpProQuiz_Controller_Quiz.php:71
-#: lib/controller/WpProQuiz_Controller_Quiz.php:402
+#: lib/controller/WpProQuiz_Controller_Quiz.php:397
 #, php-format
 msgctxt "Quiz not found"
 msgid "%s not found"
@@ -244,7 +244,7 @@ msgid "questions copied"
 msgstr ""
 
 #: lib/controller/WpProQuiz_Controller_Quiz.php:107
-#: lib/controller/WpProQuiz_Controller_Quiz.php:417
+#: lib/controller/WpProQuiz_Controller_Quiz.php:412
 #, php-format
 msgctxt "Quiz edited"
 msgid "%s edited"
@@ -256,46 +256,46 @@ msgctxt "Quiz created"
 msgid "%s created"
 msgstr ""
 
-#: lib/controller/WpProQuiz_Controller_Quiz.php:147
-#: lib/controller/WpProQuiz_Controller_Quiz.php:438
-#: lib/controller/WpProQuiz_Controller_Quiz.php:510
+#: lib/controller/WpProQuiz_Controller_Quiz.php:142
+#: lib/controller/WpProQuiz_Controller_Quiz.php:433
+#: lib/controller/WpProQuiz_Controller_Quiz.php:505
 #, php-format
 msgctxt "Quiz title or quiz description are not filled"
 msgid "%s title or %s description are not filled"
 msgstr ""
 
-#: lib/controller/WpProQuiz_Controller_Quiz.php:164
-#: lib/controller/WpProQuiz_Controller_Quiz.php:395
+#: lib/controller/WpProQuiz_Controller_Quiz.php:159
+#: lib/controller/WpProQuiz_Controller_Quiz.php:390
 #, php-format
 msgctxt "Edit quiz"
 msgid "Edit %s"
 msgstr ""
 
-#: lib/controller/WpProQuiz_Controller_Quiz.php:164
-#: lib/controller/WpProQuiz_Controller_Quiz.php:473
-#: lib/controller/WpProQuiz_Controller_Quiz.php:491
+#: lib/controller/WpProQuiz_Controller_Quiz.php:159
+#: lib/controller/WpProQuiz_Controller_Quiz.php:468
+#: lib/controller/WpProQuiz_Controller_Quiz.php:486
 #, php-format
 msgctxt "Create quiz"
 msgid "Create %s"
 msgstr ""
 
-#: lib/controller/WpProQuiz_Controller_Quiz.php:588
+#: lib/controller/WpProQuiz_Controller_Quiz.php:583
 msgid "Template stored"
 msgstr ""
 
-#: lib/controller/WpProQuiz_Controller_Quiz.php:694
+#: lib/controller/WpProQuiz_Controller_Quiz.php:689
 #, php-format
 msgctxt "Quiz deleted"
 msgid "%s deleted"
 msgstr ""
 
-#: lib/controller/WpProQuiz_Controller_Quiz.php:990
+#: lib/controller/WpProQuiz_Controller_Quiz.php:984
 #: lib/controller/WpProQuiz_Controller_QuizCompleted.php:250
 #: lib/view/WpProQuiz_View_FrontQuiz.php:1185
 msgid "Not categorized"
 msgstr ""
 
-#: lib/controller/WpProQuiz_Controller_Quiz.php:996
+#: lib/controller/WpProQuiz_Controller_Quiz.php:990
 #: lib/controller/WpProQuiz_Controller_QuizCompleted.php:256
 #: lib/view/WpProQuiz_View_FrontQuiz.php:1169
 msgid "Categories"
@@ -309,22 +309,22 @@ msgstr ""
 
 #: lib/controller/WpProQuiz_Controller_Statistics.php:570
 #: lib/controller/WpProQuiz_Controller_Statistics.php:617
-#: lib/controller/WpProQuiz_Controller_Statistics.php:784
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:727
+#: lib/controller/WpProQuiz_Controller_Statistics.php:783
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:660
 msgid "Anonymous"
 msgstr ""
 
 #: lib/controller/WpProQuiz_Controller_Statistics.php:619
-#: lib/controller/WpProQuiz_Controller_Statistics.php:792
+#: lib/controller/WpProQuiz_Controller_Statistics.php:791
 msgid "Deleted user"
 msgstr ""
 
-#: lib/controller/WpProQuiz_Controller_Statistics.php:765
+#: lib/controller/WpProQuiz_Controller_Statistics.php:764
 msgid "Ungraded"
 msgstr ""
 
 #: lib/controller/WpProQuiz_Controller_Toplist.php:80
-#: lib/controller/WpProQuiz_Controller_Toplist.php:255
+#: lib/controller/WpProQuiz_Controller_Toplist.php:260
 msgid "No name or e-mail entered."
 msgstr ""
 
@@ -332,16 +332,16 @@ msgstr ""
 msgid "You signed up successfully."
 msgstr ""
 
-#: lib/controller/WpProQuiz_Controller_Toplist.php:242
-#: lib/controller/WpProQuiz_Controller_Toplist.php:251
+#: lib/controller/WpProQuiz_Controller_Toplist.php:247
+#: lib/controller/WpProQuiz_Controller_Toplist.php:256
 msgid "You can not enter again."
 msgstr ""
 
-#: lib/controller/WpProQuiz_Controller_Toplist.php:259
+#: lib/controller/WpProQuiz_Controller_Toplist.php:264
 msgid "Your name can not exceed 15 characters."
 msgstr ""
 
-#: lib/controller/WpProQuiz_Controller_Toplist.php:267
+#: lib/controller/WpProQuiz_Controller_Toplist.php:272
 msgid "You entered wrong captcha code."
 msgstr ""
 
@@ -479,7 +479,7 @@ msgstr ""
 
 #: lib/view/WpProQuiz_View_AdminToplist.php:55
 #: lib/view/WpProQuiz_View_Statistics.php:239
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:706
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:639
 #: lib/view/WpProQuiz_View_StatisticsNew.php:106
 msgid "User"
 msgstr ""
@@ -508,8 +508,8 @@ msgstr ""
 #: lib/view/WpProQuiz_View_Statistics.php:105
 #: lib/view/WpProQuiz_View_Statistics.php:240
 #: lib/view/WpProQuiz_View_StatisticsAjax.php:30
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:109
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:707
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:104
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:640
 msgid "Points"
 msgstr ""
 
@@ -520,8 +520,8 @@ msgstr ""
 #: lib/view/WpProQuiz_View_Statistics.php:245
 #: lib/view/WpProQuiz_View_Statistics.php:324
 #: lib/view/WpProQuiz_View_StatisticsAjax.php:31
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:115
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:712
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:110
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:645
 msgid "Results"
 msgstr ""
 
@@ -540,7 +540,7 @@ msgstr ""
 #: lib/view/WpProQuiz_View_QuizEdit.php:1448
 #: lib/view/WpProQuiz_View_QuizOverall.php:80
 #: lib/view/WpProQuiz_View_StatisticsAjax.php:47
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:752
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:685
 msgid "Delete"
 msgstr ""
 
@@ -629,12 +629,12 @@ msgid "You must specify a date."
 msgstr ""
 
 #: lib/view/WpProQuiz_View_FrontQuiz.php:608
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:670
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:603
 msgid "Yes"
 msgstr ""
 
 #: lib/view/WpProQuiz_View_FrontQuiz.php:613
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:670
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:603
 msgid "No"
 msgstr ""
 
@@ -769,7 +769,7 @@ msgstr ""
 #: lib/view/WpProQuiz_View_FrontQuiz.php:1352
 #: lib/view/WpProQuiz_View_QuestionEdit.php:110
 #: lib/view/WpProQuiz_View_Statistics.php:104
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:108
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:103
 msgid "Question"
 msgstr ""
 
@@ -822,9 +822,9 @@ msgstr ""
 #: lib/view/WpProQuiz_View_Statistics.php:106
 #: lib/view/WpProQuiz_View_Statistics.php:241
 #: lib/view/WpProQuiz_View_StatisticsAjax.php:28
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:110
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:363
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:708
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:105
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:354
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:641
 msgid "Correct"
 msgstr ""
 
@@ -838,8 +838,8 @@ msgstr ""
 #: lib/view/WpProQuiz_View_Statistics.php:107
 #: lib/view/WpProQuiz_View_Statistics.php:242
 #: lib/view/WpProQuiz_View_StatisticsAjax.php:29
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:111
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:709
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:106
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:642
 msgid "Incorrect"
 msgstr ""
 
@@ -1399,7 +1399,7 @@ msgstr ""
 #: lib/view/WpProQuiz_View_QuestionEdit.php:80
 #: lib/view/WpProQuiz_View_QuestionOverall.php:31
 #: lib/view/WpProQuiz_View_Statistics.php:124
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:127
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:122
 msgid "Category"
 msgstr ""
 
@@ -1758,7 +1758,7 @@ msgstr ""
 
 #: lib/view/WpProQuiz_View_QuestionOverall.php:104
 #: lib/view/WpProQuiz_View_Statistics.php:169
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:274
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:269
 msgid "Total"
 msgstr ""
 
@@ -2494,7 +2494,7 @@ msgstr ""
 #: lib/view/WpProQuiz_View_QuizEdit.php:1318
 #: lib/view/WpProQuiz_View_Statistics.php:41
 #: lib/view/WpProQuiz_View_Statistics.php:364
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:641
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:574
 msgid "Custom fields"
 msgstr ""
 
@@ -2718,39 +2718,39 @@ msgstr ""
 
 #: lib/view/WpProQuiz_View_Statistics.php:108
 #: lib/view/WpProQuiz_View_Statistics.php:243
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:112
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:710
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:107
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:643
 msgid "Hints used"
 msgstr ""
 
 #: lib/view/WpProQuiz_View_Statistics.php:109
 #: lib/view/WpProQuiz_View_Statistics.php:244
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:113
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:711
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:108
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:644
 msgid "Time"
 msgstr ""
 
 #: lib/view/WpProQuiz_View_Statistics.php:110
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:114
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:109
 msgid "Points scored"
 msgstr ""
 
 #: lib/view/WpProQuiz_View_Statistics.php:148
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:242
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:237
 msgid "Sub-Total: "
 msgstr ""
 
 #: lib/view/WpProQuiz_View_Statistics.php:183
 #: lib/view/WpProQuiz_View_Statistics.php:268
 #: lib/view/WpProQuiz_View_Statistics.php:343
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:288
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:283
 #: lib/view/WpProQuiz_View_StatisticsNew.php:162
 #: lib/view/WpProQuiz_View_StatisticsNew.php:246
 msgid "Refresh"
 msgstr ""
 
 #: lib/view/WpProQuiz_View_Statistics.php:187
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:292
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:287
 msgid "Reset statistics"
 msgstr ""
 
@@ -2792,41 +2792,41 @@ msgstr ""
 msgid "only anonymous users"
 msgstr ""
 
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:89
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:84
 #, php-format
 msgid "User statistics: %s"
 msgstr ""
 
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:161
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:172
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:156
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:167
 msgid "(view)"
 msgstr ""
 
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:493
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:426
 msgid "Graded"
 msgstr ""
 
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:495
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:428
 msgid "Not Graded"
 msgstr ""
 
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:500
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:433
 msgid "Status"
 msgstr ""
 
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:503
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:436
 msgid "view"
 msgstr ""
 
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:507
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:440
 msgid "edit"
 msgstr ""
 
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:667
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:600
 msgid "ticked"
 msgstr ""
 
-#: lib/view/WpProQuiz_View_StatisticsAjax.php:667
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:600
 msgid "not ticked"
 msgstr ""
 

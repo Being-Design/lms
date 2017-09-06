@@ -1,4 +1,4 @@
-# Translation of the WordPress plugin LearnDash LMS 2.4.6 by LearnDash.
+# Translation of the WordPress plugin LearnDash LMS 2.4.3 by LearnDash.
 # Copyright (C) 2017 LearnDash
 # This file is distributed under the same license as the LearnDash LMS package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LearnDash LMS 2.4.6\n"
+"Project-Id-Version: LearnDash LMS 2.4.3\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/sfwd-lms\n"
-"POT-Creation-Date: 2017-07-24 00:17-0500\n"
+"POT-Creation-Date: 2017-04-24 20:14-0500\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,144 +39,128 @@ msgid "Search"
 msgstr ""
 
 #: includes/admin/class-learndash-admin-binary-selector.php:414
-#, php-format
-msgctxt "Course Users Label"
-msgid "%s Users"
-msgstr ""
-
-#: includes/admin/class-learndash-admin-binary-selector.php:415
-#, php-format
-msgctxt "Course Users label"
-msgid "%s Users"
-msgstr ""
-
-#: includes/admin/class-learndash-admin-binary-selector.php:419
-#, php-format
-msgctxt "Search All Group Users"
-msgid "Search All %s Users"
-msgstr ""
-
-#: includes/admin/class-learndash-admin-binary-selector.php:420
-#, php-format
-msgctxt "Search Assigned Group Users"
-msgid "Search Assigned %s Users"
-msgstr ""
-
-#: includes/admin/class-learndash-admin-binary-selector.php:442
 msgctxt "Group Users Label"
 msgid "Group Users"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:446
+#: includes/admin/class-learndash-admin-binary-selector.php:418
 msgctxt "Search All Group Users"
 msgid "Search All Group Users"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:447
+#: includes/admin/class-learndash-admin-binary-selector.php:419
 msgctxt "Search Assigned Group Users"
 msgid "Search Assigned Group Users"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:469
+#: includes/admin/class-learndash-admin-binary-selector.php:441
 msgctxt "Group Leaders Label"
 msgid "Group Leaders"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:473
+#: includes/admin/class-learndash-admin-binary-selector.php:445
 msgctxt "Search All Group Leaders Label"
 msgid "Search All Group Leaders"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:474
+#: includes/admin/class-learndash-admin-binary-selector.php:446
 msgctxt "Search Assigned Group Leaders Label"
 msgid "Search Assigned Group Leaders"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:665
+#: includes/admin/class-learndash-admin-binary-selector.php:637
 #, php-format
 msgctxt "Group Courses label"
 msgid "Group %s"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:669
+#: includes/admin/class-learndash-admin-binary-selector.php:641
 #, php-format
 msgctxt "Search All Group Courses Label"
 msgid "Search All Group %s"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:670
+#: includes/admin/class-learndash-admin-binary-selector.php:642
 #, php-format
 msgctxt "Search Assigned Group Courses Label"
 msgid "Search Assigned Group %s"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:693
+#: includes/admin/class-learndash-admin-binary-selector.php:665
 #, php-format
 msgctxt "Groups Using Course Label"
 msgid "Groups Using %s"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:697
+#: includes/admin/class-learndash-admin-binary-selector.php:669
+#: includes/admin/class-learndash-admin-binary-selector.php:726
 #: includes/admin/class-learndash-admin-binary-selector.php:754
-#: includes/admin/class-learndash-admin-binary-selector.php:782
 msgctxt "Search All Groups Label"
 msgid "Search All Groups"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:698
+#: includes/admin/class-learndash-admin-binary-selector.php:670
 #, php-format
 msgctxt "Search Course Groups Label"
 msgid "Search %s Groups"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:721
+#: includes/admin/class-learndash-admin-binary-selector.php:693
 #, php-format
 msgctxt "User Enrolled in Courses Label"
 msgid "User Enrolled in %s"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:725
+#: includes/admin/class-learndash-admin-binary-selector.php:697
 #, php-format
 msgctxt "Search All Courses Label"
 msgid "Search All %s"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:726
+#: includes/admin/class-learndash-admin-binary-selector.php:698
 #, php-format
 msgctxt "Search Enrolled Courses Label"
 msgid "Search Enrolled %s"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:750
+#: includes/admin/class-learndash-admin-binary-selector.php:722
 msgctxt "User Enrolled in Groups Label"
 msgid "User Enrolled in Groups"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:755
+#: includes/admin/class-learndash-admin-binary-selector.php:727
 msgctxt "Search Enrolled Groups Label"
 msgid "Search Enrolled Groups"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:778
+#: includes/admin/class-learndash-admin-binary-selector.php:750
 msgctxt "Leader of Groups Label"
 msgid "Leader of Groups"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-binary-selector.php:783
+#: includes/admin/class-learndash-admin-binary-selector.php:755
 msgctxt "Search Leader Groups Label"
 msgid "Search Leader Groups"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-course-edit.php:61
-#, php-format
-msgctxt "LearnDash Course Users"
-msgid "LearnDash %s Users"
-msgstr ""
-
-#: includes/admin/class-learndash-admin-course-edit.php:83
+#: includes/admin/class-learndash-admin-course-edit.php:66
 #, php-format
 msgctxt "LearnDash Course Group"
 msgid "LearnDash %s Group"
+msgstr ""
+
+#: includes/admin/class-learndash-admin-course-edit.php:129
+#, php-format
+msgctxt "placeholder: Course"
+msgid ""
+"With this setting students enrolling in this %s will automatically be added "
+"to the following Group(s)."
+msgstr ""
+
+#: includes/admin/class-learndash-admin-course-edit.php:133
+#, php-format
+msgctxt "%s Users Groups"
+msgid "%s Users Groups"
 msgstr ""
 
 #: includes/admin/class-learndash-admin-groups-edit.php:67
@@ -207,9 +191,9 @@ msgstr ""
 
 #: includes/admin/class-learndash-admin-groups-edit.php:123
 #: includes/admin/class-learndash-admin-groups-edit.php:134
-#: includes/class-ld-lms.php:2476 includes/class-ld-lms.php:2581
-#: includes/class-ld-lms.php:2778 includes/class-ld-lms.php:2874
-#: includes/class-ld-lms.php:2961 includes/ld-users.php:57
+#: includes/class-ld-lms.php:2557 includes/class-ld-lms.php:2662
+#: includes/class-ld-lms.php:2859 includes/class-ld-lms.php:2955
+#: includes/class-ld-lms.php:3042 includes/ld-users.php:57
 #: includes/ld-users.php:68
 #, php-format
 msgctxt "Select a Course Label"
@@ -283,7 +267,7 @@ msgstr ""
 #: includes/admin/class-learndash-admin-groups-users-list-table.php:149
 #: includes/quiz/ld-quiz-essays.php:821 includes/quiz/ld-quiz-essays.php:834
 #: includes/quiz/ld-quiz-essays.php:847
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:507
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:440
 #: templates/course_info_shortcode.php:330
 msgid "edit"
 msgstr ""
@@ -436,7 +420,7 @@ msgctxt "Submitted Essays Menu Label"
 msgid "Submitted Essays"
 msgstr ""
 
-#. #-#-#-#-#  sfwd-lms.pot (LearnDash LMS 2.4.6)  #-#-#-#-#
+#. #-#-#-#-#  sfwd-lms.pot (LearnDash LMS 2.4.3)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: includes/admin/class-learndash-admin-menus-tabs.php:335
 #: includes/admin/class-learndash-admin-menus-tabs.php:336
@@ -465,7 +449,7 @@ msgid "Import/Export"
 msgstr ""
 
 #: includes/admin/class-learndash-admin-menus-tabs.php:520
-#: includes/class-ld-lms.php:644
+#: includes/class-ld-lms.php:636
 #, php-format
 msgctxt "Edit Quiz Label"
 msgid "Edit %s"
@@ -512,13 +496,13 @@ msgctxt "Learndash Report Menu Label"
 msgid "Reports"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-data-reports.php:146
-#: includes/admin/class-learndash-admin-settings-data-reports.php:152
+#: includes/admin/class-learndash-admin-settings-data-reports.php:145
+#: includes/admin/class-learndash-admin-settings-data-reports.php:151
 #: includes/admin/ld-admin.php:160
 msgid "User Reports"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-data-reports.php:151
+#: includes/admin/class-learndash-admin-settings-data-reports.php:150
 #: includes/admin/class-learndash-admin-settings-data-upgrades.php:209
 msgid "Click to toggle"
 msgstr ""
@@ -555,74 +539,74 @@ msgstr ""
 msgid "Last run: none"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:13
+#: includes/admin/class-learndash-admin-settings-support-panel.php:11
 msgctxt "Support Tab Label"
 msgid "Support"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:96
+#: includes/admin/class-learndash-admin-settings-support-panel.php:79
 msgid "Support"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:97
+#: includes/admin/class-learndash-admin-settings-support-panel.php:80
 msgid "LearnDash Support"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:104
+#: includes/admin/class-learndash-admin-settings-support-panel.php:87
 msgid "Server"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:108
-#: includes/admin/class-learndash-admin-settings-support-panel.php:151
-#: includes/admin/class-learndash-admin-settings-support-panel.php:194
-#: includes/admin/class-learndash-admin-settings-support-panel.php:328
+#: includes/admin/class-learndash-admin-settings-support-panel.php:91
+#: includes/admin/class-learndash-admin-settings-support-panel.php:134
+#: includes/admin/class-learndash-admin-settings-support-panel.php:177
+#: includes/admin/class-learndash-admin-settings-support-panel.php:310
 msgid "Setting"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:109
-#: includes/admin/class-learndash-admin-settings-support-panel.php:152
-#: includes/admin/class-learndash-admin-settings-support-panel.php:195
-#: includes/admin/class-learndash-admin-settings-support-panel.php:329
+#: includes/admin/class-learndash-admin-settings-support-panel.php:92
+#: includes/admin/class-learndash-admin-settings-support-panel.php:135
+#: includes/admin/class-learndash-admin-settings-support-panel.php:178
+#: includes/admin/class-learndash-admin-settings-support-panel.php:311
 msgid "Value"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:113
+#: includes/admin/class-learndash-admin-settings-support-panel.php:96
 msgid "PHP Version"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:121
+#: includes/admin/class-learndash-admin-settings-support-panel.php:104
 msgid " PHP_OS: "
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:122
+#: includes/admin/class-learndash-admin-settings-support-panel.php:105
 msgid " PHP_OS_FAMILY: "
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:125
-#: includes/admin/class-learndash-admin-settings-support-panel.php:139
+#: includes/admin/class-learndash-admin-settings-support-panel.php:108
+#: includes/admin/class-learndash-admin-settings-support-panel.php:122
 msgid "WordPress Minimum Requirements"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:129
+#: includes/admin/class-learndash-admin-settings-support-panel.php:112
 msgid "MySQL version"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:147
+#: includes/admin/class-learndash-admin-settings-support-panel.php:130
 msgid "WordPress Settings"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:156
+#: includes/admin/class-learndash-admin-settings-support-panel.php:139
 msgid "WordPress Version"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:158
+#: includes/admin/class-learndash-admin-settings-support-panel.php:141
 msgid "Is Multisite"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:159
-#: includes/admin/class-learndash-admin-settings-support-panel.php:185
-#: includes/admin/class-learndash-admin-settings-support-panel.php:310
-#: includes/admin/class-learndash-admin-settings-support-panel.php:344
+#: includes/admin/class-learndash-admin-settings-support-panel.php:142
+#: includes/admin/class-learndash-admin-settings-support-panel.php:168
+#: includes/admin/class-learndash-admin-settings-support-panel.php:292
+#: includes/admin/class-learndash-admin-settings-support-panel.php:326
 #: includes/quiz/ld-quiz-info-shortcode.php:98
 #: includes/settings/settings-sections/class-ld-settings-section-general-admin-user.php:54
 #: includes/settings/settings-sections/class-ld-settings-section-general-admin-user.php:64
@@ -643,182 +627,154 @@ msgstr ""
 #: includes/settings/shortcodes-sections/ld_topic_list.php:83
 #: includes/settings/shortcodes-sections/ld_topic_list.php:139
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_FrontQuiz.php:608
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:670
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:603
 msgid "Yes"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:159
-#: includes/admin/class-learndash-admin-settings-support-panel.php:185
-#: includes/admin/class-learndash-admin-settings-support-panel.php:312
-#: includes/admin/class-learndash-admin-settings-support-panel.php:342
+#: includes/admin/class-learndash-admin-settings-support-panel.php:142
+#: includes/admin/class-learndash-admin-settings-support-panel.php:168
+#: includes/admin/class-learndash-admin-settings-support-panel.php:294
+#: includes/admin/class-learndash-admin-settings-support-panel.php:324
 #: includes/quiz/ld-quiz-info-shortcode.php:98
 #: includes/settings/shortcodes-sections/ld_profile.php:54
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_FrontQuiz.php:613
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:670
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:603
 msgid "No"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:160
+#: includes/admin/class-learndash-admin-settings-support-panel.php:143
 msgid "Site Language"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:162
+#: includes/admin/class-learndash-admin-settings-support-panel.php:145
 msgid "DISABLE_WP_CRON"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:163
-#: includes/admin/class-learndash-admin-settings-support-panel.php:165
-#: includes/admin/class-learndash-admin-settings-support-panel.php:167
-#: includes/admin/class-learndash-admin-settings-support-panel.php:169
-#: includes/admin/class-learndash-admin-settings-support-panel.php:171
-#: includes/admin/class-learndash-admin-settings-support-panel.php:173
-#: includes/admin/class-learndash-admin-settings-support-panel.php:175
-#: includes/admin/class-learndash-admin-settings-support-panel.php:177
-#: includes/admin/class-learndash-admin-settings-support-panel.php:179
-#: includes/admin/class-learndash-admin-settings-support-panel.php:181
-#: includes/admin/class-learndash-admin-settings-support-panel.php:183
-#: includes/admin/class-learndash-admin-settings-support-panel.php:204
+#: includes/admin/class-learndash-admin-settings-support-panel.php:146
+#: includes/admin/class-learndash-admin-settings-support-panel.php:148
+#: includes/admin/class-learndash-admin-settings-support-panel.php:150
+#: includes/admin/class-learndash-admin-settings-support-panel.php:152
+#: includes/admin/class-learndash-admin-settings-support-panel.php:154
+#: includes/admin/class-learndash-admin-settings-support-panel.php:156
+#: includes/admin/class-learndash-admin-settings-support-panel.php:158
+#: includes/admin/class-learndash-admin-settings-support-panel.php:160
+#: includes/admin/class-learndash-admin-settings-support-panel.php:162
+#: includes/admin/class-learndash-admin-settings-support-panel.php:164
+#: includes/admin/class-learndash-admin-settings-support-panel.php:166
+#: includes/admin/class-learndash-admin-settings-support-panel.php:187
 msgid "not defined"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:164
+#: includes/admin/class-learndash-admin-settings-support-panel.php:147
 msgid "WP_DEBUG"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:166
-#: includes/admin/class-learndash-admin-settings-support-panel.php:170
+#: includes/admin/class-learndash-admin-settings-support-panel.php:149
+#: includes/admin/class-learndash-admin-settings-support-panel.php:153
 msgid "WP_DEBUG_DISPLAY"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:168
+#: includes/admin/class-learndash-admin-settings-support-panel.php:151
 msgid "SCRIPT_DEBUG"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:172
+#: includes/admin/class-learndash-admin-settings-support-panel.php:155
 msgid "WP_DEBUG_LOG"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:174
+#: includes/admin/class-learndash-admin-settings-support-panel.php:157
 msgid "WP_AUTO_UPDATE_CORE"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:176
+#: includes/admin/class-learndash-admin-settings-support-panel.php:159
 msgid "WP_MAX_MEMORY_LIMIT"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:178
+#: includes/admin/class-learndash-admin-settings-support-panel.php:161
 msgid "WP_MEMORY_LIMIT"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:180
+#: includes/admin/class-learndash-admin-settings-support-panel.php:163
 msgid "DB_CHARSET"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:182
+#: includes/admin/class-learndash-admin-settings-support-panel.php:165
 msgid "DB_COLLATE"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:184
+#: includes/admin/class-learndash-admin-settings-support-panel.php:167
 msgid "Object Cache"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:190
+#: includes/admin/class-learndash-admin-settings-support-panel.php:173
 msgid "Learndash settings"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:199
-#: includes/admin/class-learndash-admin-settings-support-panel.php:347
+#: includes/admin/class-learndash-admin-settings-support-panel.php:182
+#: includes/admin/class-learndash-admin-settings-support-panel.php:329
 msgid "Version"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:201
+#: includes/admin/class-learndash-admin-settings-support-panel.php:184
 msgid "DB Version"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:203
+#: includes/admin/class-learndash-admin-settings-support-panel.php:186
 msgid "Script Debug"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:205
+#: includes/admin/class-learndash-admin-settings-support-panel.php:188
 msgid "Translation Files"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:235
+#: includes/admin/class-learndash-admin-settings-support-panel.php:217
 msgid "Learndash Templates"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:237
+#: includes/admin/class-learndash-admin-settings-support-panel.php:219
 msgid ""
 "The following is the search order paths for override templates, relative to "
 "site root:"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:267
+#: includes/admin/class-learndash-admin-settings-support-panel.php:249
 msgid "Template Name"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:268
+#: includes/admin/class-learndash-admin-settings-support-panel.php:250
 msgid "Template Path"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:297
+#: includes/admin/class-learndash-admin-settings-support-panel.php:279
 msgid "Database Tables"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:301
+#: includes/admin/class-learndash-admin-settings-support-panel.php:283
 msgid "Table Name"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:302
+#: includes/admin/class-learndash-admin-settings-support-panel.php:284
 msgid "Present"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:324
+#: includes/admin/class-learndash-admin-settings-support-panel.php:306
 msgid "PHP Settings"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:338
+#: includes/admin/class-learndash-admin-settings-support-panel.php:320
 msgid "cURL - Used for PayPal IPN Processing"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:348
+#: includes/admin/class-learndash-admin-settings-support-panel.php:330
 msgid "SSL Version"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:349
+#: includes/admin/class-learndash-admin-settings-support-panel.php:331
 msgid "Libz Version"
 msgstr ""
 
-#: includes/admin/class-learndash-admin-settings-support-panel.php:350
+#: includes/admin/class-learndash-admin-settings-support-panel.php:332
 msgid "Protocols"
-msgstr ""
-
-#: includes/admin/class-learndash-admin-settings-support-panel.php:359
-msgid "Reset LearnDash"
-msgstr ""
-
-#: includes/admin/class-learndash-admin-settings-support-panel.php:361
-msgid "This option will remove ALL LearnDash data."
-msgstr ""
-
-#: includes/admin/class-learndash-admin-settings-support-panel.php:364
-#, php-format
-msgctxt "placeholder: DELETE ALL DATA"
-msgid ""
-"Confirm the data deletion. Enter \"<strong>%s</strong>\" into the field "
-"below and click the submit button"
-msgstr ""
-
-#: includes/admin/class-learndash-admin-settings-support-panel.php:366
-msgid "Submit"
-msgstr ""
-
-#: includes/admin/class-learndash-admin-settings-support-panel.php:370
-msgid "Are you sure that you want to remove ALL LearnDash data?"
-msgstr ""
-
-#: includes/admin/class-learndash-admin-settings-support-panel.php:377
-msgid "All LearnDash successfully remove from site."
 msgstr ""
 
 #: includes/admin/class-learndash-admin-user-profile-edit.php:166
@@ -838,27 +794,27 @@ msgctxt "Export User Course Data Label"
 msgid "Export User %s Data"
 msgstr ""
 
-#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-courses.php:278
-#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-quizzes.php:254
+#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-courses.php:275
+#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-quizzes.php:240
 #: includes/admin/classes-data-uprades-actions/class-learndash-admin-data-upgrades-user-meta-courses.php:94
 #: includes/admin/classes-data-uprades-actions/class-learndash-admin-data-upgrades-user-meta-quizzes.php:95
 #, php-format
 msgid "%d of %s Users"
 msgstr ""
 
-#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-courses.php:360
-#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-quizzes.php:370
+#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-courses.php:357
+#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-quizzes.php:356
 msgid ""
 "ERROR: Cannot create working folder. Check that the parent folder is writable"
 msgstr ""
 
-#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-courses.php:458
+#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-courses.php:455
 msgctxt "Course Complete Report label: NO"
 msgid "NO"
 msgstr ""
 
+#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-courses.php:459
 #: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-courses.php:462
-#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-courses.php:465
 msgctxt "Course Complete Report label: YES"
 msgid "YES"
 msgstr ""
@@ -869,12 +825,12 @@ msgctxt "Export User Quiz Data Label"
 msgid "Export User %s Data"
 msgstr ""
 
-#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-quizzes.php:344
+#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-quizzes.php:330
 msgctxt "Quiz Passed Report label: NO"
 msgid "NO"
 msgstr ""
 
-#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-quizzes.php:522
+#: includes/admin/classes-data-reports-actions/class-learndash-admin-data-reports-user-quizzes.php:508
 msgctxt "Quiz Passed Report label: YES"
 msgid "YES"
 msgstr ""
@@ -911,7 +867,7 @@ msgid ""
 "table for better reporting. (Required)"
 msgstr ""
 
-#: includes/admin/ld-admin.php:144 includes/class-ld-lms.php:625
+#: includes/admin/ld-admin.php:144 includes/class-ld-lms.php:617
 #, php-format
 msgctxt "Edit Topic Label"
 msgid "Edit %s"
@@ -942,7 +898,7 @@ msgid "Assigned %s"
 msgstr ""
 
 #: includes/admin/ld-admin.php:287 includes/quiz/ld-quiz-essays.php:280
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:500
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:433
 #: templates/course.php:108 templates/course.php:215
 #: templates/course_content_shortcode.php:53
 #: templates/course_content_shortcode.php:116
@@ -966,8 +922,8 @@ msgstr ""
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:105
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:240
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:30
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:109
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:707
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:104
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:640
 #: templates/course_info_shortcode.php:327
 msgid "Points"
 msgstr ""
@@ -1005,7 +961,7 @@ msgctxt "Show All Courses Option Label"
 msgid "Show All %s"
 msgstr ""
 
-#: includes/admin/ld-admin.php:579 includes/class-ld-semper-fi-module.php:1096
+#: includes/admin/ld-admin.php:579 includes/class-ld-semper-fi-module.php:1093
 msgid "loading"
 msgstr ""
 
@@ -1068,8 +1024,8 @@ msgstr ""
 msgid " Options"
 msgstr ""
 
-#: includes/class-ld-cpt-instance.php:82 includes/class-ld-lms.php:1388
-#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:78
+#: includes/class-ld-cpt-instance.php:82 includes/class-ld-lms.php:1391
+#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:70
 msgid "Sort By"
 msgstr ""
 
@@ -1078,21 +1034,21 @@ msgid "select"
 msgstr ""
 
 #: includes/class-ld-cpt-instance.php:85 includes/class-ld-cpt-instance.php:97
-#: includes/class-ld-lms.php:1390 includes/class-ld-lms.php:1401
+#: includes/class-ld-lms.php:1393 includes/class-ld-lms.php:1404
 msgid "Select a choice..."
 msgstr ""
 
-#: includes/class-ld-cpt-instance.php:86 includes/class-ld-lms.php:983
-#: includes/class-ld-lms.php:1391
-#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:82
+#: includes/class-ld-cpt-instance.php:86 includes/class-ld-lms.php:958
+#: includes/class-ld-lms.php:1394
+#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:74
 #: includes/settings/shortcodes-sections/courseinfo.php:28
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_QuestionEdit.php:40
 msgid "Title"
 msgstr ""
 
-#: includes/class-ld-cpt-instance.php:87 includes/class-ld-lms.php:984
-#: includes/class-ld-lms.php:1392
-#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:83
+#: includes/class-ld-cpt-instance.php:87 includes/class-ld-lms.php:959
+#: includes/class-ld-lms.php:1395
+#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:75
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:1430
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:323
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:27
@@ -1100,58 +1056,58 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: includes/class-ld-cpt-instance.php:88 includes/class-ld-lms.php:985
-#: includes/class-ld-lms.php:1393
-#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:84
+#: includes/class-ld-cpt-instance.php:88 includes/class-ld-lms.php:960
+#: includes/class-ld-lms.php:1396
+#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:76
 msgid "Menu Order"
 msgstr ""
 
 #: includes/class-ld-cpt-instance.php:91
-#: includes/class-ld-cpt-instance.php:102 includes/class-ld-lms.php:1396
-#: includes/class-ld-lms.php:1406
-#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:79
+#: includes/class-ld-cpt-instance.php:102 includes/class-ld-lms.php:1399
+#: includes/class-ld-lms.php:1409
+#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:71
 msgid "Choose the sort order."
 msgstr ""
 
-#: includes/class-ld-cpt-instance.php:94 includes/class-ld-lms.php:1399
-#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:90
+#: includes/class-ld-cpt-instance.php:94 includes/class-ld-lms.php:1402
+#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:82
 msgid "Sort Direction"
 msgstr ""
 
-#: includes/class-ld-cpt-instance.php:98 includes/class-ld-lms.php:996
-#: includes/class-ld-lms.php:1402
-#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:94
+#: includes/class-ld-cpt-instance.php:98 includes/class-ld-lms.php:970
+#: includes/class-ld-lms.php:1405
+#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:86
 msgid "Ascending"
 msgstr ""
 
-#: includes/class-ld-cpt-instance.php:99 includes/class-ld-lms.php:997
-#: includes/class-ld-lms.php:1403
-#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:95
+#: includes/class-ld-cpt-instance.php:99 includes/class-ld-lms.php:971
+#: includes/class-ld-lms.php:1406
+#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:87
 msgid "Descending"
 msgstr ""
 
 #: includes/class-ld-cpt-instance.php:105
-#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:101
+#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:93
 msgid "Posts Per Page"
 msgstr ""
 
 #: includes/class-ld-cpt-instance.php:107
-#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:102
+#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:94
 msgid "Enter the number of posts to display per page."
 msgstr ""
 
-#: includes/class-ld-cpt-instance.php:754
-#: includes/course/ld-course-functions.php:701
-#: includes/course/ld-course-list-shortcode.php:1027
-#: includes/course/ld-course-progress.php:1244
-#: includes/course/ld-course-progress.php:1285
-#: includes/course/ld-course-progress.php:1804
-#: includes/ld-certificates.php:142 sfwd-lms.php:279
+#: includes/class-ld-cpt-instance.php:756
+#: includes/course/ld-course-functions.php:697
+#: includes/course/ld-course-list-shortcode.php:1015
+#: includes/course/ld-course-progress.php:1237
+#: includes/course/ld-course-progress.php:1278
+#: includes/course/ld-course-progress.php:1797
+#: includes/ld-certificates.php:142 sfwd-lms.php:257
 #: templates/course_info_shortcode.php:150
 msgid "Completed"
 msgstr ""
 
-#: includes/class-ld-cpt-instance.php:852
+#: includes/class-ld-cpt-instance.php:854
 msgid "Access to certificate page is disallowed."
 msgstr ""
 
@@ -1164,9 +1120,9 @@ msgstr ""
 #: includes/class-ld-cpt-widget.php:161 includes/class-ld-cpt-widget.php:291
 #: includes/class-ld-cpt-widget.php:421 includes/class-ld-cpt-widget.php:551
 #: includes/class-ld-cpt-widget.php:682
-#: includes/course/ld-course-info-widget.php:114
-#: includes/course/ld-course-info-widget.php:228
-#: includes/course/ld-course-progress.php:1729
+#: includes/course/ld-course-info-widget.php:111
+#: includes/course/ld-course-info-widget.php:225
+#: includes/course/ld-course-progress.php:1722
 msgid "Title:"
 msgstr ""
 
@@ -1285,594 +1241,594 @@ msgstr ""
 msgid "Click Here to Continue"
 msgstr ""
 
-#: includes/class-ld-lms.php:623
+#: includes/class-ld-lms.php:615
 msgctxt "Add New Topic Label"
 msgid "Add New"
 msgstr ""
 
-#: includes/class-ld-lms.php:624
+#: includes/class-ld-lms.php:616
 #, php-format
 msgctxt "Add New Topic Label"
 msgid "Add New %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:626
+#: includes/class-ld-lms.php:618
 #, php-format
 msgctxt "New Topic Label"
 msgid "New %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:628
+#: includes/class-ld-lms.php:620
 #, php-format
 msgctxt "View Topic Label"
 msgid "View %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:629
+#: includes/class-ld-lms.php:621
 #, php-format
 msgctxt "Search Topic Label"
 msgid "Search %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:630
+#: includes/class-ld-lms.php:622
 #, php-format
 msgctxt "No Topic found Label"
 msgid "No %s found"
 msgstr ""
 
-#: includes/class-ld-lms.php:631
+#: includes/class-ld-lms.php:623
 #, php-format
 msgctxt "No Topic found in Trash"
 msgid "No %s found in Trash"
 msgstr ""
 
-#: includes/class-ld-lms.php:642
+#: includes/class-ld-lms.php:634
 msgctxt "Add New Quiz Label"
 msgid "Add New"
 msgstr ""
 
-#: includes/class-ld-lms.php:643
+#: includes/class-ld-lms.php:635
 #, php-format
 msgctxt "Add New Quiz Label"
 msgid "Add New %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:645
+#: includes/class-ld-lms.php:637
 #, php-format
 msgctxt "New Quiz Label"
 msgid "New %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:647
+#: includes/class-ld-lms.php:639
 #, php-format
 msgctxt "View Quiz Label"
 msgid "View %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:648
+#: includes/class-ld-lms.php:640
 #, php-format
 msgctxt "Search Quiz Label"
 msgid "Search %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:649
+#: includes/class-ld-lms.php:641
 #, php-format
 msgctxt "No Quiz found Label"
 msgid "No %s found"
 msgstr ""
 
-#: includes/class-ld-lms.php:650
+#: includes/class-ld-lms.php:642
 #, php-format
 msgctxt "No Quiz found in Trash Label"
 msgid "No %s found in Trash"
 msgstr ""
 
-#: includes/class-ld-lms.php:660
+#: includes/class-ld-lms.php:652
 msgctxt "Add New Lesson Label"
 msgid "Add New"
 msgstr ""
 
-#: includes/class-ld-lms.php:661
+#: includes/class-ld-lms.php:653
 #, php-format
 msgctxt "Add New Lesson Label"
 msgid "Add New %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:662
+#: includes/class-ld-lms.php:654
 #, php-format
 msgctxt "Edit Lesson Label"
 msgid "Edit %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:663
+#: includes/class-ld-lms.php:655
 #, php-format
 msgctxt "New Lesson Label"
 msgid "New %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:665
+#: includes/class-ld-lms.php:657
 #, php-format
 msgctxt "View Lesson Label"
 msgid "View %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:666
+#: includes/class-ld-lms.php:658
 #, php-format
 msgctxt "Search Lesson Label"
 msgid "Search %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:667
+#: includes/class-ld-lms.php:659
 #, php-format
 msgctxt "No Lesson found Label"
 msgid "No %s found"
 msgstr ""
 
-#: includes/class-ld-lms.php:668
+#: includes/class-ld-lms.php:660
 #, php-format
 msgctxt "No Lesson found in Trash Label"
 msgid "No %s found in Trash"
 msgstr ""
 
-#: includes/class-ld-lms.php:678
+#: includes/class-ld-lms.php:670
 msgctxt "Add New Course Label"
 msgid "Add New"
 msgstr ""
 
-#: includes/class-ld-lms.php:679
+#: includes/class-ld-lms.php:671
 #, php-format
 msgctxt "Add New Course Label"
 msgid "Add New %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:680
+#: includes/class-ld-lms.php:672
 #, php-format
 msgctxt "Edit Course Label"
 msgid "Edit %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:681
+#: includes/class-ld-lms.php:673
 #, php-format
 msgctxt "New Course Label"
 msgid "New %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:683
+#: includes/class-ld-lms.php:675
 #, php-format
 msgctxt "View Course Label"
 msgid "View %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:684
+#: includes/class-ld-lms.php:676
 #, php-format
 msgctxt "Search Courses Label"
 msgid "Search %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:685
+#: includes/class-ld-lms.php:677
 #, php-format
 msgctxt "No Courses found Label"
 msgid "No %s found"
 msgstr ""
 
-#: includes/class-ld-lms.php:686
+#: includes/class-ld-lms.php:678
 #, php-format
 msgctxt "No Courses found in Trash Label"
 msgid "No %s found in Trash"
 msgstr ""
 
-#: includes/class-ld-lms.php:721 includes/class-ld-lms.php:731
+#: includes/class-ld-lms.php:713 includes/class-ld-lms.php:723
 #, php-format
 msgctxt "placeholder: Course"
 msgid "%s Categories"
+msgstr ""
+
+#: includes/class-ld-lms.php:714
+#, php-format
+msgctxt "placeholder: Course"
+msgid "%s Category"
+msgstr ""
+
+#: includes/class-ld-lms.php:715
+#, php-format
+msgctxt "placeholder: Course"
+msgid "Search %s Categories"
+msgstr ""
+
+#: includes/class-ld-lms.php:716
+#, php-format
+msgctxt "placeholder: Course"
+msgid "All %s Categories"
+msgstr ""
+
+#: includes/class-ld-lms.php:717
+#, php-format
+msgctxt "placeholder: Course"
+msgid "Parent %s Category"
+msgstr ""
+
+#: includes/class-ld-lms.php:718
+#, php-format
+msgctxt "placeholder: Course"
+msgid "Parent %s Category:"
+msgstr ""
+
+#: includes/class-ld-lms.php:719
+#, php-format
+msgctxt "placeholder: Course"
+msgid "Edit %s Category"
+msgstr ""
+
+#: includes/class-ld-lms.php:720
+#, php-format
+msgctxt "placeholder: Course"
+msgid "Update %s Category"
+msgstr ""
+
+#: includes/class-ld-lms.php:721
+#, php-format
+msgctxt "placeholder: Course"
+msgid "Add New %s Category"
 msgstr ""
 
 #: includes/class-ld-lms.php:722
 #, php-format
 msgctxt "placeholder: Course"
-msgid "%s Category"
-msgstr ""
-
-#: includes/class-ld-lms.php:723
-#, php-format
-msgctxt "placeholder: Course"
-msgid "Search %s Categories"
-msgstr ""
-
-#: includes/class-ld-lms.php:724
-#, php-format
-msgctxt "placeholder: Course"
-msgid "All %s Categories"
-msgstr ""
-
-#: includes/class-ld-lms.php:725
-#, php-format
-msgctxt "placeholder: Course"
-msgid "Parent %s Category"
-msgstr ""
-
-#: includes/class-ld-lms.php:726
-#, php-format
-msgctxt "placeholder: Course"
-msgid "Parent %s Category:"
-msgstr ""
-
-#: includes/class-ld-lms.php:727
-#, php-format
-msgctxt "placeholder: Course"
-msgid "Edit %s Category"
-msgstr ""
-
-#: includes/class-ld-lms.php:728
-#, php-format
-msgctxt "placeholder: Course"
-msgid "Update %s Category"
-msgstr ""
-
-#: includes/class-ld-lms.php:729
-#, php-format
-msgctxt "placeholder: Course"
-msgid "Add New %s Category"
-msgstr ""
-
-#: includes/class-ld-lms.php:730
-#, php-format
-msgctxt "placeholder: Course"
 msgid "New %s Category Name"
 msgstr ""
 
-#: includes/class-ld-lms.php:746 includes/class-ld-lms.php:756
+#: includes/class-ld-lms.php:738 includes/class-ld-lms.php:748
 #, php-format
 msgctxt "placeholder: Course"
 msgid "%s Tags"
+msgstr ""
+
+#: includes/class-ld-lms.php:739
+#, php-format
+msgctxt "placeholder: Course"
+msgid "%s Tag"
+msgstr ""
+
+#: includes/class-ld-lms.php:740
+#, php-format
+msgctxt "placeholder: Course"
+msgid "Search %s Tag"
+msgstr ""
+
+#: includes/class-ld-lms.php:741
+#, php-format
+msgctxt "placeholder: Course"
+msgid "All %s Tags"
+msgstr ""
+
+#: includes/class-ld-lms.php:742
+#, php-format
+msgctxt "placeholder: Course"
+msgid "Parent %s Tag"
+msgstr ""
+
+#: includes/class-ld-lms.php:743
+#, php-format
+msgctxt "placeholder: Course"
+msgid "Parent %s Tag:"
+msgstr ""
+
+#: includes/class-ld-lms.php:744
+#, php-format
+msgctxt "placeholder: Course"
+msgid "Edit %s Tag"
+msgstr ""
+
+#: includes/class-ld-lms.php:745
+#, php-format
+msgctxt "placeholder: Course"
+msgid "Update %s Tag"
+msgstr ""
+
+#: includes/class-ld-lms.php:746
+#, php-format
+msgctxt "placeholder: Course"
+msgid "Add New %s Tag"
 msgstr ""
 
 #: includes/class-ld-lms.php:747
 #, php-format
 msgctxt "placeholder: Course"
-msgid "%s Tag"
-msgstr ""
-
-#: includes/class-ld-lms.php:748
-#, php-format
-msgctxt "placeholder: Course"
-msgid "Search %s Tag"
-msgstr ""
-
-#: includes/class-ld-lms.php:749
-#, php-format
-msgctxt "placeholder: Course"
-msgid "All %s Tags"
-msgstr ""
-
-#: includes/class-ld-lms.php:750
-#, php-format
-msgctxt "placeholder: Course"
-msgid "Parent %s Tag"
-msgstr ""
-
-#: includes/class-ld-lms.php:751
-#, php-format
-msgctxt "placeholder: Course"
-msgid "Parent %s Tag:"
-msgstr ""
-
-#: includes/class-ld-lms.php:752
-#, php-format
-msgctxt "placeholder: Course"
-msgid "Edit %s Tag"
-msgstr ""
-
-#: includes/class-ld-lms.php:753
-#, php-format
-msgctxt "placeholder: Course"
-msgid "Update %s Tag"
-msgstr ""
-
-#: includes/class-ld-lms.php:754
-#, php-format
-msgctxt "placeholder: Course"
-msgid "Add New %s Tag"
-msgstr ""
-
-#: includes/class-ld-lms.php:755
-#, php-format
-msgctxt "placeholder: Course"
 msgid "New %s Tag Name"
 msgstr ""
 
-#: includes/class-ld-lms.php:788 includes/class-ld-lms.php:798
+#: includes/class-ld-lms.php:780 includes/class-ld-lms.php:790
 #, php-format
 msgctxt "placeholder: Lesson"
 msgid "%s Categories"
+msgstr ""
+
+#: includes/class-ld-lms.php:781
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "%s Category"
+msgstr ""
+
+#: includes/class-ld-lms.php:782
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "Search %s Categories"
+msgstr ""
+
+#: includes/class-ld-lms.php:783
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "All %s Categories"
+msgstr ""
+
+#: includes/class-ld-lms.php:784
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "Parent %s Category"
+msgstr ""
+
+#: includes/class-ld-lms.php:785
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "Parent %s Category:"
+msgstr ""
+
+#: includes/class-ld-lms.php:786
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "Edit %s Category"
+msgstr ""
+
+#: includes/class-ld-lms.php:787
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "Update %s Category"
+msgstr ""
+
+#: includes/class-ld-lms.php:788
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "Add New %s Category"
 msgstr ""
 
 #: includes/class-ld-lms.php:789
 #, php-format
 msgctxt "placeholder: Lesson"
-msgid "%s Category"
-msgstr ""
-
-#: includes/class-ld-lms.php:790
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "Search %s Categories"
-msgstr ""
-
-#: includes/class-ld-lms.php:791
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "All %s Categories"
-msgstr ""
-
-#: includes/class-ld-lms.php:792
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "Parent %s Category"
-msgstr ""
-
-#: includes/class-ld-lms.php:793
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "Parent %s Category:"
-msgstr ""
-
-#: includes/class-ld-lms.php:794
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "Edit %s Category"
-msgstr ""
-
-#: includes/class-ld-lms.php:795
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "Update %s Category"
-msgstr ""
-
-#: includes/class-ld-lms.php:796
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "Add New %s Category"
-msgstr ""
-
-#: includes/class-ld-lms.php:797
-#, php-format
-msgctxt "placeholder: Lesson"
 msgid "New %s Category Name"
 msgstr ""
 
-#: includes/class-ld-lms.php:813 includes/class-ld-lms.php:823
+#: includes/class-ld-lms.php:805 includes/class-ld-lms.php:815
 #, php-format
 msgctxt "placeholder: Lesson"
 msgid "%s Tags"
+msgstr ""
+
+#: includes/class-ld-lms.php:806
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "%s Tag"
+msgstr ""
+
+#: includes/class-ld-lms.php:807
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "Search %s Tag"
+msgstr ""
+
+#: includes/class-ld-lms.php:808
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "All %s Tags"
+msgstr ""
+
+#: includes/class-ld-lms.php:809
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "Parent %s Tag"
+msgstr ""
+
+#: includes/class-ld-lms.php:810
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "Parent %s Tag:"
+msgstr ""
+
+#: includes/class-ld-lms.php:811
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "Edit %s Tag"
+msgstr ""
+
+#: includes/class-ld-lms.php:812
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "Update %s Tag"
+msgstr ""
+
+#: includes/class-ld-lms.php:813
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "Add New %s Tag"
 msgstr ""
 
 #: includes/class-ld-lms.php:814
 #, php-format
 msgctxt "placeholder: Lesson"
-msgid "%s Tag"
-msgstr ""
-
-#: includes/class-ld-lms.php:815
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "Search %s Tag"
-msgstr ""
-
-#: includes/class-ld-lms.php:816
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "All %s Tags"
-msgstr ""
-
-#: includes/class-ld-lms.php:817
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "Parent %s Tag"
-msgstr ""
-
-#: includes/class-ld-lms.php:818
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "Parent %s Tag:"
-msgstr ""
-
-#: includes/class-ld-lms.php:819
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "Edit %s Tag"
-msgstr ""
-
-#: includes/class-ld-lms.php:820
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "Update %s Tag"
-msgstr ""
-
-#: includes/class-ld-lms.php:821
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "Add New %s Tag"
-msgstr ""
-
-#: includes/class-ld-lms.php:822
-#, php-format
-msgctxt "placeholder: Lesson"
 msgid "New %s Tag Name"
 msgstr ""
 
-#: includes/class-ld-lms.php:854 includes/class-ld-lms.php:864
+#: includes/class-ld-lms.php:846 includes/class-ld-lms.php:856
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "%s Categories"
 msgstr ""
 
-#: includes/class-ld-lms.php:855
+#: includes/class-ld-lms.php:847
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "%s Category"
 msgstr ""
 
-#: includes/class-ld-lms.php:856
+#: includes/class-ld-lms.php:848
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "Search %s Categories"
 msgstr ""
 
-#: includes/class-ld-lms.php:857
+#: includes/class-ld-lms.php:849
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "All %s Categories"
 msgstr ""
 
-#: includes/class-ld-lms.php:858
+#: includes/class-ld-lms.php:850
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "Parent %s Category"
 msgstr ""
 
-#: includes/class-ld-lms.php:859
+#: includes/class-ld-lms.php:851
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "Parent %s Category:"
 msgstr ""
 
-#: includes/class-ld-lms.php:860
+#: includes/class-ld-lms.php:852
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "Edit %s Category"
 msgstr ""
 
-#: includes/class-ld-lms.php:861
+#: includes/class-ld-lms.php:853
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "Update %s Category"
 msgstr ""
 
-#: includes/class-ld-lms.php:862
+#: includes/class-ld-lms.php:854
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "Add New %s Category"
 msgstr ""
 
-#: includes/class-ld-lms.php:863
+#: includes/class-ld-lms.php:855
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "New %s Category Name"
 msgstr ""
 
-#: includes/class-ld-lms.php:879 includes/class-ld-lms.php:889
+#: includes/class-ld-lms.php:871 includes/class-ld-lms.php:881
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "%s Tags"
 msgstr ""
 
-#: includes/class-ld-lms.php:880
+#: includes/class-ld-lms.php:872
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "%s Tag"
 msgstr ""
 
-#: includes/class-ld-lms.php:881
+#: includes/class-ld-lms.php:873
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "Search %s Tag"
 msgstr ""
 
-#: includes/class-ld-lms.php:882
+#: includes/class-ld-lms.php:874
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "All %s Tags"
 msgstr ""
 
-#: includes/class-ld-lms.php:883
+#: includes/class-ld-lms.php:875
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "Parent %s Tag"
 msgstr ""
 
-#: includes/class-ld-lms.php:884
+#: includes/class-ld-lms.php:876
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "Parent %s Tag:"
 msgstr ""
 
-#: includes/class-ld-lms.php:885
+#: includes/class-ld-lms.php:877
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "Edit %s Tag"
 msgstr ""
 
-#: includes/class-ld-lms.php:886
+#: includes/class-ld-lms.php:878
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "Update %s Tag"
 msgstr ""
 
-#: includes/class-ld-lms.php:887
+#: includes/class-ld-lms.php:879
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "Add New %s Tag"
 msgstr ""
 
-#: includes/class-ld-lms.php:888
+#: includes/class-ld-lms.php:880
 #, php-format
 msgctxt "placeholder: Topic"
 msgid "New %s Tag Name"
 msgstr ""
 
-#: includes/class-ld-lms.php:922 templates/course.php:72
+#: includes/class-ld-lms.php:914 templates/course.php:72
 #, php-format
 msgctxt "Course Materials Label"
 msgid "%s Materials"
 msgstr ""
 
-#: includes/class-ld-lms.php:924
+#: includes/class-ld-lms.php:916
 #, php-format
 msgctxt "Options for course materials"
 msgid "Options for %s materials"
 msgstr ""
 
-#: includes/class-ld-lms.php:934
+#: includes/class-ld-lms.php:919
 #, php-format
 msgctxt "Course Price Type Label"
 msgid "%s Price Type"
 msgstr ""
 
-#: includes/class-ld-lms.php:937
+#: includes/class-ld-lms.php:922
 msgid "Open"
 msgstr ""
 
-#: includes/class-ld-lms.php:938
+#: includes/class-ld-lms.php:923
 msgid "Closed"
 msgstr ""
 
-#: includes/class-ld-lms.php:939
+#: includes/class-ld-lms.php:924
 msgid "Free"
 msgstr ""
 
-#: includes/class-ld-lms.php:940
+#: includes/class-ld-lms.php:925
 msgid "Buy Now"
 msgstr ""
 
-#: includes/class-ld-lms.php:941
+#: includes/class-ld-lms.php:926
 msgid "Recurring"
 msgstr ""
 
-#: includes/class-ld-lms.php:944
+#: includes/class-ld-lms.php:929
 msgid ""
 "Is it open to all, free join, one time purchase, or a recurring subscription?"
 msgstr ""
 
-#: includes/class-ld-lms.php:953
+#: includes/class-ld-lms.php:932
 msgid "Custom Button URL"
 msgstr ""
 
-#: includes/class-ld-lms.php:955
+#: includes/class-ld-lms.php:934
 msgid "Optional"
 msgstr ""
 
-#: includes/class-ld-lms.php:956
+#: includes/class-ld-lms.php:935
 #, php-format
 msgctxt "placeholders: \"Take This Course\" button label"
 msgid ""
@@ -1880,171 +1836,171 @@ msgid ""
 "not display if this field is left empty."
 msgstr ""
 
-#: includes/class-ld-lms.php:960
+#: includes/class-ld-lms.php:938
 #, php-format
 msgctxt "Course Price Label"
 msgid "%s Price"
 msgstr ""
 
-#: includes/class-ld-lms.php:962
+#: includes/class-ld-lms.php:940
 #, php-format
 msgctxt "Enter course price here. Leave empty if the course is free."
 msgid "Enter %s price here. Leave empty if the %s is free."
 msgstr ""
 
-#: includes/class-ld-lms.php:966
+#: includes/class-ld-lms.php:943
 msgid "Billing Cycle"
 msgstr ""
 
-#: includes/class-ld-lms.php:969
+#: includes/class-ld-lms.php:946
 msgid "Billing Cycle for the recurring payments in case of a subscription."
 msgstr ""
 
-#: includes/class-ld-lms.php:973
+#: includes/class-ld-lms.php:949
 #, php-format
 msgctxt "Course Access List Label"
 msgid "%s Access List"
 msgstr ""
 
-#: includes/class-ld-lms.php:975
+#: includes/class-ld-lms.php:951
 msgid ""
 "This field is auto-populated with the UserIDs of those who have access to "
 "this course."
 msgstr ""
 
-#: includes/class-ld-lms.php:979
+#: includes/class-ld-lms.php:954
 #, php-format
 msgctxt "Sort Lesson By Label"
 msgid "Sort %s By"
 msgstr ""
 
-#: includes/class-ld-lms.php:982 includes/class-ld-lms.php:995
+#: includes/class-ld-lms.php:957 includes/class-ld-lms.php:969
 msgid "Use Default"
 msgstr ""
 
-#: includes/class-ld-lms.php:988 includes/class-ld-lms.php:1000
+#: includes/class-ld-lms.php:963 includes/class-ld-lms.php:974
 #, php-format
 msgctxt "Choose the sort order of lessons in this course."
 msgid "Choose the sort order of %s in this %s."
 msgstr ""
 
-#: includes/class-ld-lms.php:992
+#: includes/class-ld-lms.php:966
 #, php-format
 msgctxt "Sort Lesson Direction Label"
 msgid "Sort %s Direction"
 msgstr ""
 
-#: includes/class-ld-lms.php:1024
+#: includes/class-ld-lms.php:997
 #, php-format
 msgctxt "placeholder: Course"
 msgid "Enable %s Prerequisites"
 msgstr ""
 
-#: includes/class-ld-lms.php:1027
+#: includes/class-ld-lms.php:1000
 msgid "Leave this field unchecked if prerequisite not used."
 msgstr ""
 
-#: includes/class-ld-lms.php:1031
+#: includes/class-ld-lms.php:1004
 #, php-format
 msgctxt "Course prerequisites Label"
 msgid "%s Prerequisites"
 msgstr ""
 
-#: includes/class-ld-lms.php:1033
+#: includes/class-ld-lms.php:1006
 #, php-format
 msgctxt "Select one or more course as prerequisites to view this course"
 msgid "Select one or more %s as prerequisites to view this %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:1040
+#: includes/class-ld-lms.php:1012
 #, php-format
 msgctxt "Course Prerequisites Compare Label"
 msgid "%s Prerequisites Compare"
 msgstr ""
 
-#: includes/class-ld-lms.php:1043
+#: includes/class-ld-lms.php:1015
 msgid ""
 "ANY (default) - The student must complete at least one of the prerequisites"
 msgstr ""
 
-#: includes/class-ld-lms.php:1044
+#: includes/class-ld-lms.php:1016
 msgid "ALL - The student must complete all the prerequisites"
 msgstr ""
 
-#: includes/class-ld-lms.php:1047
+#: includes/class-ld-lms.php:1019
 #, php-format
 msgctxt "pleaceholder: Course"
 msgid "Select how to compare the selected prerequisite %s."
 msgstr ""
 
-#: includes/class-ld-lms.php:1051
+#: includes/class-ld-lms.php:1024
 #, php-format
 msgctxt "placeholder: Course"
 msgid "Enable %s Points"
 msgstr ""
 
-#: includes/class-ld-lms.php:1053
+#: includes/class-ld-lms.php:1026
 msgid "Leave this field unchecked if points not used."
 msgstr ""
 
-#: includes/class-ld-lms.php:1057
+#: includes/class-ld-lms.php:1029
 msgid "Course Points"
 msgstr ""
 
-#: includes/class-ld-lms.php:1061
+#: includes/class-ld-lms.php:1033
 #, php-format
 msgctxt "placeholder: course"
 msgid "Enter the number of points a user will receive for this %s."
 msgstr ""
 
-#: includes/class-ld-lms.php:1065
+#: includes/class-ld-lms.php:1036
 msgid "Course Points Access"
 msgstr ""
 
-#: includes/class-ld-lms.php:1069
+#: includes/class-ld-lms.php:1040
 #, php-format
 msgctxt "placeholder: course"
 msgid "Enter the number of points a user must have to access this %s."
 msgstr ""
 
-#: includes/class-ld-lms.php:1073
+#: includes/class-ld-lms.php:1045
 #, php-format
 msgctxt "Disable Lesson Progression Label"
 msgid "Disable %s Progression"
 msgstr ""
 
-#: includes/class-ld-lms.php:1076
+#: includes/class-ld-lms.php:1048
 #, php-format
 msgctxt ""
 "Disable the feature that allows attempting lessons only in allowed order."
 msgid "Disable the feature that allows attempting %s only in allowed order."
 msgstr ""
 
-#: includes/class-ld-lms.php:1080
+#: includes/class-ld-lms.php:1051
 msgid "Expire Access"
 msgstr ""
 
-#: includes/class-ld-lms.php:1082
+#: includes/class-ld-lms.php:1053
 msgid "Leave this field unchecked if access never expires."
 msgstr ""
 
-#: includes/class-ld-lms.php:1086
+#: includes/class-ld-lms.php:1057
 msgid "Expire Access After (days)"
 msgstr ""
 
-#: includes/class-ld-lms.php:1089
+#: includes/class-ld-lms.php:1060
 #, php-format
 msgctxt "Enter the number of days a user has access to this course."
 msgid "Enter the number of days a user has access to this %s."
 msgstr ""
 
-#: includes/class-ld-lms.php:1093
+#: includes/class-ld-lms.php:1063
 #, php-format
 msgctxt "Delete Course and Quiz Data After Expiration Label"
 msgid "Delete %s and %s Data After Expiration"
 msgstr ""
 
-#: includes/class-ld-lms.php:1095
+#: includes/class-ld-lms.php:1065
 #, php-format
 msgctxt ""
 "Select this option if you want the user's course progress to be deleted when "
@@ -2054,55 +2010,54 @@ msgid ""
 "their access expires."
 msgstr ""
 
-#: includes/class-ld-lms.php:1099
+#: includes/class-ld-lms.php:1068
 #, php-format
 msgctxt "Hide Course Content Table Label"
 msgid "Hide %s Content Table"
 msgstr ""
 
-#: includes/class-ld-lms.php:1102
+#: includes/class-ld-lms.php:1071
 #, php-format
 msgctxt "Hide Course Content table when user is not enrolled."
 msgid "Hide %s Content table when user is not enrolled."
 msgstr ""
 
-#: includes/class-ld-lms.php:1107 includes/class-ld-lms.php:1282
+#: includes/class-ld-lms.php:1075 includes/class-ld-lms.php:1292
 msgid "Associated Certificate"
 msgstr ""
 
-#: includes/class-ld-lms.php:1109
+#: includes/class-ld-lms.php:1077
 #, php-format
 msgctxt "Select a certificate to be awarded upon course completion (optional)."
 msgid "Select a certificate to be awarded upon %s completion (optional)."
 msgstr ""
 
-#: includes/class-ld-lms.php:1130
-#: includes/settings/settings-sections-pages/class-ld-settings-page-lessons-options.php:10
+#: includes/class-ld-lms.php:1140
 #, php-format
 msgctxt "Lesson Options Label"
 msgid "%s Options"
 msgstr ""
 
-#: includes/class-ld-lms.php:1133 includes/class-ld-lms.php:1268
-#: includes/class-ld-lms.php:1326
+#: includes/class-ld-lms.php:1143 includes/class-ld-lms.php:1278
+#: includes/class-ld-lms.php:1336
 #, php-format
 msgctxt "Associated Course Label"
 msgid "Associated %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:1136 includes/class-ld-lms.php:1271
+#: includes/class-ld-lms.php:1146 includes/class-ld-lms.php:1281
 #, php-format
 msgctxt "Associate with a course."
 msgid "Associate with a %s."
 msgstr ""
 
-#: includes/class-ld-lms.php:1141
+#: includes/class-ld-lms.php:1151
 #, php-format
 msgctxt "Forced Lesson Timer Label"
 msgid "Forced %s Timer"
 msgstr ""
 
-#: includes/class-ld-lms.php:1143
+#: includes/class-ld-lms.php:1153
 #, php-format
 msgctxt "Minimum time a user has to spend on Lesson page Label"
 msgid ""
@@ -2111,46 +2066,46 @@ msgid ""
 "5m 10s, 1hr 5min 10sec"
 msgstr ""
 
-#: includes/class-ld-lms.php:1147 includes/class-ld-lms.php:1351
+#: includes/class-ld-lms.php:1157 includes/class-ld-lms.php:1358
 #: includes/course/ld-course-progress.php:111
 msgid "Upload Assignment"
 msgstr ""
 
-#: includes/class-ld-lms.php:1149 includes/class-ld-lms.php:1353
+#: includes/class-ld-lms.php:1159 includes/class-ld-lms.php:1360
 msgid "Check this if you want to make it mandatory to upload assignment"
 msgstr ""
 
-#: includes/class-ld-lms.php:1153 includes/class-ld-lms.php:1358
+#: includes/class-ld-lms.php:1163 includes/class-ld-lms.php:1364
 msgid "Auto Approve Assignment"
 msgstr ""
 
-#: includes/class-ld-lms.php:1155 includes/class-ld-lms.php:1360
+#: includes/class-ld-lms.php:1165 includes/class-ld-lms.php:1366
 msgid "Check this if you want to auto-approve the uploaded assignment"
 msgstr ""
 
-#: includes/class-ld-lms.php:1159 includes/class-ld-lms.php:1365
+#: includes/class-ld-lms.php:1169 includes/class-ld-lms.php:1370
 msgid "Award Points for Assignment"
 msgstr ""
 
-#: includes/class-ld-lms.php:1161 includes/class-ld-lms.php:1367
+#: includes/class-ld-lms.php:1171 includes/class-ld-lms.php:1372
 msgid "Allow this assignment to be assigned points when it is approved."
 msgstr ""
 
-#: includes/class-ld-lms.php:1165 includes/class-ld-lms.php:1372
+#: includes/class-ld-lms.php:1175 includes/class-ld-lms.php:1376
 msgid "Set Number of Points for Assignment"
 msgstr ""
 
-#: includes/class-ld-lms.php:1168 includes/class-ld-lms.php:1375
+#: includes/class-ld-lms.php:1178 includes/class-ld-lms.php:1379
 msgid "Assign the max amount of points someone can earn for this assignment."
 msgstr ""
 
-#: includes/class-ld-lms.php:1172
+#: includes/class-ld-lms.php:1182
 #, php-format
 msgctxt "Sample Lesson Label"
 msgid "Sample %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:1174
+#: includes/class-ld-lms.php:1184
 #, php-format
 msgctxt ""
 "Check this if you want this lesson and all its topics to be available for "
@@ -2158,61 +2113,61 @@ msgctxt ""
 msgid "Check this if you want this %s and all its %s to be available for free."
 msgstr ""
 
-#: includes/class-ld-lms.php:1178
+#: includes/class-ld-lms.php:1188
 #, php-format
 msgctxt "Make Lesson Visible X Days After Sign-up"
 msgid "Make %s visible X Days After Sign-up"
 msgstr ""
 
-#: includes/class-ld-lms.php:1182
+#: includes/class-ld-lms.php:1192
 #, php-format
 msgctxt "Make lesson visible ____ days after sign-up"
 msgid "Make %s visible ____ days after sign-up"
 msgstr ""
 
-#: includes/class-ld-lms.php:1186
+#: includes/class-ld-lms.php:1196
 #, php-format
 msgctxt "Make Lesson Visible on Specific Date"
 msgid "Make %s Visible on Specific Date"
 msgstr ""
 
-#: includes/class-ld-lms.php:1189
+#: includes/class-ld-lms.php:1199
 #, php-format
 msgctxt "Set the date that you would like this lesson to become available."
 msgid "Set the date that you would like this %s to become available."
 msgstr ""
 
-#: includes/class-ld-lms.php:1247
+#: includes/class-ld-lms.php:1257
 #, php-format
 msgctxt "Quiz Settings Label"
 msgid "%s Settings"
 msgstr ""
 
-#: includes/class-ld-lms.php:1250
+#: includes/class-ld-lms.php:1260
 msgid "Repeats"
 msgstr ""
 
-#: includes/class-ld-lms.php:1252
+#: includes/class-ld-lms.php:1262
 #, php-format
 msgctxt "Number of repeats allowed for quiz"
 msgid "Number of repeats allowed for %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:1256
+#: includes/class-ld-lms.php:1266
 msgid "Certificate Threshold"
 msgstr ""
 
-#: includes/class-ld-lms.php:1258
+#: includes/class-ld-lms.php:1268
 msgid ""
 "Minimum score required to award a certificate, between 0 and 1 where 1 = "
 "100%."
 msgstr ""
 
-#: includes/class-ld-lms.php:1262
+#: includes/class-ld-lms.php:1272
 msgid "Passing Percentage"
 msgstr ""
 
-#: includes/class-ld-lms.php:1264
+#: includes/class-ld-lms.php:1274
 #, php-format
 msgctxt ""
 "Passing percentage required to pass the quiz (number only). e.g. 80 for 80%."
@@ -2220,29 +2175,29 @@ msgid ""
 "Passing percentage required to pass the %s (number only). e.g. 80 for 80%%."
 msgstr ""
 
-#: includes/class-ld-lms.php:1276 includes/class-ld-lms.php:1335
+#: includes/class-ld-lms.php:1286 includes/class-ld-lms.php:1344
 #, php-format
 msgctxt "Associated Lesson Label"
 msgid "Associated %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:1278 includes/class-ld-lms.php:1338
+#: includes/class-ld-lms.php:1288 includes/class-ld-lms.php:1347
 #, php-format
 msgctxt "Optionally associate a quiz with a lesson."
 msgid "Optionally associate a %s with a %s."
 msgstr ""
 
-#: includes/class-ld-lms.php:1284
+#: includes/class-ld-lms.php:1294
 #, php-format
 msgctxt "Optionally associate a quiz with a certificate."
 msgid "Optionally associate a %s with a certificate."
 msgstr ""
 
-#: includes/class-ld-lms.php:1288
+#: includes/class-ld-lms.php:1298
 msgid "Associated Settings"
 msgstr ""
 
-#: includes/class-ld-lms.php:1290
+#: includes/class-ld-lms.php:1300
 #, php-format
 msgctxt ""
 "If you imported a quiz, use this field to select it. Otherwise, create new "
@@ -2254,36 +2209,36 @@ msgid ""
 "questions."
 msgstr ""
 
-#: includes/class-ld-lms.php:1290
+#: includes/class-ld-lms.php:1300
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_QuizOverall.php:84
 msgid "Preview"
 msgstr ""
 
-#: includes/class-ld-lms.php:1308
+#: includes/class-ld-lms.php:1318
 #, php-format
 msgctxt "Lesson Topic Label"
 msgid "%s %s"
 msgstr ""
 
-#: includes/class-ld-lms.php:1323
+#: includes/class-ld-lms.php:1333
 #, php-format
 msgctxt "Lesson Topic Options Label"
 msgid "%s %s Options"
 msgstr ""
 
-#: includes/class-ld-lms.php:1329
+#: includes/class-ld-lms.php:1339
 #, php-format
 msgctxt "placeholders: course"
 msgid "Associate with a %s."
 msgstr ""
 
-#: includes/class-ld-lms.php:1344
+#: includes/class-ld-lms.php:1352
 #, php-format
 msgctxt "Forced Topic Timer Label"
 msgid "Forced %s Timer"
 msgstr ""
 
-#: includes/class-ld-lms.php:1346
+#: includes/class-ld-lms.php:1354
 #, php-format
 msgctxt "Minimum time a user has to spend on Topic page Label"
 msgid ""
@@ -2292,92 +2247,170 @@ msgid ""
 "5m 10s, 1hr 5min 10sec"
 msgstr ""
 
-#: includes/class-ld-lms.php:1431
+#: includes/class-ld-lms.php:1434
 msgid "Certificates"
 msgstr ""
 
-#: includes/class-ld-lms.php:1436
+#: includes/class-ld-lms.php:1439
 msgid "Certificates Options"
 msgstr ""
 
-#: includes/class-ld-lms.php:1451
+#: includes/class-ld-lms.php:1454
 msgid "Transactions"
 msgstr ""
 
-#: includes/class-ld-lms.php:1455
+#: includes/class-ld-lms.php:1458
 msgid "Transactions Options"
 msgstr ""
 
-#: includes/class-ld-lms.php:1469
+#: includes/class-ld-lms.php:1472
 msgid "Click the Export button below to export the transaction list."
 msgstr ""
 
-#: includes/class-ld-lms.php:1531
+#: includes/class-ld-lms.php:1487 includes/class-ld-lms.php:1527
+msgid "Enable Video Progression"
+msgstr ""
+
+#: includes/class-ld-lms.php:1489 includes/class-ld-lms.php:1529
+msgid "Check this if you want to show a video as part of the progression."
+msgstr ""
+
+#: includes/class-ld-lms.php:1493 includes/class-ld-lms.php:1533
+msgid "Video URL"
+msgstr ""
+
+#: includes/class-ld-lms.php:1495
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid ""
+"URL to video. The video will be added bottom of the %s content. Only YouTube "
+"or Vimeo supported at this time."
+msgstr ""
+
+#: includes/class-ld-lms.php:1499 includes/class-ld-lms.php:1539
+msgid "Auto Start Video"
+msgstr ""
+
+#: includes/class-ld-lms.php:1501 includes/class-ld-lms.php:1541
+msgid "Check this if you want the video to auto-start on page load."
+msgstr ""
+
+#: includes/class-ld-lms.php:1505
+msgid "When to show video"
+msgstr ""
+
+#: includes/class-ld-lms.php:1508
+msgid "After (default) - Video is shown after completing sub-steps"
+msgstr ""
+
+#: includes/class-ld-lms.php:1509
+msgid "Before - Video is shown before completing sub-steps"
+msgstr ""
+
+#: includes/class-ld-lms.php:1512
+msgid "Select when to show video in relation to sub-steps."
+msgstr ""
+
+#: includes/class-ld-lms.php:1515
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid "Auto Complete %s"
+msgstr ""
+
+#: includes/class-ld-lms.php:1517
+#, php-format
+msgctxt "placeholder: Lesson"
+msgid ""
+"Check this if you want the %s to auto-complete after the video completes."
+msgstr ""
+
+#: includes/class-ld-lms.php:1535
+#, php-format
+msgctxt "placeholder: Topic"
+msgid ""
+"URL to video. The video will be added bottom of the %s content. Only YouTube "
+"or Vimeo supported at this time."
+msgstr ""
+
+#: includes/class-ld-lms.php:1545
+#, php-format
+msgctxt "placeholder: Topic"
+msgid "Auto Complete %s"
+msgstr ""
+
+#: includes/class-ld-lms.php:1547
+#, php-format
+msgctxt "placeholder: Topic"
+msgid ""
+"Check this if you want the %s to auto-complete after the video completes."
+msgstr ""
+
+#: includes/class-ld-lms.php:1612
 #, php-format
 msgctxt "Course Info Label"
 msgid "%s Info"
 msgstr ""
 
-#: includes/class-ld-lms.php:1737
+#: includes/class-ld-lms.php:1818
 msgid "day(s)"
 msgstr ""
 
-#: includes/class-ld-lms.php:1738
+#: includes/class-ld-lms.php:1819
 msgid "week(s)"
 msgstr ""
 
-#: includes/class-ld-lms.php:1739
+#: includes/class-ld-lms.php:1820
 msgid "month(s)"
 msgstr ""
 
-#: includes/class-ld-lms.php:1740
+#: includes/class-ld-lms.php:1821
 msgid "year(s)"
 msgstr ""
 
-#: includes/class-ld-lms.php:1896 includes/class-ld-lms.php:1938
-#: includes/class-ld-lms.php:2227 includes/class-ld-lms.php:2243
+#: includes/class-ld-lms.php:1977 includes/class-ld-lms.php:2019
+#: includes/class-ld-lms.php:2308 includes/class-ld-lms.php:2324
 msgid "No attempts"
 msgstr ""
 
-#: includes/class-ld-lms.php:1932 includes/class-ld-lms.php:2015
-#: includes/class-ld-lms.php:2308 includes/class-ld-semper-fi-module.php:1633
+#: includes/class-ld-lms.php:2013 includes/class-ld-lms.php:2096
+#: includes/class-ld-lms.php:2389 includes/class-ld-semper-fi-module.php:1630
 msgid ""
 "Security Check - If you receive this in error, log out and back in to "
 "WordPress"
 msgstr ""
 
-#: includes/class-ld-lms.php:1983
+#: includes/class-ld-lms.php:2064
 #, php-format
 msgctxt "Export User Course Data Label"
 msgid "Export User %s Data &raquo;"
 msgstr ""
 
-#: includes/class-ld-lms.php:2283
+#: includes/class-ld-lms.php:2364
 #, php-format
 msgctxt "Export Quiz Data Label"
 msgid "Export %s Data &raquo;"
 msgstr ""
 
-#: includes/class-ld-lms.php:2374
+#: includes/class-ld-lms.php:2455
 msgid "Export &raquo;"
 msgstr ""
 
-#: includes/class-ld-lms.php:2426 includes/class-ld-lms.php:2514
-#: includes/class-ld-lms.php:2811
+#: includes/class-ld-lms.php:2507 includes/class-ld-lms.php:2595
+#: includes/class-ld-lms.php:2892
 msgid "-- Select a Certificate --"
 msgstr ""
 
-#: includes/class-ld-lms.php:2526
+#: includes/class-ld-lms.php:2607
 msgid "-- Select Settings --"
 msgstr ""
 
-#: includes/class-ld-lms.php:2648
+#: includes/class-ld-lms.php:2729
 #, php-format
 msgctxt "Select a Lesson or Topic Label"
 msgid "-- Select a %s or %s --"
 msgstr ""
 
-#: includes/class-ld-lms.php:2718 includes/class-ld-lms.php:3022
+#: includes/class-ld-lms.php:2799 includes/class-ld-lms.php:3103
 #: includes/class-ld-semper-fi-module.php:644
 #, php-format
 msgctxt "Select a Lesson Label"
@@ -2398,64 +2431,64 @@ msgctxt "Select a Lesson Topic Label"
 msgid "-- Select a %s or %s --"
 msgstr ""
 
-#: includes/class-ld-semper-fi-module.php:1221
+#: includes/class-ld-semper-fi-module.php:1218
 msgid "Upload Image"
 msgstr ""
 
-#: includes/class-ld-semper-fi-module.php:1277
+#: includes/class-ld-semper-fi-module.php:1274
 msgid "Month"
 msgstr ""
 
 #. translators: 1: month number (01, 02, etc.), 2: month abbreviation
-#: includes/class-ld-semper-fi-module.php:1283
+#: includes/class-ld-semper-fi-module.php:1280
 #, php-format
 msgid "%1$s-%2$s"
 msgstr ""
 
-#: includes/class-ld-semper-fi-module.php:1287
+#: includes/class-ld-semper-fi-module.php:1284
 msgid "Day"
 msgstr ""
 
-#: includes/class-ld-semper-fi-module.php:1288
+#: includes/class-ld-semper-fi-module.php:1285
 msgid "Year"
 msgstr ""
 
-#: includes/class-ld-semper-fi-module.php:1289
+#: includes/class-ld-semper-fi-module.php:1286
 msgid "Hour"
 msgstr ""
 
-#: includes/class-ld-semper-fi-module.php:1290
+#: includes/class-ld-semper-fi-module.php:1287
 msgid "Minute"
 msgstr ""
 
-#: includes/class-ld-semper-fi-module.php:1301
+#: includes/class-ld-semper-fi-module.php:1298
 #, php-format
 msgid "%1$s %2$s, %3$s @ %4$s:%5$s"
 msgstr ""
 
-#: includes/class-ld-semper-fi-module.php:1320
+#: includes/class-ld-semper-fi-module.php:1317
 #, php-format
 msgid " characters. Most search engines use a maximum of %s chars for the %s."
 msgstr ""
 
-#: includes/class-ld-semper-fi-module.php:1382
+#: includes/class-ld-semper-fi-module.php:1379
 #: includes/settings/class-ld-settings-section-fields.php:74
 msgid "Click for Help!"
 msgstr ""
 
-#: includes/class-ld-semper-fi-module.php:1637
+#: includes/class-ld-semper-fi-module.php:1634
 msgid "Options Reset."
 msgstr ""
 
-#: includes/class-ld-semper-fi-module.php:1654
+#: includes/class-ld-semper-fi-module.php:1651
 msgid "Options Updated."
 msgstr ""
 
-#: includes/class-ld-semper-fi-module.php:1798
+#: includes/class-ld-semper-fi-module.php:1795
 msgid "Update Options"
 msgstr ""
 
-#: includes/class-ld-semper-fi-module.php:1803
+#: includes/class-ld-semper-fi-module.php:1800
 msgid "Reset to Defaults"
 msgstr ""
 
@@ -2465,7 +2498,7 @@ msgctxt "Your access to this course has expired."
 msgid "Your access to this %s has expired."
 msgstr ""
 
-#: includes/course/ld-course-info-widget.php:25
+#: includes/course/ld-course-info-widget.php:22
 #, php-format
 msgctxt "placeholders: course"
 msgid ""
@@ -2473,13 +2506,13 @@ msgid ""
 "logged in."
 msgstr ""
 
-#: includes/course/ld-course-info-widget.php:28
+#: includes/course/ld-course-info-widget.php:25
 #, php-format
 msgctxt "Course Information"
 msgid "%s Information"
 msgstr ""
 
-#: includes/course/ld-course-info-widget.php:133
+#: includes/course/ld-course-info-widget.php:130
 #, php-format
 msgctxt ""
 "LearnDash - Course Navigation. Shows lessons and topics on the current "
@@ -2488,30 +2521,30 @@ msgid ""
 "LearnDash - %s Navigation. Shows lessons and topics on the current course."
 msgstr ""
 
-#: includes/course/ld-course-info-widget.php:136
+#: includes/course/ld-course-info-widget.php:133
 #, php-format
 msgctxt "Course Navigation Label"
 msgid "%s Navigation"
 msgstr ""
 
-#: includes/course/ld-course-info-widget.php:235
+#: includes/course/ld-course-info-widget.php:232
 msgid "Show Course Quizzes?"
 msgstr ""
 
-#: includes/course/ld-course-info-widget.php:239
+#: includes/course/ld-course-info-widget.php:236
 msgid "Show Lesson Quizzes?"
 msgstr ""
 
-#: includes/course/ld-course-info-widget.php:243
+#: includes/course/ld-course-info-widget.php:240
 msgid "Show Topic Quizzes?"
 msgstr ""
 
-#: includes/course/ld-course-info-widget.php:340
+#: includes/course/ld-course-info-widget.php:337
 msgid "Associated Content"
 msgstr ""
 
 #: includes/course/ld-course-list-shortcode.php:596
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:996
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:990
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_QuizCompleted.php:256
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_FrontQuiz.php:1169
 msgid "Categories"
@@ -2527,23 +2560,23 @@ msgctxt "placeholder: LD Category label"
 msgid "Select %s"
 msgstr ""
 
-#: includes/course/ld-course-list-shortcode.php:1047
-#: includes/course/ld-course-progress.php:1283 sfwd-lms.php:278
+#: includes/course/ld-course-list-shortcode.php:1035
+#: includes/course/ld-course-progress.php:1276 sfwd-lms.php:256
 msgid "In Progress"
 msgstr ""
 
-#: includes/course/ld-course-list-shortcode.php:1067
-#: includes/course/ld-course-progress.php:1281 sfwd-lms.php:277
+#: includes/course/ld-course-list-shortcode.php:1055
+#: includes/course/ld-course-progress.php:1274 sfwd-lms.php:255
 msgid "Not Started"
 msgstr ""
 
-#: includes/course/ld-course-list-shortcode.php:1092
+#: includes/course/ld-course-list-shortcode.php:1080
 #, php-format
 msgctxt "Course access will expire on:"
 msgid "%s access will expire on:"
 msgstr ""
 
-#: includes/course/ld-course-list-shortcode.php:1093
+#: includes/course/ld-course-list-shortcode.php:1081
 #, php-format
 msgctxt "Course access expired on:"
 msgid "%s access expired on:"
@@ -2577,155 +2610,21 @@ msgstr ""
 msgid "Upload"
 msgstr ""
 
-#: includes/course/ld-course-progress.php:1357
+#: includes/course/ld-course-progress.php:1350
 #, php-format
 msgid "%d out of %d steps completed"
 msgstr ""
 
-#: includes/course/ld-course-progress.php:1653
+#: includes/course/ld-course-progress.php:1646
 #, php-format
 msgctxt "placeholders: course"
 msgid "LearnDash %s progress bar"
 msgstr ""
 
-#: includes/course/ld-course-progress.php:1656
+#: includes/course/ld-course-progress.php:1649
 #, php-format
 msgctxt "Course Progress Bar Label"
 msgid "%s Progress Bar"
-msgstr ""
-
-#: includes/course/ld-course-video.php:43
-#: includes/course/ld-course-video.php:105
-msgid "Enable Video Progression"
-msgstr ""
-
-#: includes/course/ld-course-video.php:45
-#: includes/course/ld-course-video.php:107
-msgid "Check this if you want to show a video as part of the progression."
-msgstr ""
-
-#: includes/course/ld-course-video.php:49
-#: includes/course/ld-course-video.php:111
-msgid "Video URL"
-msgstr ""
-
-#: includes/course/ld-course-video.php:51
-#, php-format
-msgctxt "learndash"
-msgid ""
-"URL to video. The video will be added above the %s content. Use the "
-"shortcode %s to position the player within content. Supported URL formats "
-"are YouTube (youtu.be, youtube.com), Vimeo (vimeo.com), Wistia (wistia.com), "
-"or Local videos. The value for this field can be a simple URL to the video, "
-"an iframe or either [video] or [embed] shortcodes."
-msgstr ""
-
-#: includes/course/ld-course-video.php:55
-#: includes/course/ld-course-video.php:117
-msgid "Auto Start Video"
-msgstr ""
-
-#: includes/course/ld-course-video.php:57
-#: includes/course/ld-course-video.php:119
-msgid "Check this if you want the video to auto-start on page load."
-msgstr ""
-
-#: includes/course/ld-course-video.php:61
-#: includes/course/ld-course-video.php:123
-msgid "Show Video Controls"
-msgstr ""
-
-#: includes/course/ld-course-video.php:63
-#: includes/course/ld-course-video.php:125
-msgid ""
-"Show Video Controls. By default controls are disabled. Only used for YouTube "
-"and local videos."
-msgstr ""
-
-#: includes/course/ld-course-video.php:67
-#: includes/course/ld-course-video.php:129
-msgid "When to show video"
-msgstr ""
-
-#: includes/course/ld-course-video.php:70
-#: includes/course/ld-course-video.php:132
-msgid "After (default) - Video is shown after completing sub-steps"
-msgstr ""
-
-#: includes/course/ld-course-video.php:71
-#: includes/course/ld-course-video.php:133
-msgid "Before - Video is shown before completing sub-steps"
-msgstr ""
-
-#: includes/course/ld-course-video.php:74
-#: includes/course/ld-course-video.php:136
-msgid "Select when to show video in relation to sub-steps."
-msgstr ""
-
-#: includes/course/ld-course-video.php:77
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid "Auto Complete %s"
-msgstr ""
-
-#: includes/course/ld-course-video.php:79
-#, php-format
-msgctxt "placeholder: Lesson"
-msgid ""
-"Check this if you want the %s to auto-complete after the video completes."
-msgstr ""
-
-#: includes/course/ld-course-video.php:83
-#: includes/course/ld-course-video.php:146
-msgid "Auto Complete Delay"
-msgstr ""
-
-#: includes/course/ld-course-video.php:87
-#: includes/course/ld-course-video.php:150
-msgid ""
-"Time delay in second between the time the video finishes and the auto "
-"complete occurs. Example 0 no delay, 5 for five seconds."
-msgstr ""
-
-#: includes/course/ld-course-video.php:91
-#: includes/course/ld-course-video.php:154
-msgid "Hide Complete Button"
-msgstr ""
-
-#: includes/course/ld-course-video.php:93
-#: includes/course/ld-course-video.php:156
-msgid "Check this to hide the complete button."
-msgstr ""
-
-#: includes/course/ld-course-video.php:113
-#, php-format
-msgctxt "placeholder: Topic, admin URL to [ld_video] shortcode."
-msgid ""
-"URL to video. The video will be added above the %s content. Use the "
-"shortcode %s to position the player within content. Supported URL formats "
-"are YouTube (youtu.be, youtube.com), Vimeo (vimeo.com), Wistia (wistia.com), "
-"or Local videos. The value for this field can be a simple URL to the video, "
-"an iframe or either [video] or [embed] shortcodes."
-msgstr ""
-
-#: includes/course/ld-course-video.php:140
-#, php-format
-msgctxt "placeholder: Topic"
-msgid "Auto Complete %s"
-msgstr ""
-
-#: includes/course/ld-course-video.php:142
-#, php-format
-msgctxt "placeholder: Topic"
-msgid ""
-"Check this if you want the %s to auto-complete after the video completes."
-msgstr ""
-
-#: includes/course/ld-course-video.php:498
-#, php-format
-msgctxt "placeholders: 1. Lesson or Topic label, 2. span for counter"
-msgid ""
-"<p class=\"ld-video-delay-message\">%s will auto complete in %s seconds</p>"
 msgstr ""
 
 #: includes/ld-assignment-uploads.php:461
@@ -2810,10 +2709,10 @@ msgstr ""
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Question.php:580
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:48
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:52
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:371
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:385
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:469
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:675
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:366
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:380
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:464
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:670
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Statistics.php:40
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:88
 msgid "You do not have sufficient permissions to access this page."
@@ -2850,7 +2749,7 @@ msgid "Update License"
 msgstr ""
 
 #: includes/ld-certificates.php:112 includes/ld-certificates.php:204
-#: includes/quiz/ld-quiz-pro.php:1078 templates/course.php:57
+#: includes/quiz/ld-quiz-pro.php:1050 templates/course.php:57
 msgid "PRINT YOUR CERTIFICATE"
 msgstr ""
 
@@ -3034,12 +2933,12 @@ msgstr ""
 msgid "No users."
 msgstr ""
 
-#: includes/ld-misc-functions.php:476 includes/ld-misc-functions.php:486
+#: includes/ld-misc-functions.php:470 includes/ld-misc-functions.php:480
 #: includes/vendor/paypal/enhanced-paypal-shortcodes.php:266
 msgid "Complete Your Purchase"
 msgstr ""
 
-#: includes/ld-misc-functions.php:521
+#: includes/ld-misc-functions.php:515
 msgid "Use Paypal"
 msgstr ""
 
@@ -3059,39 +2958,39 @@ msgstr ""
 msgid "Remove the Quiz lock(s) for this user."
 msgstr ""
 
-#: includes/ld-users.php:1178
+#: includes/ld-users.php:1161
 msgid "User Login"
 msgstr ""
 
-#: includes/ld-users.php:1179
+#: includes/ld-users.php:1162
 msgid "User Display Name"
 msgstr ""
 
-#: includes/ld-users.php:1180
+#: includes/ld-users.php:1163
 msgid "User Nicename"
 msgstr ""
 
-#: includes/ld-users.php:1181
+#: includes/ld-users.php:1164
 msgid "User First Name"
 msgstr ""
 
-#: includes/ld-users.php:1182
+#: includes/ld-users.php:1165
 msgid "User Last Name"
 msgstr ""
 
-#: includes/ld-users.php:1183
+#: includes/ld-users.php:1166
 msgid "User Nickname"
 msgstr ""
 
-#: includes/ld-users.php:1184
+#: includes/ld-users.php:1167
 msgid "User Email"
 msgstr ""
 
-#: includes/ld-users.php:1185
+#: includes/ld-users.php:1168
 msgid "User URL"
 msgstr ""
 
-#: includes/ld-users.php:1186
+#: includes/ld-users.php:1169
 msgid "User Description"
 msgstr ""
 
@@ -3231,12 +3130,12 @@ msgid "Essay Grading Status"
 msgstr ""
 
 #: includes/quiz/ld-quiz-essays.php:751
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:495
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:428
 msgid "Not Graded"
 msgstr ""
 
 #: includes/quiz/ld-quiz-essays.php:753
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:493
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:426
 msgid "Graded"
 msgstr ""
 
@@ -3290,19 +3189,19 @@ msgstr ""
 msgid "Move to Trash"
 msgstr ""
 
-#: includes/quiz/ld-quiz-pro.php:1042
+#: includes/quiz/ld-quiz-pro.php:1014
 msgid ""
 "Certificate Pending - Questions still need to be graded, please check your "
 "profile for the status."
 msgstr ""
 
-#: includes/quiz/ld-quiz-pro.php:1284
+#: includes/quiz/ld-quiz-pro.php:1256
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Admin.php:195
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsNew.php:180
 msgid "Close"
 msgstr ""
 
-#: includes/quiz/ld-quiz-pro.php:1290
+#: includes/quiz/ld-quiz-pro.php:1262
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Front.php:56
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Front.php:87
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Preview.php:17
@@ -3317,127 +3216,12 @@ msgstr ""
 msgid "Loading"
 msgstr ""
 
-#: includes/quiz/ld-quiz-pro.php:1333
+#: includes/quiz/ld-quiz-pro.php:1305
 msgctxt "Previous Quiz Button Label"
 msgid "View Previous Answers"
 msgstr ""
 
-#: includes/rest-api/v1/class-ld-rest-posts-controller.php:42
-msgid "Sorry, you are not allowed to edit this post."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-controller.php:48
-msgid "Incorrect post password."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-controller.php:83
-#: includes/rest-api/v1/class-ld-rest-posts-controller.php:305
-msgid "Invalid post ID."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-controller.php:94
-#: includes/rest-api/v1/class-ld-rest-posts-controller.php:311
-#: includes/rest-api/v1/class-ld-rest-posts-courses-controller.php:125
-#: includes/rest-api/v1/class-ld-rest-posts-lessons-controller.php:168
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:186
-msgid "You are not currently logged in."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-controller.php:100
-#: includes/rest-api/v1/class-ld-rest-posts-controller.php:108
-#: includes/rest-api/v1/class-ld-rest-posts-controller.php:301
-#: includes/rest-api/v1/class-ld-rest-posts-lessons-controller.php:159
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:173
-msgid "Invalid Course ID."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-controller.php:115
-#: includes/rest-api/v1/class-ld-rest-posts-controller.php:326
-#: includes/rest-api/v1/class-ld-rest-posts-lessons-controller.php:174
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:192
-msgid "Sorry, you are not allowed view items."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-courses-controller.php:31
-#: includes/rest-api/v1/class-ld-rest-posts-lessons-controller.php:79
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:32
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:83
-msgid "The password for the post if it is password protected."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-courses-controller.php:64
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:220
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:101
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:148
-msgid "Unique identifier for the object."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-courses-controller.php:89
-#: includes/rest-api/v1/class-ld-rest-posts-lessons-controller.php:117
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:90
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:160
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:244
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:330
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:125
-msgid "Whether to bypass trash and force deletion."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-courses-controller.php:103
-msgid "Course ID to enroll user into."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-lessons-controller.php:52
-#: includes/rest-api/v1/class-ld-rest-posts-lessons-controller.php:89
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:107
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:132
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:178
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:212
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:260
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:294
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:53
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:93
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:140
-msgid "Unique identifier for the Course object."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-lessons-controller.php:93
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:182
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:216
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:264
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:298
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:57
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:97
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:144
-msgid "Unique identifier for the Lesson object."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-lessons-controller.php:131
-msgid "Course ID."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-lessons-controller.php:136
-msgid "Lesson ID."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-lessons-controller.php:163
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:177
-#: includes/rest-api/v1/class-ld-rest-posts-topics-controller.php:181
-msgid "Invalid Lesson ID."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:66
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:136
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:306
-msgid "Unique identifier for the Quiz object."
-msgstr ""
-
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:186
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:268
-#: includes/rest-api/v1/class-ld-rest-posts-quizzes-controller.php:302
-msgid "Unique identifier for the Topic object."
-msgstr ""
-
-#: includes/settings/class-ld-settings-pages.php:236
+#: includes/settings/class-ld-settings-pages.php:238
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:140
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:171
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:204
@@ -3564,9 +3348,7 @@ msgid ""
 msgstr ""
 
 #: includes/settings/settings-sections-pages/class-ld-settings-page-courses-options.php:10
-#, php-format
-msgctxt "placeholder: Course"
-msgid "%s Options"
+msgid "Course Options"
 msgstr ""
 
 #: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:10
@@ -3941,17 +3723,7 @@ msgid ""
 "Example: <b>[ld_group group_id=\"16\"]insert any content[/ld_group]</b>"
 msgstr ""
 
-#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:132
-#, php-format
-msgctxt "learndash"
-msgid ""
-"This shortcode is used on %s and %s where Video Progression is enabled. The "
-"video player will be added above the content. This shortcode allows "
-"positioning the player elsewhere within the content. This shortcode does not "
-"take any parameters."
-msgstr ""
-
-#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:136
+#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:133
 #, php-format
 msgctxt "learndash"
 msgid ""
@@ -3960,7 +3732,7 @@ msgid ""
 "buttons for %s with %s ID: 123"
 msgstr ""
 
-#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:139
+#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:136
 #, php-format
 msgid ""
 "This shortcode displays the %s Content table (%s, %s, and %s) when inserted "
@@ -3968,7 +3740,7 @@ msgid ""
 "strong> shows the %s content for %s with %s ID: 123"
 msgstr ""
 
-#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:142
+#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:139
 #, php-format
 msgctxt "placeholders: course, Course, Course"
 msgid ""
@@ -3978,7 +3750,7 @@ msgid ""
 "Y g:i a\"]</strong>."
 msgstr ""
 
-#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:144
+#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:141
 #, php-format
 msgctxt "plaeholders: course"
 msgid ""
@@ -3986,13 +3758,13 @@ msgid ""
 "post. Example: <b>[ld_course_expire_status course_id=\"111\"]</b> "
 msgstr ""
 
-#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:145
+#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:142
 msgid ""
 "The ID of the user to check. If not provided the current logged in user ID "
 "will be used. Example: <b>[ld_course_expire_status user_id=\"222\"]</b>"
 msgstr ""
 
-#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:146
+#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:143
 #, php-format
 msgctxt "placeholders: Course, course"
 msgid ""
@@ -4001,7 +3773,7 @@ msgid ""
 "\"Your access to this %s will expire on:\"]</b>"
 msgstr ""
 
-#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:147
+#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:144
 #, php-format
 msgctxt "placeholders: Course, course"
 msgid ""
@@ -4010,7 +3782,7 @@ msgid ""
 "access to this %s expired on:\"]</b>"
 msgstr ""
 
-#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:148
+#: includes/settings/settings-sections-pages/class-ld-settings-page-courses-shortcodes.php:145
 msgid ""
 "The controls the format of the date/time value shown to the user. If not "
 "provided the date/time format from your WordPress sytem will be used. "
@@ -4026,6 +3798,10 @@ msgstr ""
 msgid "General"
 msgstr ""
 
+#: includes/settings/settings-sections-pages/class-ld-settings-page-lessons-options.php:10
+msgid "Lesson Options"
+msgstr ""
+
 #: includes/settings/settings-sections-pages/class-ld-settings-page-license.php:10
 msgid "LMS License"
 msgstr ""
@@ -4036,9 +3812,7 @@ msgid "PayPal Settings"
 msgstr ""
 
 #: includes/settings/settings-sections-pages/class-ld-settings-page-topics-options.php:10
-#, php-format
-msgctxt "placeholder: Topic"
-msgid "%s Options"
+msgid "Topic Options"
 msgstr ""
 
 #: includes/settings/settings-sections/class-ld-settings-section-courses-cpt.php:22
@@ -4223,9 +3997,7 @@ msgid "Admin User Settings"
 msgstr ""
 
 #: includes/settings/settings-sections/class-ld-settings-section-general-admin-user.php:50
-#, php-format
-msgctxt "placeholder: Course"
-msgid "%s Auto-enroll"
+msgid "Courses Auto-enroll"
 msgstr ""
 
 #: includes/settings/settings-sections/class-ld-settings-section-general-admin-user.php:51
@@ -4235,9 +4007,7 @@ msgid "Admin users will be automatically enrolled in all %s."
 msgstr ""
 
 #: includes/settings/settings-sections/class-ld-settings-section-general-admin-user.php:60
-#, php-format
-msgctxt "placeholder: Course"
-msgid "Bypass %s limits"
+msgid "Bypass Course limits"
 msgstr ""
 
 #: includes/settings/settings-sections/class-ld-settings-section-general-admin-user.php:61
@@ -4278,7 +4048,7 @@ msgctxt "placeholder: Lesson"
 msgid "%s Display Settings"
 msgstr ""
 
-#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:91
+#: includes/settings/settings-sections/class-ld-settings-section-lessons-display-order.php:83
 msgid "Choose the sort direction."
 msgstr ""
 
@@ -5224,23 +4994,6 @@ msgctxt "placeholders: course, course"
 msgid "This shortcode shows the earned %s points for the user."
 msgstr ""
 
-#: includes/settings/shortcodes-sections/ld_video.php:11
-#, php-format
-msgctxt "placeholders: Lessons, Topics"
-msgid ""
-"This shortcode is used on %s and %s where Video Progression is enabled. The "
-"video player will be added above the content. This shortcode allows "
-"positioning the player elsewhere within the content. This shortcode does not "
-"take any parameters."
-msgstr ""
-
-#: includes/settings/shortcodes-sections/ld_video.php:15
-#: includes/settings/shortcodes-sections/ld_video.php:17
-#, php-format
-msgctxt "learndash"
-msgid "%s Video"
-msgstr ""
-
 #: includes/settings/shortcodes-sections/learndash_course_progress.php:9
 #, php-format
 msgctxt "placeholder: Course"
@@ -5388,8 +5141,8 @@ msgstr ""
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Admin.php:122
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:156
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:175
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:220
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:224
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:225
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:229
 msgid "An error has occurred."
 msgstr ""
 
@@ -5448,7 +5201,7 @@ msgstr ""
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_QuestionOverall.php:95
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_QuizOverall.php:107
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:37
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:718
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:651
 msgid "No data available"
 msgstr ""
 
@@ -5529,7 +5282,7 @@ msgstr ""
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Question.php:10
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Question.php:21
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:71
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:402
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:397
 #, php-format
 msgctxt "Quiz not found"
 msgid "%s not found"
@@ -5573,7 +5326,7 @@ msgid "questions copied"
 msgstr ""
 
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:107
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:417
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:412
 #, php-format
 msgctxt "Quiz edited"
 msgid "%s edited"
@@ -5585,40 +5338,40 @@ msgctxt "Quiz created"
 msgid "%s created"
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:147
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:438
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:510
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:142
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:433
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:505
 #, php-format
 msgctxt "Quiz title or quiz description are not filled"
 msgid "%s title or %s description are not filled"
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:164
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:395
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:159
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:390
 #, php-format
 msgctxt "Edit quiz"
 msgid "Edit %s"
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:164
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:473
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:491
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:159
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:468
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:486
 #, php-format
 msgctxt "Create quiz"
 msgid "Create %s"
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:588
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:583
 msgid "Template stored"
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:694
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:689
 #, php-format
 msgctxt "Quiz deleted"
 msgid "%s deleted"
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:990
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Quiz.php:984
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_QuizCompleted.php:250
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_FrontQuiz.php:1185
 msgid "Not categorized"
@@ -5632,22 +5385,22 @@ msgstr ""
 
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Statistics.php:570
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Statistics.php:617
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Statistics.php:784
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:727
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Statistics.php:783
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:660
 msgid "Anonymous"
 msgstr ""
 
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Statistics.php:619
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Statistics.php:792
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Statistics.php:791
 msgid "Deleted user"
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Statistics.php:765
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Statistics.php:764
 msgid "Ungraded"
 msgstr ""
 
 #: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:80
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:255
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:260
 msgid "No name or e-mail entered."
 msgstr ""
 
@@ -5655,16 +5408,16 @@ msgstr ""
 msgid "You signed up successfully."
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:242
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:251
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:247
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:256
 msgid "You can not enter again."
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:259
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:264
 msgid "Your name can not exceed 15 characters."
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:267
+#: includes/vendor/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:272
 msgid "You entered wrong captcha code."
 msgstr ""
 
@@ -5792,7 +5545,7 @@ msgstr ""
 
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_AdminToplist.php:55
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:239
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:706
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:639
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsNew.php:106
 msgid "User"
 msgstr ""
@@ -5815,8 +5568,8 @@ msgstr ""
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:245
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:324
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:31
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:115
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:712
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:110
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:645
 msgid "Results"
 msgstr ""
 
@@ -5829,7 +5582,7 @@ msgstr ""
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:1448
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_QuizOverall.php:80
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:47
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:752
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:685
 msgid "Delete"
 msgstr ""
 
@@ -6026,7 +5779,7 @@ msgstr ""
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_FrontQuiz.php:1352
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_QuestionEdit.php:110
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:104
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:108
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:103
 msgid "Question"
 msgstr ""
 
@@ -6079,9 +5832,9 @@ msgstr ""
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:106
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:241
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:28
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:110
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:363
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:708
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:105
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:354
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:641
 msgid "Correct"
 msgstr ""
 
@@ -6095,8 +5848,8 @@ msgstr ""
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:107
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:242
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:29
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:111
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:709
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:106
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:642
 msgid "Incorrect"
 msgstr ""
 
@@ -6629,7 +6382,7 @@ msgstr ""
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_QuestionEdit.php:80
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_QuestionOverall.php:31
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:124
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:127
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:122
 msgid "Category"
 msgstr ""
 
@@ -6996,7 +6749,7 @@ msgstr ""
 
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_QuestionOverall.php:104
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:169
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:274
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:269
 msgid "Total"
 msgstr ""
 
@@ -7726,7 +7479,7 @@ msgstr ""
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:1318
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:41
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:364
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:641
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:574
 msgid "Custom fields"
 msgstr ""
 
@@ -7928,39 +7681,39 @@ msgstr ""
 
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:108
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:243
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:112
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:710
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:107
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:643
 msgid "Hints used"
 msgstr ""
 
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:109
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:244
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:113
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:711
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:108
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:644
 msgid "Time"
 msgstr ""
 
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:110
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:114
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:109
 msgid "Points scored"
 msgstr ""
 
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:148
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:242
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:237
 msgid "Sub-Total: "
 msgstr ""
 
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:183
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:268
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:343
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:288
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:283
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsNew.php:162
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsNew.php:246
 msgid "Refresh"
 msgstr ""
 
 #: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:187
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:292
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:287
 msgid "Reset statistics"
 msgstr ""
 
@@ -8002,26 +7755,26 @@ msgstr ""
 msgid "only anonymous users"
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:89
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:84
 #, php-format
 msgid "User statistics: %s"
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:161
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:172
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:156
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:167
 msgid "(view)"
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:503
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:436
 #: templates/course_info_shortcode.php:332
 msgid "view"
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:667
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:600
 msgid "ticked"
 msgstr ""
 
-#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:667
+#: includes/vendor/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:600
 msgid "not ticked"
 msgstr ""
 
@@ -8361,9 +8114,9 @@ msgstr ""
 msgid "Assigned Group(s) : "
 msgstr ""
 
-#. #-#-#-#-#  sfwd-lms.pot (LearnDash LMS 2.4.6)  #-#-#-#-#
+#. #-#-#-#-#  sfwd-lms.pot (LearnDash LMS 2.4.3)  #-#-#-#-#
 #. Plugin URI of the plugin/theme
-#. #-#-#-#-#  sfwd-lms.pot (LearnDash LMS 2.4.6)  #-#-#-#-#
+#. #-#-#-#-#  sfwd-lms.pot (LearnDash LMS 2.4.3)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "http://www.learndash.com"
 msgstr ""

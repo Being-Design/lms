@@ -645,7 +645,7 @@ function buddyboss_shortcode_tab($atts, $content = null) {
         </li>
     ';
 
-    $tabs_divs.= '<div id="'.$id.'">'.$content.'</div>';
+    $tabs_divs.= '<div id="'.$id.'">'.do_shortcode( $content ).'</div>';
 
     return $output;
 }

@@ -2433,9 +2433,6 @@
 					plugin.methode.showSinglePage(currentPage+1);
 				});
 				
-				//console.log('line 2436: adding click event for essay upload button ');
-				$e.find('input[id^="uploadEssaySubmit"]').click(plugin.methode.uploadFile);
-				
 				// Added in LD v2.4 to allow external notification when quiz init happens.
 				$e.trigger('learndash-quiz-init');
 				
@@ -2699,7 +2696,6 @@
 
 			$e.bind('questionSolved', plugin.methode.questionSolved);
 
-			//console.log('line 2702: adding click event for essay upload button');
 			$e.find('input[id^="uploadEssaySubmit"]').click(plugin.methode.uploadFile);
 
 			if(!bitOptions.maxShowQuestion) {

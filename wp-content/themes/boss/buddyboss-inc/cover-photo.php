@@ -224,8 +224,9 @@ function buddyboss_cover_photo( $object, $object_id ) {
 	$edit		 = '';
 	$edit_button = '';
 	$remove		 = '';
+	$permalink	 = '';
 
-	if ( $object == 'group' ) {
+	if ( $object == 'group' && bp_is_group() ) {
 		$permalink = bp_get_group_permalink() . 'admin/group-cover-image/';
 	}
 

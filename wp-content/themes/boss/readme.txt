@@ -1,8 +1,8 @@
 === Boss. ===
 Contributors: BuddyBoss
 Requires at least: 3.8
-Tested up to: 4.7.3
-Version: 2.3.2
+Tested up to: 4.7.5
+Version: 2.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -21,7 +21,26 @@ Boss is a responsive WordPress/BuddyPress theme that provides a whole new way of
 
 == Changelog ==
 
-= 2.3.2 =
+= 2.4.0 =
+* Fix - Notifications bell icon is not working
+* Fix - New update enables toolbar, disabling toolbar from BuddyPress setting hides login/register button at frontend
+* Fix - Blurred profile images inside groups -> manage -> members when trying to change from admin dashboard
+* Fix - WPGlobus support issue
+* Fix - Header title color changes
+* Fix - When using Badge OS BB displays badges that are marked hidden to users
+* Fix - Buddypress Docs comments not displaying
+* Fix - Shopping cart disappears on mobiles
+* Fix - Old version of swiper
+* Fix - Conflict with ACF / Events Manager and Boss theme
+* Fix - Message not showing when show_admin_bar set false
+* Fix - User avatar when WooCommerce activated
+* Fix - WooCommerce styling tweaks
+* Fix - Profile menu scroll bar issue
+* Fix - Notification dropdown menu scroll ba
+* Fix - Global search php notice fix
+
+
+= 2.3.3 =
 * Fix - Woo 3.0 Select2 support
 
 = 2.3.2 =

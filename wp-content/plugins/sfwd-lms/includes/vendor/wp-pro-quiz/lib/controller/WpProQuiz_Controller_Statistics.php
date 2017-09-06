@@ -701,8 +701,7 @@ class WpProQuiz_Controller_Statistics extends WpProQuiz_Controller_Controller {
 				'statistcAnswerData' => $statistic->getStatisticAnswerData(),
 				'questionName' => $statistic->getQuestionName(),
 				'questionAnswerData' => $statistic->getQuestionAnswerData(),
-				'answerType' => $statistic->getAnswerType(),
-				'questionId' => $statistic->getQuestionId()
+				'answerType' => $statistic->getAnswerType()
 			);
 			
 			

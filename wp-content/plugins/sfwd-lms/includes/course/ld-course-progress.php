@@ -325,17 +325,10 @@ function learndash_mark_complete_process( $post = null ) {
 			return;
 		}
 
-		/**
-		 * Added logic to enroll the student in the course if the course price type is open and not a sample. 
-		 * @since 2.4.4
-		 */
-		//$course_id = learndash_get_course_id( $post_id );
-		//if ( !empty( $course_id ) ) {
-		//	$user_course_access_time = get_user_meta( $userid, "course_".$course_id."_access_from", true );
-		//	if ( empty( $user_course_access_time ) ) {
-		//		ld_update_course_access( $userid, $course_id );
-		//	}
-		//}
+		$course_id = learndash_get_course_id( $post_id );
+		if ( !empty( $course_id ) ) {
+			ld_update_course_access( $userid, $course_id );
+		}
 
 		$return = learndash_process_mark_complete( $userid, $post_id );
 

@@ -4,10 +4,6 @@ define( 'LEARNDASH_SETTINGS_SECTION_TYPE', 'metabox' );
 require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/class-ld-settings-pages.php' );
 require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/class-ld-settings-sections.php' );
 
-require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/settings-sections-pages/class-ld-settings-page-custom-labels.php' );
-require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/settings-sections/class-ld-settings-section-custom-labels.php' );
-require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/settings-sections/class-ld-settings-section-custom-labels-submit.php' );
-
 require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/settings-sections-pages/class-ld-settings-page-courses-options.php' );
 require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/settings-sections/class-ld-settings-section-courses-options-submit.php' );
 require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/settings-sections/class-ld-settings-section-courses-taxonomies.php' );
@@ -38,6 +34,10 @@ require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/settings-sections/cl
 require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/settings-sections-pages/class-ld-settings-page-paypal.php' );
 require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/settings-sections/class-ld-settings-section-paypal.php' );
 require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/settings-sections/class-ld-settings-section-paypal-submit.php' );
+
+require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/settings-sections-pages/class-ld-settings-page-custom-labels.php' );
+require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/settings-sections/class-ld-settings-section-custom-labels.php' );
+require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/settings-sections/class-ld-settings-section-custom-labels-submit.php' );
 
 //require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/class-ld-settings-page-license.php' );
 //require_once( LEARNDASH_LMS_PLUGIN_DIR . 'includes/settings/class-ld-settings-section-license.php' );

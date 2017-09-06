@@ -182,7 +182,12 @@ class WpProQuiz_Controller_Toplist extends WpProQuiz_Controller_Controller {
 		
 			foreach( $results as $r_idx => $result ) {
 				if ( $r_idx == 'comp' ) {
-					$points = intval( $total_awarded_points );
+					
+					//if ( intval( $this->_post['points']  ) != intval( $total_awarded_points ) ) {
+						//$this->_post['points'] = intval( $total_awarded_points );
+						$points = intval( $total_awarded_points );
+					//}
+				
 					continue;
 				}
 			
@@ -201,7 +206,7 @@ class WpProQuiz_Controller_Toplist extends WpProQuiz_Controller_Controller {
 					$this->_post['results'][$r_idx]['possiblePoints'] = 0;
 				}
 				$total_awarded_points += intval( $this->_post['results'][$r_idx]['points'] );
-				$total_possible_points += intval( $_POST['results'][$r_idx]['possiblePoints'] );
+				//$total_possible_points += intval( $_POST['results'][$r_idx]['possiblePoints'] );
 			}
 		}
 		
@@ -225,7 +230,7 @@ class WpProQuiz_Controller_Toplist extends WpProQuiz_Controller_Controller {
 		}
 		
 		//$numPoints = $quizMapper->sumQuestionPoints($quizId);
-		//$totalPoints = $quizMapper->sumQuestionPoints($quizId);
+		$totalPoints = $quizMapper->sumQuestionPoints($quizId);
 		
 		//if($totalPoints > $numPoints || $points > $numPoints) {
 		//	return array('text' => __('An error has occurred.', 'wp-pro-quiz'), 'clear' => true);
@@ -277,7 +282,7 @@ class WpProQuiz_Controller_Toplist extends WpProQuiz_Controller_Controller {
 			->setName($name)
 			->setEmail($email)
 			->setPoints($points)
-			->setResult(round($points / $total_possible_points * 100, 2))
+			->setResult(round($points / $totalPoints * 100, 2))
 			->setIp($ip);
 		
 		$toplistMapper->save($toplist);

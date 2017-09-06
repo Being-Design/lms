@@ -20,13 +20,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'johnc151_wp142');
+define('DB_NAME', 'johnc151_wp856');
 
 /** MySQL database username */
-define('DB_USER', 'johnc151_wp142');
+define('DB_USER', 'johnc151_wp856');
 
 /** MySQL database password */
-define('DB_PASSWORD', '4[p-2k3SYn');
+define('DB_PASSWORD', '54pS(5w-6V');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -46,14 +46,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'fj0mc3ax8ykji4rfapglngjeqssgnu7gj29lkdput4zdqrcmpklath3qksgrqzqm');
-define('SECURE_AUTH_KEY',  '7pyteqxjseospiovxqprekxrbhfmbfqpbdqceyeae4fv4pehrozu1htg8ggilmif');
-define('LOGGED_IN_KEY',    'qmofzac932cab9zz0kdik2wt6cshbvuq56wxkyekjzsty6xmxsmlfrhuw9xopujb');
-define('NONCE_KEY',        'r8ao4pdei0fdvvgq64tm6xkctcwd0j1to8gcpeuplslx41ge9ptl0raoksi8ygo1');
-define('AUTH_SALT',        'vwmn3icbxdf91mmb8g5wfct2ml62ep3mhesl90gnbyjly6yypgm39lmr8yhyeee8');
-define('SECURE_AUTH_SALT', 'fx1osxtfsb4inzz4tstqvo2bl31e2hrkar94nq6gtuzn5fkvkawenjp6nlewrdpd');
-define('LOGGED_IN_SALT',   'jtnumeiyhplqmqhpptx21qnetfqriifij1cczettqnjcvz2pbzoxsruxqhb3uwom');
-define('NONCE_SALT',       'fd5z1wr19caw5ltyxxgsbzelgxwci6zdujwnzva2fbo74ndtecbpzkwd6khdlxkf');
+define('AUTH_KEY',         'io6s7x1hw6d5w66h0x0prqsyes363ehdnpf8dcn0ltky5wegtdjvcwlab71cpamv');
+define('SECURE_AUTH_KEY',  'lfdguilkpebslpewll0qwwejd9z1uo8yrm6s1lbw81r4oxxf4s1luaeqrbywlqpb');
+define('LOGGED_IN_KEY',    'vgxpc56e62f0ktx6y5w22tqaygr9xdof79gkdcqbw0u10lpbvzci4o6n6adlsfme');
+define('NONCE_KEY',        'mipfuc8b2ubp5ziusqjmgzyjpbadwtbw3mobp4nvrsxoagd318r5paxqhsz1bwhl');
+define('AUTH_SALT',        '0btlex6yblcfbrvyxdxcq0coqzoxzyifue305eap7nfobp7pcvjvtymwv3noutvc');
+define('SECURE_AUTH_SALT', 'mcbtjoouwuqcwkfqknvyqbe8cecz6utzopububq9iaklspgmppjx6vqumijav3pa');
+define('LOGGED_IN_SALT',   'nh3zkmg2v6n9v4rkgk1vloygics9bpk3kn3yziel6eywzdm9jyurnj8qkgw3lnux');
+define('NONCE_SALT',       'hzua6fu0ja4hbcngpx10wm2ffwgkhziaqoefc1kuzqbdxj1ptmrhchjls9vy5skd');
 
 /**#@-*/
 
@@ -63,7 +63,7 @@ define('NONCE_SALT',       'fd5z1wr19caw5ltyxxgsbzelgxwci6zdujwnzva2fbo74ndtecbp
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wpje_';
+$table_prefix  = 'wpj7_';
 
 /**
  * For developers: WordPress debugging mode.

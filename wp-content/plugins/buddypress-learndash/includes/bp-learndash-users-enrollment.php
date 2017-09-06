@@ -74,9 +74,14 @@ class BuddyPress_Learndash_Users_Enrollment {
 
         // Learndash course edit screen
         if ( $current_screen->post_type == 'sfwd-courses' ) {
-            $courses = array( $post_ID );
-            $course_user_query = learndash_get_users_for_course( $post_ID );
-            $users = $course_user_query->get_results();
+
+            $courses            = array( $post_ID );
+            $users              = array();
+            $course_user_query  = learndash_get_users_for_course( $post_ID, array( 'count_total' => false ) );
+
+            if ( is_object( $course_user_query ) && $course_user_query instanceof WP_User_Query ) {
+                $users = $course_user_query->get_results();
+            }
         }
 
         if ( ! empty( $_GET['message'] ) ) {

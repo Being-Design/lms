@@ -10,9 +10,6 @@
 
 // This filter will parse the text of the widget for shortcodes.
 add_filter( 'widget_text', 'do_shortcode' );
-add_filter( 'widget_text_content', 'do_shortcode' );
-add_filter( 'widget_custom_html', 'do_shortcode' );
-add_filter( 'widget_custom_html_content', 'do_shortcode' );
 
 class LearnDash_Course_Info_Widget extends WP_Widget {
 

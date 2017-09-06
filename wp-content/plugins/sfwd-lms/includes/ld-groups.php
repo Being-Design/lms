@@ -1051,14 +1051,6 @@ function learndash_set_groups_users( $group_id = 0, $group_users_new = array() )
 				//delete_user_meta( $user_id, 'learndash_group_users_' . $group_id, null );
 				ld_update_group_access( $user_id, $group_id, true);
 			}
-
-			/**
-			 * Action hook for remove group users
-			 *
-			 * $group_id 			int 	ID of the group
-			 * $group_users_remove 	array 	User IDs that are removed from group
-			 */
-			do_action( 'learndash_remove_group_users', $group_id, $group_users_remove );
 		}
 		
 		// Finally clear our cache for other services 

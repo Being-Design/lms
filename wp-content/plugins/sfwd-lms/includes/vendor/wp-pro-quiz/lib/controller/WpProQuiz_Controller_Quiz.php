@@ -109,22 +109,17 @@ class WpProQuiz_Controller_Quiz extends WpProQuiz_Controller_Controller {
 					WpProQuiz_View_View::admin_notices( sprintf( _x('%s created', 'Quiz created', 'wp-pro-quiz'), LearnDash_Custom_Label::get_label( 'quiz' )), 'info');
 		
 				$quiz->setText("AAZZAAZZ");
-								
+				
+				if ( isset( $this->_post['viewProfileStatistics'] ) ) {
+					$quiz->setViewProfileStatistics( true );
+				} else {
+					$quiz->setViewProfileStatistics( false );
+				}
+				
 				$quizMapper->save($quiz);
-				if ( empty( $quizId ) && !empty( $get["post_id"] ) ) {
+				if(empty($quizId) && !empty($get["post_id"])) {
 					learndash_update_setting($get["post_id"], "quiz_pro", $quiz->getId());
 				}
-				
-				if ( ( isset( $get["post_id"] ) ) && ( !empty( $get["post_id"] ) ) ) {
-					if ( isset( $this->_post['viewProfileStatistics'] ) ) {
-						$quiz->setViewProfileStatistics( true );
-						update_post_meta( $get["post_id"], '_viewProfileStatistics', 1 );
-					} else {
-						$quiz->setViewProfileStatistics( false );
-						update_post_meta( $get["post_id"], '_viewProfileStatistics', 0 );
-					}
-				}
-				
 				$quizId = $quiz->getId();
 
 				$prerequisiteMapper->delete($quizId);
@@ -868,7 +863,6 @@ class WpProQuiz_Controller_Quiz extends WpProQuiz_Controller_Controller {
 		
 		if($quiz->isUserEmailNotification()) {
 			$msg = str_replace(array_keys($r), $r, $userEmail['message']);
-			$msg = apply_filters( 'learndash_quiz_email_note_user_message', $msg, $r, $quiz, $result, $categories );
 				
 			$headers = '';
 				
@@ -920,7 +914,7 @@ class WpProQuiz_Controller_Quiz extends WpProQuiz_Controller_Controller {
 			|| (get_current_user_id() > 0 && $quiz->getEmailNotification() == WpProQuiz_Model_Quiz::QUIZ_EMAIL_NOTE_REG_USER)) {
 			
 			$msg = str_replace(array_keys($r), $r, $adminEmail['message']);
-			$msg = apply_filters( 'learndash_quiz_email_note_admin_message', $msg, $r, $quiz, $result, $categories );
+			
 			$headers = '';
 			
 			//if ( ( !empty( $adminEmail['from'] ) ) && ( is_email( $adminEmail['from'] ) ) ) {

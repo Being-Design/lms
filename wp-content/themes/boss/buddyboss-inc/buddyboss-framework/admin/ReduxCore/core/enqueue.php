@@ -35,7 +35,7 @@
                 add_filter("redux/{$this->parent->args['opt_name']}/localize", array('Redux_Helpers', 'localize'));
 
                 $this->set_localized_data();
-
+                
                 /**
                  * action 'redux-enqueue-{opt_name}'
                  *
@@ -91,10 +91,10 @@
                 //*****************************************************************
                 // Spectrum CSS
                 //*****************************************************************
-                $css_file = 'redux-spectrum.min.css';
-                if ($this->parent->args['dev_mode']) {
+                //$css_file = 'redux-spectrum.min.css';
+                //if ($this->parent->args['dev_mode']) {
                     $css_file = 'redux-spectrum.css';
-                }                
+                //}
                 
                 wp_register_style(
                     'redux-spectrum-css',
@@ -263,17 +263,16 @@
                 //*****************************************************************
                 // Vendor JS
                 //*****************************************************************
-                if ( $this->parent->args['dev_mode'] ) {
-                    wp_register_script(
-                        'redux-vendor',
-                        ReduxFramework::$_url . 'assets/js/vendor.min.js',
-                        array( 'jquery' ),
-                        $this->timestamp,
-                        true
-                    );
+                wp_register_script(
+                    'redux-vendor',
+                    ReduxFramework::$_url . 'assets/js/vendor.min.js',
+                    array( 'jquery' ),
+                    $this->timestamp,
+                    true
+                );
 
-                    array_push( $depArray, 'redux-vendor' );
-                }
+                array_push( $depArray, 'redux-vendor' );
+
 
                 //*****************************************************************
                 // Redux JS
@@ -406,7 +405,7 @@
                 if (!empty($this->parent->args['last_tab'])) {
                     $this->parent->localize_data['last_tab']       = $this->parent->args['last_tab'];
                 }
-                
+
                 $this->parent->localize_data['required']       = $this->parent->required;
                 $this->parent->localize_data['fonts']          = $this->parent->fonts;
                 $this->parent->localize_data['required_child'] = $this->parent->required_child;
@@ -437,7 +436,6 @@
                         }
                     }
                 }
-
 
 
                 $this->parent->localize_data['fieldsHidden'] = $this->parent->fieldsHidden;

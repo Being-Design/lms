@@ -306,7 +306,9 @@ var BuddyBossMain = ( function ( $, window, undefined ) {
                         scrollContainer: true,
                         slideElement: 'div',
                         slideClass: 'mobile-item-nav',
-                        wrapperClass: 'mobile-item-nav-wrapper'
+                        wrapperClass: 'mobile-item-nav-wrapper',
+                        slidesPerView: 'auto',
+                        freeMode: true
                     } );
                 }
             }
@@ -1049,6 +1051,7 @@ var BuddyBossMain = ( function ( $, window, undefined ) {
             $( '#profile-nav' ).addClass( 'close' );
             $( '#right-panel' ).addClass( 'side-menu-right' );
             $( '#mobile-header' ).addClass( 'side-menu-right' );
+            $( '.subheader' ).addClass( 'side-menu-right' );
             $( '#left-panel-inner' ).addClass( 'animated BeanSidebarIn' ).removeClass( 'BeanSidebarOut' );
             $( '#masthead' ).css( 'margin-top', '0' );
             setTimeout( function () {
@@ -1062,6 +1065,7 @@ var BuddyBossMain = ( function ( $, window, undefined ) {
             $( '#custom-nav' ).addClass( 'close' );
             $( '#right-panel' ).addClass( 'side-menu-left' );
             $( '#mobile-header' ).addClass( 'side-menu-left' );
+            $( '.subheader' ).addClass( 'side-menu-left' );
             $( '#mobile-menu-inner' ).addClass( 'animated BeanSidebarIn' ).removeClass( 'BeanSidebarOut' );
             $( '#masthead' ).css( 'margin-top', '0' );
             setTimeout( function () {
@@ -1075,6 +1079,7 @@ var BuddyBossMain = ( function ( $, window, undefined ) {
             $( '#profile-nav' ).removeClass( 'close' );
             $( '#right-panel' ).removeClass( 'side-menu-right' );
             $( '#mobile-header' ).removeClass( 'side-menu-right' );
+            $( '.subheader' ).removeClass( 'side-menu-right' );
             $( '#left-panel-inner' ).removeClass( 'BeanSidebarIn' ).addClass( 'BeanSidebarOut' );
             $( '#left-panel-inner' ).addClass( 'animated ' );
             setTimeout( function () {
@@ -1088,6 +1093,7 @@ var BuddyBossMain = ( function ( $, window, undefined ) {
             $( '#custom-nav' ).removeClass( 'close' );
             $( '#right-panel' ).removeClass( 'side-menu-left' );
             $( '#mobile-header' ).removeClass( 'side-menu-left' );
+            $( '.subheader' ).removeClass( 'side-menu-left' );
             $( '#mobile-menu-inner' ).removeClass( 'BeanSidebarIn' ).addClass( 'BeanSidebarOut' );
             $( '#mobile-menu-inner' ).addClass( 'animated ' );
             setTimeout( function () {
@@ -1225,7 +1231,7 @@ var BuddyBossMain = ( function ( $, window, undefined ) {
          3.21 - Responsive Menus (...)
          --------------------------------------------------------------------------------------------------------*/
         if ( !is_mobile ) {
-            $( "#item-nav" ).find( "#nav-bar-filter" ).jRMenuMore( 60 );
+            $( "#item-nav > .item-list-tabs > ul" ).jRMenuMore( 60 );
 
 
             //Initialize jRMenuMore menu when it actually start falling outside of screen width
@@ -1649,6 +1655,7 @@ var BuddyBossMain = ( function ( $, window, undefined ) {
                 } );
                 /**********messages type************/
                 if ( data.unread_message > 0 ) { //has count
+                    jQuery( "#user-messages" ).find( "span" ).html( '<b>' + data.unread_message + '</b>' ).removeClass( "no-alert" );
                     jQuery( "#user-messages" ).find( "span" ).text( data.unread_message );
                     jQuery( ".ab-item[href*='/messages/']" ).each( function () {
                         jQuery( this ).append( "<span class='count'>" + data.unread_message + "</span>" );
@@ -1657,6 +1664,7 @@ var BuddyBossMain = ( function ( $, window, undefined ) {
                         }
                     } );
                 } else {
+                    jQuery( "#user-messages" ).find( "span" ).html( '<b>' + data.unread_message + '</b>' ).addClass( "no-alert" );
                     jQuery( "#user-messages" ).find( "span" ).text( data.unread_message );
                     jQuery( ".ab-item[href*='/messages/']" ).each( function () {
                         jQuery( this ).find( ".count" ).remove();

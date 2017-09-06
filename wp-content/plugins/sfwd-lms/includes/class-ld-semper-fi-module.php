@@ -652,7 +652,7 @@ if ( ! class_exists( 'Semper_Fi_Module' ) ) {
 
 		wp_enqueue_script( 
 			'sfwd-module-script', 
-			LEARNDASH_LMS_PLUGIN_URL . 'assets/js/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.js', 
+			LEARNDASH_LMS_PLUGIN_URL . '/assets/js/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.js', 
 			array( 'jquery' ), 
 			LEARNDASH_VERSION,
 			true 
@@ -1048,9 +1048,6 @@ if ( ! class_exists( 'Semper_Fi_Module' ) ) {
 						update_post_meta( $post_id, '_' . $this->get_prefix( $k ) . $k, $options );
 						
 						learndash_convert_settings_to_single( $post_id, $options, $k );
-						
-						// Purge the LD transients when we save any of our post types.
-						learndash_purge_transients();
 					}
 				}
 			}

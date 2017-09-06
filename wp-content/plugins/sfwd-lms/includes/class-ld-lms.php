@@ -104,9 +104,9 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 		function trigger_actions() {
 			if ( is_admin() ) {
 				do_action('learndash_admin_init');
+			} else {
+				do_action('learndash_init');
 			}
-			
-			do_action('learndash_init');
 
 			do_action('learndash_settings_sections_fields_init');
 			do_action('learndash_settings_sections_init');
@@ -114,14 +114,6 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 			if ( is_admin() ) {
 				do_action('learndash_settings_pages_init');
 			}
-		}
-
-		function get_post_args_section( $section = '', $sub_section = '' ) {
-			if ( ( !empty( $section ) ) && ( isset( $this->post_args[$section] ) ) )
-				if ( ( !empty( $sub_section ) ) && ( isset( $this->post_args[$section][$sub_section] ) ) )
-					return $this->post_args[$section][$sub_section];
-				else
-					return $this->post_args[$section];
 		}
 
 		function wp_shutdown() {
@@ -922,13 +914,6 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 							'name' => sprintf( _x( '%s Materials', 'Course Materials Label', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
 							'type' => 'textarea',
 							'help_text' => sprintf( _x( 'Options for %s materials', 'Options for course materials', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
-							'show_in_rest' => true,
-							
-							'rest_args' => array(
-								'schema' => array(
-									'type' => 'html'
-								) 
-							)
 						),
 						'course_price_type' => array(
 							'name' => sprintf( _x( '%s Price Type', 'Course Price Type Label', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
@@ -942,38 +927,28 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 							),
 							'default' => 'open',
 							'help_text' => __( 'Is it open to all, free join, one time purchase, or a recurring subscription?', 'learndash' ),
-							'show_in_rest' => true,
-							'rest_args' => array(
-								'schema' => array(
-									'type' => 'string',
-								)
-							)
 						),
 						'custom_button_url' => array(
 							'name' => __( 'Custom Button URL', 'learndash' ),
 							'type' => 'text',
 							'placeholder'	=> __( 'Optional', 'learndash' ),
 							'help_text' => sprintf( _x( 'Entering a URL in this field will enable the "%s" button. The button will not display if this field is left empty.', 'placeholders: "Take This Course" button label', 'learndash' ), LearnDash_Custom_Label::get_label( 'button_take_this_course' )),
-							'show_in_rest' => false
 						),
 						'course_price' => array(
 							'name' => sprintf( _x( '%s Price', 'Course Price Label', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
 							'type' => 'text',
 							'help_text' => sprintf( _x( 'Enter %s price here. Leave empty if the %s is free.', 'Enter course price here. Leave empty if the course is free.', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ), LearnDash_Custom_Label::get_label( 'course' ) ),
-							'show_in_rest' => true,
 						),
 						'course_price_billing_cycle' => array(
 							'name' => __( 'Billing Cycle', 'learndash' ),
 							'type' => 'html',
 							'default' => $this->learndash_course_price_billing_cycle_html(),
 							'help_text' => __( 'Billing Cycle for the recurring payments in case of a subscription.', 'learndash' ),
-							'show_in_rest' => false,
 						),
 						'course_access_list' => array(
 							'name' => sprintf( _x( '%s Access List', 'Course Access List Label', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
 							'type' => 'textarea',
 							'help_text' => __( 'This field is auto-populated with the UserIDs of those who have access to this course.', 'learndash' ),
-							'show_in_rest' => false,
 						),
 						'course_lesson_orderby' => array(
 							'name' => sprintf( _x( 'Sort %s By', 'Sort Lesson By Label', 'learndash' ), LearnDash_Custom_Label::get_label( 'lesson' ) ),
@@ -985,8 +960,7 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 								'menu_order' => __( 'Menu Order', 'learndash' ),
 							),
 							'default' => '',
-							'help_text' => sprintf( _x( 'Choose the sort order of %s in this %s.', 'Choose the sort order of lessons in this course.', 'learndash' ), LearnDash_Custom_Label::label_to_lower('lessons'), LearnDash_Custom_Label::label_to_lower('course') ),
-							'show_in_rest' => true,
+							'help_text' => sprintf( _x( 'Choose the sort order of %s in this %s.', 'Choose the sort order of lessons in this course.', 'learndash' ), LearnDash_Custom_Label::label_to_lower('lessons'), LearnDash_Custom_Label::label_to_lower('course') )
 						),
 						'course_lesson_order' => array(
 							'name' => sprintf( _x( 'Sort %s Direction', 'Sort Lesson Direction Label', 'learndash' ), LearnDash_Custom_Label::get_label( 'lesson' ) ),
@@ -998,7 +972,6 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 							),
 							'default' => '',
 							'help_text' => sprintf( _x( 'Choose the sort order of %s in this %s.', 'Choose the sort order of lessons in this course.', 'learndash' ), LearnDash_Custom_Label::label_to_lower('lessons'), LearnDash_Custom_Label::label_to_lower('course' ) ),
-							'show_in_rest' => true,
 						),
 						/*
 						'course_lesson_per_page' => array(
@@ -1025,8 +998,8 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 							'type' => 'checkbox',
 							'checked_value' => 'on',
 							'help_text' => __( 'Leave this field unchecked if prerequisite not used.', 'learndash' ),
-							'show_in_rest' => true,
 						),
+
 						'course_prerequisite' => array( 
 							'name' => sprintf( _x( '%s Prerequisites', 'Course prerequisites Label', 'learndash' ),LearnDash_Custom_Label::get_label( 'course' ) ), 
 							'type' => 'multiselect', 
@@ -1034,7 +1007,6 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 							'lazy_load'	=>	true,
 							'initial_options' => '', 
 							'default' => '',
-							'show_in_rest' => true,
 						),
 						'course_prerequisite_compare' => array(
 							'name' => sprintf( _x( '%s Prerequisites Compare', 'Course Prerequisites Compare Label', 'learndash' ),LearnDash_Custom_Label::get_label( 'course' ) ), 
@@ -1045,13 +1017,13 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 							),
 							'default' => '',
 							'help_text' => sprintf( _x( 'Select how to compare the selected prerequisite %s.', 'pleaceholder: Course', 'learndash' ),LearnDash_Custom_Label::label_to_lower('course')),
-							'show_in_rest' => true,
 						),
+						
+						
 						'course_points_enabled' => array(
 							'name' => sprintf( _x( 'Enable %s Points', 'placeholder: Course', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
 							'type' => 'checkbox',
 							'help_text' => __( 'Leave this field unchecked if points not used.', 'learndash' ),
-							'show_in_rest' => true,
 						),
 						'course_points' => array(
 							'name' => __( 'Course Points', 'learndash' ),
@@ -1059,7 +1031,6 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 							'step' => 'any',
 							'min' => '0',
 							'help_text' => sprintf( _x( 'Enter the number of points a user will receive for this %s.', 'placeholder: course', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
-							'show_in_rest' => true,
 						),
 						'course_points_access' => array(
 							'name' => __( 'Course Points Access', 'learndash' ),
@@ -1067,50 +1038,89 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 							'step' => 'any',
 							'min' => '0',
 							'help_text' => sprintf( _x( 'Enter the number of points a user must have to access this %s.', 'placeholder: course', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
-							'show_in_rest' => true,
 						),
+
+
 						'course_disable_lesson_progression' => array(
 							'name' => sprintf( _x( 'Disable %s Progression', 'Disable Lesson Progression Label', 'learndash' ), LearnDash_Custom_Label::get_label( 'lesson' ) ),
 							'type' => 'checkbox',
 							'default' => 0,
 							'help_text' => sprintf( _x( 'Disable the feature that allows attempting %s only in allowed order.', 'Disable the feature that allows attempting lessons only in allowed order.', 'learndash' ), LearnDash_Custom_Label::label_to_lower('lessons') ), 
-							'show_in_rest' => true,
 						),
 						'expire_access' => array(
 							'name' => __( 'Expire Access', 'learndash' ),
 							'type' => 'checkbox',
 							'help_text' => __( 'Leave this field unchecked if access never expires.', 'learndash' ),
-							'show_in_rest' => true,
 						),
+
 						'expire_access_days' => array(
 							'name' => __( 'Expire Access After (days)', 'learndash' ),
 							'type' => 'number',
 							'min' => '0',
 							'help_text' => sprintf( _x( 'Enter the number of days a user has access to this %s.', 'Enter the number of days a user has access to this course.', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
-							'show_in_rest' => true,
 						),
 						'expire_access_delete_progress' => array(
 							'name' => sprintf( _x( 'Delete %s and %s Data After Expiration', 'Delete Course and Quiz Data After Expiration Label', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ), LearnDash_Custom_Label::get_label( 'quiz' ) ),
 							'type' => 'checkbox',
 							'help_text' => sprintf( _x( 'Select this option if you want the user\'s %s progress to be deleted when their access expires.', 'Select this option if you want the user\'s course progress to be deleted when their access expires.', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
-							'show_in_rest' => true,
 						),
 						'course_disable_content_table' => array(
 							'name' => sprintf( _x( 'Hide %s Content Table', 'Hide Course Content Table Label', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ),
 							'type' => 'checkbox',
 							'default' => 0,
 							'help_text' => sprintf( _x( 'Hide %s Content table when user is not enrolled.', 'Hide Course Content table when user is not enrolled.', 'learndash' ), LearnDash_Custom_Label::get_label( 'course' ) ), 
-							'show_in_rest' => true,
 						),
 						
 						'certificate' => array( 
 							'name' => __( 'Associated Certificate', 'learndash' ), 
 							'type' => 'select', 
 							'help_text' => sprintf( _x( 'Select a certificate to be awarded upon %s completion (optional).', 'Select a certificate to be awarded upon course completion (optional).', 'learndash' ), LearnDash_Custom_Label::label_to_lower('course') ), 
-							'default' => '',
-							'show_in_rest' => true,
+							'default' => '' 
 						),
 					),
+					/*
+					'default_options' => array(
+						'paypal_email' => array( 
+							'name' => __( 'PayPal Email', 'learndash' ), 
+							'help_text' => __( 'Enter your PayPal email here.', 'learndash' ), 
+							'type' => 'text',
+						),
+						'paypal_currency' => array( 
+							'name' => __( 'PayPal Currency', 'learndash' ), 
+							'help_text' => __( 'Enter the currency code for transactions.', 'learndash' ), 
+							'type' => 'text', 
+							'default' => 'USD',
+						),
+						'paypal_country' => array( 
+							'name' => __( 'PayPal Country', 'learndash' ), 
+							'help_text' => __( 'Enter your country code here.', 'learndash' ), 
+							'type' => 'text', 
+							'default' => 'US',
+						),
+						'paypal_cancelurl' => array( 
+							'name' => __( 'PayPal Cancel URL', 'learndash' ), 
+							'help_text' => __( 'Enter the URL used for purchase cancellations.', 'learndash' ), 
+							'type' => 'text', 
+							'default' => get_home_url(),
+						),
+						'paypal_returnurl' => array( 
+							'name' => __( 'PayPal Return URL', 'learndash' ), 
+							'help_text' => __( 'Enter the URL used for completed purchases (typically a thank you page).', 'learndash' ), 
+							'type' => 'text', 
+							'default' => get_home_url(),
+						),
+						'paypal_notifyurl' => array( 
+							'name' => __( 'PayPal Notify URL', 'learndash' ), 
+							'help_text' => __( 'Enter the URL used for IPN notifications.', 'learndash' ), 
+							'type' => 'text', 
+							'default' => get_home_url() . '/sfwd-lms/paypal',
+						),
+						'paypal_sandbox' => array( 
+							'name' => __( 'Use PayPal Sandbox', 'learndash' ), 
+							'help_text' => __( 'Check to enable the PayPal sandbox.', 'learndash' ),
+						),
+					),
+					*/
 				),
 				'sfwd-lessons' => array(
 					'plugin_name' => LearnDash_Custom_Label::get_label( 'lesson' ),
@@ -1329,7 +1339,6 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 							'help_text' => sprintf( _x( 'Associate with a %s.', 'placeholders: course', 'learndash' ), LearnDash_Custom_Label::label_to_lower( 'course' ) ), 
 							'default' => '', 
 							//'initial_options' => $this->select_a_course( 'sfwd-topic' ),	// Move to topic_display_settings
-							'show_in_rest' => true,
 						),
 						'lesson' => array( 
 							'name' => sprintf( _x( 'Associated %s', 'Associated Lesson Label', 'learndash' ), LearnDash_Custom_Label::get_label( 'lesson' ) ), 
@@ -1338,35 +1347,30 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 							'help_text' => sprintf( _x( 'Optionally associate a %s with a %s.', 'Optionally associate a quiz with a lesson.', 'learndash' ), LearnDash_Custom_Label::label_to_lower('quiz'), LearnDash_Custom_Label::label_to_lower('lesson') ),
 							'default' => '' , 
 							//'initial_options' => $this->select_a_lesson(), // // Move to topic_display_settings
-							'show_in_rest' => true,
 						),
 						'forced_lesson_time' => array( 
 							'name' => sprintf( _x( 'Forced %s Timer', 'Forced Topic Timer Label', 'learndash' ), LearnDash_Custom_Label::get_label( 'topic' ) ), 
 							'type' => 'text', 
 							'help_text' => sprintf( _x( 'Minimum time a user has to spend on %s page before it can be marked complete. Examples: 40 (for 40 seconds), 20s, 45sec, 2m 30s, 2min 30sec, 1h 5m 10s, 1hr 5min 10sec', 'Minimum time a user has to spend on Topic page Label', 'learndash' ), LearnDash_Custom_Label::get_label( 'topic' ) ), 
 							'default' => '',
-							'show_in_rest' => true,
 						),
 						'lesson_assignment_upload' => array( 
 							'name' => __( 'Upload Assignment', 'learndash' ), 
 							'type' => 'checkbox', 
 							'help_text' => __( 'Check this if you want to make it mandatory to upload assignment', 'learndash' ), 
 							'default' => 0,
-							'show_in_rest' => true,
 						),
 						'auto_approve_assignment' => array( 
 							'name' => __( 'Auto Approve Assignment', 'learndash' ), 
 							'type' => 'checkbox', 
 							'help_text' => __( 'Check this if you want to auto-approve the uploaded assignment', 'learndash' ), 
-							'default' => 0,
-							'show_in_rest' => true,
+							'default' => 0 
 						),
 						'lesson_assignment_points_enabled' => array(
 							'name' => __( 'Award Points for Assignment', 'learndash' ),
 							'type' => 'checkbox',
 							'help_text' => __( 'Allow this assignment to be assigned points when it is approved.', 'learndash' ),
 							'default' => 0,
-							'show_in_rest' => true,
 						),
 						'lesson_assignment_points_amount' => array(
 							'name' => __( 'Set Number of Points for Assignment', 'learndash' ),
@@ -1374,7 +1378,6 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 							'min' => 0,
 							'help_text' => __( 'Assign the max amount of points someone can earn for this assignment.', 'learndash' ),
 							'default' => 0,
-							'show_in_rest' => true,
 						),
 						// 'visible_after' => array( 
 						// 	'name' => __( 'Make lesson visible X days after sign-up', 'learndash' ), 
@@ -1473,7 +1476,85 @@ if ( ! class_exists( 'SFWD_LMS' ) ) {
 
 				add_action( 'admin_init', array( $this, 'trans_export_init' ) );
 			}
-			
+
+
+			// Added support for Lesson/Topic Videos
+			if ( ( defined('LEARNDASH_LESSON_VIDEO' ) ) && ( LEARNDASH_LESSON_VIDEO == true ) ) {
+				$this->post_args['sfwd-lessons']['fields'] = array_merge(
+					$this->post_args['sfwd-lessons']['fields'],
+					array(
+						'lesson_video_enabled' => array( 
+							'name' => __( 'Enable Video Progression', 'learndash' ), 
+							'type' => 'checkbox', 
+							'help_text' => __( 'Check this if you want to show a video as part of the progression.', 'learndash' ), 
+							'default' => 0,
+						),
+						'lesson_video_url' => array( 
+							'name' => __( 'Video URL', 'learndash' ), 
+							'type' => 'text', 
+							'help_text' => sprintf( _x( 'URL to video. The video will be added bottom of the %s content. Only YouTube or Vimeo supported at this time.', 'placeholder: Lesson', 'learndash' ), LearnDash_Custom_Label::get_label( 'lesson' ) ),
+							'default' => '',
+						),
+						'lesson_video_auto_start' => array( 
+							'name' => __( 'Auto Start Video', 'learndash' ), 
+							'type' => 'checkbox', 
+							'help_text' => __( 'Check this if you want the video to auto-start on page load.', 'learndash' ), 
+							'default' => 0,
+						),
+						'lesson_video_shown' => array(
+							'name' => __( 'When to show video', 'learndash' ), 
+							'type' => 'select',
+							'initial_options' => array(	
+								'AFTER'	=> __( 'After (default) - Video is shown after completing sub-steps', 'learndash' ),
+								'BEFORE' => __( 'Before - Video is shown before completing sub-steps', 'learndash' ),
+							),
+							'default' => '',
+							'help_text' => __( 'Select when to show video in relation to sub-steps.', 'learndash' )
+						),
+						'lesson_video_auto_complete' => array( 
+							'name' => sprintf( _x( 'Auto Complete %s', 'placeholder: Lesson', 'learndash' ), LearnDash_Custom_Label::get_label( 'lesson' ) ), 
+							'type' => 'checkbox', 
+							'help_text' => sprintf( _x( 'Check this if you want the %s to auto-complete after the video completes.', 'placeholder: Lesson', 'learndash' ), LearnDash_Custom_Label::get_label( 'lesson' ) ), 
+							'default' => 0,
+						),
+					)
+				);				
+
+				$this->post_args['sfwd-topic']['fields'] = array_merge(
+					$this->post_args['sfwd-topic']['fields'],
+					array(
+						'lesson_video_enabled' => array( 
+							'name' => __( 'Enable Video Progression', 'learndash' ), 
+							'type' => 'checkbox', 
+							'help_text' => __( 'Check this if you want to show a video as part of the progression.', 'learndash' ), 
+							'default' => 0,
+						),
+						'lesson_video_url' => array( 
+							'name' => __( 'Video URL', 'learndash' ), 
+							'type' => 'text', 
+							'help_text' => sprintf( _x( 'URL to video. The video will be added bottom of the %s content. Only YouTube or Vimeo supported at this time.', 'placeholder: Topic', 'learndash' ), LearnDash_Custom_Label::get_label( 'topic' ) ),
+							'default' => '',
+						),
+						'lesson_video_auto_start' => array( 
+							'name' => __( 'Auto Start Video', 'learndash' ), 
+							'type' => 'checkbox', 
+							'help_text' => __( 'Check this if you want the video to auto-start on page load.', 'learndash' ), 
+							'default' => 0,
+						),
+						'lesson_video_auto_complete' => array( 
+							'name' => sprintf( _x( 'Auto Complete %s', 'placeholder: Topic', 'learndash' ), LearnDash_Custom_Label::get_label( 'topic' ) ), 
+							'type' => 'checkbox', 
+							'help_text' => sprintf( _x( 'Check this if you want the %s to auto-complete after the video completes.', 'placeholder: Topic', 'learndash' ), LearnDash_Custom_Label::get_label( 'topic' ) ), 
+							'default' => 0,
+						)
+					)
+				);
+			}
+		
+
+
+
+
 			 /**
 			 * Filter $post_args used to create the custom post types and everything
 			 * associated with them.

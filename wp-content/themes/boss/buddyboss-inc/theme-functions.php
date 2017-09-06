@@ -288,11 +288,7 @@ function buddyboss_scripts_styles() {
 	 * Adds mobile JavaScript functionality.
 	 */
 	if ( !is_admin() ) {
-		if ( $rtl ) {
-			wp_enqueue_script( 'idangerous-swiper', get_template_directory_uri() . '/js/idangerous.rtl.swiper.js', array( 'jquery' ), '1.9.2', true );
-		} else {
-			wp_enqueue_script( 'idangerous-swiper', get_template_directory_uri() . '/js/idangerous.swiper.js', array( 'jquery' ), '1.9.2', true );
-		}
+			wp_enqueue_script( 'idangerous-swiper', get_template_directory_uri() . '/js/swiper.jquery.js', array( 'jquery' ), '3.4.2', true );
 	}
 
 	$user_profile = null;
@@ -539,6 +535,37 @@ function buddyboss_members_latest_update_filter( $latest ) {
 add_filter( 'bp_get_activity_latest_update_excerpt', 'buddyboss_members_latest_update_filter' );
 
 /**
+ * Remove an anonymous object filter.
+ *
+ * @param string $tag Hook name.
+ * @param string $class Class name
+ * @param string $method Method name
+ * @return void
+ */
+function buddyboss_remove_anonymous_object_filter( $tag, $class, $method ) {
+	$filters = $GLOBALS['wp_filter'][ $tag ];
+
+	if ( empty ( $filters ) ) {
+		return;
+	}
+
+	foreach ( $filters as $priority => $filter ) {
+		foreach ( $filter as $identifier => $function ) {
+			if ( is_array( $function)
+				and is_a( $function['function'][0], $class )
+				and $method === $function['function'][1]
+			) {
+				remove_filter(
+					$tag,
+					array ( $function['function'][0], $method ),
+					$priority
+				);
+			}
+		}
+	}
+}
+
+/**
  * Moves sitewide notices to the header
  *
  * Since BuddyPress doesn't give us access to BP_Legacy, let
@@ -549,36 +576,8 @@ add_filter( 'bp_get_activity_latest_update_excerpt', 'buddyboss_members_latest_u
 function buddyboss_fix_sitewide_notices() {
 	// Check if BP_Legacy is being used and messages are active
 	if ( class_exists( 'BP_Legacy' ) && bp_is_active( 'messages' ) ) {
-		remove_action( 'wp_footer', array( 'BP_Legacy', 'sitewide_notices' ), 9999 );
-
-		global $wp_filter;
-
-		// Get the wp_footer callbacks
-		$footer = !empty( $wp_filter[ 'wp_footer' ] ) && is_array( $wp_filter[ 'wp_footer' ] ) ? $wp_filter[ 'wp_footer' ] : false;
-
-		// Make sure we have some
-		if ( is_array( $footer ) && count( $footer ) > 0 ) {
-			$new_footer_cbs = array();
-
-			// Cycle through each callback and remove any with sitewide_notices in it,
-			// then replace and add to the header
-			foreach ( $footer as $priority => $footer_cb ) {
-				if ( is_array( $footer_cb ) && !empty( $footer_cb ) ) {
-					$keys	 = array_keys( $footer_cb );
-					$key	 = $keys[ 0 ];
-
-					if ( stristr( $key, 'sitewide_notices' ) ) {
-						add_action( 'buddyboss_inside_wrapper', 'buddyboss_print_sitewide_notices', 9999 );
-					} else {
-						$new_footer_cbs[ $priority ] = $footer_cb;
-					}
-				} else {
-					$new_footer_cbs[ $priority ] = $footer_cb;
-				}
-			}
-
-			$wp_filter[ 'wp_footer' ] = $new_footer_cbs;
-		}
+		buddyboss_remove_anonymous_object_filter( 'wp_footer', 'BP_Legacy', 'sitewide_notices' );
+		add_action( 'buddyboss_inside_wrapper', 'buddyboss_print_sitewide_notices', 9999 );
 	}
 }
 
@@ -1267,6 +1266,7 @@ function buddyboss_memory_admin_bar_nodes() {
 			'class="nojq nojs"',
 			'class="quicklinks" id="wp-toolbar"',
 			'id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu"',
+			'id="wp-admin-bar-top-secondary" class="ab-top-secondary active ab-top-menu"',
 		), '', $admin_bar_output );
 
 		//remove screen shortcut link
@@ -1490,8 +1490,8 @@ function buddyboss_avatar_thumb_width( $val ) {
 
 add_filter( "bp_core_avatar_full_height", "buddyboss_avatar_full_height" );
 add_filter( "bp_core_avatar_full_width", "buddyboss_avatar_full_width" );
-add_filter( "bp_core_avatar_thumb_height", "buddyboss_avatar_thumb_height" );
-add_filter( "bp_core_avatar_thumb_width", "buddyboss_avatar_thumb_width" );
+//add_filter( "bp_core_avatar_thumb_height", "buddyboss_avatar_thumb_height" );
+//add_filter( "bp_core_avatar_thumb_width", "buddyboss_avatar_thumb_width" );
 
 
 
@@ -2019,7 +2019,11 @@ class BuddybossWalker extends Walker {
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
-		$icon_class = 'fa-file';
+		$icon_class = '';
+		
+		if ( $item->menu_item_parent === '0' ) {
+			$icon_class = 'fa-file';
+		}
 
 		foreach ( $item->classes as $key => $value ) {
 			if ( substr( $value, 0, 3 ) === 'fa-' ) {
@@ -2087,7 +2091,7 @@ class BuddybossWalker extends Walker {
 		 * @param object $item The current menu item.
 		 * @param array  $args An array of wp_nav_menu() arguments.
 		 */
-		$archor_classes = ($item->menu_item_parent === '0') ? 'class="' . esc_attr( $icon_class ) . '"' : '';
+		$archor_classes = 'class="' . esc_attr( $icon_class ) . '"';
 
 		$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
 
@@ -2223,7 +2227,7 @@ function buddyboss_get_page_title() {
 
 				$output_page = get_post( $page_id );
 
-				$custom_title = $output_page->post_title;
+				$custom_title = apply_filters( 'the_title', $output_page->post_title );
 			}
 		}
 	}
@@ -2416,16 +2420,17 @@ function buddyboss_notification_count_heartbeat( $response, $data, $screen_id ) 
 	if ( function_exists( "bp_notifications_get_all_notifications_for_user" ) )
 		$notifications			 = bp_notifications_get_all_notifications_for_user( get_current_user_id() );
 
-	$notification_count		 = count( $notifications );
+	$notification_count = 0;
 
 	if ( function_exists( "bp_notifications_get_all_notifications_for_user" ) ) {
-		$notifications			 = bp_notifications_get_notifications_for_user( get_current_user_id() );
-		$notification_content	 = '';
-        if( !empty( $notifications ) ){
-            foreach ( (array) $notifications as $notification ) {
-                if( is_array( $notification ) ){
-                    if( isset( $notification['link'] ) && isset( $notification['text'] ) ){
-                        $notification_content .= "<a href='". esc_url( $notification['link'] ) ."'>{$notification['text']}</a>";
+		$notifications 			= bp_notifications_get_notifications_for_user( get_current_user_id(), 'object' );
+		$notification_count		= $notifications ? count( $notifications ) : 0;
+		$notification_content	= '';
+		if( !empty( $notifications ) ){
+			foreach ( (array) $notifications as $notification ) {
+				if( is_object( $notification ) ){
+					if( isset( $notification->href ) && isset( $notification->content ) ){
+                        $notification_content .= "<a href='". esc_url( $notification->href ) ."'>{$notification->content}</a>";
                     }
                 } else {
                     $notification_content .= $notification;
@@ -2773,7 +2778,7 @@ function bb_child_doc_menu_count_tabs() {
 		$name = __( 'Docs', 'boss' );
 	}
 
-	$bp->bp_nav[ 'docs' ][ 'name' ] = $name . ' <span class="count">' . $numdocsposts . '</span>';
+	$bp->members->nav->edit_nav( array( 'name' => $name . ' <span class="count">' . $numdocsposts . '</span>' ), bp_docs_get_docs_slug() );
 
 	if ( bp_is_group() ) {
 		$get_term_id = get_term_by( 'slug', 'bp_docs_associated_group_' . bp_get_current_group_id(), 'bp_docs_associated_item' );
@@ -2786,15 +2791,9 @@ function bb_child_doc_menu_count_tabs() {
 				$numdocsposts = number_format( $numdocsposts );
 			}
 
-			$slug = bp_get_current_group_slug();
-
-			$bp->bp_options_nav[ $slug ][ "docs" ][ "name" ] = '' . $bp->bp_options_nav[ $slug ][ "docs" ][ "name" ] . ' <span class="count">' . $numdocsposts . '</span>';
-			;
-			//$bp->bp_nav
+			$bp->groups->nav->edit_nav( array( 'name' => $name . ' <span class="count">' . $numdocsposts . '</span>' ), bp_docs_get_docs_slug(), bp_current_item() );
 		}
 	}
-
-	//print_r($bp);
 }
 
 if ( function_exists( 'bp_is_active' ) && (buddyboss_is_plugin_active( 'buddypress-docs/loader.php' )) ) {
@@ -2832,6 +2831,9 @@ add_action( 'admin_head', 'bb_child_custom_admin_styles' );
  */
 
 define( 'BBOSS_BPDOC_GDS_PATH', get_stylesheet_directory() );
+
+//Show the comment form on single doc page
+add_filter( 'bp_docs_allow_comment_section', '__return_true', 11 );
 
 //add_filter( 'bp_docs_get_doc_link', 'bboss_bp_doc_group_doc_permalink', 11, 2 );
 function bboss_bp_doc_group_doc_permalink( $permalink, $doc_id ) {
@@ -3116,7 +3118,7 @@ if ( !function_exists( 'buddyboss_comment' ) ) {
 
 							<footer class="comment-meta">
 								<?php
-								printf( '<a href="%1$s"><time datetime="%2$s">%3$s ago</time></a>', esc_url( get_comment_link( $comment->comment_ID ) ), get_comment_time( 'c' ),
+								printf( __( '<a href="%1$s"><time datetime="%2$s">%3$s ago</time></a>', 'boss' ), esc_url( get_comment_link( $comment->comment_ID ) ), get_comment_time( 'c' ),
 								/* translators: 1: date, 2: time */ human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) )
 								);
 								?>
@@ -3323,6 +3325,7 @@ if( defined('EM_VERSION') && EM_VERSION ) {
      */
     function boss_add_translatable_options($array){
         array_push($array, 'dbem_bb_event_list_layout', 'dbem_bb_event_list_item_format_header', 'dbem_bb_event_list_item_format', 'dbem_bb_event_list_item_format_footer', 'dbem_bb_event_grid_layout', 'dbem_bb_event_grid_item_format_header', 'dbem_bb_event_grid_item_format', 'dbem_bb_event_grid_item_format_footer', 'dbem_bb_single_event', 'dbem_bb_single_event_format');
+		return $array;
     }
 
     add_filter('em_content_events_args', 'boss_events_page_arguments', 10, 1);
@@ -3368,19 +3371,23 @@ if( defined('EM_VERSION') && EM_VERSION ) {
      * Prepate things on theme switch
      */
     function boss_events_default_options() {
-        $bb_event_options = array(
-            'dbem_full_calendar_event_format' => '<li style="background-color: #_CATEGORYCOLOR">#_EVENTLINK</li>',
-            'dbem_bb_event_list_layout' => 1,
-            'dbem_bb_event_list_item_format_header' => '<table cellpadding="0" cellspacing="0" class="events-table" >
+
+		if ( ! get_option('dbem_bb_event_default_options') ) {
+
+			$bb_event_options = array(
+				'dbem_full_calendar_event_format' => '<li style="background-color: #_CATEGORYCOLOR">#_EVENTLINK</li>',
+				'dbem_bb_event_list_layout' => 1,
+				'dbem_bb_event_default_options' => 1,
+				'dbem_bb_event_list_item_format_header' => '<table cellpadding="0" cellspacing="0" class="events-table" >
             <thead>
                 <tr>
-                    <th class="event-time" width="150">'.__('Date/Time','boss').'</th>
-                    <th class="event-description" width="*">'.__('Event','boss').'</th>
-                    <th class="event-location" width="*">'.__('Location','boss').'</th>
+                    <th class="event-time" width="150">' . __('Date/Time', 'boss') . '</th>
+                    <th class="event-description" width="*">' . __('Event', 'boss') . '</th>
+                    <th class="event-location" width="*">' . __('Location', 'boss') . '</th>
                 </tr>
             </thead>
             <tbody>',
-            'dbem_bb_event_list_item_format' => '<tr>
+				'dbem_bb_event_list_item_format' => '<tr>
                 <td class="event-time">
                     <i class="fa fa-calendar"></i>#_EVENTDATES<br/>
                     <i class="fa fa-clock-o"></i>#_EVENTTIMES
@@ -3398,10 +3405,10 @@ if( defined('EM_VERSION') && EM_VERSION ) {
                     {has_location}<i class="fa fa-globe"></i><span>#_LOCATIONTOWN #_LOCATIONSTATE</span>{/has_location}
                 </td>
             </tr>',
-            'dbem_bb_event_list_item_format_footer' => '</tbody></table>',
-            'dbem_bb_event_grid_layout' => 0,
-            'dbem_bb_event_grid_item_format_header' => '<div class="events-grid">',
-            'dbem_bb_event_grid_item_format' => '<div class="event-item">
+				'dbem_bb_event_list_item_format_footer' => '</tbody></table>',
+				'dbem_bb_event_grid_layout' => 0,
+				'dbem_bb_event_grid_item_format_header' => '<div class="events-grid">',
+				'dbem_bb_event_grid_item_format' => '<div class="event-item">
                 <a href="#_EVENTURL" class="event-image">
                 #_EVENTIMAGECROP{events_thumbnail}
                 </a>
@@ -3413,50 +3420,51 @@ if( defined('EM_VERSION') && EM_VERSION ) {
                 #_EVENTDATES<span> / </span>#_EVENTTIMES
                 </div>
             </div>',
-            'dbem_bb_event_grid_item_format_footer' => '</div>',
-            'dbem_bb_single_event_format' => '<div class="event-image">#_EVENTIMAGE{1400,332}</div>
+				'dbem_bb_event_grid_item_format_footer' => '</div>',
+				'dbem_bb_single_event_format' => '<div class="event-image">#_EVENTIMAGE{1400,332}</div>
              #_EVENTNOTES
             <div class="event-details">
             <div style="float:right; margin:0px 0px 0 15px;">#_LOCATIONMAP</div>
             <p>
-                <strong>'.__('Date/Time', 'boss').'</strong>
+                <strong>' . __('Date/Time', 'boss') . '</strong>
                #_EVENTDATES @ <i>#_EVENTTIMES</i>
             </p>
             {has_location}
             <p>
-                <strong>'.__('Location', 'boss').'</strong>
+                <strong>' . __('Location', 'boss') . '</strong>
                 #_LOCATIONLINK
             </p>
             {/has_location}
             <p>
-                <strong>'.__('Categories', 'boss').'</strong>
+                <strong>' . __('Categories', 'boss') . '</strong>
                 #_CATEGORIES
             </p>
 </div>
              {has_bookings}
-            <h3>'.__('Bookings', 'boss').'</h3>
+            <h3>' . __('Bookings', 'boss') . '</h3>
             #_BOOKINGFORM
             {/has_bookings}',
-            'dbem_image_min_width' => 200,
-		    'dbem_image_min_height' => 200
+				'dbem_image_min_width' => 200,
+				'dbem_image_min_height' => 200
 //            'dbem_bb_single_event_header_format' => '<h1 class="entry-title">#s</h1><div class="subtitle">#_EVENTDATES @ #_EVENTTIMES</div>'
-        );
+			);
 
-        //add new options
-        foreach($bb_event_options as $key => $value){
-            add_option($key, $value);
-        }
+			//add new options
+			foreach ($bb_event_options as $key => $value) {
+				update_option($key, $value);
+			}
 
-        $events_page_id = get_option ( 'dbem_events_page' );
-        $events_page = array(
-          'ID'           => $events_page_id,
-          'page_template'  => 'page-events.php'
-        );
-        wp_update_post( $events_page );
+			$events_page_id = get_option('dbem_events_page');
+			$events_page = array(
+				'ID' => $events_page_id,
+				'page_template' => 'page-events.php'
+			);
+			wp_update_post($events_page);
+		}
     }
 
 	/**
-	 * Since strait call to boss_events_default_options giving a php warning, boss_events_default_options call is moved on init with priority 11
+	 * Since straight call to boss_events_default_options giving a php warning, boss_events_default_options call is moved on init with priority 11
 	 */
 	add_action( 'init', 'boss_events_default_options', 11 );
 
@@ -3471,11 +3479,11 @@ if( defined('EM_VERSION') && EM_VERSION ) {
         global $post;
         $events_page_id = get_option ( 'dbem_events_page' );
 
-        if($post->ID == $events_page_id) {
+        if ( isset( $post->ID ) && $post->ID == $events_page_id) {
             $classes[] = 'events-page';
         }
 
-        if($post->ID == $events_page_id && get_option('dbem_display_calendar_in_events_page')) {
+        if ( isset( $post->ID ) && $post->ID == $events_page_id && get_option('dbem_display_calendar_in_events_page')) {
             $classes[] = 'fullcalendar-page';
         }
         return array_unique( $classes );
@@ -3541,7 +3549,7 @@ function boss_profile_achievements() {
 
 	if ( is_user_logged_in() && function_exists( 'badgeos_get_user_achievements' ) ) {
 
-		$achievements = badgeos_get_user_achievements( array( 'user_id' => bp_displayed_user_id() ) );
+		$achievements = badgeos_get_user_achievements( array( 'user_id' => bp_displayed_user_id(), 'display' => true ) );
 
 		if ( is_array( $achievements ) && !empty( $achievements ) ) {
 

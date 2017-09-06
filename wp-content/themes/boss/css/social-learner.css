@@ -532,6 +532,12 @@ body .entry-content .instructors-title h2,
 body .entry-content .shop-title h2 {
     margin-bottom: 50px;
 }
+body.is-desktop.left-menu-open:not(.boxed) .vc_row[data-vc-stretch-content] {
+  padding-left: 227px;
+}
+body.is-desktop .vc_row[data-vc-stretch-content] > .vc_column_container {
+    max-width: 90% !important;
+}
 .wpb_row .woocommerce ul.products li.product a img {
     border: 2px solid transparent;
     width: 100% !important;

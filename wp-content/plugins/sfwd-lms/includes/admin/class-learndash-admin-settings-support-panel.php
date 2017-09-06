@@ -4,8 +4,6 @@ if (!class_exists('Learndash_Admin_Settings_Support_Panel')) {
 
 		var $mo_files = array();
 		
-		private $DELETE_ALL = 'DELETE ALL DATA';
-		
 		function __construct() {
 			$this->parent_menu_page_url		=	'admin.php?page=learndash_lms_settings';
 			$this->menu_page_capability		=	LEARNDASH_ADMIN_CAPABILITY_CHECK;
@@ -51,36 +49,21 @@ if (!class_exists('Learndash_Admin_Settings_Support_Panel')) {
 
 		// Track the loaded MO files for our text domain. This is used on Support tab
 		function load_textdomain( $domain = '', $mofile = '' ) {			
-			if ( ( $domain == LEARNDASH_LMS_TEXT_DOMAIN ) || ( $domain == WPPROQUIZ_TEXT_DOMAIN ) && ( !empty( $mofile ) ) ) {
-				if ( file_exists( $mofile ) ) {
-					if  ( !isset( $this->mo_files[$domain] ) ) {
-						$this->mo_files[$domain] = array();
-					}
-				
-					if ( !isset( $this->mo_files[$mofile] ) ) {
-						$this->mo_files[$domain][$mofile] = $mofile;
-					}
+			if ( ( $domain == LEARNDASH_LMS_TEXT_DOMAIN ) || ( $domain == WPPROQUIZ_TEXT_DOMAIN ) ) {
+				if ( ( !empty( $mofile ) ) && ( !isset( $this->mo_files[$mofile] ) ) ) {
+					if ( !isset( $this->mo_files[$domain] ) ) $this->mo_files[$domain] = array();
+					
+					$this->mo_files[$domain][$mofile] = $mofile;
 				}
 			}
 		}
 		
 		function on_load_panel() {
 
-			if ( ( isset( $_POST['ld_data_remove_verify'] ) ) && ( $_POST['ld_data_remove_verify'] == $this->DELETE_ALL ) ) {
-				if ( ( isset( $_POST['ld_data_remove_nonce'] ) ) && ( !empty( $_POST['ld_data_remove_nonce'] ) ) ) {
-
-					if ( wp_verify_nonce( $_POST['ld_data_remove_nonce'], 'ld_data_remove' ) ) { 
-						error_log('_POST<pre>'. print_r($_POST, true) .'</pre>');
-						learndash_delete_all_data();
-						wp_redirect( add_query_arg('ld-data-deleted', '1' ) );
-					}
-				}
-			}
-
 			// Load JS/CSS as needed for page
 			wp_enqueue_style( 
 				'sfwd-module-style', 
-				LEARNDASH_LMS_PLUGIN_URL . 'assets/css/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.css', 
+				LEARNDASH_LMS_PLUGIN_URL . '/assets/css/sfwd_module'. ( ( defined( 'LEARNDASH_SCRIPT_DEBUG' ) && ( LEARNDASH_SCRIPT_DEBUG === true ) ) ? '' : '.min') .'.css', 
 				array(), 
 				LEARNDASH_VERSION 
 			);
@@ -205,7 +188,6 @@ if (!class_exists('Learndash_Admin_Settings_Support_Panel')) {
 						<tr><th scope="row"><strong><?php _e('Translation Files', 'learndash') ?></strong></th>
 							<td><?php 
 							if ( !empty( $this->mo_files ) ) {
-								
 								foreach( $this->mo_files as $domain => $mo_files ) {
 									$mo_files_output = '';
 									foreach( $mo_files as $mo_file ) {
@@ -353,30 +335,7 @@ if (!class_exists('Learndash_Admin_Settings_Support_Panel')) {
 							</td></tr>
 					</tbody>
 				</table>
-				
-				<?php if ( learndash_is_admin_user() ) { ?>
-					<hr style="margin-top: 30px; border-top: 5px solid red;"/>
-					<h2><?php _e('Reset LearnDash', 'learndash' ); ?></h2>
-					<?php if ( !isset($_GET['ld-data-deleted'] ) ) { ?>
-						<p><?php _e('This option will remove ALL LearnDash data.', 'learndash') ?></p>
-						<form id="ld_data_remove_form" method="POST">
-							<input type="hidden" name="ld_data_remove_nonce" value="<?php echo wp_create_nonce( 'ld_data_remove' ); ?>"
-							<p><?php echo sprintf( _x('Confirm the data deletion. Enter "<strong>%s</strong>" into the field below and click the submit button', 'placeholder: DELETE ALL DATA', 'learndash'), $this->DELETE_ALL ) ?><br /> 
-							<input name="ld_data_remove_verify" type="text" value="" /></p>
-							<p><input type="submit" value="<?php _e('Submit', 'learndash') ?>" /></p>
-						</form>
-						<script>
-							jQuery('form#ld_data_remove_form').submit(function( event ){
-								if ( !confirm( '<?php _e( 'Are you sure that you want to remove ALL LearnDash data?', 'learndash' ) ?>' ) ) {
-									event.preventDefault();
-									return;
-								}
-							});
-						</script>
-					<?php } else { ?>
-						<p><?php _e('All LearnDash successfully remove from site.', 'learndash'); ?>
-					<?php } ?>
-				<?php } ?>
+						
 				
 				<?php /* ?>
 				<h2><?php _e('Active Theme', 'learndash' ); ?></h2>

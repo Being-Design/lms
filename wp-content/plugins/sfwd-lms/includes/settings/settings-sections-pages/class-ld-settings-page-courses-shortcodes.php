@@ -128,9 +128,6 @@ LearnDash_Settings_Section::get_section_setting('LearnDash_Settings_Section_Perm
 							<ul>
 							<li><b>group_id</b>: ' . __( 'Required. Show content if the student has access to a specific group. Example: <b>[ld_group group_id="16"]insert any content[/ld_group]</b>', 'learndash' ) . '</li>
 							</ul><br />
-
-		                    <p id="shortcode_ld_video" class="ld-shortcode-header">[ld_video]</p><p>' . sprintf( _x( 'This shortcode is used on %s and %s where Video Progression is enabled. The video player will be added above the content. This shortcode allows positioning the player elsewhere within the content. This shortcode does not take any parameters.', 'learndash' ), LearnDash_Custom_Label::get_label( 'lessons' ), LearnDash_Custom_Label::get_label( 'topics' ) ) . '</p><br />
-
 							
 							<p class="ld-shortcode-header">[learndash_payment_buttons]</p>
 							<p>' . sprintf( _x( 'This shortcode can show the payment buttons on any page. Example: <strong>[learndash_payment_buttons course_id="123"]</strong> shows the payment buttons for %s with %s ID: 123', 'learndash' ), LearnDash_Custom_Label::label_to_lower( 'course' ), LearnDash_Custom_Label::get_label( 'courses' ) ) . '</p><br>
