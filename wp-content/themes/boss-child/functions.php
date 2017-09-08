@@ -48,6 +48,7 @@ function boss_child_theme_scripts_styles()
    * Styles
    */
   wp_enqueue_style( 'boss-child-custom', get_stylesheet_directory_uri().'/css/custom.css' );
+  wp_enqueue_style( 'boss-child-custom', get_stylesheet_directory_uri().'/css/main.css' );
 }
 add_action( 'wp_enqueue_scripts', 'boss_child_theme_scripts_styles', 9999 );
 
