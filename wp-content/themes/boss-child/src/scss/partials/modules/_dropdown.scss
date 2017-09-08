@@ -1,0 +1,57 @@
+// .dropdown {
+// 	$border_radius: 4px;
+
+// 	position: relative;
+
+// 	.dropdown-menu {
+// 		width: 100%;
+// 		padding: 0;
+// 		border-color: color('platinum');
+// 		border-radius: $border_radius;
+
+// 		> li {
+
+// 			& + li {
+// 				border-top: color('platinum') 1px solid;
+// 			}
+
+// 			&:first-child > a {
+// 				margin-top: -1px;
+// 				border-top-right-radius: $border_radius;
+// 				border-top-left-radius: $border_radius;
+// 			}
+
+// 			&:last-child > a {
+// 				margin-bottom: -1px;
+// 				border-bottom-right-radius: $border_radius;
+// 				border-bottom-left-radius: $border_radius;
+// 			}
+
+// 			> a {
+// 				padding: 1em;
+// 				margin-left: -1px;
+// 				margin-right: -1px;
+// 				line-height: 100%;
+// 				color: color('android-green');
+// 				transition: color $trans_time/2, background-color $trans_time/2;
+
+// 				&:hover,
+// 				&:focus,
+// 				&:active {
+// 					background-color: color('max-blue-green');
+// 					color: color('white');
+// 				}
+// 			}
+// 		} 
+// 	}
+
+// 	&.open {
+// 		.dropdown-toggle.caret {
+// 			background: none;
+			
+// 			&:before {
+// 				border-top-color: color('jet');
+// 			}
+// 		}
+// 	}
+// }

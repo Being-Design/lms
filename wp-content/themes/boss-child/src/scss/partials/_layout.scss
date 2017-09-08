@@ -1,0 +1,30 @@
+// html, body {
+// 	max-width: 100%;
+// 	overflow-x: hidden;
+
+// 	&.scroll-lock {
+// 		overflow: hidden !important;
+// 	}
+// }
+
+// #bhp-overlay {
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100vh;
+// 	z-index: 1050;
+// 	@include autoAlpha(0);
+
+// 	@include media(breakpoint(sm)) {
+// 		z-index: 1;
+// 	}
+
+// 	&.top-nav {
+// 		z-index: 1030;
+// 	}
+// }
+
+// .list-inline > .row {
+// 	display: block;
+// }

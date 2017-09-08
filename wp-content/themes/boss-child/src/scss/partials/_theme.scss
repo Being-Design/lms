@@ -1,0 +1,234 @@
+
+// body {
+// 	color: color('jet');
+// 	font-family: $font-lato;
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+// 	letter-spacing: 0.01em;
+// }
+
+// a,
+// a:visited {
+// 	color: color('android-green');
+// 	transition: color $trans_time/2;
+
+// 	&:hover,
+// 	&:focus {
+// 		color: color('max-blue-green');
+// 	}
+// }
+
+// .btn {
+// 	padding: 0.75rem 2rem;
+// 	min-width: 125px;
+// 	@include font-rem(1.5);
+// 	font-weight: font-weight(normal);
+// 	text-transform: uppercase;
+// 	color: color('android-green');
+// 	border-radius: 9999px;
+// 	background: color(white);
+// 	border: color('android-green') 2px solid;
+// 	transition: background-color $trans_time, color $trans_time;
+
+// 	&.light {
+// 		color: color('max-blue-green');
+// 		background: color(white);
+// 		border: color(white) 2px solid;
+
+// 		&:hover,
+// 		&:focus,
+// 		&:active {
+// 			background: rgba(color(white), 0.25);
+// 			color: color(white);
+// 		}
+// 	}
+
+// 	&.transparent-blue {
+// 		color: color(white);
+// 		background: transparent;
+// 		border: color(white) 2px solid;
+
+// 		&:hover,
+// 		&:focus,
+// 		&:active {
+// 			background: color(white);
+// 			color: color('max-blue-green');
+// 		}
+// 	}
+
+// 	&.success {
+// 		background-color: color('android-green');
+// 		border-color: color('android-green');
+// 		color: color(white);
+
+// 		&:hover,
+// 		&:active,
+// 		&:focus {
+// 			background-color: color(white);
+// 			color: color('android-green');
+// 		}
+
+// 		&.cta /*,
+// 		&.cta2,
+// 		&.cta3*/ {
+
+// 			&:before {
+// 				border-color: color('android-green');
+// 			}
+// 		}
+// 	}
+
+// 	&.cta {
+// 		position: relative;
+// 		text-transform: uppercase;
+// 		letter-spacing: 0.15rem;
+
+// 		&:before {
+// 			content: '';
+// 			display: block;
+// 			position: absolute;
+// 			left: -2px;
+// 			top: -2px;
+// 			width: calc(100% + 4px);
+// 			height: calc(100% + 4px);
+// 			border-right: white 2px solid;
+// 			border-radius: 9999px;
+// 			pointer-events: none;
+// 		}
+// 	}
+
+// 	&:hover,
+// 	&:focus,
+// 	&:active {
+// 		background: color('android-green');
+// 		color: color(white);
+
+// 		&.cta:before {
+// 			@include transform( translateX(6px) );
+// 			transition: transform $trans_time/2;
+// 		}
+// 	}
+
+// 	&.caret {
+// 		position: relative;
+// 		display: inline;
+// 		min-width: 0;
+// 		margin: 0;
+// 		border: none;
+// 		border-radius: 0;
+// 		background: none;
+
+// 		&:before {
+// 			$caret_width: 10px;
+
+// 			content: '';
+// 			@include center-absolute;
+// 			display: inline-block;
+// 			width: 0;
+// 			height: 0;
+// 			border-top: $caret_width dashed;
+// 			border-top: $caret_width solid color(white);
+// 			border-right: $caret_width solid transparent;
+// 			border-left: $caret_width solid transparent;
+// 			transition: border-color $trans_time;
+// 		}
+
+// 		&:focus,
+// 		&:active, {
+
+// 			&:before {
+// 				border-color-top: color('platinum');
+// 			}
+// 		}
+
+// 		&:focus {
+// 			box-shadow: 0 0 3px rgba( color('android-green'), 1 );
+// 		}
+// 	}
+// }
+
+// @each $direction in $directions {
+// 	.border-#{$direction} {
+// 		border-#{$direction}: color('platinum') 1px solid;
+// 	}
+// }
+
+// @each $color in $palette {
+// 	.border-#{$color} {
+// 		border-color: color($color);
+// 	}
+// }
+
+// .bg-white {
+// 	background: color(white);
+// 	color: color('jet');
+// }
+
+// .bg-blue {
+// 	color: color(white);
+// 	background-color: color('max-blue-green');
+// 	// background-image: url(#{$path_images + '/1_textures/bg-blue.jpg'});
+// 	// background-size: cover;
+// 	// background-repeat: no-repeat;
+// 	// background-position: 50%;
+// }
+
+// .bg-pink {
+// 	color: color(white);
+// 	background-color: color('telemagenta');
+// 	// background-image: url(#{$path_images + '/1_textures/bg-magenta.jpg'});
+// 	// background-size: cover;
+// 	// background-repeat: no-repeat;
+// 	// background-position: 50%;
+// }
+
+// .bg-orange {
+// 	color: color(white);
+// 	background-color: color('cadmium-orange');
+// 	// background-image: url(#{$path_images + '/1_textures/bg-orange.jpg'});
+// 	// background-size: cover;
+// 	// background-repeat: no-repeat;
+// 	// background-position: 50%;
+// }
+
+// .bg-gold {
+// 	color: color(white);
+// 	background-color: #fcc831;
+// }
+
+// .bg-magenta {
+// 	color: color(white);
+// 	background-color: #ec0581;
+// }
+
+// .bg-green {
+// 	color: color(white);
+// 	background-color: #51da95;
+// }
+
+// .color-orange {
+// 	color: color('cadmium-orange');
+// }
+
+// .color-magenta {
+// 	color: color('telemagenta');
+// }
+
+// .color-teal {
+// 	color: color('max-blue-green');
+// }
+
+// .panel {
+// 	box-shadow: 0 0 5px rgba( color(black), 0.35);
+// 	padding: 25px;
+// }
+
+// #bhp-overlay {
+// 	background: rgba(color(black), 0.5);
+// }

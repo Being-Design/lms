@@ -1,0 +1,26 @@
+{
+  "name": "asset-compile",
+  "version": "1.0.0",
+  "description": "Processes & compiles SCSS & JS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mtrischetta@bitbucket.org/mtrischetta/corexrm-twilio.git"
+  },
+  "author": "Mike Trischetta <mike@fullscoredev.com>",
+  "license": "ISC",
+  "homepage": "https://fullscoredev.com",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "main-bower-files": "^2.13.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

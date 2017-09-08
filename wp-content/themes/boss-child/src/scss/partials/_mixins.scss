@@ -1,0 +1,172 @@
+/**
+ *  BROWSER PREFIXES
+ */
+ 
+ @mixin transform($value, $important: '') {
+ 	-webkit-transform: #{$value} #{$important};
+ 	-ms-transform: $value #{$important};
+ 	transform: $value #{$important};
+ }
+
+ @mixin transform-origin($value) {
+ 	-webkit-transform-origin: #{$value};
+ 	-ms-transform-origin: $value;
+ 	transform-origin: $value;
+ }
+
+ @mixin transition-timing-function($value) {
+ 	-webkit-transition-timing-function: $value;
+ 	transition-timing-function: $value;
+ }
+
+ @mixin columns($val) {
+ 	-moz-columns: $val;
+ 	-webkit-columns: $val;
+ 	columns: $val;
+ }
+
+ @mixin display-flex() {
+ 	display: -ms-flex;
+ 	display: -webkit-flex;
+ 	display: flex;
+ }
+
+ @mixin display-inline-flex() {
+ 	display: -ms-inline-flex;
+ 	display: -webkit-inline-flex;
+ 	display: inline-flex;
+ }
+
+ @mixin flex($val) {
+ 	-ms-flex: $val;
+ 	-webkit-flex: $val;
+ 	flex: $val;
+ }
+
+ @mixin align-items($val) {
+ 	-ms-align-items: $val;
+ 	-webkit-align-items: $val;
+ 	align-items: $val;
+ }
+
+ @mixin align-self($val) {
+ 	-ms-align-self: $val;
+ 	-webkit-align-self: $val;
+ 	align-self: $val;
+ }
+
+ @mixin flex-direction($val) {
+ 	-ms-flex-direction: $val;
+ 	-webkit-flex-direction: $val;
+ 	flex-direction: $val;
+ }
+
+ @mixin filter($val) {
+ 	-webkit-filter: $val;
+ 	filter: $val;
+ }
+
+ @mixin center-absolute() {
+ 	position: absolute;
+ 	@include transform( translate(-50%, -50%) );
+ }
+
+ @mixin placeholder() {
+ 	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+ 		@content;
+ 	}
+ 	&::-moz-placeholder { /* Firefox 19+ */
+ 		@content;
+ 	}
+ 	&:-ms-input-placeholder { /* IE 10+ */
+ 		@content;
+ 	}
+ 	&:-moz-placeholder { /* Firefox 18- */
+ 		@content;
+ 	}
+ }
+
+/**
+ *  UTIL
+ */
+
+ @mixin font-rem($rem_value) {
+ 	font-size: #{$rem_value * 10}px;
+ 	font-size: #{$rem_value}rem;
+ }
+
+ @mixin font-px($px_value) {
+ 	font-size: #{$px_value}px;
+ 	font-size: #{$px_value / 10}rem;
+ }
+
+ @mixin autoAlpha($val, $important:"") {
+ 	$visibility: inherit;
+ 	@if $val <= 0 {
+ 		$visibility: hidden;
+ 	}
+ 	visibility: $visibility #{$important};
+ 	opacity: $val #{$important};
+ }
+
+ @mixin gpuAccel() {
+ 	@include transform(rotateX(0deg));
+ }
+
+ @mixin square($size: auto) {
+ 	width: $size;
+ 	height: $size;
+ }
+
+ @mixin center-absolute() {
+ 	position: absolute;
+ 	left: 50%;
+ 	top: 50%;
+ 	@include transform( translate(-50%, -50%) );
+ }
+
+ @mixin hide() {
+ 	display: none;
+ 	visibility: hidden;
+ }
+
+ @mixin sr-only() {
+ 	position: absolute;
+ 	width: 1px;
+ 	height: 1px;
+ 	margin: -1px;
+ 	padding: 0;
+ 	overflow: hidden;
+ 	clip: rect(0, 0, 0, 0);
+ 	border: 0;
+ }
+
+ @mixin show($display: block) {
+ 	display: $display;
+ 	visibility: visible;
+ }
+
+ @mixin text-uppercase() {
+ 	text-transform: uppercase;
+ 	letter-spacing: $uppercase_letter_spacing;
+ }
+
+ @mixin media($breakpoint, $comparator: 'min') {
+ 	$offset: 0px;
+ 	@if $comparator == 'max' {
+ 		$offset: -1px;
+ 	}
+ 	@media screen AND ( #{$comparator}-width: #{breakpoint($breakpoint) + $offset} ) {
+ 		@content;
+ 	}
+ }
+
+ @mixin media-between($breakpoint1, $breakpoint2) {
+ 	@media screen AND ( min-width: #{breakpoint($breakpoint1)} ) AND ( max-width: #{breakpoint($breakpoint2)} ) {
+ 		@content;
+ 	}
+ }
+
+ @mixin region-card-color($color) {
+ 	border-top: 4px solid color($color);
+ }

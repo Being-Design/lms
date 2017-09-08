@@ -1,0 +1,70 @@
+// PATHS
+$path_fonts: '../../fonts';
+$path_images: '../../images';
+
+
+// GLOBAL SETTINGS
+$trans_time: 250ms;
+$uppercase_letter_spacing: 0.075em;
+$border-radius: 4px;
+
+
+// COLORS
+// usage: color('blue-text')
+$palette: (
+	'white':					#fff,
+	'black': 					#000,
+	'zomp': 					#389c84,
+	'ocean-green':		#4fb69d,
+	'rich-maroon':		#af2061,
+	'telemagenta':		#d03174,
+	'flame':					#df5530,
+	'cadmium-orange':	#ec9137,
+	'palm-leaf':			#6f9b40,
+	'android-green':	#9db83c,
+	'plum':						#8b4078,
+	'pearly-purple':	#ab5d94,
+	'viridian-green':	#0090a1,
+	'max-blue-green':	#30b6bd,
+	'jet':						#333,
+	'davys-grey':			#565656,
+	'sonic-silver':		#777776,
+	'platinum':				#e4e7ec,
+	);
+
+
+// MODULE COLORS
+$body_bg: color('max-blue-green');
+
+
+// FONTS
+// Lato
+$font-lato: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+// FONT-WEIGHT
+// usage: font-weight('semi-bold')
+$font-weight: ( //keys designated per fonts.google.com
+	'thin': 				100,
+	'extra-light': 	200,
+	'light': 				300,
+	'regular': 			400,
+	'medium':				500,
+	'semi-bold':		600,
+	'bold':         700,
+	'extra-bold':		800,
+	'black':  			900,
+	);
+
+
+// BREAKPOINTS
+// usage: breakpoint(sm)
+$breakpoints: (
+	'xs': 480px,
+	'sm': 768px,
+	'md': 992px,
+	'lg': 1200px
+	);
+
+// DIRECTIONS
+$directions: (top, right, bottom, left);
