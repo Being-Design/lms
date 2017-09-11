@@ -68,7 +68,7 @@
 		<!-- #panels closed in footer-->
 		<div id="panels" class="<?php echo (boss_get_option( 'boss_adminbar' )) ? 'with-adminbar' : ''; ?>">
 
-			<?php if ( ) : ?>
+			<?php if ( true ) : ?>
 				<!-- Left Panel (hidden) -->
 			<?php else: ?>
 				<!-- Left Panel -->

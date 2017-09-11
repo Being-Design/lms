@@ -67,7 +67,7 @@ add_action('admin_menu', 'bd_settings_menu');
 
 //this function creates a simple page with title Custom Theme Options Page.
 function bd_theme_settings_page() { 
-  include( get_template_directory() . 'options.php' );
+  include get_template_directory() . '/options.php';
 }
 
 function register_bdsettings() { 
