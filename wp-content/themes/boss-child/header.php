@@ -69,7 +69,15 @@
 		<div id="panels" class="<?php echo (boss_get_option( 'boss_adminbar' )) ? 'with-adminbar' : ''; ?>">
 
 			<?php if ( get_option('hide_left_bar') == true ) : ?>
+				
 				<!-- Left Panel (hidden) -->
+				<style>
+					#right-panel-inner {
+						width: 100%;
+    					margin-left: 0;
+					}
+				</style>
+
 			<?php else: ?>
 				<!-- Left Panel -->
 				<?php get_template_part( 'template-parts/left-panel' ); ?>
