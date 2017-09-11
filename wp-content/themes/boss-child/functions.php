@@ -67,7 +67,27 @@ add_action('admin_menu', 'bd_settings_menu');
 
 //this function creates a simple page with title Custom Theme Options Page.
 function bd_theme_settings_page() { 
-  include get_template_directory() . '/options.php';
+  ?>
+  <div class="wrap">
+    <h1>Being Design Theme Options</h1>
+      <form method="post" action="options.php">
+        <?php
+        settings_fields( 'bd-options-group' );
+        do_settings_sections( 'bd-options-group' );
+        ?>
+
+        <table class="form-table">
+              <tr valign="top">
+              <th scope="row">Hide Left Sidebar</th>
+              <td><input type="checkbox" name="hide_left_bar" <?php if ( get_option('hide_left_bar') ) echo 'checked'; ?> value="true" /></td>
+              </tr>
+          </table>
+
+        <?php submit_button(); ?>
+
+      </form>
+  </div>
+  <?php
 }
 
 function register_bdsettings() { 
