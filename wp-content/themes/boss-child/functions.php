@@ -59,4 +59,22 @@ add_action( 'wp_enqueue_scripts', 'boss_child_theme_scripts_styles', 9999 );
 
 
 
-?>
+function bd_settings_menu() {
+  add_theme_page('Being Design Theme Options', 'Being Design Theme Options', 'edit_theme_options', 'bd-theme-options', 'bd_theme_settings_page');
+  add_action( 'admin_init', 'register_bdsettings' );
+}
+add_action('admin_menu', 'bd_settings_menu');
+
+//this function creates a simple page with title Custom Theme Options Page.
+function bd_theme_settings_page() { 
+  include( get_template_directory() . 'options.php' );
+}
+
+function register_bdsettings() { 
+  // whitelist options
+  register_setting( 'bd-options-group', 'hide_left_bar' );
+
+}
+
+
+
