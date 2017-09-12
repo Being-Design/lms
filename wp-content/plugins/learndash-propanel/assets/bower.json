@@ -1,0 +1,26 @@
+{
+  "name": "learndash-propanel",
+  "authors": [
+    "LearnDash <support@learndash.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "learndash.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "tablesorter": "jquery.tablesorter#^2.26.4",
+    "select2": "^4.0.3",
+    "Chart.js": "chartjs-Chart.js#^2.1.6"
+  },
+  "ignoredDependencies": [
+    "jquery"
+  ]
+}

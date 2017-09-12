@@ -59,4 +59,42 @@ add_action( 'wp_enqueue_scripts', 'boss_child_theme_scripts_styles', 9999 );
 
 
 
-?>
+function bd_settings_menu() {
+  add_theme_page('Being Design Theme Options', 'Being Design Theme Options', 'edit_theme_options', 'bd-theme-options', 'bd_theme_settings_page');
+  add_action( 'admin_init', 'register_bdsettings' );
+}
+add_action('admin_menu', 'bd_settings_menu');
+
+//this function creates a simple page with title Custom Theme Options Page.
+function bd_theme_settings_page() { 
+  ?>
+  <div class="wrap">
+    <h1>Being Design Theme Options</h1>
+      <form method="post" action="options.php">
+        <?php
+        settings_fields( 'bd-options-group' );
+        do_settings_sections( 'bd-options-group' );
+        ?>
+
+        <table class="form-table">
+              <tr valign="top">
+              <th scope="row">Hide Left Sidebar</th>
+              <td><input type="checkbox" name="hide_left_bar" <?php if ( get_option('hide_left_bar') ) echo 'checked'; ?> value="true" /></td>
+              </tr>
+          </table>
+
+        <?php submit_button(); ?>
+
+      </form>
+  </div>
+  <?php
+}
+
+function register_bdsettings() { 
+  // whitelist options
+  register_setting( 'bd-options-group', 'hide_left_bar' );
+
+}
+
+
+
