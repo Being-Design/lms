@@ -20,19 +20,19 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'wordpress');
+define('DB_NAME', 'johnc151_wp856');
 
 /** MySQL database username */
-define('DB_USER', 'johnc151_wp856');
+define('DB_USER', 'johnc151_dev');
 
 /** MySQL database password */
-define('DB_PASSWORD', '54pS(5w-6V');
+define('DB_PASSWORD', 'dKdL93Hsn445');
 
 /** MySQL hostname */
-define('DB_HOST', 'db:3306');
+define('DB_HOST', 'being.design:3306');
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8mb4');
+define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
@@ -46,14 +46,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'io6s7x1hw6d5w66h0x0prqsyes363ehdnpf8dcn0ltky5wegtdjvcwlab71cpamv');
-define('SECURE_AUTH_KEY',  'lfdguilkpebslpewll0qwwejd9z1uo8yrm6s1lbw81r4oxxf4s1luaeqrbywlqpb');
-define('LOGGED_IN_KEY',    'vgxpc56e62f0ktx6y5w22tqaygr9xdof79gkdcqbw0u10lpbvzci4o6n6adlsfme');
-define('NONCE_KEY',        'mipfuc8b2ubp5ziusqjmgzyjpbadwtbw3mobp4nvrsxoagd318r5paxqhsz1bwhl');
-define('AUTH_SALT',        '0btlex6yblcfbrvyxdxcq0coqzoxzyifue305eap7nfobp7pcvjvtymwv3noutvc');
-define('SECURE_AUTH_SALT', 'mcbtjoouwuqcwkfqknvyqbe8cecz6utzopububq9iaklspgmppjx6vqumijav3pa');
-define('LOGGED_IN_SALT',   'nh3zkmg2v6n9v4rkgk1vloygics9bpk3kn3yziel6eywzdm9jyurnj8qkgw3lnux');
-define('NONCE_SALT',       'hzua6fu0ja4hbcngpx10wm2ffwgkhziaqoefc1kuzqbdxj1ptmrhchjls9vy5skd');
+define('AUTH_KEY',         '55ca89c72bba05a113250def94151338352d2dfb');
+define('SECURE_AUTH_KEY',  'c35c4e266a994c806d655a7fa22d0bf5bd4031d7');
+define('LOGGED_IN_KEY',    '91f8df44277599576ed9ee92b68fdfce47a75d95');
+define('NONCE_KEY',        'c890105fe178c0b3a7bd1b98a1f20c170f6ff56f');
+define('AUTH_SALT',        'cb1ba1982ee31c056c44eb8fd71774e18cd5b81c');
+define('SECURE_AUTH_SALT', 'd925a3641abed20bb3454b105de6729ef01b4218');
+define('LOGGED_IN_SALT',   '206d35395c4a51979a92e0b8bc9746467c6c17ce');
+define('NONCE_SALT',       'e819e6a545261c05bc50fe13e5dd0af384c04585');
 
 /**#@-*/
 
@@ -77,18 +77,13 @@ $table_prefix  = 'wpj7_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
-define( 'WP_MEMORY_LIMIT', '128M' );
-define( 'WP_AUTO_UPDATE_CORE', false );
+define('WP_DEBUG', true);
 
-/* Multisite */
-define( 'WP_ALLOW_MULTISITE', true );
-define('MULTISITE', true);
-define('SUBDOMAIN_INSTALL', false);
-define('DOMAIN_CURRENT_SITE', 'lms.being.design');
-define('PATH_CURRENT_SITE', '/');
-define('SITE_ID_CURRENT_SITE', 1);
-define('BLOG_ID_CURRENT_SITE', 1);
+// If we're behind a proxy server and using HTTPS, we need to alert Wordpress of that fact
+// see also http://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+	$_SERVER['HTTPS'] = 'on';
+}
 
 /* That's all, stop editing! Happy blogging. */
 
